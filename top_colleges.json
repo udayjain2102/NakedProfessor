@@ -1,0 +1,1802 @@
+[
+  {
+    "rank": 1,
+    "name": "California Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/CA/California_Institute_of_Technology.html",
+    "state": "CA",
+    "score": 100.0,
+    "previous_rank": 1,
+    "metadata": {}
+  },
+  {
+    "rank": 2,
+    "name": "Massachusetts Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/MA/Massachusetts_Institute_of_Technology.html",
+    "state": "MA",
+    "score": 99.62,
+    "previous_rank": 4,
+    "metadata": {}
+  },
+  {
+    "rank": 3,
+    "name": "Princeton University",
+    "url": "https://www.stateuniversity.com/universities/NJ/Princeton_University.html",
+    "state": "NJ",
+    "score": 99.61,
+    "previous_rank": 3,
+    "metadata": {}
+  },
+  {
+    "rank": 4,
+    "name": "Williams College",
+    "url": "https://www.stateuniversity.com/universities/MA/Williams_College.html",
+    "state": "MA",
+    "score": 99.55,
+    "previous_rank": 7,
+    "metadata": {}
+  },
+  {
+    "rank": 5,
+    "name": "University of Notre Dame",
+    "url": "https://www.stateuniversity.com/universities/IN/University_of_Notre_Dame.html",
+    "state": "IN",
+    "score": 99.33,
+    "previous_rank": 5,
+    "metadata": {}
+  },
+  {
+    "rank": 6,
+    "name": "Swarthmore College",
+    "url": "https://www.stateuniversity.com/universities/PA/Swarthmore_College.html",
+    "state": "PA",
+    "score": 99.27,
+    "previous_rank": 8,
+    "metadata": {}
+  },
+  {
+    "rank": 7,
+    "name": "Middlebury College",
+    "url": "https://www.stateuniversity.com/universities/VT/Middlebury_College.html",
+    "state": "VT",
+    "score": 99.17,
+    "previous_rank": 11,
+    "metadata": {}
+  },
+  {
+    "rank": 8,
+    "name": "Wesleyan University",
+    "url": "https://www.stateuniversity.com/universities/CT/Wesleyan_University.html",
+    "state": "CT",
+    "score": 99.11,
+    "previous_rank": 12,
+    "metadata": {}
+  },
+  {
+    "rank": 9,
+    "name": "Bowdoin College",
+    "url": "https://www.stateuniversity.com/universities/ME/Bowdoin_College.html",
+    "state": "ME",
+    "score": 99.09,
+    "previous_rank": 17,
+    "metadata": {}
+  },
+  {
+    "rank": 10,
+    "name": "Rice University",
+    "url": "https://www.stateuniversity.com/universities/TX/Rice_University.html",
+    "state": "TX",
+    "score": 99.02,
+    "previous_rank": 9,
+    "metadata": {}
+  },
+  {
+    "rank": 11,
+    "name": "Amherst College",
+    "url": "https://www.stateuniversity.com/universities/MA/Amherst_College.html",
+    "state": "MA",
+    "score": 99.01,
+    "previous_rank": 6,
+    "metadata": {}
+  },
+  {
+    "rank": 12,
+    "name": "Pomona College",
+    "url": "https://www.stateuniversity.com/universities/CA/Pomona_College.html",
+    "state": "CA",
+    "score": 98.98,
+    "previous_rank": 13,
+    "metadata": {}
+  },
+  {
+    "rank": 13,
+    "name": "Carleton College",
+    "url": "https://www.stateuniversity.com/universities/MN/Carleton_College.html",
+    "state": "MN",
+    "score": 98.95,
+    "previous_rank": 22,
+    "metadata": {}
+  },
+  {
+    "rank": 14,
+    "name": "Vanderbilt University",
+    "url": "https://www.stateuniversity.com/universities/TN/Vanderbilt_University.html",
+    "state": "TN",
+    "score": 98.95,
+    "previous_rank": 164,
+    "metadata": {}
+  },
+  {
+    "rank": 15,
+    "name": "Wellesley College",
+    "url": "https://www.stateuniversity.com/universities/MA/Wellesley_College.html",
+    "state": "MA",
+    "score": 98.91,
+    "previous_rank": 19,
+    "metadata": {}
+  },
+  {
+    "rank": 16,
+    "name": "United States Coast Guard Academy",
+    "url": null,
+    "state": null,
+    "score": 98.9,
+    "previous_rank": 34,
+    "metadata": {}
+  },
+  {
+    "rank": 17,
+    "name": "Vassar College",
+    "url": "https://www.stateuniversity.com/universities/NY/Vassar_College.html",
+    "state": "NY",
+    "score": 98.73,
+    "previous_rank": 10,
+    "metadata": {}
+  },
+  {
+    "rank": 18,
+    "name": "Claremont McKenna College",
+    "url": "https://www.stateuniversity.com/universities/CA/Claremont_McKenna_College.html",
+    "state": "CA",
+    "score": 98.67,
+    "previous_rank": 23,
+    "metadata": {}
+  },
+  {
+    "rank": 19,
+    "name": "Franklin W Olin College of Engineering",
+    "url": null,
+    "state": null,
+    "score": 98.66,
+    "previous_rank": 81,
+    "metadata": {}
+  },
+  {
+    "rank": 20,
+    "name": "Brown University",
+    "url": "https://www.stateuniversity.com/universities/RI/Brown_University.html",
+    "state": "RI",
+    "score": 98.61,
+    "previous_rank": 14,
+    "metadata": {}
+  },
+  {
+    "rank": 21,
+    "name": "Harvey Mudd College",
+    "url": "https://www.stateuniversity.com/universities/CA/Harvey_Mudd_College.html",
+    "state": "CA",
+    "score": 98.59,
+    "previous_rank": 21,
+    "metadata": {}
+  },
+  {
+    "rank": 22,
+    "name": "Haverford College",
+    "url": "https://www.stateuniversity.com/universities/PA/Haverford_College.html",
+    "state": "PA",
+    "score": 98.58,
+    "previous_rank": 25,
+    "metadata": {}
+  },
+  {
+    "rank": 23,
+    "name": "Colgate University",
+    "url": "https://www.stateuniversity.com/universities/NY/Colgate_University.html",
+    "state": "NY",
+    "score": 98.57,
+    "previous_rank": 31,
+    "metadata": {}
+  },
+  {
+    "rank": 24,
+    "name": "Carnegie Mellon University",
+    "url": "https://www.stateuniversity.com/universities/PA/Carnegie_Mellon_University.html",
+    "state": "PA",
+    "score": 98.51,
+    "previous_rank": 26,
+    "metadata": {}
+  },
+  {
+    "rank": 25,
+    "name": "Cornell University",
+    "url": "https://www.stateuniversity.com/universities/NY/Cornell_University.html",
+    "state": "NY",
+    "score": 98.38,
+    "previous_rank": 16,
+    "metadata": {}
+  },
+  {
+    "rank": 26,
+    "name": "Bucknell University",
+    "url": null,
+    "state": null,
+    "score": 98.26,
+    "previous_rank": 15,
+    "metadata": {}
+  },
+  {
+    "rank": 27,
+    "name": "Davidson College",
+    "url": "https://www.stateuniversity.com/universities/NC/Davidson_College.html",
+    "state": "NC",
+    "score": 98.25,
+    "previous_rank": 30,
+    "metadata": {}
+  },
+  {
+    "rank": 28,
+    "name": "Washington and Lee University",
+    "url": "https://www.stateuniversity.com/universities/VA/Washington_and_Lee_University.html",
+    "state": "VA",
+    "score": 98.24,
+    "previous_rank": 27,
+    "metadata": {}
+  },
+  {
+    "rank": 29,
+    "name": "Colorado College",
+    "url": "https://www.stateuniversity.com/universities/CO/Colorado_College.html",
+    "state": "CO",
+    "score": 98.19,
+    "previous_rank": 35,
+    "metadata": {}
+  },
+  {
+    "rank": 30,
+    "name": "Harvard University",
+    "url": "https://www.stateuniversity.com/universities/MA/Harvard_University.html",
+    "state": "MA",
+    "score": 98.17,
+    "previous_rank": 33,
+    "metadata": {}
+  },
+  {
+    "rank": 31,
+    "name": "Colby College",
+    "url": "https://www.stateuniversity.com/universities/ME/Colby_College.html",
+    "state": "ME",
+    "score": 98.16,
+    "previous_rank": 41,
+    "metadata": {}
+  },
+  {
+    "rank": 32,
+    "name": "Hamilton College",
+    "url": "https://www.stateuniversity.com/universities/NY/Hamilton_College.html",
+    "state": "NY",
+    "score": 98.1,
+    "previous_rank": 28,
+    "metadata": {}
+  },
+  {
+    "rank": 33,
+    "name": "Union College",
+    "url": "https://www.stateuniversity.com/universities/NY/Union_College.html",
+    "state": "NY",
+    "score": 98.07,
+    "previous_rank": 42,
+    "metadata": {}
+  },
+  {
+    "rank": 34,
+    "name": "Grinnell College",
+    "url": null,
+    "state": null,
+    "score": 98.0,
+    "previous_rank": 29,
+    "metadata": {}
+  },
+  {
+    "rank": 35,
+    "name": "Lehigh University",
+    "url": "https://www.stateuniversity.com/universities/PA/Lehigh_University.html",
+    "state": "PA",
+    "score": 97.98,
+    "previous_rank": 37,
+    "metadata": {}
+  },
+  {
+    "rank": 36,
+    "name": "College of William and Mary",
+    "url": "https://www.stateuniversity.com/universities/VA/College_of_William_and_Mary.html",
+    "state": "VA",
+    "score": 97.89,
+    "previous_rank": 36,
+    "metadata": {}
+  },
+  {
+    "rank": 37,
+    "name": "Dartmouth College",
+    "url": "https://www.stateuniversity.com/universities/NH/Dartmouth_College.html",
+    "state": "NH",
+    "score": 97.74,
+    "previous_rank": 47,
+    "metadata": {}
+  },
+  {
+    "rank": 38,
+    "name": "Kenyon College",
+    "url": "https://www.stateuniversity.com/universities/OH/Kenyon_College.html",
+    "state": "OH",
+    "score": 97.67,
+    "previous_rank": 32,
+    "metadata": {}
+  },
+  {
+    "rank": 39,
+    "name": "Mount Holyoke College",
+    "url": null,
+    "state": null,
+    "score": 97.67,
+    "previous_rank": 142,
+    "metadata": {}
+  },
+  {
+    "rank": 40,
+    "name": "Macalester College",
+    "url": "https://www.stateuniversity.com/universities/MN/Macalester_College.html",
+    "state": "MN",
+    "score": 97.58,
+    "previous_rank": 38,
+    "metadata": {}
+  },
+  {
+    "rank": 41,
+    "name": "Lafayette College",
+    "url": "https://www.stateuniversity.com/universities/PA/Lafayette_College.html",
+    "state": "PA",
+    "score": 97.54,
+    "previous_rank": 45,
+    "metadata": {}
+  },
+  {
+    "rank": 42,
+    "name": "United States Naval Academy",
+    "url": "https://www.stateuniversity.com/universities/MD/United_States_Naval_Academy.html",
+    "state": "MD",
+    "score": 97.52,
+    "previous_rank": 20,
+    "metadata": {}
+  },
+  {
+    "rank": 43,
+    "name": "Bryn Mawr College",
+    "url": null,
+    "state": null,
+    "score": 97.45,
+    "previous_rank": 49,
+    "metadata": {}
+  },
+  {
+    "rank": 44,
+    "name": "Rose-Hulman Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/IN/Rose_Hulman_Institute_of_Technology.html",
+    "state": "IN",
+    "score": 97.37,
+    "previous_rank": 59,
+    "metadata": {}
+  },
+  {
+    "rank": 45,
+    "name": "Skidmore College",
+    "url": null,
+    "state": null,
+    "score": 97.32,
+    "previous_rank": 39,
+    "metadata": {}
+  },
+  {
+    "rank": 46,
+    "name": "United States Merchant Marine Academy",
+    "url": null,
+    "state": null,
+    "score": 97.3,
+    "previous_rank": 105,
+    "metadata": {}
+  },
+  {
+    "rank": 47,
+    "name": "Oberlin College",
+    "url": "https://www.stateuniversity.com/universities/OH/Oberlin_College.html",
+    "state": "OH",
+    "score": 97.27,
+    "previous_rank": 24,
+    "metadata": {}
+  },
+  {
+    "rank": 48,
+    "name": "Villanova University",
+    "url": "https://www.stateuniversity.com/universities/PA/Villanova_University.html",
+    "state": "PA",
+    "score": 97.27,
+    "previous_rank": 54,
+    "metadata": {}
+  },
+  {
+    "rank": 49,
+    "name": "Dickinson College",
+    "url": "https://www.stateuniversity.com/universities/PA/Dickinson_College.html",
+    "state": "PA",
+    "score": 97.24,
+    "previous_rank": 53,
+    "metadata": {}
+  },
+  {
+    "rank": 50,
+    "name": "University of Richmond",
+    "url": "https://www.stateuniversity.com/universities/VA/University_of_Richmond.html",
+    "state": "VA",
+    "score": 97.23,
+    "previous_rank": 44,
+    "metadata": {}
+  },
+  {
+    "rank": 51,
+    "name": "Barnard College",
+    "url": "https://www.stateuniversity.com/universities/NY/Barnard_College.html",
+    "state": "NY",
+    "score": 97.13,
+    "previous_rank": 50,
+    "metadata": {}
+  },
+  {
+    "rank": 52,
+    "name": "St. John's College",
+    "url": null,
+    "state": null,
+    "score": 97.05,
+    "previous_rank": 268,
+    "metadata": {}
+  },
+  {
+    "rank": 53,
+    "name": "University of Chicago",
+    "url": "https://www.stateuniversity.com/universities/IL/University_of_Chicago.html",
+    "state": "IL",
+    "score": 96.95,
+    "previous_rank": 55,
+    "metadata": {}
+  },
+  {
+    "rank": 54,
+    "name": "Whitman College",
+    "url": null,
+    "state": null,
+    "score": 96.85,
+    "previous_rank": 40,
+    "metadata": {}
+  },
+  {
+    "rank": 55,
+    "name": "Reed College",
+    "url": "https://www.stateuniversity.com/universities/OR/Reed_College.html",
+    "state": "OR",
+    "score": 96.79,
+    "previous_rank": 18,
+    "metadata": {}
+  },
+  {
+    "rank": 56,
+    "name": "United States Military Academy",
+    "url": "https://www.stateuniversity.com/universities/NY/United_States_Military_Academy.html",
+    "state": "NY",
+    "score": 96.76,
+    "previous_rank": 99,
+    "metadata": {}
+  },
+  {
+    "rank": 57,
+    "name": "Northwestern University",
+    "url": "https://www.stateuniversity.com/universities/IL/Northwestern_University.html",
+    "state": "IL",
+    "score": 96.72,
+    "previous_rank": 46,
+    "metadata": {}
+  },
+  {
+    "rank": 58,
+    "name": "Trinity College",
+    "url": "https://www.stateuniversity.com/universities/CT/Trinity_College.html",
+    "state": "CT",
+    "score": 96.72,
+    "previous_rank": 57,
+    "metadata": {}
+  },
+  {
+    "rank": 59,
+    "name": "Denison University",
+    "url": null,
+    "state": null,
+    "score": 96.72,
+    "previous_rank": 61,
+    "metadata": {}
+  },
+  {
+    "rank": 60,
+    "name": "Connecticut College",
+    "url": "https://www.stateuniversity.com/universities/CT/Connecticut_College.html",
+    "state": "CT",
+    "score": 96.5,
+    "previous_rank": 141,
+    "metadata": {}
+  },
+  {
+    "rank": 61,
+    "name": "DePauw University",
+    "url": null,
+    "state": null,
+    "score": 96.48,
+    "previous_rank": 48,
+    "metadata": {}
+  },
+  {
+    "rank": 62,
+    "name": "Northeastern University",
+    "url": "https://www.stateuniversity.com/universities/MA/Northeastern_University.html",
+    "state": "MA",
+    "score": 96.43,
+    "previous_rank": 52,
+    "metadata": {}
+  },
+  {
+    "rank": 63,
+    "name": "Trinity University",
+    "url": "https://www.stateuniversity.com/universities/TX/Trinity_University.html",
+    "state": "TX",
+    "score": 96.31,
+    "previous_rank": 43,
+    "metadata": {}
+  },
+  {
+    "rank": 64,
+    "name": "Gettysburg College",
+    "url": "https://www.stateuniversity.com/universities/PA/Gettysburg_College.html",
+    "state": "PA",
+    "score": 96.27,
+    "previous_rank": 89,
+    "metadata": {}
+  },
+  {
+    "rank": 65,
+    "name": "Occidental College",
+    "url": "https://www.stateuniversity.com/universities/CA/Occidental_College.html",
+    "state": "CA",
+    "score": 96.26,
+    "previous_rank": 64,
+    "metadata": {}
+  },
+  {
+    "rank": 66,
+    "name": "Furman University",
+    "url": "https://www.stateuniversity.com/universities/SC/Furman_University.html",
+    "state": "SC",
+    "score": 96.14,
+    "previous_rank": 100,
+    "metadata": {}
+  },
+  {
+    "rank": 67,
+    "name": "Southern Methodist University",
+    "url": "https://www.stateuniversity.com/universities/TX/Southern_Methodist_University.html",
+    "state": "TX",
+    "score": 96.14,
+    "previous_rank": 86,
+    "metadata": {}
+  },
+  {
+    "rank": 68,
+    "name": "Scripps College",
+    "url": "https://www.stateuniversity.com/universities/CA/Scripps_College.html",
+    "state": "CA",
+    "score": 96.14,
+    "previous_rank": 71,
+    "metadata": {}
+  },
+  {
+    "rank": 69,
+    "name": "University of Georgia",
+    "url": "https://www.stateuniversity.com/universities/GA/University_of_Georgia.html",
+    "state": "GA",
+    "score": 96.13,
+    "previous_rank": 70,
+    "metadata": {}
+  },
+  {
+    "rank": 70,
+    "name": "Pennsylvania State University-Main Campus",
+    "url": "https://penn.stateuniversity.com/",
+    "state": null,
+    "score": 96.12,
+    "previous_rank": 102,
+    "metadata": {}
+  },
+  {
+    "rank": 71,
+    "name": "University of North Carolina at Chapel Hill",
+    "url": "https://www.stateuniversity.com/universities/NC/University_of_North_Carolina_at_Chapel_Hill.html",
+    "state": "NC",
+    "score": 96.1,
+    "previous_rank": 56,
+    "metadata": {}
+  },
+  {
+    "rank": 72,
+    "name": "Cox College",
+    "url": null,
+    "state": null,
+    "score": 96.09,
+    "previous_rank": 504,
+    "metadata": {}
+  },
+  {
+    "rank": 73,
+    "name": "North Carolina State University at Raleigh",
+    "url": "https://northcarolina.stateuniversity.com/",
+    "state": null,
+    "score": 96.08,
+    "previous_rank": 95,
+    "metadata": {}
+  },
+  {
+    "rank": 74,
+    "name": "The University of the South",
+    "url": null,
+    "state": null,
+    "score": 96.01,
+    "previous_rank": 63,
+    "metadata": {}
+  },
+  {
+    "rank": 75,
+    "name": "Rhodes College",
+    "url": null,
+    "state": null,
+    "score": 96.01,
+    "previous_rank": 51,
+    "metadata": {}
+  },
+  {
+    "rank": 76,
+    "name": "Tufts University",
+    "url": "https://www.stateuniversity.com/universities/MA/Tufts_University.html",
+    "state": "MA",
+    "score": 95.99,
+    "previous_rank": 68,
+    "metadata": {}
+  },
+  {
+    "rank": 77,
+    "name": "Santa Clara University",
+    "url": "https://www.stateuniversity.com/universities/CA/Santa_Clara_University.html",
+    "state": "CA",
+    "score": 95.93,
+    "previous_rank": 83,
+    "metadata": {}
+  },
+  {
+    "rank": 78,
+    "name": "Virginia Polytechnic Institute and State University",
+    "url": "https://www.stateuniversity.com/universities/VA/Virginia_Polytechnic_Institute_and_State_University.html",
+    "state": "VA",
+    "score": 95.9,
+    "previous_rank": 75,
+    "metadata": {}
+  },
+  {
+    "rank": 79,
+    "name": "University of Pennsylvania",
+    "url": "https://www.stateuniversity.com/universities/PA/University_of_Pennsylvania.html",
+    "state": "PA",
+    "score": 95.87,
+    "previous_rank": 79,
+    "metadata": {}
+  },
+  {
+    "rank": 80,
+    "name": "Wheaton College",
+    "url": "https://www.stateuniversity.com/universities/IL/Wheaton_College.html",
+    "state": "IL",
+    "score": 95.85,
+    "previous_rank": 78,
+    "metadata": {}
+  },
+  {
+    "rank": 81,
+    "name": "Clemson University",
+    "url": "https://www.stateuniversity.com/universities/SC/Clemson_University.html",
+    "state": "SC",
+    "score": 95.82,
+    "previous_rank": 80,
+    "metadata": {}
+  },
+  {
+    "rank": 82,
+    "name": "Centre College",
+    "url": null,
+    "state": null,
+    "score": 95.8,
+    "previous_rank": 76,
+    "metadata": {}
+  },
+  {
+    "rank": 83,
+    "name": "Webb Institute",
+    "url": "https://www.stateuniversity.com/universities/NY/Webb_Institute.html",
+    "state": "NY",
+    "score": 95.73,
+    "previous_rank": 119,
+    "metadata": {}
+  },
+  {
+    "rank": 84,
+    "name": "University of Virginia-Main Campus",
+    "url": "https://www.stateuniversity.com/universities/VA/University_of_Virginia.html",
+    "state": "VA",
+    "score": 95.73,
+    "previous_rank": 87,
+    "metadata": {}
+  },
+  {
+    "rank": 85,
+    "name": "University of Michigan-Ann Arbor",
+    "url": "https://www.stateuniversity.com/universities/MI/University_of_Michigan.html",
+    "state": "MI",
+    "score": 95.67,
+    "previous_rank": 77,
+    "metadata": {}
+  },
+  {
+    "rank": 86,
+    "name": "The University of Texas at Austin",
+    "url": "https://www.stateuniversity.com/universities/TX/The_University_of_Texas_Austin.html",
+    "state": "TX",
+    "score": 95.63,
+    "previous_rank": 67,
+    "metadata": {}
+  },
+  {
+    "rank": 87,
+    "name": "Babson College",
+    "url": "https://www.stateuniversity.com/universities/MA/Babson_College.html",
+    "state": "MA",
+    "score": 95.57,
+    "previous_rank": 65,
+    "metadata": {}
+  },
+  {
+    "rank": 88,
+    "name": "Boston College",
+    "url": "https://www.stateuniversity.com/universities/MA/Boston_College.html",
+    "state": "MA",
+    "score": 95.48,
+    "previous_rank": 111,
+    "metadata": {}
+  },
+  {
+    "rank": 89,
+    "name": "University of Tulsa",
+    "url": "https://www.stateuniversity.com/universities/OK/University_of_Tulsa.html",
+    "state": "OK",
+    "score": 95.48,
+    "previous_rank": 62,
+    "metadata": {}
+  },
+  {
+    "rank": 90,
+    "name": "Rollins College",
+    "url": "https://www.stateuniversity.com/universities/FL/Rollins_College.html",
+    "state": "FL",
+    "score": 95.37,
+    "previous_rank": 130,
+    "metadata": {}
+  },
+  {
+    "rank": 91,
+    "name": "Rensselaer Polytechnic Institute",
+    "url": "https://www.stateuniversity.com/universities/NY/Rensselaer_Polytechnic_Institute.html",
+    "state": "NY",
+    "score": 95.35,
+    "previous_rank": 72,
+    "metadata": {}
+  },
+  {
+    "rank": 92,
+    "name": "Johns Hopkins University",
+    "url": "https://www.stateuniversity.com/universities/MD/Johns_Hopkins_University.html",
+    "state": "MD",
+    "score": 95.25,
+    "previous_rank": 120,
+    "metadata": {}
+  },
+  {
+    "rank": 93,
+    "name": "University of Miami",
+    "url": "https://www.stateuniversity.com/universities/FL/University_of_Miami.html",
+    "state": "FL",
+    "score": 95.16,
+    "previous_rank": 121,
+    "metadata": {}
+  },
+  {
+    "rank": 94,
+    "name": "College of the Holy Cross",
+    "url": "https://www.stateuniversity.com/universities/MA/College_of_the_Holy_Cross.html",
+    "state": "MA",
+    "score": 95.15,
+    "previous_rank": 91,
+    "metadata": {}
+  },
+  {
+    "rank": 95,
+    "name": "Brandeis University",
+    "url": "https://www.stateuniversity.com/universities/MA/Brandeis_University.html",
+    "state": "MA",
+    "score": 95.13,
+    "previous_rank": 96,
+    "metadata": {}
+  },
+  {
+    "rank": 96,
+    "name": "Franklin and Marshall College",
+    "url": null,
+    "state": null,
+    "score": 95.12,
+    "previous_rank": 157,
+    "metadata": {}
+  },
+  {
+    "rank": 97,
+    "name": "Texas Christian University",
+    "url": "https://www.stateuniversity.com/universities/TX/Texas_Christian_University.html",
+    "state": "TX",
+    "score": 95.1,
+    "previous_rank": 112,
+    "metadata": {}
+  },
+  {
+    "rank": 98,
+    "name": "Georgia Institute of Technology-Main Campus",
+    "url": "https://www.stateuniversity.com/universities/GA/Georgia_Institute_of_Technology.html",
+    "state": "GA",
+    "score": 95.09,
+    "previous_rank": 66,
+    "metadata": {}
+  },
+  {
+    "rank": 99,
+    "name": "Kalamazoo College",
+    "url": null,
+    "state": null,
+    "score": 95.08,
+    "previous_rank": 97,
+    "metadata": {}
+  },
+  {
+    "rank": 100,
+    "name": "Hellenic College-Holy Cross Greek Orthodox School of Theology",
+    "url": null,
+    "state": null,
+    "score": 95.08,
+    "previous_rank": 831,
+    "metadata": {}
+  },
+  {
+    "rank": 101,
+    "name": "Stanford University",
+    "url": "https://www.stateuniversity.com/universities/CA/Stanford_University.html",
+    "state": "CA",
+    "score": 95.07,
+    "previous_rank": 2,
+    "metadata": {}
+  },
+  {
+    "rank": 102,
+    "name": "Thomas Aquinas College",
+    "url": null,
+    "state": null,
+    "score": 95.04,
+    "previous_rank": 155,
+    "metadata": {}
+  },
+  {
+    "rank": 103,
+    "name": "St Olaf College",
+    "url": "https://www.stateuniversity.com/universities/MN/St_Olaf_College.html",
+    "state": "MN",
+    "score": 95.03,
+    "previous_rank": 73,
+    "metadata": {}
+  },
+  {
+    "rank": 104,
+    "name": "University of Illinois at Urbana-Champaign",
+    "url": "https://www.stateuniversity.com/universities/IL/University_of_Illinois_at_Urbana_Champaign.html",
+    "state": "IL",
+    "score": 95.02,
+    "previous_rank": 84,
+    "metadata": {}
+  },
+  {
+    "rank": 105,
+    "name": "University of Florida",
+    "url": "https://www.stateuniversity.com/universities/FL/University_of_Florida.html",
+    "state": "FL",
+    "score": 95.0,
+    "previous_rank": 135,
+    "metadata": {}
+  },
+  {
+    "rank": 106,
+    "name": "Rochester Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/NY/Rochester_Institute_of_Technology.html",
+    "state": "NY",
+    "score": 94.97,
+    "previous_rank": 148,
+    "metadata": {}
+  },
+  {
+    "rank": 107,
+    "name": "Principia College",
+    "url": null,
+    "state": null,
+    "score": 94.91,
+    "previous_rank": 151,
+    "metadata": {}
+  },
+  {
+    "rank": 108,
+    "name": "Gonzaga University",
+    "url": "https://www.stateuniversity.com/universities/WA/Gonzaga_University.html",
+    "state": "WA",
+    "score": 94.91,
+    "previous_rank": 101,
+    "metadata": {}
+  },
+  {
+    "rank": 109,
+    "name": "Divine Word College",
+    "url": null,
+    "state": null,
+    "score": 94.9,
+    "previous_rank": 626,
+    "metadata": {}
+  },
+  {
+    "rank": 110,
+    "name": "Washington University in St Louis",
+    "url": "https://www.stateuniversity.com/universities/MO/Washington_University_in_St_Louis.html",
+    "state": "MO",
+    "score": 94.88,
+    "previous_rank": 104,
+    "metadata": {}
+  },
+  {
+    "rank": 111,
+    "name": "Baylor University",
+    "url": "https://www.stateuniversity.com/universities/TX/Baylor_University.html",
+    "state": "TX",
+    "score": 94.85,
+    "previous_rank": 123,
+    "metadata": {}
+  },
+  {
+    "rank": 112,
+    "name": "Illinois Institute of Technology",
+    "url": null,
+    "state": null,
+    "score": 94.79,
+    "previous_rank": 113,
+    "metadata": {}
+  },
+  {
+    "rank": 113,
+    "name": "Case Western Reserve University",
+    "url": "https://www.stateuniversity.com/universities/OH/Case_Western_Reserve_University.html",
+    "state": "OH",
+    "score": 94.74,
+    "previous_rank": 82,
+    "metadata": {}
+  },
+  {
+    "rank": 114,
+    "name": "Gustavus Adolphus College",
+    "url": null,
+    "state": null,
+    "score": 94.73,
+    "previous_rank": 60,
+    "metadata": {}
+  },
+  {
+    "rank": 115,
+    "name": "University of Massachusetts-Amherst",
+    "url": "https://www.stateuniversity.com/universities/MA/University_of_Massachusetts_Amherst.html",
+    "state": "MA",
+    "score": 94.72,
+    "previous_rank": 144,
+    "metadata": {}
+  },
+  {
+    "rank": 116,
+    "name": "Providence College",
+    "url": "https://www.stateuniversity.com/universities/RI/Providence_College.html",
+    "state": "RI",
+    "score": 94.71,
+    "previous_rank": 138,
+    "metadata": {}
+  },
+  {
+    "rank": 117,
+    "name": "St Lawrence University",
+    "url": null,
+    "state": null,
+    "score": 94.71,
+    "previous_rank": 282,
+    "metadata": {}
+  },
+  {
+    "rank": 118,
+    "name": "Soka University of America",
+    "url": null,
+    "state": null,
+    "score": 94.7,
+    "previous_rank": 90,
+    "metadata": {}
+  },
+  {
+    "rank": 119,
+    "name": "University of North Carolina School of the Arts",
+    "url": null,
+    "state": null,
+    "score": 94.7,
+    "previous_rank": 184,
+    "metadata": {}
+  },
+  {
+    "rank": 120,
+    "name": "Hobart William Smith Colleges",
+    "url": null,
+    "state": null,
+    "score": 94.69,
+    "previous_rank": 232,
+    "metadata": {}
+  },
+  {
+    "rank": 121,
+    "name": "University of Delaware",
+    "url": "https://www.stateuniversity.com/universities/DE/University_of_Delaware.html",
+    "state": "DE",
+    "score": 94.68,
+    "previous_rank": 93,
+    "metadata": {}
+  },
+  {
+    "rank": 122,
+    "name": "Loyola University Maryland",
+    "url": "https://www.stateuniversity.com/universities/MD/Loyola_University_Maryland.html",
+    "state": "MD",
+    "score": 94.65,
+    "previous_rank": 180,
+    "metadata": {}
+  },
+  {
+    "rank": 123,
+    "name": "Drake University",
+    "url": "https://www.stateuniversity.com/universities/IA/Drake_University.html",
+    "state": "IA",
+    "score": 94.57,
+    "previous_rank": 152,
+    "metadata": {}
+  },
+  {
+    "rank": 124,
+    "name": "Purdue University-Main Campus",
+    "url": "https://www.stateuniversity.com/universities/IN/Purdue_University.html",
+    "state": "IN",
+    "score": 94.56,
+    "previous_rank": 129,
+    "metadata": {}
+  },
+  {
+    "rank": 125,
+    "name": "The College of Wooster",
+    "url": null,
+    "state": null,
+    "score": 94.55,
+    "previous_rank": 126,
+    "metadata": {}
+  },
+  {
+    "rank": 126,
+    "name": "Miami University-Oxford",
+    "url": "https://www.stateuniversity.com/universities/OH/Miami_University_Oxford_Campus.html",
+    "state": "OH",
+    "score": 94.49,
+    "previous_rank": 146,
+    "metadata": {}
+  },
+  {
+    "rank": 127,
+    "name": "Indiana University-Bloomington",
+    "url": "https://www.stateuniversity.com/universities/IN/Indiana_University_Bloomington.html",
+    "state": "IN",
+    "score": 94.4,
+    "previous_rank": 131,
+    "metadata": {}
+  },
+  {
+    "rank": 128,
+    "name": "Butler University",
+    "url": "https://www.stateuniversity.com/universities/IN/Butler_University.html",
+    "state": "IN",
+    "score": 94.39,
+    "previous_rank": 103,
+    "metadata": {}
+  },
+  {
+    "rank": 129,
+    "name": "Ursinus College",
+    "url": null,
+    "state": null,
+    "score": 94.35,
+    "previous_rank": 140,
+    "metadata": {}
+  },
+  {
+    "rank": 130,
+    "name": "Wofford College",
+    "url": null,
+    "state": null,
+    "score": 94.34,
+    "previous_rank": 128,
+    "metadata": {}
+  },
+  {
+    "rank": 131,
+    "name": "Yale University",
+    "url": "https://www.stateuniversity.com/universities/CT/Yale_University.html",
+    "state": "CT",
+    "score": 94.28,
+    "previous_rank": 85,
+    "metadata": {}
+  },
+  {
+    "rank": 132,
+    "name": "Lawrence University",
+    "url": null,
+    "state": null,
+    "score": 94.23,
+    "previous_rank": 290,
+    "metadata": {}
+  },
+  {
+    "rank": 133,
+    "name": "University of Maryland-College Park",
+    "url": "https://www.stateuniversity.com/universities/MD/University_of_Maryland_College_Park.html",
+    "state": "MD",
+    "score": 94.18,
+    "previous_rank": 106,
+    "metadata": {}
+  },
+  {
+    "rank": 134,
+    "name": "Elon University",
+    "url": "https://www.stateuniversity.com/universities/NC/Elon_University.html",
+    "state": "NC",
+    "score": 94.17,
+    "previous_rank": 150,
+    "metadata": {}
+  },
+  {
+    "rank": 135,
+    "name": "Kettering University",
+    "url": null,
+    "state": null,
+    "score": 94.15,
+    "previous_rank": 69,
+    "metadata": {}
+  },
+  {
+    "rank": 136,
+    "name": "Boston University",
+    "url": "https://www.stateuniversity.com/universities/MA/Boston_University.html",
+    "state": "MA",
+    "score": 94.14,
+    "previous_rank": 156,
+    "metadata": {}
+  },
+  {
+    "rank": 137,
+    "name": "Georgetown University",
+    "url": "https://www.stateuniversity.com/universities/DC/Georgetown_University.html",
+    "state": "DC",
+    "score": 94.13,
+    "previous_rank": 115,
+    "metadata": {}
+  },
+  {
+    "rank": 138,
+    "name": "Hope College",
+    "url": "https://www.stateuniversity.com/universities/MI/Hope_College.html",
+    "state": "MI",
+    "score": 94.13,
+    "previous_rank": 127,
+    "metadata": {}
+  },
+  {
+    "rank": 139,
+    "name": "Smith College",
+    "url": "https://www.stateuniversity.com/universities/MA/Smith_College.html",
+    "state": "MA",
+    "score": 94.12,
+    "previous_rank": 107,
+    "metadata": {}
+  },
+  {
+    "rank": 140,
+    "name": "Bates College",
+    "url": "https://www.stateuniversity.com/universities/ME/Bates_College.html",
+    "state": "ME",
+    "score": 94.11,
+    "previous_rank": 162,
+    "metadata": {}
+  },
+  {
+    "rank": 141,
+    "name": "Virginia Military Institute",
+    "url": null,
+    "state": null,
+    "score": 94.1,
+    "previous_rank": 909,
+    "metadata": {}
+  },
+  {
+    "rank": 142,
+    "name": "Pennsylvania College of Health Sciences",
+    "url": null,
+    "state": null,
+    "score": 94.08,
+    "previous_rank": null,
+    "metadata": {}
+  },
+  {
+    "rank": 143,
+    "name": "Summit Christian College",
+    "url": null,
+    "state": null,
+    "score": 94.08,
+    "previous_rank": 1718,
+    "metadata": {}
+  },
+  {
+    "rank": 144,
+    "name": "Wabash College",
+    "url": null,
+    "state": null,
+    "score": 94.05,
+    "previous_rank": 352,
+    "metadata": {}
+  },
+  {
+    "rank": 145,
+    "name": "Tulane University of Louisiana",
+    "url": "https://www.stateuniversity.com/universities/LA/Tulane_University_of_Louisiana.html",
+    "state": "LA",
+    "score": 94.04,
+    "previous_rank": 169,
+    "metadata": {}
+  },
+  {
+    "rank": 146,
+    "name": "University of Denver",
+    "url": "https://www.stateuniversity.com/universities/CO/University_of_Denver.html",
+    "state": "CO",
+    "score": 94.03,
+    "previous_rank": 187,
+    "metadata": {}
+  },
+  {
+    "rank": 147,
+    "name": "The University of Tennessee-Knoxville",
+    "url": "https://www.stateuniversity.com/universities/TN/The_University_of_Tennessee.html",
+    "state": "TN",
+    "score": 94.03,
+    "previous_rank": 177,
+    "metadata": {}
+  },
+  {
+    "rank": 148,
+    "name": "Bentley University",
+    "url": "https://www.stateuniversity.com/universities/MA/Bentley_University.html",
+    "state": "MA",
+    "score": 94.0,
+    "previous_rank": 154,
+    "metadata": {}
+  },
+  {
+    "rank": 149,
+    "name": "University of Oklahoma-Norman Campus",
+    "url": "https://www.stateuniversity.com/universities/OK/University_of_Oklahoma.html",
+    "state": "OK",
+    "score": 93.99,
+    "previous_rank": 217,
+    "metadata": {}
+  },
+  {
+    "rank": 150,
+    "name": "Michigan State University",
+    "url": "https://michigan.stateuniversity.com/",
+    "state": null,
+    "score": 93.98,
+    "previous_rank": 163,
+    "metadata": {}
+  },
+  {
+    "rank": 151,
+    "name": "University of Dayton",
+    "url": "https://www.stateuniversity.com/universities/OH/University_of_Dayton.html",
+    "state": "OH",
+    "score": 93.98,
+    "previous_rank": 200,
+    "metadata": {}
+  },
+  {
+    "rank": 152,
+    "name": "Pepperdine University",
+    "url": "https://www.stateuniversity.com/universities/CA/Pepperdine_University.html",
+    "state": "CA",
+    "score": 93.96,
+    "previous_rank": 117,
+    "metadata": {}
+  },
+  {
+    "rank": 153,
+    "name": "Duke University",
+    "url": "https://www.stateuniversity.com/universities/NC/Duke_University.html",
+    "state": "NC",
+    "score": 93.91,
+    "previous_rank": 98,
+    "metadata": {}
+  },
+  {
+    "rank": 154,
+    "name": "Seattle University",
+    "url": "https://www.stateuniversity.com/universities/WA/Seattle_University.html",
+    "state": "WA",
+    "score": 93.88,
+    "previous_rank": 124,
+    "metadata": {}
+  },
+  {
+    "rank": 155,
+    "name": "Union University",
+    "url": null,
+    "state": null,
+    "score": 93.88,
+    "previous_rank": 108,
+    "metadata": {}
+  },
+  {
+    "rank": 156,
+    "name": "Saint Anselm College",
+    "url": null,
+    "state": null,
+    "score": 93.86,
+    "previous_rank": 231,
+    "metadata": {}
+  },
+  {
+    "rank": 157,
+    "name": "University of Connecticut",
+    "url": "https://www.stateuniversity.com/universities/CT/University_of_Connecticut.html",
+    "state": "CT",
+    "score": 93.84,
+    "previous_rank": 58,
+    "metadata": {}
+  },
+  {
+    "rank": 158,
+    "name": "Illinois Wesleyan University",
+    "url": null,
+    "state": null,
+    "score": 93.84,
+    "previous_rank": 114,
+    "metadata": {}
+  },
+  {
+    "rank": 159,
+    "name": "Creighton University",
+    "url": "https://www.stateuniversity.com/universities/NE/Creighton_University.html",
+    "state": "NE",
+    "score": 93.81,
+    "previous_rank": 122,
+    "metadata": {}
+  },
+  {
+    "rank": 160,
+    "name": "Colorado School of Mines",
+    "url": "https://www.stateuniversity.com/universities/CO/Colorado_School_of_Mines.html",
+    "state": "CO",
+    "score": 93.65,
+    "previous_rank": 188,
+    "metadata": {}
+  },
+  {
+    "rank": 161,
+    "name": "Elizabethtown College",
+    "url": null,
+    "state": null,
+    "score": 93.64,
+    "previous_rank": 312,
+    "metadata": {}
+  },
+  {
+    "rank": 162,
+    "name": "Emory University",
+    "url": "https://www.stateuniversity.com/universities/GA/Emory_University.html",
+    "state": "GA",
+    "score": 93.64,
+    "previous_rank": 143,
+    "metadata": {}
+  },
+  {
+    "rank": 163,
+    "name": "University of Southern California",
+    "url": "https://www.stateuniversity.com/universities/CA/University_of_Southern_California.html",
+    "state": "CA",
+    "score": 93.59,
+    "previous_rank": 173,
+    "metadata": {}
+  },
+  {
+    "rank": 164,
+    "name": "Spelman College",
+    "url": "https://www.stateuniversity.com/universities/GA/Spelman_College.html",
+    "state": "GA",
+    "score": 93.59,
+    "previous_rank": 220,
+    "metadata": {}
+  },
+  {
+    "rank": 165,
+    "name": "University of Puerto Rico-Rio Piedras",
+    "url": "https://www.stateuniversity.com/universities/PR/University_of_Puerto_Rico_Rio_Piedras.html",
+    "state": "PR",
+    "score": 93.56,
+    "previous_rank": 136,
+    "metadata": {}
+  },
+  {
+    "rank": 166,
+    "name": "Auburn University",
+    "url": "https://www.stateuniversity.com/universities/AL/Auburn_University_Main.html",
+    "state": "AL",
+    "score": 93.53,
+    "previous_rank": 132,
+    "metadata": {}
+  },
+  {
+    "rank": 167,
+    "name": "Samford University",
+    "url": null,
+    "state": null,
+    "score": 93.51,
+    "previous_rank": 197,
+    "metadata": {}
+  },
+  {
+    "rank": 168,
+    "name": "University of Minnesota-Twin Cities",
+    "url": "https://www.stateuniversity.com/universities/MN/University_of_Minnesota_Twin_Cities.html",
+    "state": "MN",
+    "score": 93.46,
+    "previous_rank": 158,
+    "metadata": {}
+  },
+  {
+    "rank": 169,
+    "name": "University of California-Berkeley",
+    "url": "https://www.stateuniversity.com/universities/CA/University_of_California_Berkeley.html",
+    "state": "CA",
+    "score": 93.46,
+    "previous_rank": 118,
+    "metadata": {}
+  },
+  {
+    "rank": 170,
+    "name": "College of Saint Benedict",
+    "url": null,
+    "state": null,
+    "score": 93.46,
+    "previous_rank": 134,
+    "metadata": {}
+  },
+  {
+    "rank": 171,
+    "name": "Saint Johns University",
+    "url": null,
+    "state": null,
+    "score": 93.4,
+    "previous_rank": 160,
+    "metadata": {}
+  },
+  {
+    "rank": 172,
+    "name": "Syracuse University",
+    "url": "https://www.stateuniversity.com/universities/NY/Syracuse_University.html",
+    "state": "NY",
+    "score": 93.35,
+    "previous_rank": 159,
+    "metadata": {}
+  },
+  {
+    "rank": 173,
+    "name": "Hendrix College",
+    "url": null,
+    "state": null,
+    "score": 93.31,
+    "previous_rank": 168,
+    "metadata": {}
+  },
+  {
+    "rank": 174,
+    "name": "Loyola Marymount University",
+    "url": "https://www.stateuniversity.com/universities/CA/Loyola_Marymount_University.html",
+    "state": "CA",
+    "score": 93.26,
+    "previous_rank": 185,
+    "metadata": {}
+  },
+  {
+    "rank": 175,
+    "name": "Binghamton University",
+    "url": "https://binghamton.stateuniversity.com/",
+    "state": null,
+    "score": 93.23,
+    "previous_rank": 204,
+    "metadata": {}
+  },
+  {
+    "rank": 176,
+    "name": "Earlham College",
+    "url": null,
+    "state": null,
+    "score": 93.21,
+    "previous_rank": 92,
+    "metadata": {}
+  },
+  {
+    "rank": 177,
+    "name": "Muhlenberg College",
+    "url": null,
+    "state": null,
+    "score": 93.18,
+    "previous_rank": 125,
+    "metadata": {}
+  },
+  {
+    "rank": 178,
+    "name": "Texas A & M University-College Station",
+    "url": "https://www.stateuniversity.com/universities/TX/Texas_A_M_University.html",
+    "state": "TX",
+    "score": 93.15,
+    "previous_rank": 137,
+    "metadata": {}
+  },
+  {
+    "rank": 179,
+    "name": "Jewish Theological Seminary of America",
+    "url": null,
+    "state": null,
+    "score": 93.14,
+    "previous_rank": 149,
+    "metadata": {}
+  },
+  {
+    "rank": 180,
+    "name": "University of California-Santa Barbara",
+    "url": "https://www.stateuniversity.com/universities/CA/University_of_California_Santa_Barbara.html",
+    "state": "CA",
+    "score": 93.11,
+    "previous_rank": 179,
+    "metadata": {}
+  },
+  {
+    "rank": 181,
+    "name": "Florida State University",
+    "url": "https://florida.stateuniversity.com/",
+    "state": null,
+    "score": 93.08,
+    "previous_rank": 236,
+    "metadata": {}
+  },
+  {
+    "rank": 182,
+    "name": "University of Utah",
+    "url": "https://www.stateuniversity.com/universities/UT/University_of_Utah.html",
+    "state": "UT",
+    "score": 93.07,
+    "previous_rank": 161,
+    "metadata": {}
+  },
+  {
+    "rank": 183,
+    "name": "American University",
+    "url": "https://www.stateuniversity.com/universities/DC/American_University.html",
+    "state": "DC",
+    "score": 93.05,
+    "previous_rank": 153,
+    "metadata": {}
+  },
+  {
+    "rank": 184,
+    "name": "Harding University",
+    "url": "https://www.stateuniversity.com/universities/AR/Harding_University.html",
+    "state": "AR",
+    "score": 93.05,
+    "previous_rank": 308,
+    "metadata": {}
+  },
+  {
+    "rank": 185,
+    "name": "Calvin College",
+    "url": "https://www.stateuniversity.com/universities/MI/Calvin_College.html",
+    "state": "MI",
+    "score": 93.04,
+    "previous_rank": 133,
+    "metadata": {}
+  },
+  {
+    "rank": 186,
+    "name": "University of Wisconsin-Madison",
+    "url": "https://www.stateuniversity.com/universities/WI/University_of_Wisconsin_Madison.html",
+    "state": "WI",
+    "score": 92.89,
+    "previous_rank": 170,
+    "metadata": {}
+  },
+  {
+    "rank": 187,
+    "name": "University of Puget Sound",
+    "url": null,
+    "state": null,
+    "score": 92.88,
+    "previous_rank": 94,
+    "metadata": {}
+  },
+  {
+    "rank": 188,
+    "name": "Clarkson University",
+    "url": "https://www.stateuniversity.com/universities/NY/Clarkson_University.html",
+    "state": "NY",
+    "score": 92.86,
+    "previous_rank": 171,
+    "metadata": {}
+  },
+  {
+    "rank": 189,
+    "name": "Wheaton College",
+    "url": null,
+    "state": null,
+    "score": 92.84,
+    "previous_rank": 499,
+    "metadata": {}
+  },
+  {
+    "rank": 190,
+    "name": "Berry College",
+    "url": null,
+    "state": null,
+    "score": 92.8,
+    "previous_rank": 285,
+    "metadata": {}
+  },
+  {
+    "rank": 191,
+    "name": "University of Pittsburgh-Pittsburgh Campus",
+    "url": "https://www.stateuniversity.com/universities/PA/University_of_Pittsburgh.html",
+    "state": "PA",
+    "score": 92.8,
+    "previous_rank": 198,
+    "metadata": {}
+  },
+  {
+    "rank": 192,
+    "name": "Michigan Technological University",
+    "url": "https://www.stateuniversity.com/universities/MI/Michigan_Technological_University.html",
+    "state": "MI",
+    "score": 92.78,
+    "previous_rank": 208,
+    "metadata": {}
+  },
+  {
+    "rank": 193,
+    "name": "Rhode Island School of Design",
+    "url": null,
+    "state": null,
+    "score": 92.77,
+    "previous_rank": 286,
+    "metadata": {}
+  },
+  {
+    "rank": 194,
+    "name": "Howard University",
+    "url": "https://www.stateuniversity.com/universities/DC/Howard_University.html",
+    "state": "DC",
+    "score": 92.77,
+    "previous_rank": 299,
+    "metadata": {}
+  },
+  {
+    "rank": 195,
+    "name": "Willamette University",
+    "url": null,
+    "state": null,
+    "score": 92.68,
+    "previous_rank": 139,
+    "metadata": {}
+  },
+  {
+    "rank": 196,
+    "name": "Siena College",
+    "url": "https://www.stateuniversity.com/universities/NY/Siena_College.html",
+    "state": "NY",
+    "score": 92.66,
+    "previous_rank": 219,
+    "metadata": {}
+  },
+  {
+    "rank": 197,
+    "name": "Stevens Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/NJ/Stevens_Institute_of_Technology.html",
+    "state": "NJ",
+    "score": 92.66,
+    "previous_rank": 116,
+    "metadata": {}
+  },
+  {
+    "rank": 198,
+    "name": "Ohio Northern University",
+    "url": null,
+    "state": null,
+    "score": 92.62,
+    "previous_rank": 207,
+    "metadata": {}
+  },
+  {
+    "rank": 199,
+    "name": "James Madison University",
+    "url": "https://www.stateuniversity.com/universities/VA/James_Madison_University.html",
+    "state": "VA",
+    "score": 92.6,
+    "previous_rank": 194,
+    "metadata": {}
+  },
+  {
+    "rank": 200,
+    "name": "University of Rochester",
+    "url": "https://www.stateuniversity.com/universities/NY/University_of_Rochester.html",
+    "state": "NY",
+    "score": 92.59,
+    "previous_rank": 209,
+    "metadata": {}
+  }
+]
