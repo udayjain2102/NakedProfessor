@@ -18,19 +18,20 @@ not already in that list, displayed in an interactive table and exportable to `t
 
 ## Quick Start
 
-1. Install dependencies
+1. Install dependencies (survival web app)
 
 ```bash
-   npm install
+cd frontend
+npm install
 ```
 
 2. Start the development server
 
 ```bash
-   npm run dev
+npm run dev
 ```
 
-3. Open your browser and navigate to `https://nakedprofessor-bwnc8nxc4-udayjain2102s-projects.vercel.app`.
+3. Open the local URL shown in the terminal (or your latest [Vercel deployment](https://vercel.com) after connecting this repo).
 
 ## Usage
 
@@ -51,6 +52,27 @@ parameters, and adapt your syllabus with an LLM-backed plan.
 1. Navigate to the Planner section in the top nav.
 2. Search for a school, pick a professor, and review the parameter cards + risk signals.
 3. Paste your syllabus, choose a GPT-4.x model, and click Generate professor-aware plan.
+
+### Survival planner (Vite app in `frontend/`)
+
+The **NakedProfessor** class survival UI lives under `frontend/`: college search, professor list, **Reality Check**, **Game Plan**, and **Execution Hub**. For local development:
+
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+Use `data/top200_plus_behrend_professors.csv` from scraping, or the Behrend sample under `frontend/public/data/` for demos. Copy `frontend/.env.example` to `frontend/.env.local` and set `OPENAI_API_KEY` for local API routes.
+
+The browser does not hold the OpenAI key. Serverless generation uses `frontend/api/generate.js`; the host must provide `OPENAI_API_KEY`.
+
+#### Deploying to Vercel
+
+1. Import this GitHub repository in the [Vercel dashboard](https://vercel.com).
+2. Set **Root Directory** to `frontend` (framework: Vite).
+3. Add the **Environment Variable** `OPENAI_API_KEY` (Production / Preview as needed).
+4. Deploy. Functions are served from `frontend/api/` relative to that root.
 
 Behind the scenes, `rmp_scraper/professor_profiles.py` converts professor rating platform
 metrics into normalized parameters (clarity, workload, support, assessment strictness,
