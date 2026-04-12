@@ -6,10 +6,6 @@ list and enumerates professors from a third-party professor rating GraphQL API f
 Default rankings view: top 200 schools plus Penn State Behrend (Erie, PA) if it is
 not already in that list, displayed in an interactive table and exportable to `top200_plus_behrend_professors.csv`.
 
-> ⚠️ Use responsibly. The upstream rating platform does not provide an official public API
-> and may throttle or block overly aggressive scraping. The app intentionally throttles
-> requests, but you are still responsible for following the platform's Terms of Use.
-
 ## Features
 
 - Fetches ranked schools from StateUniversity.com (Creative Commons license) and caches them
