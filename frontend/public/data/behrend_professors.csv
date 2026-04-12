@@ -1,0 +1,81 @@
+school_rank,school_name,school_id,school_state,professor_id,professor_legacy_id,professor_first,professor_last,department,avg_rating,avg_difficulty,would_take_again_percent,num_ratings,profile_url
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDU5Mjgz,3059283,Nicholas,Papalia,Mathematics,5,2.3,95,20,https://www.ratemyprofessors.com/professor/3059283
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTQzMzI4,2943328,Ahmed,Elnakib,Computer Science,2.9,3.5,46.1538,13,https://www.ratemyprofessors.com/professor/2943328
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTE2MDUy,3116052,Shariffah,Dawood,Psychology,3,3,0,1,https://www.ratemyprofessors.com/professor/3116052
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODE3OTgx,2817981,Britanny,Kramer,Mathematics,4.6,2.3,75,8,https://www.ratemyprofessors.com/professor/2817981
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTY0NTY1,2964565,Jennifer,Kuntz,Chemistry,1.6,4.4,20,5,https://www.ratemyprofessors.com/professor/2964565
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTMzODE4,3133818,Zhenghao ,Zhu,Engineering,2.5,3,50,2,https://www.ratemyprofessors.com/professor/3133818
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDc4MzQ2,3078346,Carolyn,Gold,Business,5,3,100,1,https://www.ratemyprofessors.com/professor/3078346
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTQ4MzU0,3148354,David,Rhoades,Engineering,1,2,0,1,https://www.ratemyprofessors.com/professor/3148354
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTYxMDIz,3161023,Mark,Makowski,Business,3.5,3,50,2,https://www.ratemyprofessors.com/professor/3161023
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDM4MzAz,3038303,David,Bialas,Chemistry,5,2.3,100,6,https://www.ratemyprofessors.com/professor/3038303
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTg3NTQy,2987542,Shahid,Hussain,Computer Science,3.6,3.2,66.6667,12,https://www.ratemyprofessors.com/professor/2987542
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTQzOTMz,2943933,Peter,Ingram,Computer Science,1.3,4.6,12.5,8,https://www.ratemyprofessors.com/professor/2943933
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yNzk4Njg0,2798684,Mark,Rubeo,Engineering,5,2.3,100,3,https://www.ratemyprofessors.com/professor/2798684
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODc5NTc1,2879575,Kevin ,Pratt,Marketing,4.9,2,100,7,https://www.ratemyprofessors.com/professor/2879575
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDgxNTAw,3081500,Erika,Berlin,Communication,1,3.7,0,6,https://www.ratemyprofessors.com/professor/3081500
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDU5MTgx,3059181,Lena,Harned,Political Science,4.3,3,66.6667,3,https://www.ratemyprofessors.com/professor/3059181
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yNzcwMDc5,2770079,Jeremiah,Keyes,Biology,2.3,3.8,30,10,https://www.ratemyprofessors.com/professor/2770079
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDU1MDUz,3055053,Darren,Williams,Physics,4.3,2.3,100,3,https://www.ratemyprofessors.com/professor/3055053
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTI3NjQx,3127641,Kevin,Belknap,English,5,1,100,1,https://www.ratemyprofessors.com/professor/3127641
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTI3NjQy,3127642,James,Lanham,Computer Science,4,2,100,1,https://www.ratemyprofessors.com/professor/3127642
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTAwMjY3,3100267,Emily,Cassano,Theater,2.3,3.7,33.3333,3,https://www.ratemyprofessors.com/professor/3100267
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDM2NjM0,3036634,Amber,Schultz,Humanities,5,2.6,100,5,https://www.ratemyprofessors.com/professor/3036634
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDY1NDA0,3065404,Gregory,Bondar,Anthropology,2.2,3.6,0,5,https://www.ratemyprofessors.com/professor/3065404
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTQxMjUy,3141252,Matthew ,Levi,Art History,2,3,0,1,https://www.ratemyprofessors.com/professor/3141252
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDI3OTQ3,3027947,Nancy,Study,Engineering,1,5,0,3,https://www.ratemyprofessors.com/professor/3027947
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDk1Njgz,3095683,Bob,Patterson,Business,4.5,4,100,2,https://www.ratemyprofessors.com/professor/3095683
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDk0NjMw,3094630,John ,Trucilla ,Criminal Justice,5,1.5,100,2,https://www.ratemyprofessors.com/professor/3094630
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDY5MTk1,3069195,Joel,Hunt,Music,5,1.5,100,2,https://www.ratemyprofessors.com/professor/3069195
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODgwODcz,2880873,Ben,Lee,Marketing,5,2.2,100,5,https://www.ratemyprofessors.com/professor/2880873
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODgyMDkx,2882091,Derek,Hanely,Mathematics,5,2.9,100,7,https://www.ratemyprofessors.com/professor/2882091
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDk2ODE5,3096819,Kevin,Slye,Biology,5,1,100,1,https://www.ratemyprofessors.com/professor/3096819
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODkzODk4,2893898,Dustin,Hemphill,Physics,4.7,3,100,3,https://www.ratemyprofessors.com/professor/2893898
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDY1NDAy,3065402,Lauren,Liebe,Computer Science,5,2,100,3,https://www.ratemyprofessors.com/professor/3065402
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODMyNjk5,2832699,Jay,George,Mathematics,3.1,3.3,57.1429,7,https://www.ratemyprofessors.com/professor/2832699
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTAwMzMx,3100331,Amy,Lesuer,Nursing,5,3,100,2,https://www.ratemyprofessors.com/professor/3100331
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTAwMjU3,3100257,George,Looney,English,4,2,100,1,https://www.ratemyprofessors.com/professor/3100257
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDk1Njg0,3095684,David,Kahl,Communication,4.7,1.7,100,3,https://www.ratemyprofessors.com/professor/3095684
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDk1Njgx,3095681,Carolyn,Gol(d),Business,1,2,0,1,https://www.ratemyprofessors.com/professor/3095681
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDY2NzAy,3066702,Paul,Becker,Mathematics,4.5,2,100,2,https://www.ratemyprofessors.com/professor/3066702
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yNzUyMDU3,2752057,Ashley,Russell,Biology,2.8,3.5,25,4,https://www.ratemyprofessors.com/professor/2752057
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDc5MDI0,3079024,Leigh-Ann,Bedal,Humanities,2,5,0,1,https://www.ratemyprofessors.com/professor/3079024
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTc4NDU2,2978456,Erika,Edwards,Psychology,5,2,100,3,https://www.ratemyprofessors.com/professor/2978456
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDU5ODM5,3059839,Scott,Stroupe,Management,2,1,0,1,https://www.ratemyprofessors.com/professor/3059839
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTA1MDI2,2905026,Cate,Stiller,Nursing,4,3,100,1,https://www.ratemyprofessors.com/professor/2905026
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODk2OTk2,2896996,Tom,Noyes,English,5,2,100,2,https://www.ratemyprofessors.com/professor/2896996
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODY3Mzg5,2867389,Francesca,Fee,Art History,3,2,50,2,https://www.ratemyprofessors.com/professor/2867389
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yNzc2MTg5,2776189,Allison,Griesmer,Psychology,1,1,0,1,https://www.ratemyprofessors.com/professor/2776189
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yNzI5Mjk1,2729295,Ross,Zambanini,Business,5,4,100,2,https://www.ratemyprofessors.com/professor/2729295
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDcwNTAz,3070503,Bwth,Last,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/3070503
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTU0MzI4,3154328,Tiffany,Petricini,Communication,0,0,-1,0,https://www.ratemyprofessors.com/professor/3154328
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTk3MDk4,2997098,Daniel ,Schank,Art History,0,0,-1,0,https://www.ratemyprofessors.com/professor/2997098
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yODYwNTU0,2860554,Sherri,Mason,Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2860554
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDU5MTY3,3059167,Zhengran,He,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/3059167
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDY0MDk3,3064097,Shahid ,Hussain ,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/3064097
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTU0NTkz,3154593,Nick,Chiappazzi,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/3154593
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTI3NzM1,3127735,Xuechen,Gao,Finance,0,0,-1,0,https://www.ratemyprofessors.com/professor/3127735
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDM2MDYy,3036062,Gabe,Kramer,Mathematics,0,0,-1,0,https://www.ratemyprofessors.com/professor/3036062
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDA1MDY5,3005069,Josh,Lutz,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/3005069
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTc3ODA5,2977809,Mohammad,Rasouli,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/2977809
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTQ3Mjkz,3147293,Xiaoshi,Zhang,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/3147293
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTM2NDI4,3136428,Mike,Naber,Geology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3136428
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTUyNDY2,3152466,Denise,Pekelnicky,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3152466
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDkzNTU5,3093559,Erika,Berlin,Social Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3093559
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDg3MzU3,3087357,David,Dieteman,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3087357
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDYwNTgy,3060582,Thomas ,Vogt,Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3060582
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTYyODQ0,2962844,Zachary,Williams,Accounting,0,0,-1,0,https://www.ratemyprofessors.com/professor/2962844
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDg3OTY0,3087964,Kevin,Syle,Biology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3087964
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDg3NjU5,3087659,Robert,Speel,Political Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3087659
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDcyOTA1,3072905,Gregory,Adams,Mathematics,0,0,-1,0,https://www.ratemyprofessors.com/professor/3072905
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDYwNTgx,3060581,john ,Trucilla,Political Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3060581
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yNzg1NDY3,2785467,James,Henderson,Mathematics,0,0,-1,0,https://www.ratemyprofessors.com/professor/2785467
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTY4MTY2,2968166,Marie,Angelini,Chemistry,0,0,-1,0,https://www.ratemyprofessors.com/professor/2968166
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTM5MDI4,3139028,Teri,Sinnott,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3139028
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDA1NTM4,3005538,Jennifer,Wallace,Physical Education,0,0,-1,0,https://www.ratemyprofessors.com/professor/3005538
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0yOTkyNTc2,2992576,Babajide ,Osatuyi,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2992576
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDAxMzY3,3001367,Meghan ,Easter,Sociology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3001367
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTI1MzI0,3125324,Joshua,Hussey,Graphic Arts,0,0,-1,0,https://www.ratemyprofessors.com/professor/3125324
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMTIwNTI0,3120524,Erica,Rice,Education,0,0,-1,0,https://www.ratemyprofessors.com/professor/3120524
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDYyMjk0,3062294,Richard ,Gosnell ,Physics,0,0,-1,0,https://www.ratemyprofessors.com/professor/3062294
+,Pennsylvania State University - Behrend,U2Nob29sLTEzOTc2,PA,VGVhY2hlci0zMDM0OTg5,3034989,Eric,Robbins,Finance,0,0,-1,0,https://www.ratemyprofessors.com/professor/3034989

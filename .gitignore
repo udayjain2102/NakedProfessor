@@ -26,3 +26,9 @@ professor_profiles.cpython-*.pyc
 rankings.cpython-*.pyc
 rmp_client.cpython-*.pyc
 syllabus_parser.cpython-*.pyc
+
+# ignore local database backups
+professors.db copy
+
+# ignore Vite build output
+frontend/dist/
