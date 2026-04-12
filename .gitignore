@@ -16,7 +16,9 @@ yarn-error.log*
 .DS_Store
 coverage/
 .env
-.env.*
+.env.local
+.env.*.local
+!.env.example
 __init__.cpython-*.pyc
 __main__.cpython-*.pyc
 app.cpython-*.pyc
@@ -32,3 +34,8 @@ professors.db copy
 
 # ignore Vite build output
 frontend/dist/
+
+# scratch / backup UI
+frontend/src/App_new.jsx
+frontend/src/components/*_old.jsx
+frontend/src/components/PlanScreen_new.jsx

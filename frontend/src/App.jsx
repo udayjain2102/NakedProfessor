@@ -1,10 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
-
-const MODEL_OPTIONS = [
-  { value: "gpt-4o-mini", label: "gpt-4o-mini (Fast)" },
-  { value: "gpt-4.1-mini", label: "gpt-4.1-mini (Balanced)" },
-  { value: "gpt-4.1", label: "gpt-4.1 (Higher quality)" }
-];
+import RealityCheckScreen from "./components/RealityCheckScreen";
+import GamePlanScreen from "./components/GamePlanScreen";
+import ExecutionHubScreen from "./components/ExecutionHubScreen";
+import { deriveProfile } from "./lib/profileDeriver";
+import { getFullIntel } from "./lib/survivalIntel";
 
 function parseCSV(text) {
   const lines = text.trim().split("\n");
@@ -18,269 +17,430 @@ function parseCSV(text) {
   });
 }
 
-async function callOpenAI(apiKey, model, prompt) {
-  const response = await fetch("https://api.openai.com/v1/responses", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`
-    },
-    body: JSON.stringify({
-      model,
-      input: [{ role: "user", content: prompt }],
-      max_output_tokens: 900
-    })
-  });
+function filterProfessors(professors, query) {
+  const q = query.toLowerCase().trim();
+  if (!q) return professors.slice(0, 14);
+  return professors
+    .filter((p) =>
+      `${p.professor_first} ${p.professor_last} ${p.department}`
+        .toLowerCase()
+        .includes(q)
+    )
+    .slice(0, 14);
+}
 
-  if (!response.ok) {
-    const error = await response.text();
-    throw new Error(error || "OpenAI request failed");
+/** Merge CSV schools with national rankings list for search. */
+function buildSchoolOptions(professors, topColleges) {
+  const map = new Map();
+  for (const p of professors) {
+    const n = (p.school_name || "").trim();
+    if (!n) continue;
+    if (!map.has(n)) {
+      map.set(n, { name: n, inDataset: true, professorCount: 0 });
+    }
+    map.get(n).professorCount += 1;
   }
-
-  const data = await response.json();
-  return data.output_text ||
-    data.output?.map((item) => item.content?.map((block) => block.text).join(""))?.join("\n") ||
-    "";
+  if (Array.isArray(topColleges)) {
+    for (const c of topColleges) {
+      const n = c.name;
+      if (!n) continue;
+      if (map.has(n)) {
+        const e = map.get(n);
+        e.state = c.state;
+        e.rank = c.rank;
+      } else {
+        map.set(n, {
+          name: n,
+          state: c.state,
+          rank: c.rank,
+          inDataset: false,
+          professorCount: 0,
+        });
+      }
+    }
+  }
+  return Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name));
 }
 
-function profileSummary(professor) {
-  return `${professor.professor_first} ${professor.professor_last} — ${professor.department} · ${professor.avg_rating || "N/A"}⭐ · difficulty ${professor.avg_difficulty || "N/A"}`;
+function filterSchoolOptions(options, query, limit = 18) {
+  const s = query.toLowerCase().trim();
+  if (!s) return options.slice(0, limit);
+  return options
+    .filter(
+      (o) =>
+        o.name.toLowerCase().includes(s) ||
+        (o.state && String(o.state).toLowerCase().includes(s))
+    )
+    .slice(0, limit);
 }
+
+const LOADING_LINES = [
+  "Analyzing professor patterns…",
+  "Cross-checking workload signals…",
+  "Calibrating grade scenarios…",
+];
+
+const MODES = [
+  { id: "reality", label: "Reality Check", step: "01" },
+  { id: "gameplan", label: "Game Plan", step: "02" },
+  { id: "execution", label: "Execution Hub", step: "03" },
+];
 
 export default function App() {
   const [professors, setProfessors] = useState([]);
-  const [school, setSchool] = useState("Pennsylvania State University - Behrend");
-  const [selectedProfessorId, setSelectedProfessorId] = useState("");
+  const [topColleges, setTopColleges] = useState([]);
+  const [collegeSearch, setCollegeSearch] = useState("");
+  const [selectedSchool, setSelectedSchool] = useState(null);
+  const [search, setSearch] = useState("");
+  const [selectedId, setSelectedId] = useState(null);
+  const [courseTitle, setCourseTitle] = useState("");
   const [syllabus, setSyllabus] = useState("");
-  const [openaiKey, setOpenaiKey] = useState("");
-  const [model, setModel] = useState("gpt-4o-mini");
-  const [plan, setPlan] = useState("");
-  const [quiz, setQuiz] = useState("");
-  const [status, setStatus] = useState("");
-  const [error, setError] = useState("");
+  const [materialsNote, setMaterialsNote] = useState("");
+  const [planText, setPlanText] = useState("");
   const [loading, setLoading] = useState(false);
+  const [loadingIdx, setLoadingIdx] = useState(0);
+  const [error, setError] = useState("");
+  const [mode, setMode] = useState("reality");
+  const [studyHours, setStudyHours] = useState(9);
+  const [planReady, setPlanReady] = useState(false);
+  const [insightVisible, setInsightVisible] = useState(true);
 
   useEffect(() => {
-    fetch("/data/behrend_professors.csv")
-      .then((res) => res.text())
-      .then((text) => {
+    let cancelled = false;
+    async function load() {
+      try {
+        const csvRes = await fetch("/data/behrend_professors.csv");
+        const text = await csvRes.text();
+        if (cancelled) return;
         const parsed = parseCSV(text);
         setProfessors(parsed);
-        if (parsed.length > 0) {
-          setSelectedProfessorId(parsed[0].professor_id);
+        if (parsed.length > 0) setSelectedId(parsed[0].professor_id);
+
+        try {
+          const colRes = await fetch("/data/top_colleges.json");
+          const json = await colRes.json();
+          if (!cancelled && Array.isArray(json)) setTopColleges(json);
+        } catch {
+          /* rankings optional */
         }
-      })
-      .catch((err) => {
-        console.error(err);
-        setError("Unable to load professor data.");
-      });
+      } catch {
+        if (!cancelled) setError("Unable to load professor data.");
+      }
+    }
+    load();
+    return () => {
+      cancelled = true;
+    };
   }, []);
 
-  const schools = useMemo(
-    () => Array.from(new Set(professors.map((prof) => prof.school_name))).sort(),
-    [professors]
-  );
-
-  const filteredProfessors = useMemo(
-    () => professors.filter((prof) => prof.school_name === school),
-    [professors, school]
-  );
+  useEffect(() => {
+    if (!loading) return;
+    const t = setInterval(() => {
+      setLoadingIdx((i) => (i + 1) % LOADING_LINES.length);
+    }, 900);
+    return () => clearInterval(t);
+  }, [loading]);
 
   const selectedProfessor = useMemo(
-    () => filteredProfessors.find((prof) => prof.professor_id === selectedProfessorId) || filteredProfessors[0],
-    [filteredProfessors, selectedProfessorId]
+    () => professors.find((p) => p.professor_id === selectedId),
+    [professors, selectedId]
   );
 
-  async function generate(type) {
-    if (!openaiKey) {
-      setError("Enter your OpenAI API key to generate content.");
-      return;
-    }
+  const profile = useMemo(
+    () => (selectedProfessor ? deriveProfile(selectedProfessor) : null),
+    [selectedProfessor]
+  );
+
+  const intel = useMemo(
+    () => (selectedProfessor ? getFullIntel(selectedProfessor) : null),
+    [selectedProfessor]
+  );
+
+  const schoolOptions = useMemo(
+    () => buildSchoolOptions(professors, topColleges),
+    [professors, topColleges]
+  );
+
+  const filteredCollegeOptions = useMemo(
+    () => filterSchoolOptions(schoolOptions, collegeSearch),
+    [schoolOptions, collegeSearch]
+  );
+
+  const professorPool = useMemo(() => {
+    if (!selectedSchool) return professors;
+    if (selectedSchool.inDataset === false) return [];
+    return professors.filter((p) => p.school_name === selectedSchool.name);
+  }, [professors, selectedSchool]);
+
+  const filteredProfessors = useMemo(
+    () => filterProfessors(professorPool, search),
+    [professorPool, search]
+  );
+
+  function handleSelectSchool(option) {
+    setSelectedSchool(option);
+    setCollegeSearch("");
+    const pool =
+      option.inDataset === false
+        ? []
+        : professors.filter((p) => p.school_name === option.name);
+    if (pool.length) setSelectedId(pool[0].professor_id);
+    else setSelectedId(null);
+  }
+
+  function handleClearSchool() {
+    setSelectedSchool(null);
+    setCollegeSearch("");
+    if (professors.length) setSelectedId(professors[0].professor_id);
+  }
+
+  async function handleGenerateStrategy() {
     if (!selectedProfessor) {
       setError("Select a professor first.");
       return;
     }
     if (!syllabus.trim()) {
-      setError("Paste the syllabus or course description before generating.");
+      setError("Paste your syllabus (grading + dates) to generate a plan.");
       return;
     }
-
     setError("");
-    setStatus(`${type === "plan" ? "Generating plan" : "Generating quiz"}…`);
     setLoading(true);
 
-    const profileBlock = `Professor: ${selectedProfessor.professor_first} ${selectedProfessor.professor_last}\nDepartment: ${selectedProfessor.department}\nRating: ${selectedProfessor.avg_rating}\nDifficulty: ${selectedProfessor.avg_difficulty}\nWould take again: ${selectedProfessor.would_take_again_percent}%\nReviews: ${selectedProfessor.num_ratings}`;
-    const prompt =
-      type === "plan"
-        ? `You are an academic coach. Using the professor profile below and the syllabus, create a tailored study plan covering expectation alignment, weekly cadence, communication strategy, exam/project prep, and risk mitigations.\n\nProfessor profile:\n${profileBlock}\n\nSyllabus:\n${syllabus}`
-        : `You are an academic coach. Create a 5-question study quiz for this professor. Mix multiple choice, short answer, and scenario questions. Provide answers and quick tips tied to the professor profile below.\n\nProfessor profile:\n${profileBlock}\n\nSyllabus:\n${syllabus}`;
+    await new Promise((r) => setTimeout(r, 1100));
 
-    try {
-      const result = await callOpenAI(openaiKey, model, prompt);
-      if (type === "plan") {
-        setPlan(result);
-      } else {
-        setQuiz(result);
-      }
-      setStatus("Ready");
-    } catch (err) {
-      console.error(err);
-      setError(err.message || "Generation failed.");
-      setStatus("");
-    } finally {
-      setLoading(false);
-    }
+    const profName = selectedProfessor.professor_first;
+    const dept = selectedProfessor.department;
+    const g = intel?.profile?.workload || "medium";
+
+    const body = `## Survival plan — ${profName} (${dept})
+
+### Verdict
+Treat this as a **${g} workload** class. Your playbook is tuned to clarity/workload signals — not generic study tips.
+
+### Weekly
+- **Mon–Tue**: Active recall on lecture artifacts (not passive re-reads).
+- **Wed**: Problem sets + error log (same mistake twice = stop and fix root cause).
+- **Thu–Sun**: Timed segment + review mistakes under test conditions.
+
+### Before each exam
+Two full-length mocks, sleep-protected. If past exams exist, match format exactly.
+
+### What to ignore
+Low-yield extras unless syllabus weights them. Protect deep-work blocks weekly — no negotiation.
+
+---
+Generated locally (demo). Connect API for richer synthesis.`;
+
+    setPlanText(body);
+    setPlanReady(true);
+    setLoading(false);
+    setMode("execution");
+  }
+
+  function goMode(next) {
+    setInsightVisible(false);
+    setMode(next);
+    requestAnimationFrame(() => {
+      setInsightVisible(true);
+    });
   }
 
   return (
-    <main className="app-shell">
-      <section className="poster-stage">
-        <div className="poster-copy">
-          <div className="poster-tag-row">
-            <span className="poster-chip">Streamlit replacement</span>
-            <span className="poster-chip">Professor planner</span>
-            <span className="poster-chip">Penn State Behrend</span>
-          </div>
-
-          <div className="brand-lockup">
-            <div className="brand-mark">RMP</div>
-            <div>
-              <div className="eyebrow">Professor-aware study planning</div>
-              <h1>Behrend study coach</h1>
-            </div>
-          </div>
-
-          <p className="poster-headline">Turn syllabus detail and RateMyProfessors signals into a plan, quiz, and professor strategy.</p>
-          <p className="poster-subhead">Select a professor, paste the syllabus, and generate professor-aware guidance directly in the browser.</p>
-
-          <div className="poster-panels">
-            <article className="poster-panel">
-              <span className="section-label">Professor</span>
-              <strong>{selectedProfessor ? profileSummary(selectedProfessor) : "Loading professors…"}</strong>
-              <p>{selectedProfessor ? selectedProfessor.profile_url : "No professor selected."}</p>
-            </article>
-            <article className="poster-panel poster-panel-light">
-              <span className="section-label">Status</span>
-              <strong>{loading ? "Running" : status || "Ready"}</strong>
-              <p>{error || "Use your OpenAI key, select a professor, and generate output."}</p>
-            </article>
+    <div className="np-app">
+      <aside className="np-sidebar">
+        <div className="np-brand">
+          <div className="np-brand-mark">NP</div>
+          <div>
+            <div className="np-brand-name">NakedProfessor</div>
+            <div className="np-brand-tag">Class survival system</div>
           </div>
         </div>
 
-        <div className="phone-stage">
-          <div className="phone-shell">
-            <div className="phone-notch" />
-            <div className="phone-screen">
-              <div className="screen-header" style={{ paddingTop: "36px" }}>
-                <strong>Streamlit Study Planner</strong>
-                <p>Use Behrend professor ratings and syllabus input to generate tailored student guidance.</p>
-              </div>
-              <div className="screen-body" style={{ padding: "20px" }}>
-                <label className="section-label">OpenAI API key</label>
-                <input
-                  type="password"
-                  value={openaiKey}
-                  onChange={(event) => setOpenaiKey(event.target.value)}
-                  placeholder="sk-..."
-                  style={{ width: "100%", padding: "14px", borderRadius: "18px", border: "1px solid var(--line)", marginBottom: "16px" }}
-                />
-
-                <label className="section-label">Professor</label>
-                <select
-                  value={school}
-                  onChange={(event) => setSchool(event.target.value)}
-                  style={{ width: "100%", padding: "14px", borderRadius: "18px", border: "1px solid var(--line)", marginBottom: "12px" }}
-                >
-                  {schools.map((name) => (
-                    <option key={name} value={name}>
-                      {name}
-                    </option>
-                  ))}
-                </select>
-                <select
-                  value={selectedProfessorId}
-                  onChange={(event) => setSelectedProfessorId(event.target.value)}
-                  style={{ width: "100%", padding: "14px", borderRadius: "18px", border: "1px solid var(--line)", marginBottom: "20px" }}
-                >
-                  {filteredProfessors.map((prof) => (
-                    <option key={prof.professor_id} value={prof.professor_id}>
-                      {prof.professor_first} {prof.professor_last} — {prof.department}
-                    </option>
-                  ))}
-                </select>
-
-                <label className="section-label">Syllabus / Course notes</label>
-                <textarea
-                  value={syllabus}
-                  onChange={(event) => setSyllabus(event.target.value)}
-                  placeholder="Paste the syllabus or major assignment list here..."
-                  rows={10}
-                  style={{ width: "100%", padding: "16px", borderRadius: "24px", border: "1px solid var(--line)", resize: "vertical", marginBottom: "18px" }}
-                />
-
-                <label className="section-label">LLM model</label>
-                <select
-                  value={model}
-                  onChange={(event) => setModel(event.target.value)}
-                  style={{ width: "100%", padding: "14px", borderRadius: "18px", border: "1px solid var(--line)", marginBottom: "20px" }}
-                >
-                  {MODEL_OPTIONS.map((option) => (
-                    <option key={option.value} value={option.value}>
-                      {option.label}
-                    </option>
-                  ))}
-                </select>
-
-                <div style={{ display: "flex", gap: "12px", flexWrap: "wrap", marginBottom: "20px" }}>
-                  <button
-                    onClick={() => generate("plan")}
-                    disabled={loading}
-                    style={{ flex: 1, background: "#111", color: "#fff", borderRadius: "18px", padding: "14px" }}
-                  >
-                    Generate plan
-                  </button>
-                  <button
-                    onClick={() => generate("quiz")}
-                    disabled={loading}
-                    style={{ flex: 1, background: "#f7f06d", color: "#111", borderRadius: "18px", padding: "14px" }}
-                  >
-                    Generate quiz
-                  </button>
-                </div>
-
-                <div style={{ marginBottom: "18px" }}>
-                  <span className="section-label">Professor details</span>
-                  <div style={{ padding: "18px", borderRadius: "24px", background: "rgba(255,255,255,0.92)", border: "1px solid var(--line)", marginTop: "10px" }}>
-                    {selectedProfessor ? (
-                      <>
-                        <p><strong>{selectedProfessor.professor_first} {selectedProfessor.professor_last}</strong></p>
-                        <p>{selectedProfessor.department}</p>
-                        <p>{selectedProfessor.avg_rating} ⭐ · difficulty {selectedProfessor.avg_difficulty} · {selectedProfessor.would_take_again_percent}% would take again</p>
-                        <a href={selectedProfessor.profile_url} target="_blank" rel="noreferrer">RateMyProfessors profile</a>
-                      </>
-                    ) : (
-                      <p>Loading professor details…</p>
-                    )}
-                  </div>
-                </div>
-
-                {plan && (
-                  <article className="poster-panel" style={{ marginBottom: "18px" }}>
-                    <span className="section-label">Generated plan</span>
-                    <pre style={{ whiteSpace: "pre-wrap", margin: 0 }}>{plan}</pre>
-                  </article>
-                )}
-                {quiz && (
-                  <article className="poster-panel poster-panel-light">
-                    <span className="section-label">Generated quiz</span>
-                    <pre style={{ whiteSpace: "pre-wrap", margin: 0 }}>{quiz}</pre>
-                  </article>
-                )}
-              </div>
-            </div>
+        <label className="np-label" htmlFor="np-college-search">
+          College
+        </label>
+        <input
+          id="np-college-search"
+          className="np-input"
+          placeholder="Search college or state…"
+          value={collegeSearch}
+          onChange={(e) => setCollegeSearch(e.target.value)}
+          autoComplete="off"
+        />
+        {selectedSchool && (
+          <div className="np-school-picked">
+            <span className="np-school-picked-name">{selectedSchool.name}</span>
+            {!selectedSchool.inDataset && (
+              <span className="np-school-badge">No roster in dataset</span>
+            )}
+            <button
+              type="button"
+              className="np-school-clear"
+              onClick={handleClearSchool}
+              aria-label="Clear college"
+            >
+              ×
+            </button>
           </div>
+        )}
+        <div className="np-college-list">
+          {!selectedSchool &&
+            filteredCollegeOptions.map((opt) => (
+              <button
+                key={opt.name}
+                type="button"
+                className="np-college-row"
+                onClick={() => handleSelectSchool(opt)}
+              >
+                <span className="np-college-name">{opt.name}</span>
+                <span className="np-college-meta">
+                  {opt.state ? `${opt.state}` : ""}
+                  {opt.rank != null ? ` · #${opt.rank}` : ""}
+                  {opt.inDataset && opt.professorCount > 0
+                    ? ` · ${opt.professorCount} profs`
+                    : ""}
+                </span>
+              </button>
+            ))}
         </div>
-      </section>
-    </main>
+
+        <label className="np-label" htmlFor="np-search">
+          Professor
+        </label>
+        <input
+          id="np-search"
+          className="np-input"
+          placeholder="Search name or department…"
+          value={search}
+          onChange={(e) => setSearch(e.target.value)}
+        />
+        {selectedSchool?.inDataset === false && (
+          <p className="np-school-hint">
+            This college isn’t in the loaded professor roster — pick a school with professors or clear to browse all.
+          </p>
+        )}
+
+        <div className="np-prof-list">
+          {filteredProfessors.map((p) => (
+            <button
+              key={p.professor_id}
+              type="button"
+              className={`np-prof ${p.professor_id === selectedId ? "np-prof-active" : ""}`}
+              onClick={() => setSelectedId(p.professor_id)}
+            >
+              <span>
+                {p.professor_first} {p.professor_last}
+                <small>{p.department}</small>
+              </span>
+              {p.avg_rating && <span className="np-prof-rating">{p.avg_rating}</span>}
+            </button>
+          ))}
+        </div>
+
+        {selectedProfessor && (
+          <div className="np-side-card">
+            <div className="np-eyebrow">Locked context</div>
+            <strong>
+              {selectedProfessor.professor_first} {selectedProfessor.professor_last}
+            </strong>
+            <p className="np-fineprint">
+              {selectedProfessor.school_name && (
+                <>
+                  {selectedProfessor.school_name}
+                  <br />
+                </>
+              )}
+              {selectedProfessor.department}
+              {selectedProfessor.avg_rating &&
+                ` · ${selectedProfessor.avg_rating} avg · diff ${selectedProfessor.avg_difficulty}`}
+            </p>
+          </div>
+        )}
+
+        {error && <p className="np-error">{error}</p>}
+      </aside>
+
+      <div className="np-main">
+        <header className="np-topbar">
+          <div className="np-mode-rail" role="tablist" aria-label="Modes">
+            {MODES.map((m) => (
+              <button
+                key={m.id}
+                type="button"
+                role="tab"
+                aria-selected={mode === m.id}
+                className={`np-mode-btn ${mode === m.id ? "np-mode-active" : ""}`}
+                onClick={() => goMode(m.id)}
+              >
+                <span className="np-mode-step">{m.step}</span>
+                {m.label}
+              </button>
+            ))}
+          </div>
+          <div className="np-topbar-actions">
+            <button
+              type="button"
+              className="np-btn np-btn-ghost"
+              onClick={() => goMode("reality")}
+            >
+              Analyze professor risk
+            </button>
+            <button
+              type="button"
+              className="np-btn np-btn-secondary"
+              onClick={() => goMode("gameplan")}
+            >
+              Build game plan
+            </button>
+          </div>
+        </header>
+
+        {loading && (
+          <div className="np-loading" role="status">
+            <div className="np-loading-pulse" />
+            <p>{LOADING_LINES[loadingIdx]}</p>
+          </div>
+        )}
+
+        <div className={`np-content ${insightVisible ? "np-content-in" : ""}`}>
+          {mode === "reality" && (
+            <RealityCheckScreen
+              professor={selectedProfessor}
+              courseTitle={courseTitle}
+              intel={intel}
+              onGeneratePlan={() => goMode("gameplan")}
+            />
+          )}
+          {mode === "gameplan" && (
+            <GamePlanScreen
+              professor={selectedProfessor}
+              profile={profile}
+              syllabus={syllabus}
+              courseTitle={courseTitle}
+              onSyllabusChange={setSyllabus}
+              onCourseTitleChange={setCourseTitle}
+              materialsNote={materialsNote}
+              onMaterialsNoteChange={setMaterialsNote}
+              onGenerate={handleGenerateStrategy}
+              loading={loading}
+              planText={planText}
+              intel={intel}
+              studyHours={studyHours}
+              onStudyHoursChange={setStudyHours}
+            />
+          )}
+          {mode === "execution" && (
+            <ExecutionHubScreen
+              professor={selectedProfessor}
+              profile={profile}
+              syllabus={syllabus}
+              studyHours={studyHours}
+              onStudyHoursChange={setStudyHours}
+              planReady={planReady}
+            />
+          )}
+        </div>
+      </div>
+    </div>
   );
 }
