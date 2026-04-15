@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono&display=swap");
 
 :root {
   --bg-primary: #0F0F0F;
@@ -1435,20 +1435,39 @@ textarea {
 
 /* ========== NakedProfessor — survival system ========== */
 :root {
-  --np-bg: #0b0f17;
-  --np-surface: #111827;
-  --np-surface-hover: #161f2e;
-  --np-line: rgba(255, 255, 255, 0.06);
-  --np-primary: #7c5cff;
-  --np-success: #22c55e;
-  --np-warning: #f59e0b;
-  --np-danger: #ef4444;
-  --np-text: #f8fafc;
-  --np-muted: #94a3b8;
+  /* Logo-driven palette: sky + ink. */
+  --np-sky: #5aa6ff;
+  --np-sky-deep: #2f7cff;
+  --np-ink: #0b0f14;
+  --np-ink-soft: rgba(11, 15, 20, 0.72);
+  --np-paper: rgba(255, 255, 255, 0.92);
+  --np-paper-strong: rgba(255, 255, 255, 0.98);
+  --np-glass: rgba(255, 255, 255, 0.76);
+  --np-line: rgba(11, 15, 20, 0.12);
+  --np-line-strong: rgba(11, 15, 20, 0.18);
+
+  --np-primary: #0b0f14;
+  --np-primary-soft: rgba(11, 15, 20, 0.12);
+  --np-accent: #1d4ed8;
+  --np-success: #16a34a;
+  --np-warning: #d97706;
+  --np-danger: #dc2626;
+
+  --np-bg: var(--np-sky);
+  --np-surface: var(--np-paper);
+  --np-surface-hover: var(--np-paper-strong);
+  --np-text: var(--np-ink);
+  --np-muted: var(--np-ink-soft);
+
+  --np-shadow: 0 20px 70px rgba(11, 15, 20, 0.26);
+  --np-shadow-soft: 0 10px 30px rgba(11, 15, 20, 0.18);
 }
 
 body {
-  background: var(--np-bg);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.35), transparent 52%),
+    radial-gradient(circle at 90% 10%, rgba(255, 255, 255, 0.22), transparent 40%),
+    linear-gradient(180deg, var(--np-sky) 0%, #5fb0ff 38%, #79c3ff 100%);
   color: var(--np-text);
 }
 
@@ -1456,18 +1475,21 @@ body {
   min-height: 100vh;
   display: flex;
   font-family: "Inter", system-ui, sans-serif;
-  background: var(--np-bg);
+  background: transparent;
   color: var(--np-text);
 }
 
 .np-sidebar {
   width: min(100%, 300px);
-  border-right: 1px solid var(--np-line);
+  border-right: 1px solid var(--np-line-strong);
   padding: 24px 20px 32px;
   display: flex;
   flex-direction: column;
   gap: 14px;
-  background: linear-gradient(180deg, #0b0f17 0%, #0a0d14 100%);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.55), transparent 60%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0.62) 100%);
+  backdrop-filter: blur(10px);
 }
 
 .np-brand {
@@ -1481,12 +1503,17 @@ body {
   width: 40px;
   height: 40px;
   border-radius: 10px;
-  display: grid;
-  place-items: center;
-  font-weight: 700;
-  font-size: 14px;
-  background: linear-gradient(135deg, var(--np-primary), #5b21b6);
-  color: #fff;
+  overflow: hidden;
+  display: block;
+  background: #fff;
+  box-shadow: var(--np-shadow-soft);
+}
+
+.np-brand-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .np-brand-name {
@@ -1510,12 +1537,22 @@ body {
 .np-input,
 .np-textarea {
   width: 100%;
-  border: 1px solid var(--np-line);
+  border: 1px solid var(--np-line-strong);
   border-radius: 10px;
   padding: 10px 12px;
-  background: var(--np-surface);
+  background: rgba(255, 255, 255, 0.78);
   color: var(--np-text);
   font-size: 14px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.25) inset;
+}
+
+.np-input:focus,
+.np-textarea:focus {
+  outline: none;
+  border-color: rgba(29, 78, 216, 0.55);
+  box-shadow:
+    0 0 0 4px rgba(29, 78, 216, 0.16),
+    0 1px 0 rgba(255, 255, 255, 0.25) inset;
 }
 
 .np-textarea {
@@ -1553,8 +1590,8 @@ body {
 }
 
 .np-college-row:hover {
-  background: var(--np-surface-hover);
-  border-color: rgba(124, 92, 255, 0.25);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(29, 78, 216, 0.3);
 }
 
 .np-college-name {
@@ -1576,8 +1613,8 @@ body {
   padding: 8px 10px;
   margin-bottom: 8px;
   border-radius: 10px;
-  border: 1px solid rgba(124, 92, 255, 0.35);
-  background: rgba(124, 92, 255, 0.08);
+  border: 1px solid rgba(11, 15, 20, 0.18);
+  background: rgba(255, 255, 255, 0.72);
   font-size: 12px;
 }
 
@@ -1650,12 +1687,12 @@ body {
 }
 
 .np-prof:hover {
-  background: var(--np-surface-hover);
+  background: rgba(255, 255, 255, 0.72);
 }
 
 .np-prof-active {
-  border-color: rgba(124, 92, 255, 0.45);
-  background: rgba(124, 92, 255, 0.08);
+  border-color: rgba(11, 15, 20, 0.32);
+  background: rgba(255, 255, 255, 0.88);
 }
 
 .np-prof-rating {
@@ -1668,7 +1705,8 @@ body {
   padding: 14px;
   border-radius: 12px;
   border: 1px solid var(--np-line);
-  background: var(--np-surface);
+  background: rgba(255, 255, 255, 0.78);
+  box-shadow: var(--np-shadow-soft);
 }
 
 .np-error {
@@ -1691,9 +1729,9 @@ body {
   justify-content: space-between;
   gap: 12px;
   padding: 16px 24px;
-  border-bottom: 1px solid var(--np-line);
-  background: rgba(17, 24, 39, 0.65);
-  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(11, 15, 20, 0.18);
+  background: rgba(255, 255, 255, 0.62);
+  backdrop-filter: blur(14px);
 }
 
 .np-mode-rail {
@@ -1709,8 +1747,8 @@ body {
   padding: 10px 14px;
   border-radius: 999px;
   border: 1px solid var(--np-line);
-  background: transparent;
-  color: var(--np-muted);
+  background: rgba(255, 255, 255, 0.5);
+  color: rgba(11, 15, 20, 0.7);
   font-size: 13px;
   font-weight: 600;
   cursor: pointer;
@@ -1725,8 +1763,8 @@ body {
 
 .np-mode-active {
   color: #fff;
-  border-color: rgba(124, 92, 255, 0.55);
-  background: rgba(124, 92, 255, 0.12);
+  border-color: rgba(11, 15, 20, 0.9);
+  background: rgba(11, 15, 20, 0.92);
 }
 
 .np-topbar-actions {
@@ -2046,8 +2084,12 @@ body {
 .np-insight-body p {
   margin: 0 0 8px;
   font-size: 13px;
-  color: #cbd5e1;
+  color: rgba(11, 15, 20, 0.95);
   line-height: 1.5;
+}
+
+.np-insight-body strong {
+  color: #0b0f14;
 }
 
 .np-stagger-item {
