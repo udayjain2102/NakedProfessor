@@ -1,9 +1,10 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import RealityCheckScreen from "./components/RealityCheckScreen";
 import GamePlanScreen from "./components/GamePlanScreen";
 import ExecutionHubScreen from "./components/ExecutionHubScreen";
 import { deriveProfile } from "./lib/profileDeriver";
 import { getFullIntel } from "./lib/survivalIntel";
+import brandLogo from "./assets/nakedprofessor-logo.png";
 
 function parseCSV(text) {
   const lines = text.trim().split("\n");
@@ -104,6 +105,7 @@ export default function App() {
   const [studyHours, setStudyHours] = useState(9);
   const [planReady, setPlanReady] = useState(false);
   const [insightVisible, setInsightVisible] = useState(true);
+  const rafIdRef = useRef(null);
 
   useEffect(() => {
     let cancelled = false;
@@ -130,6 +132,15 @@ export default function App() {
     load();
     return () => {
       cancelled = true;
+    };
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (rafIdRef.current != null && typeof cancelAnimationFrame !== "undefined") {
+        cancelAnimationFrame(rafIdRef.current);
+      }
+      rafIdRef.current = null;
     };
   }, []);
 
@@ -240,7 +251,17 @@ Generated locally (demo). Connect API for richer synthesis.`;
   function goMode(next) {
     setInsightVisible(false);
     setMode(next);
-    requestAnimationFrame(() => {
+    if (rafIdRef.current != null && typeof cancelAnimationFrame !== "undefined") {
+      cancelAnimationFrame(rafIdRef.current);
+      rafIdRef.current = null;
+    }
+    if (typeof requestAnimationFrame === "undefined") {
+      rafIdRef.current = null;
+      setInsightVisible(true);
+      return;
+    }
+    rafIdRef.current = requestAnimationFrame(() => {
+      rafIdRef.current = null;
       setInsightVisible(true);
     });
   }
@@ -249,7 +270,9 @@ Generated locally (demo). Connect API for richer synthesis.`;
     <div className="np-app">
       <aside className="np-sidebar">
         <div className="np-brand">
-          <div className="np-brand-mark">NP</div>
+          <div className="np-brand-mark">
+            <img src={brandLogo} alt="NakedProfessor logo" className="np-brand-logo" />
+          </div>
           <div>
             <div className="np-brand-name">NakedProfessor</div>
             <div className="np-brand-tag">Class survival system</div>
