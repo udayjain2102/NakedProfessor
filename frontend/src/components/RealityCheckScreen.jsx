@@ -30,6 +30,19 @@ function InsightModule({ metric, index }) {
   );
 }
 
+function PriorityCard({ metric, index }) {
+  return (
+    <article
+      className="np-priority-card np-stagger-item"
+      style={{ animationDelay: `${50 + index * 80}ms` }}
+    >
+      <span className="np-eyebrow">{metric.label}</span>
+      <strong className="np-priority-value">{metric.percentileLabel}</strong>
+      <p>{metric.action}</p>
+    </article>
+  );
+}
+
 function SurvivalGauge({ survival }) {
   const gradId = useId();
   const mid = survival.mid;
@@ -42,7 +55,7 @@ function SurvivalGauge({ survival }) {
           <path
             d="M 12 60 A 48 48 0 0 1 108 60"
             fill="none"
-            stroke="rgba(255,255,255,0.08)"
+            stroke="rgba(0,0,0,0.1)"
             strokeWidth="10"
             strokeLinecap="round"
           />
@@ -56,8 +69,8 @@ function SurvivalGauge({ survival }) {
           />
           <defs>
             <linearGradient id={gradId} x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#7C5CFF" />
-              <stop offset="100%" stopColor="#22C55E" />
+              <stop offset="0%" stopColor="#7A947A" />
+              <stop offset="100%" stopColor="#0a0a0a" />
             </linearGradient>
           </defs>
         </svg>
@@ -90,29 +103,57 @@ export default function RealityCheckScreen({
 
   const { risk, tldr, survival, metrics, failureStack, scenarios, predictions } =
     intel;
+  const leadSignals = metrics.slice(0, 3);
 
   return (
     <div className="np-screen np-screen-reality">
-      <header className="np-hero np-stagger-item" style={{ animationDelay: "0ms" }}>
-        <div className="np-hero-kicker">Professor snapshot</div>
-        <h1 className="np-hero-title">
-          {professor.professor_first} {professor.professor_last}
-        </h1>
-        <p className="np-hero-course">
-          {courseTitle?.trim() || "Course title (set in Game Plan)"}
-        </p>
-        <p className="np-hero-tldr">{tldr}</p>
-        <div className="np-risk-row">
-          <span
-            className={`np-risk-badge np-risk-${risk.level.toLowerCase()}`}
-          >
-            {risk.level} risk
-          </span>
-          <p className="np-risk-copy">{risk.explanation}</p>
+      <header className="np-poster-hero np-stagger-item" style={{ animationDelay: "0ms" }}>
+        <div className="np-poster-main">
+          <div className="np-hero-kicker">01 / Poster readout</div>
+          <h1 className="np-hero-title">
+            {professor.professor_first} {professor.professor_last}
+          </h1>
+          <p className="np-hero-course">
+            {courseTitle?.trim() || "Set course name in Game Plan"}
+          </p>
+          <p className="np-hero-tldr">{tldr}</p>
+          <div className="np-risk-row">
+            <span
+              className={`np-risk-badge np-risk-${risk.level.toLowerCase()}`}
+            >
+              {risk.level} risk
+            </span>
+            <p className="np-risk-copy">{risk.explanation}</p>
+          </div>
+        </div>
+
+        <div className="np-side-stack">
+          <SurvivalGauge survival={survival} />
+          <article className="np-priority-card">
+            <span className="np-eyebrow">Immediate move</span>
+            <strong className="np-priority-value">
+              {risk.level === "High"
+                ? "Front-load effort"
+                : risk.level === "Medium"
+                  ? "Stay ahead weekly"
+                  : "Keep consistency"}
+            </strong>
+            <p>{leadSignals[0]?.action}</p>
+          </article>
         </div>
       </header>
 
-      <SurvivalGauge survival={survival} />
+      <section className="np-section">
+        <h2 className="np-section-title">Start here</h2>
+        <p className="np-section-sub">
+          These three signals define the class fastest and should shape your first two weeks.
+        </p>
+        <div className="np-priority-grid">
+          {leadSignals.map((metric, index) => (
+            <PriorityCard key={metric.key} metric={metric} index={index} />
+          ))}
+        </div>
+      </section>
 
       <section className="np-section">
         <h2 className="np-section-title">Signal intelligence</h2>
@@ -152,48 +193,54 @@ export default function RealityCheckScreen({
         </div>
       </section>
 
-      <section className="np-section np-predict">
-        <h2 className="np-section-title">Professor behavior predictions</h2>
-        <ul className="np-predict-list">
-          {predictions.map((p, i) => (
-            <li key={i} className="np-predict-item">
-              <p>{p.text}</p>
-              <div className="np-predict-meta">
-                <span>Confidence: {p.confidence}</span>
-                <span>If wrong: {p.ifWrong}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div className="np-dual-grid">
+        <section className="np-section np-panel np-predict">
+          <h2 className="np-section-title">Professor behavior predictions</h2>
+          <ul className="np-predict-list">
+            {predictions.map((p, i) => (
+              <li key={i} className="np-predict-item">
+                <p>{p.text}</p>
+                <div className="np-predict-meta">
+                  <span>Confidence: {p.confidence}</span>
+                  <span>If wrong: {p.ifWrong}</span>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="np-section np-decision">
-        <h2 className="np-section-title">If you take this class, what happens?</h2>
-        <div className="np-scenario-grid">
-          <div className="np-scenario">
-            <div className="np-eyebrow">{scenarios.consistent.label}</div>
-            <div className="np-scenario-grade">{scenarios.consistent.grades}</div>
-            <p>{scenarios.consistent.condition}</p>
+        <section className="np-section np-panel np-decision">
+          <h2 className="np-section-title">If you take this class, what happens?</h2>
+          <div className="np-scenario-grid">
+            <div className="np-scenario">
+              <div className="np-eyebrow">{scenarios.consistent.label}</div>
+              <div className="np-scenario-grade">{scenarios.consistent.grades}</div>
+              <p>{scenarios.consistent.condition}</p>
+            </div>
+            <div className="np-scenario">
+              <div className="np-eyebrow">{scenarios.average.label}</div>
+              <div className="np-scenario-grade">{scenarios.average.grades}</div>
+              <p>{scenarios.average.condition}</p>
+            </div>
+            <div className="np-scenario np-scenario-warn">
+              <div className="np-eyebrow">{scenarios.low.label}</div>
+              <div className="np-scenario-grade">{scenarios.low.grades}</div>
+              <p>{scenarios.low.condition}</p>
+            </div>
           </div>
-          <div className="np-scenario">
-            <div className="np-eyebrow">{scenarios.average.label}</div>
-            <div className="np-scenario-grade">{scenarios.average.grades}</div>
-            <p>{scenarios.average.condition}</p>
-          </div>
-          <div className="np-scenario np-scenario-warn">
-            <div className="np-eyebrow">{scenarios.low.label}</div>
-            <div className="np-scenario-grade">{scenarios.low.grades}</div>
-            <p>{scenarios.low.condition}</p>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <div className="np-cta-bar">
         <button type="button" className="np-btn np-btn-primary" onClick={onGeneratePlan}>
-          Generate survival plan
+          Move to Game Plan
         </button>
-        <button type="button" className="np-btn np-btn-ghost" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
-          Analyze professor risk (scroll up)
+        <button
+          type="button"
+          className="np-btn np-btn-ghost"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          Back to poster top
         </button>
       </div>
     </div>
