@@ -7,15 +7,53 @@ import { getFullIntel } from "./lib/survivalIntel";
 import brandLogo from "./assets/nakedprofessor-logo.png";
 
 function parseCSV(text) {
-  const lines = text.trim().split("\n");
-  const headers = lines[0].split(",").map((h) => h.trim());
+  const input = String(text || "").replace(/^\uFEFF/, "");
+  const lines = input.split(/\r?\n/).filter((l) => l.trim().length);
+  if (lines.length < 2) return [];
+  const headers = parseCSVRow(lines[0]).map((h) => String(h || "").trim());
   return lines.slice(1).map((line) => {
-    const values = line.split(",");
+    const values = parseCSVRow(line);
     return headers.reduce((obj, header, index) => {
-      obj[header] = values[index] ? values[index].trim() : "";
+      obj[header] = values[index] != null ? String(values[index]).trim() : "";
       return obj;
     }, {});
   });
+}
+
+function parseCSVRow(line) {
+  const s = String(line ?? "");
+  const out = [];
+  let cur = "";
+  let inQuotes = false;
+  for (let i = 0; i < s.length; i += 1) {
+    const ch = s[i];
+    if (inQuotes) {
+      if (ch === '"') {
+        const next = s[i + 1];
+        if (next === '"') {
+          cur += '"';
+          i += 1;
+        } else {
+          inQuotes = false;
+        }
+      } else {
+        cur += ch;
+      }
+      continue;
+    }
+    if (ch === '"') {
+      inQuotes = true;
+      continue;
+    }
+    if (ch === ",") {
+      out.push(cur);
+      cur = "";
+      continue;
+    }
+    cur += ch;
+  }
+  out.push(cur);
+  return out;
 }
 
 function filterProfessors(professors, query) {
@@ -108,6 +146,8 @@ const MODES = [
 export default function App() {
   const [professors, setProfessors] = useState([]);
   const [topColleges, setTopColleges] = useState([]);
+  const [sources, setSources] = useState([]);
+  const [enabledSourceIds, setEnabledSourceIds] = useState(() => new Set());
   const [collegeSearch, setCollegeSearch] = useState("");
   const [selectedSchool, setSelectedSchool] = useState(null);
   const [search, setSearch] = useState("");
@@ -129,12 +169,51 @@ export default function App() {
     let cancelled = false;
     async function load() {
       try {
-        const csvRes = await fetch("/data/behrend_professors.csv");
-        const text = await csvRes.text();
+        let manifest = null;
+        try {
+          const srcRes = await fetch("/data/professor_sources.json");
+          manifest = await srcRes.json();
+        } catch {
+          manifest = null;
+        }
+
+        const normalized = Array.isArray(manifest) ? manifest : [];
+        const defaultEnabled = new Set(
+          normalized.map((s) => s?.id).filter(Boolean)
+        );
+        if (!defaultEnabled.size) defaultEnabled.add("behrend_demo");
+
         if (cancelled) return;
-        const parsed = parseCSV(text);
-        setProfessors(parsed);
-        if (parsed.length > 0) setSelectedId(parsed[0].professor_id);
+        setSources(normalized);
+        setEnabledSourceIds(defaultEnabled);
+
+        const enabled = normalized.filter((s) => defaultEnabled.has(s?.id));
+        const csvSources = enabled.filter((s) => s?.type === "csv" && s?.path);
+
+        const results = await Promise.allSettled(
+          csvSources.map(async (src) => {
+            const res = await fetch(src.path);
+            const t = await res.text();
+            return { id: src.id, label: src.label, rows: parseCSV(t) };
+          })
+        );
+
+        if (cancelled) return;
+        const merged = [];
+        for (const r of results) {
+          if (r.status !== "fulfilled") continue;
+          const { id, label, rows } = r.value || {};
+          for (const row of rows || []) {
+            merged.push({
+              ...row,
+              _source_id: id,
+              _source_label: label,
+            });
+          }
+        }
+
+        setProfessors(merged);
+        if (merged.length > 0) setSelectedId(merged[0].professor_id);
 
         try {
           const colRes = await fetch("/data/top_colleges.json");
@@ -200,6 +279,17 @@ export default function App() {
     if (selectedSchool.inDataset === false) return [];
     return professors.filter((p) => p.school_name === selectedSchool.name);
   }, [professors, selectedSchool]);
+
+  const enabledSourceLabels = useMemo(() => {
+    if (!sources.length) return "";
+    const selected = sources
+      .filter((s) => enabledSourceIds.has(s?.id))
+      .map((s) => s.label)
+      .filter(Boolean);
+    if (!selected.length) return "";
+    if (selected.length <= 2) return selected.join(" + ");
+    return `${selected.length} datasets`;
+  }, [sources, enabledSourceIds]);
 
   const filteredProfessors = useMemo(
     () => filterProfessors(professorPool, search),
@@ -344,6 +434,11 @@ Generated locally (demo). Connect API for richer synthesis.`;
             Lock the school, choose the professor, then move through the three
             poster stages: read the risk, build the plan, run the semester.
           </p>
+          {enabledSourceLabels && (
+            <p className="np-fineprint" style={{ marginTop: 10 }}>
+              Data loaded: {enabledSourceLabels}
+            </p>
+          )}
         </div>
 
         <div className="np-sidebar-block">

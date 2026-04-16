@@ -1,0 +1,1020 @@
+[
+  {
+    "rank": 1,
+    "name": "Monash University",
+    "url": null,
+    "state": null,
+    "score": 100.0,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Melbourne",
+      "estStudents": "~93,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Monash University",
+        "cityHint": "Melbourne",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 2,
+    "name": "UNSW Sydney",
+    "url": null,
+    "state": null,
+    "score": 97.96,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~82,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "UNSW Sydney",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 3,
+    "name": "University of Sydney",
+    "url": null,
+    "state": null,
+    "score": 95.92,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~79,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Sydney",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 4,
+    "name": "RMIT University",
+    "url": null,
+    "state": null,
+    "score": 93.88,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Melbourne",
+      "estStudents": "~76,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "RMIT University",
+        "cityHint": "Melbourne",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 5,
+    "name": "University of Melbourne",
+    "url": "https://www.ratemyprofessors.com/school/19280",
+    "state": "SWANSEA",
+    "score": 91.84,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Melbourne",
+      "estStudents": "~75,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE5Mjgw",
+        "legacyId": 19280,
+        "searchQuery": "University of Melbourne",
+        "cityHint": "Melbourne"
+      },
+      "professorCount": 0,
+      "professorsSummary": {
+        "listedProfessors": 0,
+        "withNumericRating": 0,
+        "avgRatingAcrossProfessors": null
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "name": "Queensland University of Technology",
+    "url": null,
+    "state": null,
+    "score": 89.8,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Brisbane",
+      "estStudents": "~52,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Queensland University of Technology",
+        "cityHint": "Brisbane",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 7,
+    "name": "University of Queensland",
+    "url": null,
+    "state": null,
+    "score": 87.76,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Brisbane",
+      "estStudents": "~55,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Queensland",
+        "cityHint": "Brisbane",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 8,
+    "name": "Curtin University",
+    "url": null,
+    "state": null,
+    "score": 85.71,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Perth",
+      "estStudents": "~58,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Curtin University",
+        "cityHint": "Perth",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 9,
+    "name": "Deakin University",
+    "url": null,
+    "state": null,
+    "score": 83.67,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Geelong",
+      "estStudents": "~62,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Deakin University",
+        "cityHint": "Geelong",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 10,
+    "name": "Griffith University",
+    "url": null,
+    "state": null,
+    "score": 81.63,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Brisbane",
+      "estStudents": "~50,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Griffith University",
+        "cityHint": "Brisbane",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 11,
+    "name": "University of Technology Sydney",
+    "url": null,
+    "state": null,
+    "score": 79.59,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~47,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Technology Sydney",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 12,
+    "name": "Western Washington University",
+    "url": "https://www.ratemyprofessors.com/school/1184",
+    "state": "WA",
+    "score": 77.55,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Penrith",
+      "estStudents": "~47,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTExODQ=",
+        "legacyId": 1184,
+        "searchQuery": "Western Sydney University",
+        "cityHint": "Penrith"
+      },
+      "professorCount": 2153,
+      "professorsSummary": {
+        "listedProfessors": 2153,
+        "withNumericRating": 2153,
+        "avgRatingAcrossProfessors": 3.391
+      }
+    }
+  },
+  {
+    "rank": 13,
+    "name": "University of Newcastle",
+    "url": null,
+    "state": null,
+    "score": 75.51,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Newcastle",
+      "estStudents": "~36,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Newcastle",
+        "cityHint": "Newcastle",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 14,
+    "name": "La Trobe University",
+    "url": null,
+    "state": null,
+    "score": 73.47,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Melbourne",
+      "estStudents": "~36,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "La Trobe University",
+        "cityHint": "Melbourne",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 15,
+    "name": "Charles Sturt University",
+    "url": null,
+    "state": null,
+    "score": 71.43,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Wagga Wagga",
+      "estStudents": "~35,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Charles Sturt University",
+        "cityHint": "Wagga Wagga",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 16,
+    "name": "University of South Australia",
+    "url": null,
+    "state": null,
+    "score": 69.39,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Adelaide",
+      "estStudents": "~33,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of South Australia",
+        "cityHint": "Adelaide",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 17,
+    "name": "University of Adelaide",
+    "url": null,
+    "state": null,
+    "score": 67.35,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Adelaide",
+      "estStudents": "~28,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Adelaide",
+        "cityHint": "Adelaide",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 18,
+    "name": "Macquarie University",
+    "url": null,
+    "state": null,
+    "score": 65.31,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~43,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Macquarie University",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 19,
+    "name": "Australian National University",
+    "url": null,
+    "state": null,
+    "score": 63.27,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Canberra",
+      "estStudents": "~26,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Australian National University",
+        "cityHint": "Canberra",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 20,
+    "name": "University of Wollongong",
+    "url": null,
+    "state": null,
+    "score": 61.22,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Wollongong",
+      "estStudents": "~25,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Wollongong",
+        "cityHint": "Wollongong",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 21,
+    "name": "University of Tasmania",
+    "url": null,
+    "state": null,
+    "score": 59.18,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Hobart",
+      "estStudents": "~26,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Tasmania",
+        "cityHint": "Hobart",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 22,
+    "name": "Federation University Australia",
+    "url": null,
+    "state": null,
+    "score": 57.14,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Ballarat",
+      "estStudents": "~24,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Federation University Australia",
+        "cityHint": "Ballarat",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 23,
+    "name": "University of the Sunshine Coast",
+    "url": null,
+    "state": null,
+    "score": 55.1,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Maroochydore",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of the Sunshine Coast",
+        "cityHint": "Maroochydore",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 24,
+    "name": "University of Canberra",
+    "url": null,
+    "state": null,
+    "score": 53.06,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Canberra",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Canberra",
+        "cityHint": "Canberra",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 25,
+    "name": "Southern Cross University",
+    "url": null,
+    "state": null,
+    "score": 51.02,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Lismore",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Southern Cross University",
+        "cityHint": "Lismore",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 26,
+    "name": "Charles Darwin University",
+    "url": null,
+    "state": null,
+    "score": 48.98,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Darwin",
+      "estStudents": "~11,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Charles Darwin University",
+        "cityHint": "Darwin",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 27,
+    "name": "Edith Cowan University",
+    "url": null,
+    "state": null,
+    "score": 46.94,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Perth",
+      "estStudents": "~32,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Edith Cowan University",
+        "cityHint": "Perth",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 28,
+    "name": "Murdoch University",
+    "url": null,
+    "state": null,
+    "score": 44.9,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Perth",
+      "estStudents": "~22,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Murdoch University",
+        "cityHint": "Perth",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 29,
+    "name": "Swinburne University",
+    "url": null,
+    "state": null,
+    "score": 42.86,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Melbourne",
+      "estStudents": "~33,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Swinburne University",
+        "cityHint": "Melbourne",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 30,
+    "name": "Victoria University",
+    "url": null,
+    "state": null,
+    "score": 40.82,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Melbourne",
+      "estStudents": "~45,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Victoria University",
+        "cityHint": "Melbourne",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 31,
+    "name": "James Cook University",
+    "url": null,
+    "state": null,
+    "score": 38.78,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Townsville",
+      "estStudents": "~19,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "James Cook University",
+        "cityHint": "Townsville",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 32,
+    "name": "Flinders University",
+    "url": null,
+    "state": null,
+    "score": 36.73,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Adelaide",
+      "estStudents": "~26,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Flinders University",
+        "cityHint": "Adelaide",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 33,
+    "name": "CQUniversity",
+    "url": null,
+    "state": null,
+    "score": 34.69,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Rockhampton",
+      "estStudents": "~30,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "CQUniversity",
+        "cityHint": "Rockhampton",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 34,
+    "name": "University of New England",
+    "url": null,
+    "state": null,
+    "score": 32.65,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Armidale",
+      "estStudents": "~22,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of New England",
+        "cityHint": "Armidale",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 35,
+    "name": "Australian Catholic University",
+    "url": null,
+    "state": null,
+    "score": 30.61,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~32,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Australian Catholic University",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 36,
+    "name": "Bond University",
+    "url": null,
+    "state": null,
+    "score": 28.57,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Gold Coast",
+      "estStudents": "~6,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Bond University",
+        "cityHint": "Gold Coast",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 37,
+    "name": "Torrens University",
+    "url": null,
+    "state": null,
+    "score": 26.53,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Adelaide",
+      "estStudents": "~8,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Torrens University",
+        "cityHint": "Adelaide",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 38,
+    "name": "Avondale University",
+    "url": null,
+    "state": null,
+    "score": 24.49,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Cooranbong",
+      "estStudents": "~1,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Avondale University",
+        "cityHint": "Cooranbong",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 39,
+    "name": "Uni of Divinity",
+    "url": null,
+    "state": null,
+    "score": 22.45,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Melbourne",
+      "estStudents": "~2,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Uni of Divinity",
+        "cityHint": "Melbourne",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 40,
+    "name": "Notre Dame University Australia",
+    "url": null,
+    "state": null,
+    "score": 20.41,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Fremantle",
+      "estStudents": "~12,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Notre Dame University Australia",
+        "cityHint": "Fremantle",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 41,
+    "name": "Campion College",
+    "url": null,
+    "state": null,
+    "score": 18.37,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~500",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Campion College",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 42,
+    "name": "Excelsia College",
+    "url": null,
+    "state": null,
+    "score": 16.33,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~600",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Excelsia College",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 43,
+    "name": "Alphacrucis University College",
+    "url": null,
+    "state": null,
+    "score": 14.29,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~1,500",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Alphacrucis University College",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 44,
+    "name": "Heritage University",
+    "url": "https://www.ratemyprofessors.com/school/408",
+    "state": "WA",
+    "score": 12.24,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Brisbane",
+      "estStudents": "~1,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTQwOA==",
+        "legacyId": 408,
+        "searchQuery": "Christian Heritage College",
+        "cityHint": "Brisbane"
+      },
+      "professorCount": 45,
+      "professorsSummary": {
+        "listedProfessors": 45,
+        "withNumericRating": 45,
+        "avgRatingAcrossProfessors": 2.009
+      }
+    }
+  },
+  {
+    "rank": 45,
+    "name": "Tabor College",
+    "url": null,
+    "state": null,
+    "score": 10.2,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Adelaide",
+      "estStudents": "~1,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Tabor College",
+        "cityHint": "Adelaide",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 46,
+    "name": "AIM Business School",
+    "url": null,
+    "state": null,
+    "score": 8.16,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Perth",
+      "estStudents": "~2,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "AIM Business School",
+        "cityHint": "Perth",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 47,
+    "name": "Box Hill Institute",
+    "url": null,
+    "state": null,
+    "score": 6.12,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Melbourne",
+      "estStudents": "~10,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Box Hill Institute",
+        "cityHint": "Melbourne",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 48,
+    "name": "SAE Creative Media Institute",
+    "url": null,
+    "state": null,
+    "score": 4.08,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~3,500",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "SAE Creative Media Institute",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 49,
+    "name": "Billy Blue College of Design",
+    "url": null,
+    "state": null,
+    "score": 2.04,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~1,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Billy Blue College of Design",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 50,
+    "name": "TAFE NSW",
+    "url": null,
+    "state": null,
+    "score": 0.0,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney",
+      "estStudents": "~500,000",
+      "scrapedAt": "2026-04-16T01:57:57.987557+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "TAFE NSW",
+        "cityHint": "Sydney",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  }
+]

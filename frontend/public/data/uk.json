@@ -1,0 +1,1302 @@
+[
+  {
+    "rank": 1,
+    "name": "Open University",
+    "url": "https://www.ratemyprofessors.com/school/12919",
+    "state": "England",
+    "score": 100.0,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Milton Keynes",
+      "estStudents": "~133,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyOTE5",
+        "legacyId": 12919,
+        "searchQuery": "Open University",
+        "cityHint": "Milton Keynes"
+      },
+      "professorCount": 27,
+      "professorsSummary": {
+        "listedProfessors": 27,
+        "withNumericRating": 27,
+        "avgRatingAcrossProfessors": 0.852
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "name": "University College London",
+    "url": "https://www.ratemyprofessors.com/school/13124",
+    "state": "England",
+    "score": 97.96,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~51,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEzMTI0",
+        "legacyId": 13124,
+        "searchQuery": "University College London (UCL)",
+        "cityHint": "London"
+      },
+      "professorCount": 344,
+      "professorsSummary": {
+        "listedProfessors": 344,
+        "withNumericRating": 344,
+        "avgRatingAcrossProfessors": 1.717
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "name": "University of Manchester",
+    "url": "https://www.ratemyprofessors.com/school/12460",
+    "state": "England",
+    "score": 95.92,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Manchester",
+      "estStudents": "~46,900",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNDYw",
+        "legacyId": 12460,
+        "searchQuery": "University of Manchester",
+        "cityHint": "Manchester"
+      },
+      "professorCount": 283,
+      "professorsSummary": {
+        "listedProfessors": 283,
+        "withNumericRating": 283,
+        "avgRatingAcrossProfessors": 2.13
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "name": "University of Leeds",
+    "url": "https://www.ratemyprofessors.com/school/12702",
+    "state": "England",
+    "score": 93.88,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Leeds",
+      "estStudents": "~40,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNzAy",
+        "legacyId": 12702,
+        "searchQuery": "University of Leeds",
+        "cityHint": "Leeds"
+      },
+      "professorCount": 190,
+      "professorsSummary": {
+        "listedProfessors": 190,
+        "withNumericRating": 190,
+        "avgRatingAcrossProfessors": 2.061
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "name": "King's College London Strand Campus",
+    "url": "https://www.ratemyprofessors.com/school/12280",
+    "state": "England",
+    "score": 91.84,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~38,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjgw",
+        "legacyId": 12280,
+        "searchQuery": "King's College London",
+        "cityHint": "London"
+      },
+      "professorCount": 114,
+      "professorsSummary": {
+        "listedProfessors": 114,
+        "withNumericRating": 114,
+        "avgRatingAcrossProfessors": 1.961
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "name": "University of Edinburgh",
+    "url": "https://www.ratemyprofessors.com/school/12827",
+    "state": "Scotland",
+    "score": 89.8,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Edinburgh",
+      "estStudents": "~38,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyODI3",
+        "legacyId": 12827,
+        "searchQuery": "University of Edinburgh",
+        "cityHint": "Edinburgh"
+      },
+      "professorCount": 279,
+      "professorsSummary": {
+        "listedProfessors": 279,
+        "withNumericRating": 279,
+        "avgRatingAcrossProfessors": 2.048
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "name": "Canterbury Christ Church University",
+    "url": "https://www.ratemyprofessors.com/school/12474",
+    "state": "England",
+    "score": 87.76,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Canterbury",
+      "estStudents": "~38,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNDc0",
+        "legacyId": 12474,
+        "searchQuery": "Canterbury Christ Church University",
+        "cityHint": "Canterbury"
+      },
+      "professorCount": 296,
+      "professorsSummary": {
+        "listedProfessors": 296,
+        "withNumericRating": 296,
+        "avgRatingAcrossProfessors": 0.704
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "name": "University of Birmingham",
+    "url": "https://www.ratemyprofessors.com/school/12642",
+    "state": "England",
+    "score": 85.71,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Birmingham",
+      "estStudents": "~37,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNjQy",
+        "legacyId": 12642,
+        "searchQuery": "University of Birmingham",
+        "cityHint": "Birmingham"
+      },
+      "professorCount": 107,
+      "professorsSummary": {
+        "listedProfessors": 107,
+        "withNumericRating": 107,
+        "avgRatingAcrossProfessors": 1.013
+      }
+    }
+  },
+  {
+    "rank": 9,
+    "name": "BPP University",
+    "url": "https://www.ratemyprofessors.com/school/16961",
+    "state": "LONDON",
+    "score": 83.67,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~33,750",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE2OTYx",
+        "legacyId": 16961,
+        "searchQuery": "BPP University",
+        "cityHint": "London"
+      },
+      "professorCount": 6,
+      "professorsSummary": {
+        "listedProfessors": 6,
+        "withNumericRating": 6,
+        "avgRatingAcrossProfessors": 3.833
+      }
+    }
+  },
+  {
+    "rank": 10,
+    "name": "University of Nottingham- University Park",
+    "url": "https://www.ratemyprofessors.com/school/12231",
+    "state": "England",
+    "score": 81.63,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Nottingham",
+      "estStudents": "~33,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjMx",
+        "legacyId": 12231,
+        "searchQuery": "University of Nottingham",
+        "cityHint": "Nottingham"
+      },
+      "professorCount": 141,
+      "professorsSummary": {
+        "listedProfessors": 141,
+        "withNumericRating": 141,
+        "avgRatingAcrossProfessors": 1.918
+      }
+    }
+  },
+  {
+    "rank": 11,
+    "name": "University of Exeter (Streatham Estate Campus)",
+    "url": "https://www.ratemyprofessors.com/school/12234",
+    "state": "England",
+    "score": 79.59,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Exeter",
+      "estStudents": "~32,880",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjM0",
+        "legacyId": 12234,
+        "searchQuery": "University of Exeter",
+        "cityHint": "Exeter"
+      },
+      "professorCount": 97,
+      "professorsSummary": {
+        "listedProfessors": 97,
+        "withNumericRating": 97,
+        "avgRatingAcrossProfessors": 2.045
+      }
+    }
+  },
+  {
+    "rank": 12,
+    "name": "Sheffield Hallam University- Collegiate Crescent C",
+    "url": "https://www.ratemyprofessors.com/school/12679",
+    "state": "England",
+    "score": 77.55,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sheffield",
+      "estStudents": "~32,235",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNjc5",
+        "legacyId": 12679,
+        "searchQuery": "Sheffield Hallam University",
+        "cityHint": "Sheffield"
+      },
+      "professorCount": 6,
+      "professorsSummary": {
+        "listedProfessors": 6,
+        "withNumericRating": 6,
+        "avgRatingAcrossProfessors": 1.333
+      }
+    }
+  },
+  {
+    "rank": 13,
+    "name": "University of Bristol",
+    "url": "https://www.ratemyprofessors.com/school/12602",
+    "state": "England",
+    "score": 75.51,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Bristol",
+      "estStudents": "~32,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNjAy",
+        "legacyId": 12602,
+        "searchQuery": "University of Bristol",
+        "cityHint": "Bristol"
+      },
+      "professorCount": 157,
+      "professorsSummary": {
+        "listedProfessors": 157,
+        "withNumericRating": 157,
+        "avgRatingAcrossProfessors": 1.925
+      }
+    }
+  },
+  {
+    "rank": 14,
+    "name": "University of Glasgow",
+    "url": "https://www.ratemyprofessors.com/school/12829",
+    "state": "Scotland",
+    "score": 73.47,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Glasgow",
+      "estStudents": "~35,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyODI5",
+        "legacyId": 12829,
+        "searchQuery": "University of Glasgow",
+        "cityHint": "Glasgow"
+      },
+      "professorCount": 558,
+      "professorsSummary": {
+        "listedProfessors": 558,
+        "withNumericRating": 558,
+        "avgRatingAcrossProfessors": 1.416
+      }
+    }
+  },
+  {
+    "rank": 15,
+    "name": "University of Hertfordshire",
+    "url": "https://www.ratemyprofessors.com/school/13168",
+    "state": "HERTFORDSHIRE",
+    "score": 71.43,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Hatfield",
+      "estStudents": "~34,255",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEzMTY4",
+        "legacyId": 13168,
+        "searchQuery": "University of Hertfordshire",
+        "cityHint": "Hatfield"
+      },
+      "professorCount": 48,
+      "professorsSummary": {
+        "listedProfessors": 48,
+        "withNumericRating": 48,
+        "avgRatingAcrossProfessors": 1.915
+      }
+    }
+  },
+  {
+    "rank": 16,
+    "name": "University of Southampton",
+    "url": "https://www.ratemyprofessors.com/school/12566",
+    "state": "England",
+    "score": 69.39,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Southampton",
+      "estStudents": "~29,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNTY2",
+        "legacyId": 12566,
+        "searchQuery": "University of Southampton",
+        "cityHint": "Southampton"
+      },
+      "professorCount": 157,
+      "professorsSummary": {
+        "listedProfessors": 157,
+        "withNumericRating": 157,
+        "avgRatingAcrossProfessors": 2.148
+      }
+    }
+  },
+  {
+    "rank": 17,
+    "name": "Newcastle University",
+    "url": "https://www.ratemyprofessors.com/school/12918",
+    "state": "England",
+    "score": 67.35,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Newcastle",
+      "estStudents": "~28,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyOTE4",
+        "legacyId": 12918,
+        "searchQuery": "Newcastle University",
+        "cityHint": "Newcastle"
+      },
+      "professorCount": 121,
+      "professorsSummary": {
+        "listedProfessors": 121,
+        "withNumericRating": 121,
+        "avgRatingAcrossProfessors": 2.281
+      }
+    }
+  },
+  {
+    "rank": 18,
+    "name": "University of Warwick",
+    "url": "https://www.ratemyprofessors.com/school/13149",
+    "state": "England",
+    "score": 65.31,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Coventry",
+      "estStudents": "~28,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEzMTQ5",
+        "legacyId": 13149,
+        "searchQuery": "University of Warwick",
+        "cityHint": "Coventry"
+      },
+      "professorCount": 271,
+      "professorsSummary": {
+        "listedProfessors": 271,
+        "withNumericRating": 271,
+        "avgRatingAcrossProfessors": 2.331
+      }
+    }
+  },
+  {
+    "rank": 19,
+    "name": "The University of Sheffield",
+    "url": "https://www.ratemyprofessors.com/school/12693",
+    "state": "England",
+    "score": 63.27,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sheffield",
+      "estStudents": "~30,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNjkz",
+        "legacyId": 12693,
+        "searchQuery": "University of Sheffield",
+        "cityHint": "Sheffield"
+      },
+      "professorCount": 158,
+      "professorsSummary": {
+        "listedProfessors": 158,
+        "withNumericRating": 158,
+        "avgRatingAcrossProfessors": 1.937
+      }
+    }
+  },
+  {
+    "rank": 20,
+    "name": "Coventry University",
+    "url": "https://www.ratemyprofessors.com/school/12627",
+    "state": "",
+    "score": 61.22,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Coventry",
+      "estStudents": "~30,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNjI3",
+        "legacyId": 12627,
+        "searchQuery": "Coventry University",
+        "cityHint": "Coventry"
+      },
+      "professorCount": 85,
+      "professorsSummary": {
+        "listedProfessors": 85,
+        "withNumericRating": 85,
+        "avgRatingAcrossProfessors": 2.054
+      }
+    }
+  },
+  {
+    "rank": 21,
+    "name": "University of Liverpool",
+    "url": "https://www.ratemyprofessors.com/school/12458",
+    "state": "England",
+    "score": 59.18,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Liverpool",
+      "estStudents": "~28,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNDU4",
+        "legacyId": 12458,
+        "searchQuery": "University of Liverpool",
+        "cityHint": "Liverpool"
+      },
+      "professorCount": 133,
+      "professorsSummary": {
+        "listedProfessors": 133,
+        "withNumericRating": 133,
+        "avgRatingAcrossProfessors": 2.111
+      }
+    }
+  },
+  {
+    "rank": 22,
+    "name": "Cardiff University",
+    "url": "https://www.ratemyprofessors.com/school/12729",
+    "state": "SOUTH GLAMORGAN",
+    "score": 57.14,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Cardiff",
+      "estStudents": "~30,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNzI5",
+        "legacyId": 12729,
+        "searchQuery": "Cardiff University",
+        "cityHint": "Cardiff"
+      },
+      "professorCount": 9,
+      "professorsSummary": {
+        "listedProfessors": 9,
+        "withNumericRating": 9,
+        "avgRatingAcrossProfessors": 1.844
+      }
+    }
+  },
+  {
+    "rank": 23,
+    "name": "University of Reading- Whiteknights Campus",
+    "url": "https://www.ratemyprofessors.com/school/12564",
+    "state": "England",
+    "score": 55.1,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Reading",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNTY0",
+        "legacyId": 12564,
+        "searchQuery": "University of Reading",
+        "cityHint": "Reading"
+      },
+      "professorCount": 91,
+      "professorsSummary": {
+        "listedProfessors": 91,
+        "withNumericRating": 91,
+        "avgRatingAcrossProfessors": 1.834
+      }
+    }
+  },
+  {
+    "rank": 24,
+    "name": "University of Leicester",
+    "url": "https://www.ratemyprofessors.com/school/12199",
+    "state": "England",
+    "score": 53.06,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Leicester",
+      "estStudents": "~22,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMTk5",
+        "legacyId": 12199,
+        "searchQuery": "University of Leicester",
+        "cityHint": "Leicester"
+      },
+      "professorCount": 87,
+      "professorsSummary": {
+        "listedProfessors": 87,
+        "withNumericRating": 87,
+        "avgRatingAcrossProfessors": 1.895
+      }
+    }
+  },
+  {
+    "rank": 25,
+    "name": "Queen Mary- University of London",
+    "url": "https://www.ratemyprofessors.com/school/12296",
+    "state": "England",
+    "score": 51.02,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~26,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjk2",
+        "legacyId": 12296,
+        "searchQuery": "Queen Mary University of London",
+        "cityHint": "London"
+      },
+      "professorCount": 117,
+      "professorsSummary": {
+        "listedProfessors": 117,
+        "withNumericRating": 117,
+        "avgRatingAcrossProfessors": 1.848
+      }
+    }
+  },
+  {
+    "rank": 26,
+    "name": "Imperial College London",
+    "url": "https://www.ratemyprofessors.com/school/12260",
+    "state": "England",
+    "score": 48.98,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~21,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjYw",
+        "legacyId": 12260,
+        "searchQuery": "Imperial College London",
+        "cityHint": "London"
+      },
+      "professorCount": 162,
+      "professorsSummary": {
+        "listedProfessors": 162,
+        "withNumericRating": 162,
+        "avgRatingAcrossProfessors": 1.593
+      }
+    }
+  },
+  {
+    "rank": 27,
+    "name": "University of Surrey",
+    "url": "https://www.ratemyprofessors.com/school/12570",
+    "state": "SURREY",
+    "score": 46.94,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Guildford",
+      "estStudents": "~18,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNTcw",
+        "legacyId": 12570,
+        "searchQuery": "University of Surrey",
+        "cityHint": "Guildford"
+      },
+      "professorCount": 68,
+      "professorsSummary": {
+        "listedProfessors": 68,
+        "withNumericRating": 68,
+        "avgRatingAcrossProfessors": 1.728
+      }
+    }
+  },
+  {
+    "rank": 28,
+    "name": "Loughborough University",
+    "url": "https://www.ratemyprofessors.com/school/12196",
+    "state": "England",
+    "score": 44.9,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Loughborough",
+      "estStudents": "~18,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMTk2",
+        "legacyId": 12196,
+        "searchQuery": "Loughborough University",
+        "cityHint": "Loughborough"
+      },
+      "professorCount": 66,
+      "professorsSummary": {
+        "listedProfessors": 66,
+        "withNumericRating": 66,
+        "avgRatingAcrossProfessors": 1.742
+      }
+    }
+  },
+  {
+    "rank": 29,
+    "name": "University of Kent",
+    "url": "https://www.ratemyprofessors.com/school/12546",
+    "state": "England",
+    "score": 42.86,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Canterbury",
+      "estStudents": "~19,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNTQ2",
+        "legacyId": 12546,
+        "searchQuery": "University of Kent",
+        "cityHint": "Canterbury"
+      },
+      "professorCount": 140,
+      "professorsSummary": {
+        "listedProfessors": 140,
+        "withNumericRating": 140,
+        "avgRatingAcrossProfessors": 2.327
+      }
+    }
+  },
+  {
+    "rank": 30,
+    "name": "University of East Anglia",
+    "url": "https://www.ratemyprofessors.com/school/12221",
+    "state": "",
+    "score": 40.82,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Norwich",
+      "estStudents": "~18,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjIx",
+        "legacyId": 12221,
+        "searchQuery": "University of East Anglia",
+        "cityHint": "Norwich"
+      },
+      "professorCount": 103,
+      "professorsSummary": {
+        "listedProfessors": 103,
+        "withNumericRating": 103,
+        "avgRatingAcrossProfessors": 2.044
+      }
+    }
+  },
+  {
+    "rank": 31,
+    "name": "Northumbria University",
+    "url": "https://www.ratemyprofessors.com/school/13351",
+    "state": "NORTHUMBERLAND",
+    "score": 38.78,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Newcastle",
+      "estStudents": "~35,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEzMzUx",
+        "legacyId": 13351,
+        "searchQuery": "Northumbria University",
+        "cityHint": "Newcastle"
+      },
+      "professorCount": 5,
+      "professorsSummary": {
+        "listedProfessors": 5,
+        "withNumericRating": 5,
+        "avgRatingAcrossProfessors": 1.0
+      }
+    }
+  },
+  {
+    "rank": 32,
+    "name": "Manchester Metropolitan University",
+    "url": "https://www.ratemyprofessors.com/school/12417",
+    "state": "England",
+    "score": 36.73,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Manchester",
+      "estStudents": "~41,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNDE3",
+        "legacyId": 12417,
+        "searchQuery": "Manchester Metropolitan University",
+        "cityHint": "Manchester"
+      },
+      "professorCount": 70,
+      "professorsSummary": {
+        "listedProfessors": 70,
+        "withNumericRating": 70,
+        "avgRatingAcrossProfessors": 2.22
+      }
+    }
+  },
+  {
+    "rank": 33,
+    "name": "Birmingham City University",
+    "url": "https://www.ratemyprofessors.com/school/13567",
+    "state": "Birmingham",
+    "score": 34.69,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Birmingham",
+      "estStudents": "~25,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEzNTY3",
+        "legacyId": 13567,
+        "searchQuery": "Birmingham City University",
+        "cityHint": "Birmingham"
+      },
+      "professorCount": 18,
+      "professorsSummary": {
+        "listedProfessors": 18,
+        "withNumericRating": 18,
+        "avgRatingAcrossProfessors": 1.5
+      }
+    }
+  },
+  {
+    "rank": 34,
+    "name": "University of London- London Business School",
+    "url": "https://www.ratemyprofessors.com/school/12386",
+    "state": "LONDON",
+    "score": 32.65,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~18,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMzg2",
+        "legacyId": 12386,
+        "searchQuery": "London South Bank University",
+        "cityHint": "London"
+      },
+      "professorCount": 7,
+      "professorsSummary": {
+        "listedProfessors": 7,
+        "withNumericRating": 7,
+        "avgRatingAcrossProfessors": 0.886
+      }
+    }
+  },
+  {
+    "rank": 35,
+    "name": "University of Bath",
+    "url": "https://www.ratemyprofessors.com/school/12596",
+    "state": "England",
+    "score": 30.61,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Bath",
+      "estStudents": "~18,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNTk2",
+        "legacyId": 12596,
+        "searchQuery": "University of Bath",
+        "cityHint": "Bath"
+      },
+      "professorCount": 85,
+      "professorsSummary": {
+        "listedProfessors": 85,
+        "withNumericRating": 85,
+        "avgRatingAcrossProfessors": 1.68
+      }
+    }
+  },
+  {
+    "rank": 36,
+    "name": "Ravensbourne University London",
+    "url": "https://www.ratemyprofessors.com/school/19217",
+    "state": "LONDON",
+    "score": 28.57,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~14,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE5MjE3",
+        "legacyId": 19217,
+        "searchQuery": "Brunel University London",
+        "cityHint": "London"
+      },
+      "professorCount": 0,
+      "professorsSummary": {
+        "listedProfessors": 0,
+        "withNumericRating": 0,
+        "avgRatingAcrossProfessors": null
+      }
+    }
+  },
+  {
+    "rank": 37,
+    "name": "University of Strathclyde (Jordanhill Campus)",
+    "url": "https://www.ratemyprofessors.com/school/12841",
+    "state": "GLASGOW",
+    "score": 26.53,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Glasgow",
+      "estStudents": "~24,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyODQx",
+        "legacyId": 12841,
+        "searchQuery": "University of Strathclyde",
+        "cityHint": "Glasgow"
+      },
+      "professorCount": 13,
+      "professorsSummary": {
+        "listedProfessors": 13,
+        "withNumericRating": 13,
+        "avgRatingAcrossProfessors": 0.538
+      }
+    }
+  },
+  {
+    "rank": 38,
+    "name": "University of Dundee",
+    "url": "https://www.ratemyprofessors.com/school/12825",
+    "state": "Scotland",
+    "score": 24.49,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Dundee",
+      "estStudents": "~19,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyODI1",
+        "legacyId": 12825,
+        "searchQuery": "University of Dundee",
+        "cityHint": "Dundee"
+      },
+      "professorCount": 45,
+      "professorsSummary": {
+        "listedProfessors": 45,
+        "withNumericRating": 45,
+        "avgRatingAcrossProfessors": 1.638
+      }
+    }
+  },
+  {
+    "rank": 39,
+    "name": "Swansea University",
+    "url": "https://www.ratemyprofessors.com/school/12973",
+    "state": "SWANSEA",
+    "score": 22.45,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Swansea",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyOTcz",
+        "legacyId": 12973,
+        "searchQuery": "Swansea University",
+        "cityHint": "Swansea"
+      },
+      "professorCount": 78,
+      "professorsSummary": {
+        "listedProfessors": 78,
+        "withNumericRating": 78,
+        "avgRatingAcrossProfessors": 2.182
+      }
+    }
+  },
+  {
+    "rank": 40,
+    "name": "Oxford Brookes University",
+    "url": "https://www.ratemyprofessors.com/school/12500",
+    "state": "England",
+    "score": 20.41,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Oxford",
+      "estStudents": "~18,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNTAw",
+        "legacyId": 12500,
+        "searchQuery": "Oxford Brookes University",
+        "cityHint": "Oxford"
+      },
+      "professorCount": 55,
+      "professorsSummary": {
+        "listedProfessors": 55,
+        "withNumericRating": 55,
+        "avgRatingAcrossProfessors": 1.664
+      }
+    }
+  },
+  {
+    "rank": 41,
+    "name": "University of Portsmouth",
+    "url": "https://www.ratemyprofessors.com/school/12554",
+    "state": "HAMPSHIRE",
+    "score": 18.37,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Portsmouth",
+      "estStudents": "~28,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNTU0",
+        "legacyId": 12554,
+        "searchQuery": "University of Portsmouth",
+        "cityHint": "Portsmouth"
+      },
+      "professorCount": 68,
+      "professorsSummary": {
+        "listedProfessors": 68,
+        "withNumericRating": 68,
+        "avgRatingAcrossProfessors": 1.669
+      }
+    }
+  },
+  {
+    "rank": 42,
+    "name": "University of Brighton",
+    "url": "https://www.ratemyprofessors.com/school/12527",
+    "state": "England",
+    "score": 16.33,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Brighton",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNTI3",
+        "legacyId": 12527,
+        "searchQuery": "University of Brighton",
+        "cityHint": "Brighton"
+      },
+      "professorCount": 37,
+      "professorsSummary": {
+        "listedProfessors": 37,
+        "withNumericRating": 37,
+        "avgRatingAcrossProfessors": 1.519
+      }
+    }
+  },
+  {
+    "rank": 43,
+    "name": "University of Lincoln",
+    "url": "https://www.ratemyprofessors.com/school/12201",
+    "state": "LINCOLNSHIRE",
+    "score": 14.29,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Lincoln",
+      "estStudents": "~16,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjAx",
+        "legacyId": 12201,
+        "searchQuery": "University of Lincoln",
+        "cityHint": "Lincoln"
+      },
+      "professorCount": 51,
+      "professorsSummary": {
+        "listedProfessors": 51,
+        "withNumericRating": 51,
+        "avgRatingAcrossProfessors": 2.114
+      }
+    }
+  },
+  {
+    "rank": 44,
+    "name": "De Montfort University",
+    "url": "https://www.ratemyprofessors.com/school/12195",
+    "state": "England",
+    "score": 12.24,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Leicester",
+      "estStudents": "~23,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMTk1",
+        "legacyId": 12195,
+        "searchQuery": "De Montfort University",
+        "cityHint": "Leicester"
+      },
+      "professorCount": 44,
+      "professorsSummary": {
+        "listedProfessors": 44,
+        "withNumericRating": 44,
+        "avgRatingAcrossProfessors": 1.591
+      }
+    }
+  },
+  {
+    "rank": 45,
+    "name": "University of Greenwich",
+    "url": "https://www.ratemyprofessors.com/school/12236",
+    "state": "England",
+    "score": 10.2,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjM2",
+        "legacyId": 12236,
+        "searchQuery": "University of Greenwich",
+        "cityHint": "London"
+      },
+      "professorCount": 42,
+      "professorsSummary": {
+        "listedProfessors": 42,
+        "withNumericRating": 42,
+        "avgRatingAcrossProfessors": 1.576
+      }
+    }
+  },
+  {
+    "rank": 46,
+    "name": "Arts University Bournemouth",
+    "url": "https://www.ratemyprofessors.com/school/17361",
+    "state": "DORSET",
+    "score": 8.16,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Bournemouth",
+      "estStudents": "~18,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE3MzYx",
+        "legacyId": 17361,
+        "searchQuery": "Bournemouth University",
+        "cityHint": "Bournemouth"
+      },
+      "professorCount": 2,
+      "professorsSummary": {
+        "listedProfessors": 2,
+        "withNumericRating": 2,
+        "avgRatingAcrossProfessors": 0.0
+      }
+    }
+  },
+  {
+    "rank": 47,
+    "name": "University of Westminster",
+    "url": "https://www.ratemyprofessors.com/school/12389",
+    "state": "",
+    "score": 6.12,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London",
+      "estStudents": "~18,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMzg5",
+        "legacyId": 12389,
+        "searchQuery": "University of Westminster",
+        "cityHint": "London"
+      },
+      "professorCount": 92,
+      "professorsSummary": {
+        "listedProfessors": 92,
+        "withNumericRating": 92,
+        "avgRatingAcrossProfessors": 1.524
+      }
+    }
+  },
+  {
+    "rank": 48,
+    "name": "University of the Southwest",
+    "url": "https://www.ratemyprofessors.com/school/4742",
+    "state": "",
+    "score": 4.08,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Bristol",
+      "estStudents": "~28,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTQ3NDI=",
+        "legacyId": 4742,
+        "searchQuery": "University of the West of England",
+        "cityHint": "Bristol"
+      },
+      "professorCount": 22,
+      "professorsSummary": {
+        "listedProfessors": 22,
+        "withNumericRating": 22,
+        "avgRatingAcrossProfessors": 2.032
+      }
+    }
+  },
+  {
+    "rank": 49,
+    "name": "Anglia Ruskin University",
+    "url": "https://www.ratemyprofessors.com/school/12206",
+    "state": "CAMBRIDGESHIRE",
+    "score": 2.04,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Cambridge",
+      "estStudents": "~35,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMjA2",
+        "legacyId": 12206,
+        "searchQuery": "Anglia Ruskin University",
+        "cityHint": "Cambridge"
+      },
+      "professorCount": 45,
+      "professorsSummary": {
+        "listedProfessors": 45,
+        "withNumericRating": 45,
+        "avgRatingAcrossProfessors": 1.829
+      }
+    }
+  },
+  {
+    "rank": 50,
+    "name": "University of Teesside",
+    "url": "https://www.ratemyprofessors.com/school/12696",
+    "state": "NORTH YORKSHIRE",
+    "score": 0.0,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Middlesbrough",
+      "estStudents": "~17,000",
+      "scrapedAt": "2026-04-15T23:36:41.112678+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyNjk2",
+        "legacyId": 12696,
+        "searchQuery": "Teesside University",
+        "cityHint": "Middlesbrough"
+      },
+      "professorCount": 41,
+      "professorsSummary": {
+        "listedProfessors": 41,
+        "withNumericRating": 41,
+        "avgRatingAcrossProfessors": 1.72
+      }
+    }
+  }
+]

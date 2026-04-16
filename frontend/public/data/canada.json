@@ -1,0 +1,1296 @@
+[
+  {
+    "rank": 1,
+    "name": "University of Toronto",
+    "url": "https://www.ratemyprofessors.com/school/12184",
+    "state": "ON",
+    "score": 100.0,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Toronto",
+      "estStudents": "~102,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEyMTg0",
+        "legacyId": 12184,
+        "searchQuery": "University of Toronto",
+        "cityHint": "Toronto"
+      },
+      "professorCount": 1211,
+      "professorsSummary": {
+        "listedProfessors": 1211,
+        "withNumericRating": 1211,
+        "avgRatingAcrossProfessors": 2.496
+      }
+    }
+  },
+  {
+    "rank": 2,
+    "name": "York University -  Keele Campus",
+    "url": "https://www.ratemyprofessors.com/school/1495",
+    "state": "ON",
+    "score": 97.96,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Toronto",
+      "estStudents": "~53,100",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0OTU=",
+        "legacyId": 1495,
+        "searchQuery": "York University",
+        "cityHint": "Toronto"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.523
+      }
+    }
+  },
+  {
+    "rank": 3,
+    "name": "University of British Columbia",
+    "url": "https://www.ratemyprofessors.com/school/1413",
+    "state": "BC",
+    "score": 95.92,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Vancouver",
+      "estStudents": "~65,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MTM=",
+        "legacyId": 1413,
+        "searchQuery": "University of British Columbia",
+        "cityHint": "Vancouver"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.643
+      }
+    }
+  },
+  {
+    "rank": 4,
+    "name": "Universite Laval",
+    "url": "https://www.ratemyprofessors.com/school/1434",
+    "state": "QC",
+    "score": 93.88,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Quebec City",
+      "estStudents": "~47,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MzQ=",
+        "legacyId": 1434,
+        "searchQuery": "Université Laval",
+        "cityHint": "Quebec City"
+      },
+      "professorCount": 773,
+      "professorsSummary": {
+        "listedProfessors": 773,
+        "withNumericRating": 773,
+        "avgRatingAcrossProfessors": 2.453
+      }
+    }
+  },
+  {
+    "rank": 5,
+    "name": "University of Ottawa",
+    "url": "https://www.ratemyprofessors.com/school/1452",
+    "state": "ON",
+    "score": 91.84,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Ottawa",
+      "estStudents": "~50,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NTI=",
+        "legacyId": 1452,
+        "searchQuery": "University of Ottawa",
+        "cityHint": "Ottawa"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.519
+      }
+    }
+  },
+  {
+    "rank": 6,
+    "name": "University of Waterloo",
+    "url": "https://www.ratemyprofessors.com/school/1490",
+    "state": "ON",
+    "score": 89.8,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Waterloo",
+      "estStudents": "~42,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0OTA=",
+        "legacyId": 1490,
+        "searchQuery": "University of Waterloo",
+        "cityHint": "Waterloo"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.578
+      }
+    }
+  },
+  {
+    "rank": 7,
+    "name": "McGill University",
+    "url": "https://www.ratemyprofessors.com/school/1439",
+    "state": "QC",
+    "score": 87.76,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Montreal",
+      "estStudents": "~40,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0Mzk=",
+        "legacyId": 1439,
+        "searchQuery": "McGill University",
+        "cityHint": "Montreal"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.717
+      }
+    }
+  },
+  {
+    "rank": 8,
+    "name": "University of Alberta",
+    "url": "https://www.ratemyprofessors.com/school/1407",
+    "state": "AB",
+    "score": 85.71,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Edmonton",
+      "estStudents": "~40,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MDc=",
+        "legacyId": 1407,
+        "searchQuery": "University of Alberta",
+        "cityHint": "Edmonton"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.562
+      }
+    }
+  },
+  {
+    "rank": 9,
+    "name": "Western University",
+    "url": "https://www.ratemyprofessors.com/school/1491",
+    "state": "ON",
+    "score": 83.67,
+    "previous_rank": null,
+    "metadata": {
+      "city": "London ON",
+      "estStudents": "~40,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0OTE=",
+        "legacyId": 1491,
+        "searchQuery": "Western University",
+        "cityHint": "London ON"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.515
+      }
+    }
+  },
+  {
+    "rank": 10,
+    "name": "McMaster University",
+    "url": "https://www.ratemyprofessors.com/school/1440",
+    "state": "ON",
+    "score": 81.63,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Hamilton",
+      "estStudents": "~32,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NDA=",
+        "legacyId": 1440,
+        "searchQuery": "McMaster University",
+        "cityHint": "Hamilton"
+      },
+      "professorCount": 2285,
+      "professorsSummary": {
+        "listedProfessors": 2285,
+        "withNumericRating": 2285,
+        "avgRatingAcrossProfessors": 3.012
+      }
+    }
+  },
+  {
+    "rank": 11,
+    "name": "University of Calgary",
+    "url": "https://www.ratemyprofessors.com/school/1416",
+    "state": "AB",
+    "score": 79.59,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Calgary",
+      "estStudents": "~33,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MTY=",
+        "legacyId": 1416,
+        "searchQuery": "University of Calgary",
+        "cityHint": "Calgary"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.533
+      }
+    }
+  },
+  {
+    "rank": 12,
+    "name": "Simon Fraser University",
+    "url": "https://www.ratemyprofessors.com/school/1482",
+    "state": "BC",
+    "score": 77.55,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Burnaby",
+      "estStudents": "~35,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0ODI=",
+        "legacyId": 1482,
+        "searchQuery": "Simon Fraser University",
+        "cityHint": "Burnaby"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.485
+      }
+    }
+  },
+  {
+    "rank": 13,
+    "name": "Toronto Metropolitan University",
+    "url": "https://www.ratemyprofessors.com/school/1471",
+    "state": "ON",
+    "score": 75.51,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Toronto",
+      "estStudents": "~48,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NzE=",
+        "legacyId": 1471,
+        "searchQuery": "Ryerson / Toronto Metropolitan Univ.",
+        "cityHint": "Toronto"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.577
+      }
+    }
+  },
+  {
+    "rank": 14,
+    "name": "Carleton University",
+    "url": "https://www.ratemyprofessors.com/school/1420",
+    "state": "ON",
+    "score": 73.47,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Ottawa",
+      "estStudents": "~32,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MjA=",
+        "legacyId": 1420,
+        "searchQuery": "Carleton University",
+        "cityHint": "Ottawa"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.576
+      }
+    }
+  },
+  {
+    "rank": 15,
+    "name": "Dalhousie University",
+    "url": "https://www.ratemyprofessors.com/school/1423",
+    "state": "NS",
+    "score": 71.43,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Halifax",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MjM=",
+        "legacyId": 1423,
+        "searchQuery": "Dalhousie University",
+        "cityHint": "Halifax"
+      },
+      "professorCount": 1762,
+      "professorsSummary": {
+        "listedProfessors": 1762,
+        "withNumericRating": 1762,
+        "avgRatingAcrossProfessors": 3.13
+      }
+    }
+  },
+  {
+    "rank": 16,
+    "name": "University of Manitoba",
+    "url": "https://www.ratemyprofessors.com/school/1438",
+    "state": "MB",
+    "score": 69.39,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Winnipeg",
+      "estStudents": "~27,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0Mzg=",
+        "legacyId": 1438,
+        "searchQuery": "University of Manitoba",
+        "cityHint": "Winnipeg"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.548
+      }
+    }
+  },
+  {
+    "rank": 17,
+    "name": "Queen's University at Kingston",
+    "url": "https://www.ratemyprofessors.com/school/1466",
+    "state": "ON",
+    "score": 67.35,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Kingston",
+      "estStudents": "~25,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NjY=",
+        "legacyId": 1466,
+        "searchQuery": "Queen's University",
+        "cityHint": "Kingston"
+      },
+      "professorCount": 1930,
+      "professorsSummary": {
+        "listedProfessors": 1930,
+        "withNumericRating": 1930,
+        "avgRatingAcrossProfessors": 3.088
+      }
+    }
+  },
+  {
+    "rank": 18,
+    "name": "University of Saskatchewan",
+    "url": "https://www.ratemyprofessors.com/school/1480",
+    "state": "SK",
+    "score": 65.31,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Saskatoon",
+      "estStudents": "~24,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0ODA=",
+        "legacyId": 1480,
+        "searchQuery": "University of Saskatchewan",
+        "cityHint": "Saskatoon"
+      },
+      "professorCount": 2424,
+      "professorsSummary": {
+        "listedProfessors": 2424,
+        "withNumericRating": 2424,
+        "avgRatingAcrossProfessors": 3.102
+      }
+    }
+  },
+  {
+    "rank": 19,
+    "name": "University of Victoria",
+    "url": "https://www.ratemyprofessors.com/school/1488",
+    "state": "BC",
+    "score": 63.27,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Victoria",
+      "estStudents": "~22,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0ODg=",
+        "legacyId": 1488,
+        "searchQuery": "University of Victoria",
+        "cityHint": "Victoria"
+      },
+      "professorCount": 2500,
+      "professorsSummary": {
+        "listedProfessors": 2500,
+        "withNumericRating": 2500,
+        "avgRatingAcrossProfessors": 3.462
+      }
+    }
+  },
+  {
+    "rank": 20,
+    "name": "Concordia University",
+    "url": "https://www.ratemyprofessors.com/school/18443",
+    "state": "QC",
+    "score": 61.22,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Montreal",
+      "estStudents": "~47,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE4NDQz",
+        "legacyId": 18443,
+        "searchQuery": "Concordia University",
+        "cityHint": "Montreal"
+      },
+      "professorCount": 274,
+      "professorsSummary": {
+        "listedProfessors": 274,
+        "withNumericRating": 274,
+        "avgRatingAcrossProfessors": 2.441
+      }
+    }
+  },
+  {
+    "rank": 21,
+    "name": "University of Guelph",
+    "url": "https://www.ratemyprofessors.com/school/1426",
+    "state": "ON",
+    "score": 59.18,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Guelph",
+      "estStudents": "~30,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MjY=",
+        "legacyId": 1426,
+        "searchQuery": "University of Guelph",
+        "cityHint": "Guelph"
+      },
+      "professorCount": 1695,
+      "professorsSummary": {
+        "listedProfessors": 1695,
+        "withNumericRating": 1695,
+        "avgRatingAcrossProfessors": 3.106
+      }
+    }
+  },
+  {
+    "rank": 22,
+    "name": "Université de Montréal",
+    "url": "https://www.ratemyprofessors.com/school/1443",
+    "state": "QC",
+    "score": 57.14,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Montreal",
+      "estStudents": "~68,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NDM=",
+        "legacyId": 1443,
+        "searchQuery": "Université de Montréal",
+        "cityHint": "Montreal"
+      },
+      "professorCount": 1455,
+      "professorsSummary": {
+        "listedProfessors": 1455,
+        "withNumericRating": 1455,
+        "avgRatingAcrossProfessors": 2.749
+      }
+    }
+  },
+  {
+    "rank": 23,
+    "name": "University of Regina",
+    "url": "https://www.ratemyprofessors.com/school/1468",
+    "state": "SK",
+    "score": 55.1,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Regina",
+      "estStudents": "~16,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0Njg=",
+        "legacyId": 1468,
+        "searchQuery": "University of Regina",
+        "cityHint": "Regina"
+      },
+      "professorCount": 1977,
+      "professorsSummary": {
+        "listedProfessors": 1977,
+        "withNumericRating": 1977,
+        "avgRatingAcrossProfessors": 3.063
+      }
+    }
+  },
+  {
+    "rank": 24,
+    "name": "Brock University",
+    "url": "https://www.ratemyprofessors.com/school/1415",
+    "state": "ON",
+    "score": 53.06,
+    "previous_rank": null,
+    "metadata": {
+      "city": "St. Catharines",
+      "estStudents": "~19,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MTU=",
+        "legacyId": 1415,
+        "searchQuery": "Brock University",
+        "cityHint": "St. Catharines"
+      },
+      "professorCount": 1420,
+      "professorsSummary": {
+        "listedProfessors": 1420,
+        "withNumericRating": 1420,
+        "avgRatingAcrossProfessors": 3.116
+      }
+    }
+  },
+  {
+    "rank": 25,
+    "name": "Wilfrid Laurier University - Milton",
+    "url": "https://www.ratemyprofessors.com/school/18184",
+    "state": "ON",
+    "score": 51.02,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Waterloo",
+      "estStudents": "~19,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE4MTg0",
+        "legacyId": 18184,
+        "searchQuery": "Wilfrid Laurier University",
+        "cityHint": "Waterloo"
+      },
+      "professorCount": 10,
+      "professorsSummary": {
+        "listedProfessors": 10,
+        "withNumericRating": 10,
+        "avgRatingAcrossProfessors": 1.61
+      }
+    }
+  },
+  {
+    "rank": 26,
+    "name": "University of New Brunswick",
+    "url": "https://www.ratemyprofessors.com/school/1446",
+    "state": "NB",
+    "score": 48.98,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Fredericton",
+      "estStudents": "~10,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NDY=",
+        "legacyId": 1446,
+        "searchQuery": "University of New Brunswick",
+        "cityHint": "Fredericton"
+      },
+      "professorCount": 946,
+      "professorsSummary": {
+        "listedProfessors": 946,
+        "withNumericRating": 946,
+        "avgRatingAcrossProfessors": 3.342
+      }
+    }
+  },
+  {
+    "rank": 27,
+    "name": "Lakehead University",
+    "url": "https://www.ratemyprofessors.com/school/16496",
+    "state": "ON",
+    "score": 46.94,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Thunder Bay",
+      "estStudents": "~9,500",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE2NDk2",
+        "legacyId": 16496,
+        "searchQuery": "Lakehead University",
+        "cityHint": "Thunder Bay"
+      },
+      "professorCount": 148,
+      "professorsSummary": {
+        "listedProfessors": 148,
+        "withNumericRating": 148,
+        "avgRatingAcrossProfessors": 2.766
+      }
+    }
+  },
+  {
+    "rank": 28,
+    "name": "University of Windsor",
+    "url": "https://www.ratemyprofessors.com/school/1493",
+    "state": "ON",
+    "score": 44.9,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Windsor",
+      "estStudents": "~16,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0OTM=",
+        "legacyId": 1493,
+        "searchQuery": "University of Windsor",
+        "cityHint": "Windsor"
+      },
+      "professorCount": 1493,
+      "professorsSummary": {
+        "listedProfessors": 1493,
+        "withNumericRating": 1493,
+        "avgRatingAcrossProfessors": 3.057
+      }
+    }
+  },
+  {
+    "rank": 29,
+    "name": "University of Northern British Columbia",
+    "url": "https://www.ratemyprofessors.com/school/1448",
+    "state": "BC",
+    "score": 42.86,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Prince George",
+      "estStudents": "~5,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NDg=",
+        "legacyId": 1448,
+        "searchQuery": "University of Northern BC",
+        "cityHint": "Prince George"
+      },
+      "professorCount": 497,
+      "professorsSummary": {
+        "listedProfessors": 497,
+        "withNumericRating": 497,
+        "avgRatingAcrossProfessors": 3.052
+      }
+    }
+  },
+  {
+    "rank": 30,
+    "name": "Trent University",
+    "url": "https://www.ratemyprofessors.com/school/13718",
+    "state": "ON",
+    "score": 40.82,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Peterborough",
+      "estStudents": "~10,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTEzNzE4",
+        "legacyId": 13718,
+        "searchQuery": "Trent University",
+        "cityHint": "Peterborough"
+      },
+      "professorCount": 102,
+      "professorsSummary": {
+        "listedProfessors": 102,
+        "withNumericRating": 102,
+        "avgRatingAcrossProfessors": 2.791
+      }
+    }
+  },
+  {
+    "rank": 31,
+    "name": "Memorial University of Newfoundland",
+    "url": "https://www.ratemyprofessors.com/school/1441",
+    "state": "NL",
+    "score": 38.78,
+    "previous_rank": null,
+    "metadata": {
+      "city": "St. John's",
+      "estStudents": "~19,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NDE=",
+        "legacyId": 1441,
+        "searchQuery": "Memorial University of Newfoundland",
+        "cityHint": "St. John's"
+      },
+      "professorCount": 2191,
+      "professorsSummary": {
+        "listedProfessors": 2191,
+        "withNumericRating": 2191,
+        "avgRatingAcrossProfessors": 3.25
+      }
+    }
+  },
+  {
+    "rank": 32,
+    "name": "University of Lethbridge",
+    "url": "https://www.ratemyprofessors.com/school/1435",
+    "state": "AB",
+    "score": 36.73,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Lethbridge",
+      "estStudents": "~9,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MzU=",
+        "legacyId": 1435,
+        "searchQuery": "University of Lethbridge",
+        "cityHint": "Lethbridge"
+      },
+      "professorCount": 1192,
+      "professorsSummary": {
+        "listedProfessors": 1192,
+        "withNumericRating": 1192,
+        "avgRatingAcrossProfessors": 3.237
+      }
+    }
+  },
+  {
+    "rank": 33,
+    "name": "Nipissing University",
+    "url": "https://www.ratemyprofessors.com/school/1447",
+    "state": "ON",
+    "score": 34.69,
+    "previous_rank": null,
+    "metadata": {
+      "city": "North Bay",
+      "estStudents": "~5,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NDc=",
+        "legacyId": 1447,
+        "searchQuery": "Nipissing University",
+        "cityHint": "North Bay"
+      },
+      "professorCount": 433,
+      "professorsSummary": {
+        "listedProfessors": 433,
+        "withNumericRating": 433,
+        "avgRatingAcrossProfessors": 3.162
+      }
+    }
+  },
+  {
+    "rank": 34,
+    "name": "Laurentian University of Sudbury",
+    "url": "https://www.ratemyprofessors.com/school/1433",
+    "state": "ON",
+    "score": 32.65,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sudbury",
+      "estStudents": "~8,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MzM=",
+        "legacyId": 1433,
+        "searchQuery": "Laurentian University",
+        "cityHint": "Sudbury"
+      },
+      "professorCount": 810,
+      "professorsSummary": {
+        "listedProfessors": 810,
+        "withNumericRating": 810,
+        "avgRatingAcrossProfessors": 3.012
+      }
+    }
+  },
+  {
+    "rank": 35,
+    "name": "Université du Québec à Chicoutimi",
+    "url": "https://www.ratemyprofessors.com/school/18596",
+    "state": "QC",
+    "score": 30.61,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Montreal",
+      "estStudents": "~43,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE4NTk2",
+        "legacyId": 18596,
+        "searchQuery": "UQAM (Univ. du Québec à Montréal)",
+        "cityHint": "Montreal"
+      },
+      "professorCount": 3,
+      "professorsSummary": {
+        "listedProfessors": 3,
+        "withNumericRating": 3,
+        "avgRatingAcrossProfessors": 1.667
+      }
+    }
+  },
+  {
+    "rank": 36,
+    "name": "University of Saskatchewan",
+    "url": "https://www.ratemyprofessors.com/school/1480",
+    "state": "SK",
+    "score": 28.57,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Moncton",
+      "estStudents": "~7,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0ODA=",
+        "legacyId": 1480,
+        "searchQuery": "University of Moncton",
+        "cityHint": "Moncton"
+      },
+      "professorCount": 2424,
+      "professorsSummary": {
+        "listedProfessors": 2424,
+        "withNumericRating": 2424,
+        "avgRatingAcrossProfessors": 3.102
+      }
+    }
+  },
+  {
+    "rank": 37,
+    "name": "Algoma University",
+    "url": "https://www.ratemyprofessors.com/school/1498",
+    "state": "ON",
+    "score": 26.53,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sault Ste. Marie",
+      "estStudents": "~9,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0OTg=",
+        "legacyId": 1498,
+        "searchQuery": "Algoma University",
+        "cityHint": "Sault Ste. Marie"
+      },
+      "professorCount": 161,
+      "professorsSummary": {
+        "listedProfessors": 161,
+        "withNumericRating": 161,
+        "avgRatingAcrossProfessors": 3.282
+      }
+    }
+  },
+  {
+    "rank": 38,
+    "name": "University of Prince Edward Island",
+    "url": "https://www.ratemyprofessors.com/school/1454",
+    "state": "PE",
+    "score": 24.49,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Charlottetown",
+      "estStudents": "~5,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NTQ=",
+        "legacyId": 1454,
+        "searchQuery": "University of Prince Edward Island",
+        "cityHint": "Charlottetown"
+      },
+      "professorCount": 518,
+      "professorsSummary": {
+        "listedProfessors": 518,
+        "withNumericRating": 518,
+        "avgRatingAcrossProfessors": 3.073
+      }
+    }
+  },
+  {
+    "rank": 39,
+    "name": "Athabasca University",
+    "url": "https://www.ratemyprofessors.com/school/1408",
+    "state": "AB",
+    "score": 22.45,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Athabasca",
+      "estStudents": "~40,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MDg=",
+        "legacyId": 1408,
+        "searchQuery": "Athabasca University",
+        "cityHint": "Athabasca"
+      },
+      "professorCount": 527,
+      "professorsSummary": {
+        "listedProfessors": 527,
+        "withNumericRating": 527,
+        "avgRatingAcrossProfessors": 2.219
+      }
+    }
+  },
+  {
+    "rank": 40,
+    "name": "Cape Breton University",
+    "url": "https://www.ratemyprofessors.com/school/1418",
+    "state": "NS",
+    "score": 20.41,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sydney NS",
+      "estStudents": "~5,500",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MTg=",
+        "legacyId": 1418,
+        "searchQuery": "Cape Breton University",
+        "cityHint": "Sydney NS"
+      },
+      "professorCount": 391,
+      "professorsSummary": {
+        "listedProfessors": 391,
+        "withNumericRating": 391,
+        "avgRatingAcrossProfessors": 3.093
+      }
+    }
+  },
+  {
+    "rank": 41,
+    "name": "Acadia University",
+    "url": "https://www.ratemyprofessors.com/school/1406",
+    "state": "NS",
+    "score": 18.37,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Wolfville",
+      "estStudents": "~4,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MDY=",
+        "legacyId": 1406,
+        "searchQuery": "Acadia University",
+        "cityHint": "Wolfville"
+      },
+      "professorCount": 558,
+      "professorsSummary": {
+        "listedProfessors": 558,
+        "withNumericRating": 558,
+        "avgRatingAcrossProfessors": 3.277
+      }
+    }
+  },
+  {
+    "rank": 42,
+    "name": "Mount Allison University",
+    "url": "https://www.ratemyprofessors.com/school/1444",
+    "state": "NB",
+    "score": 16.33,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sackville",
+      "estStudents": "~2,500",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NDQ=",
+        "legacyId": 1444,
+        "searchQuery": "Mount Allison University",
+        "cityHint": "Sackville"
+      },
+      "professorCount": 407,
+      "professorsSummary": {
+        "listedProfessors": 407,
+        "withNumericRating": 407,
+        "avgRatingAcrossProfessors": 3.447
+      }
+    }
+  },
+  {
+    "rank": 43,
+    "name": "Saint Mary's University",
+    "url": "https://www.ratemyprofessors.com/school/1475",
+    "state": "NS",
+    "score": 14.29,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Halifax",
+      "estStudents": "~8,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0NzU=",
+        "legacyId": 1475,
+        "searchQuery": "Saint Mary's University",
+        "cityHint": "Halifax"
+      },
+      "professorCount": 1056,
+      "professorsSummary": {
+        "listedProfessors": 1056,
+        "withNumericRating": 1056,
+        "avgRatingAcrossProfessors": 3.248
+      }
+    }
+  },
+  {
+    "rank": 44,
+    "name": "The Ontario College of Art and Design University (OCAD U)",
+    "url": "https://www.ratemyprofessors.com/school/4062",
+    "state": "ON",
+    "score": 12.24,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Toronto",
+      "estStudents": "~5,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTQwNjI=",
+        "legacyId": 4062,
+        "searchQuery": "OCAD University",
+        "cityHint": "Toronto"
+      },
+      "professorCount": 757,
+      "professorsSummary": {
+        "listedProfessors": 757,
+        "withNumericRating": 757,
+        "avgRatingAcrossProfessors": 2.953
+      }
+    }
+  },
+  {
+    "rank": 45,
+    "name": "Université du Québec en Outaouais",
+    "url": "https://www.ratemyprofessors.com/school/18904",
+    "state": "QC",
+    "score": 10.2,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Gatineau",
+      "estStudents": "~9,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE4OTA0",
+        "legacyId": 18904,
+        "searchQuery": "Université du Québec en Outaouais",
+        "cityHint": "Gatineau"
+      },
+      "professorCount": 4,
+      "professorsSummary": {
+        "listedProfessors": 4,
+        "withNumericRating": 4,
+        "avgRatingAcrossProfessors": 0.0
+      }
+    }
+  },
+  {
+    "rank": 46,
+    "name": "University of Fredericton",
+    "url": null,
+    "state": null,
+    "score": 8.16,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Fredericton",
+      "estStudents": "~2,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Fredericton",
+        "cityHint": "Fredericton",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 47,
+    "name": "Thompson Rivers University",
+    "url": "https://www.ratemyprofessors.com/school/1419",
+    "state": "BC",
+    "score": 6.12,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Kamloops",
+      "estStudents": "~22,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE0MTk=",
+        "legacyId": 1419,
+        "searchQuery": "Thompson Rivers University",
+        "cityHint": "Kamloops"
+      },
+      "professorCount": 1092,
+      "professorsSummary": {
+        "listedProfessors": 1092,
+        "withNumericRating": 1092,
+        "avgRatingAcrossProfessors": 3.087
+      }
+    }
+  },
+  {
+    "rank": 48,
+    "name": "Kwantlen Polytechnic University - Surrey",
+    "url": "https://www.ratemyprofessors.com/school/4028",
+    "state": "BC",
+    "score": 4.08,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Surrey BC",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTQwMjg=",
+        "legacyId": 4028,
+        "searchQuery": "Kwantlen Polytechnic University",
+        "cityHint": "Surrey BC"
+      },
+      "professorCount": 1462,
+      "professorsSummary": {
+        "listedProfessors": 1462,
+        "withNumericRating": 1462,
+        "avgRatingAcrossProfessors": 3.228
+      }
+    }
+  },
+  {
+    "rank": 49,
+    "name": "MacEwan University",
+    "url": "https://www.ratemyprofessors.com/school/1569",
+    "state": "AB",
+    "score": 2.04,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Edmonton",
+      "estStudents": "~14,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE1Njk=",
+        "legacyId": 1569,
+        "searchQuery": "MacEwan University",
+        "cityHint": "Edmonton"
+      },
+      "professorCount": 2001,
+      "professorsSummary": {
+        "listedProfessors": 2001,
+        "withNumericRating": 2001,
+        "avgRatingAcrossProfessors": 3.218
+      }
+    }
+  },
+  {
+    "rank": 50,
+    "name": "Mount Royal University",
+    "url": "https://www.ratemyprofessors.com/school/1570",
+    "state": "AB",
+    "score": 0.0,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Calgary",
+      "estStudents": "~15,000",
+      "scrapedAt": "2026-04-16T01:59:00.182176+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE1NzA=",
+        "legacyId": 1570,
+        "searchQuery": "Mount Royal University",
+        "cityHint": "Calgary"
+      },
+      "professorCount": 1946,
+      "professorsSummary": {
+        "listedProfessors": 1946,
+        "withNumericRating": 1946,
+        "avgRatingAcrossProfessors": 3.321
+      }
+    }
+  }
+]

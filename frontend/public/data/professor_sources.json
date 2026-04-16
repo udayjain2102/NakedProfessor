@@ -1,0 +1,42 @@
+[
+  {
+    "id": "top200_plus_behrend",
+    "label": "US Top 200 + Behrend",
+    "type": "csv",
+    "path": "/data/top200_plus_behrend_professors.csv"
+  },
+  {
+    "id": "behrend_demo",
+    "label": "Behrend demo",
+    "type": "csv",
+    "path": "/data/behrend_professors.csv"
+  },
+  {
+    "id": "australia",
+    "label": "Australia",
+    "type": "csv",
+    "path": "/data/australia_professors.csv",
+    "seedPath": "/data/australia_seed.json"
+  },
+  {
+    "id": "canada",
+    "label": "Canada",
+    "type": "csv",
+    "path": "/data/canada_professors.csv",
+    "seedPath": "/data/canada_seed.json"
+  },
+  {
+    "id": "india",
+    "label": "India",
+    "type": "csv",
+    "path": "/data/india_professors.csv",
+    "seedPath": "/data/india_seed.json"
+  },
+  {
+    "id": "uk",
+    "label": "UK",
+    "type": "csv",
+    "path": "/data/uk_professors.csv",
+    "seedPath": "/data/uk_seed.json"
+  }
+]

@@ -1,0 +1,559 @@
+school_rank,school_name,school_id,school_state,professor_id,professor_legacy_id,professor_first,professor_last,department,avg_rating,avg_difficulty,would_take_again_percent,num_ratings,profile_url
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDAzMTUz,3003153,janet ,libby,Law,5,2,100,1,https://www.ratemyprofessors.com/professor/3003153
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDk0MjYz,3094263,Rachel,Gallardo,Business,1.8,4,25,4,https://www.ratemyprofessors.com/professor/3094263
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjAzMzE3,2603317,Galia,Fussell,Writing,1.3,4.7,9.6774,31,https://www.ratemyprofessors.com/professor/2603317
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTAxOTUw,3101950,Abayomi,Afe,Health Science,4.8,2.8,93.75,16,https://www.ratemyprofessors.com/professor/3101950
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI2MTUz,3026153,Jim,Morgan,Business,2.7,4.3,33.3333,3,https://www.ratemyprofessors.com/professor/3026153
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDg0MDgy,3084082,Jayaram ,Madireddy,Management,2.3,2.7,33.3333,3,https://www.ratemyprofessors.com/professor/3084082
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjg5NTkx,2689591,Kimberly,Bracey,Mathematics,4,1.5,100,2,https://www.ratemyprofessors.com/professor/2689591
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDUyMjk5,2452299,Sheree,Nelson,Economics,1,3.3,0,4,https://www.ratemyprofessors.com/professor/2452299
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDczNjI2,3073626,Tecoye,Dinkins,Health Science,1.5,4.5,0,2,https://www.ratemyprofessors.com/professor/3073626
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTEwNzU1,3110755,Kristi,Pitts,Criminal Justice,3.5,3,75,4,https://www.ratemyprofessors.com/professor/3110755
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU1MTU1,3155155,Clifford,kettemborough,Information Science,1,5,0,2,https://www.ratemyprofessors.com/professor/3155155
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTgwMTA4,2980108,Lisa,Phillips,Psychology,5,4,100,2,https://www.ratemyprofessors.com/professor/2980108
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTkwODkx,2590891,Jeffrey,Gulley,Law,5,2.2,100,6,https://www.ratemyprofessors.com/professor/2590891
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM5MTkw,2939190,Cassandra,Tate,Health Science,1,5,0,5,https://www.ratemyprofessors.com/professor/2939190
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIyNTU1,3122555,Tyler,Sorg,Communication,5,1.7,100,3,https://www.ratemyprofessors.com/professor/3122555
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDc2ODI4,3076828,Danielle,Tate,Psychology,2,4,-1,1,https://www.ratemyprofessors.com/professor/3076828
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODc2NzQ4,2876748,Karen ,Watson,Psychology,3.5,2.5,66.6667,6,https://www.ratemyprofessors.com/professor/2876748
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzI0OTg5,2724989,Gabriel,Smith,Communication,1.4,4.3,14.2857,7,https://www.ratemyprofessors.com/professor/2724989
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTA4NzI4,2908728,Sandra,Keith,Education,3,3,50,2,https://www.ratemyprofessors.com/professor/2908728
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDc5NTc2,3079576,Kimberly,Testa Fortier,Education,5,1,100,1,https://www.ratemyprofessors.com/professor/3079576
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI0ODU2,2924856,Sait,Tarhan,Law,5,2.6,100,7,https://www.ratemyprofessors.com/professor/2924856
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI4MjQ1,3028245,Monal,Patel,Education,3.2,3,60,5,https://www.ratemyprofessors.com/professor/3028245
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTYxMjIx,3161221,Carl,DeCarlo,Education,1,1,0,1,https://www.ratemyprofessors.com/professor/3161221
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzEyNTU2,2712556,Kimberly,Ondo,Health Science,1,4.7,0,11,https://www.ratemyprofessors.com/professor/2712556
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDMyNzA2,3032706,Kassidi,Bremer,Nursing,1,5,0,2,https://www.ratemyprofessors.com/professor/3032706
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIwMzM2,3020336,Brenda,Harper,Business,1,4.8,0,11,https://www.ratemyprofessors.com/professor/3020336
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTEzNDMw,3113430,Sarah,Scott ,Business,1,2.5,0,2,https://www.ratemyprofessors.com/professor/3113430
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDQxMzgz,3041383,Robert ,Musante ,English,1,5,0,1,https://www.ratemyprofessors.com/professor/3041383
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjc1NDI2,2675426,Lonelle,Rathje,English,2.4,4.1,30,10,https://www.ratemyprofessors.com/professor/2675426
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTQyODUw,2542850,Daniel,Dayton,Business,1,3.8,0,5,https://www.ratemyprofessors.com/professor/2542850
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE2NTU0,2916554,Tedd,Wheeler,Business,4.9,2.2,100,16,https://www.ratemyprofessors.com/professor/2916554
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTAzNzcw,2503770,James,Taylor,Humanities,3.5,3.3,50,4,https://www.ratemyprofessors.com/professor/2503770
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjk5MDA0,2699004,Erin,Sosnowski,Social Science,3,2,0,1,https://www.ratemyprofessors.com/professor/2699004
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjQ0Mzc0,2644374,Jessica,Love,Writing,1,5,0,2,https://www.ratemyprofessors.com/professor/2644374
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTExNjg5,2511689,Timothy,Carlin,Law,4.5,4.3,100,4,https://www.ratemyprofessors.com/professor/2511689
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzQ2Mjkz,2746293,Todd,Kane,Health Science,5,2,100,3,https://www.ratemyprofessors.com/professor/2746293
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDYwNTA0,2460504,Heith,Hennel,Computer Science,2,3,33.3333,3,https://www.ratemyprofessors.com/professor/2460504
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjMyMTA2,2632106,Jason,Waldow,Communication,5,2.1,100,12,https://www.ratemyprofessors.com/professor/2632106
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTA4NDI4,3108428,Brandon,Dinkins,Criminal Justice,1,5,0,1,https://www.ratemyprofessors.com/professor/3108428
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDM2ODEw,3036810,Hoijin,Jung,Fine Arts,1.7,3.7,33.3333,3,https://www.ratemyprofessors.com/professor/3036810
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTA4OTY3,3108967,James,Ebert,Criminal Justice,5,2.5,100,2,https://www.ratemyprofessors.com/professor/3108967
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTYwMTc0,2560174,Jonathan,Cardew,Communication,5,1.7,100,6,https://www.ratemyprofessors.com/professor/2560174
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM0NDgx,2934481,Reginald,Doctor,Business,1.1,4.6,0,15,https://www.ratemyprofessors.com/professor/2934481
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTQ1NTUy,3145552,Christine,Douglass,Communication,3,3,100,1,https://www.ratemyprofessors.com/professor/3145552
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODEzNzg0,2813784,Kenin,Krieger,Psychology,3.5,5,50,2,https://www.ratemyprofessors.com/professor/2813784
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDMyMDMy,3032032,Beatrice,Brown,Nursing,1.9,3.4,28.5714,7,https://www.ratemyprofessors.com/professor/3032032
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTgyMjEy,2982212,Nelly,Mulleneaux,Computer Science,3.6,2.5,61.5385,13,https://www.ratemyprofessors.com/professor/2982212
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzg5Njg5,2789689,Yasmeen,Aleem,Psychology,3.5,2.8,50,4,https://www.ratemyprofessors.com/professor/2789689
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI1OTUw,3025950,Daniel,Bilodeau,Criminal Justice,5,2,100,1,https://www.ratemyprofessors.com/professor/3025950
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzcyNjE4,2772618,Carrie,Stringham,Business,3.8,3.4,60,5,https://www.ratemyprofessors.com/professor/2772618
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzEyNTU5,2712559,Jennifer,Claire,Health Science,5,1.6,100,5,https://www.ratemyprofessors.com/professor/2712559
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODgwMDM0,2880034,Kathi,Nicholson,Computer Science,2.2,3.8,40,5,https://www.ratemyprofessors.com/professor/2880034
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDY1MTk5,3065199,Jodee,Phillips,Management,1,4.5,0,4,https://www.ratemyprofessors.com/professor/3065199
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTM0MTk3,2534197,Jamie,Thornton,English,1.1,4.1,0,27,https://www.ratemyprofessors.com/professor/2534197
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzQ0Nzc2,2744776,Jamie,Price,Criminal Justice,2.7,4,33.3333,3,https://www.ratemyprofessors.com/professor/2744776
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDMwNTY4,3030568,Zaid,Alzamani,Information Science,5,2.5,100,2,https://www.ratemyprofessors.com/professor/3030568
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzg0MTA1,2784105,Kim,Miller,Criminal Justice,1.2,4.8,0,5,https://www.ratemyprofessors.com/professor/2784105
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA5OTQz,2809943,Elliot,Crozat,Humanities,2.6,3.4,40,5,https://www.ratemyprofessors.com/professor/2809943
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODIyMzMy,2822332,Karen,Savarese,Psychology,5,3,100,4,https://www.ratemyprofessors.com/professor/2822332
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzI5MTQ5,2729149,Holly,Parker,Health Science,4,3,100,3,https://www.ratemyprofessors.com/professor/2729149
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM3NDQ4,2937448,Lynda,Mitton,Psychology,3,4.5,50,2,https://www.ratemyprofessors.com/professor/2937448
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzA5OTA3,2709907,Kathryn,Sellers,Criminal Justice,4.5,3,100,2,https://www.ratemyprofessors.com/professor/2709907
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDc2OTAz,2476903,Monica,Hubler,Accounting,2.3,4,33.3333,3,https://www.ratemyprofessors.com/professor/2476903
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTgyMDQ5,2982049,Brian,Cushing,Business,5,2.5,100,2,https://www.ratemyprofessors.com/professor/2982049
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzk0Nzky,2794792,Jeffrey,Adair,Finance,5,2.5,100,2,https://www.ratemyprofessors.com/professor/2794792
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTI1MTU5,3125159,Mary Jane,Sauceda,Accounting,5,1,100,1,https://www.ratemyprofessors.com/professor/3125159
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTEyNDcx,3112471,Sarah,Crump,Communication,5,2.4,100,8,https://www.ratemyprofessors.com/professor/3112471
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODg3NDA1,2887405,Jennifer,Preus,Communication,5,3.5,100,2,https://www.ratemyprofessors.com/professor/2887405
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIyNTUx,3122551,Sharon,Morton,Psychology,2,2,0,1,https://www.ratemyprofessors.com/professor/3122551
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzA1ODky,2705892,Christopher,Guyant,Criminal Justice,5,3,100,2,https://www.ratemyprofessors.com/professor/2705892
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODE5MDEx,2819011,Micheal,Quails,Mathematics,5,1.5,100,2,https://www.ratemyprofessors.com/professor/2819011
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIxMTE2,3121116,Amileah ,Davis,Health Science,2,3,0,1,https://www.ratemyprofessors.com/professor/3121116
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIwNzM1,3120735,Sandra,Simmons,Health Science,5,3,100,1,https://www.ratemyprofessors.com/professor/3120735
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDQ1NzMz,3045733,Dora,Finamore ,Business,1,4,0,2,https://www.ratemyprofessors.com/professor/3045733
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzA2MjA1,2706205,Theodore,Lagerwall,Criminal Justice,3.3,3.5,50,4,https://www.ratemyprofessors.com/professor/2706205
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODk5NDU3,2899457,Robert,Winters,Criminal Justice,3,3.8,50,4,https://www.ratemyprofessors.com/professor/2899457
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDk3OTY0,3097964,Matthew ,Route,Physics,4,3.5,75,12,https://www.ratemyprofessors.com/professor/3097964
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjIzMTM2,2623136,Barry,Regan,Communication,4.8,2.5,100,4,https://www.ratemyprofessors.com/professor/2623136
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE3Mzg1,3117385,Jose,Ruiz,Accounting,0,0,-1,0,https://www.ratemyprofessors.com/professor/3117385
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM0NjYz,2934663,Stuart,Childers,Management,1.5,4.7,16.6667,6,https://www.ratemyprofessors.com/professor/2934663
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDg0MDQw,3084040,Kim,Dunn,Health Science,5,3,100,2,https://www.ratemyprofessors.com/professor/3084040
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM4NjAx,2938601,Zachary,Weaver,Health Science,5,3.5,100,2,https://www.ratemyprofessors.com/professor/2938601
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE1MTY5,3115169,Ronald,Bucci,Health Science,1,3,0,1,https://www.ratemyprofessors.com/professor/3115169
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODgwMDE1,2880015,Adrian,Johnson,Health Science,3.3,2.7,66.6667,3,https://www.ratemyprofessors.com/professor/2880015
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE2OTU0,3116954,John,Ginnity,Health Science,5,3,100,1,https://www.ratemyprofessors.com/professor/3116954
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTk3MDYz,2597063,John,Gibbons,Criminal Justice,5,3.5,100,2,https://www.ratemyprofessors.com/professor/2597063
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI0MDc4,3024078,Miriam ,Gough,Business,3,4,33.3333,3,https://www.ratemyprofessors.com/professor/3024078
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjAxOTYw,2601960,Jan,Saeger,Health Science,5,2.2,100,5,https://www.ratemyprofessors.com/professor/2601960
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDgwMzQ1,3080345,Eric,McCraney,Nursing,1.5,3,0,2,https://www.ratemyprofessors.com/professor/3080345
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDc1ODI3,2475827,Michael,Snell,Health Science,5,2,100,8,https://www.ratemyprofessors.com/professor/2475827
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDkzMzky,3093392,Lauren,Bauer,Psychology,3,4,50,2,https://www.ratemyprofessors.com/professor/3093392
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA0ODA5,2804809,Broderick,Martinez,Accounting,1.7,4.7,33.3333,3,https://www.ratemyprofessors.com/professor/2804809
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTA5NzE4,3109718,Marguerite,Galindo,Nursing,5,3,100,1,https://www.ratemyprofessors.com/professor/3109718
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTA5Mzk5,3109399,Kimberly,Testa-Fortier,Education,5,2.3,100,3,https://www.ratemyprofessors.com/professor/3109399
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzgzMDM4,2783038,Michael,Crentsil,Psychology,4,2,100,1,https://www.ratemyprofessors.com/professor/2783038
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTM1NjAz,2535603,Tina,Evans,Health Science,1.8,4.7,22.2222,18,https://www.ratemyprofessors.com/professor/2535603
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzMxNzk0,2731794,Deborah,Adell,Nursing,1,4.3,0,9,https://www.ratemyprofessors.com/professor/2731794
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTgxOTYw,2981960,Stuart,Collins,Political Science,1.4,3.6,0,5,https://www.ratemyprofessors.com/professor/2981960
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTE5Nzcy,2519772,Joyce,Boone,Management,5,2.4,100,7,https://www.ratemyprofessors.com/professor/2519772
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjA1MDU2,2605056,Darrell,Portis,Health Science,4.3,2,83.3333,6,https://www.ratemyprofessors.com/professor/2605056
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDMyNzkw,3032790,Anne,Greenlee,English,3.5,4,0,2,https://www.ratemyprofessors.com/professor/3032790
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDg0MDQx,3084041,Cameron,Lackey,Psychology,1.3,4.7,0,3,https://www.ratemyprofessors.com/professor/3084041
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDYwMTgw,3060180,Naseeba,Abdeljaber,History,5,3,100,2,https://www.ratemyprofessors.com/professor/3060180
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQ2ODE3,2946817,Kenneth,Cline,Business,4.5,2,100,2,https://www.ratemyprofessors.com/professor/2946817
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODEzMDY4,2813068,Craig,Carrigee,Mathematics,1.9,4.3,28.5714,7,https://www.ratemyprofessors.com/professor/2813068
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTAzMzUw,3103350,Juanita,Williams,Psychology,1,4,0,1,https://www.ratemyprofessors.com/professor/3103350
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTAzMzU4,3103358,Joanne,Choy,Psychology,5,2,100,1,https://www.ratemyprofessors.com/professor/3103358
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODgyOTI1,2882925,Kitty ,Berry-Austin,Criminal Justice,2,2.8,25,4,https://www.ratemyprofessors.com/professor/2882925
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTk1MzMz,2995333,Brian ,Danigole,Criminal Justice,5,2.7,100,3,https://www.ratemyprofessors.com/professor/2995333
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI5NDAx,2929401,Aashis,Luitel,Information Science,5,2.5,100,2,https://www.ratemyprofessors.com/professor/2929401
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIzNjIy,3023622,Priscilla,Aaltonen,Business,1,4.2,0,5,https://www.ratemyprofessors.com/professor/3023622
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIxNTUz,3021553,Michael,Sletten,Computer Science,5,2,100,2,https://www.ratemyprofessors.com/professor/3021553
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTk4MTE2,2998116,Raciela,Austin,Nursing,3,4.5,50,2,https://www.ratemyprofessors.com/professor/2998116
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTkxNDI3,2991427,Jared,Meacham,Science,5,2,100,2,https://www.ratemyprofessors.com/professor/2991427
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODU0ODU1,2854855,Heather,Valdes,Law,2.8,4.2,40,5,https://www.ratemyprofessors.com/professor/2854855
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODgxNTAy,2881502,Eugene,Gotwalt,Economics,3.7,3,33.3333,3,https://www.ratemyprofessors.com/professor/2881502
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE2OTUy,2916952,Andrei,Disli,Mathematics,4,2,100,2,https://www.ratemyprofessors.com/professor/2916952
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDg0MDgz,3084083,Kevin ,Phillips,Computer Science,4,3,100,1,https://www.ratemyprofessors.com/professor/3084083
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzQwNjYw,2740660,Michael,Goyden,Information Science,4,3,100,1,https://www.ratemyprofessors.com/professor/2740660
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjMyMTA1,2632105,Donald,Mounce,Communication,3.8,2.8,60,5,https://www.ratemyprofessors.com/professor/2632105
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDQyMjA1,3042205,Sanya,Diaz,Health Science,1.5,2,0,2,https://www.ratemyprofessors.com/professor/3042205
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDc2Mzc1,3076375,Samuel,Enajero,Business,1,5,0,1,https://www.ratemyprofessors.com/professor/3076375
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTI3Mzkw,2527390,CHRISTINE,O'NEAL,Biology,5,2,100,5,https://www.ratemyprofessors.com/professor/2527390
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjE2MzU2,2616356,Jennifer,Haber,English,2,4.4,8.3333,12,https://www.ratemyprofessors.com/professor/2616356
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDMyMzIw,2432320,Mark,Wilcox,Management,2.8,3.4,60,5,https://www.ratemyprofessors.com/professor/2432320
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjk3NTM2,2697536,Leslye,Rollins-Smith,Psychology,3,4,50,4,https://www.ratemyprofessors.com/professor/2697536
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDcxNDQ4,3071448,Marti,Silvidi,Nursing,5,3,100,1,https://www.ratemyprofessors.com/professor/3071448
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDcxNTcx,3071571,Kathryn,Van Horn,Education,5,2,100,1,https://www.ratemyprofessors.com/professor/3071571
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDcxNTcw,3071570,Christina,Bass,Education,5,2,100,1,https://www.ratemyprofessors.com/professor/3071570
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDcwOTYz,3070963,Scott,VanZuiden,Mathematics,5,2,100,1,https://www.ratemyprofessors.com/professor/3070963
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDcwOTY1,3070965,Andreia,Ford,Health Science,4,3,100,1,https://www.ratemyprofessors.com/professor/3070965
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTAyNzQy,2902742,Thomas,Gilchrist,Business,5,1.5,100,2,https://www.ratemyprofessors.com/professor/2902742
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzUwOTI0,2750924,Jennifer,Patrick,Psychology,5,3,100,1,https://www.ratemyprofessors.com/professor/2750924
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI0NTQ5,2924549,Jeffrey,Messinger,Communication,5,2,100,1,https://www.ratemyprofessors.com/professor/2924549
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDY3OTY3,3067967,Tatiana,Peak,Psychology,2,4,0,1,https://www.ratemyprofessors.com/professor/3067967
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDY3OTY5,3067969,Deirdre,Teaford,Psychology,3,1,100,1,https://www.ratemyprofessors.com/professor/3067969
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDM1MTg4,3035188,Bonnie,Bastin ,Social Work,1,3,0,1,https://www.ratemyprofessors.com/professor/3035188
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODg4MDk3,2888097,Dorette,Nysewander,Health Science,4.3,1.5,75,4,https://www.ratemyprofessors.com/professor/2888097
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDY2Mjkx,3066291,Shannon,Pickett,Psychology,5,3,100,1,https://www.ratemyprofessors.com/professor/3066291
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDY0MzMz,3064333,Jorge,Diaz Albelo,Management,4,3,100,1,https://www.ratemyprofessors.com/professor/3064333
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODAxMDI3,2801027,Jerry,Findler,Criminal Justice,5,1,100,1,https://www.ratemyprofessors.com/professor/2801027
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDU5NjA2,3059606,Brian,Smith,Nursing,1,3,0,1,https://www.ratemyprofessors.com/professor/3059606
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDU2MTM2,2456136,Dee,Strbiak,Psychology,5,3.1,88.8889,9,https://www.ratemyprofessors.com/professor/2456136
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODIyMzMx,2822331,Dorothy,Williams,Communication,4.8,1.7,100,6,https://www.ratemyprofessors.com/professor/2822331
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODIxNTg2,2821586,Shanise,Bell,Communication,5,3,100,2,https://www.ratemyprofessors.com/professor/2821586
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI2MzM1,3026335,Jessica,Hoover,Management,4.5,3,100,2,https://www.ratemyprofessors.com/professor/3026335
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzk0Nzg5,2794789,Jan,Watson,English,5,1,100,2,https://www.ratemyprofessors.com/professor/2794789
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDEwNjQy,3010642,Teresa,Thomas,Health Science,4,3,100,1,https://www.ratemyprofessors.com/professor/3010642
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIwMTQ1,3020145,David ,White,Criminal Justice,2,4.7,33.3333,3,https://www.ratemyprofessors.com/professor/3020145
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTEzNjY5,2513669,Shelly,Gussis,Writing,2.3,3.8,22.2222,9,https://www.ratemyprofessors.com/professor/2513669
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDMxMzM2,3031336,Alicia,Smales,Marketing,4,4,0,1,https://www.ratemyprofessors.com/professor/3031336
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTU3NDMw,2957430,Christiana,Bevier,Communication,4,2,100,2,https://www.ratemyprofessors.com/professor/2957430
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTEyODYw,2912860,Vikidiane ,Muzika,English,1,5,0,2,https://www.ratemyprofessors.com/professor/2912860
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE0ODMx,2914831,Joseph,Schwartz,Education,5,3,100,1,https://www.ratemyprofessors.com/professor/2914831
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE5MDEy,2919012,Donna ,Sanders,Information Science,2.7,1.3,33.3333,3,https://www.ratemyprofessors.com/professor/2919012
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI5MTYz,3029163,Latoya,Hayden ,Marketing,1,1,0,2,https://www.ratemyprofessors.com/professor/3029163
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzI3MTA1,2727105,Marisa,Aguiar,Management,5,2,100,2,https://www.ratemyprofessors.com/professor/2727105
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI5OTY1,3029965,Susan ,Benesh,Nursing,5,5,100,1,https://www.ratemyprofessors.com/professor/3029965
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODE0NzEx,2814711,Heather,Sager,Psychology,1,2,0,1,https://www.ratemyprofessors.com/professor/2814711
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI4NjI0,3028624,Christine,Rowe,Psychology,5,1,100,1,https://www.ratemyprofessors.com/professor/3028624
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI0OTY3,3024967,Julia,Nyberg,Education,5,2,100,1,https://www.ratemyprofessors.com/professor/3024967
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDE5OTI2,3019926,Nelly ,Dixon,Psychology,4,1,100,1,https://www.ratemyprofessors.com/professor/3019926
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM1NTI2,2935526,Jason,Dew,English,2.3,4,66.6667,3,https://www.ratemyprofessors.com/professor/2935526
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDcwNzUz,2470753,Catherine,Lopez-Gonzalez,Business,3,4,50,2,https://www.ratemyprofessors.com/professor/2470753
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODIxMjI3,2821227,Sharon,Brown,Accounting,3,3,50,2,https://www.ratemyprofessors.com/professor/2821227
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI2MzM0,3026334,Dr. April,Raines,Health Science,5,4,100,1,https://www.ratemyprofessors.com/professor/3026334
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI4Mjk5,2928299,Verl,Anderson,Management,5,1,100,2,https://www.ratemyprofessors.com/professor/2928299
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI0ODk2,3024896,Cheryl,Rhoads,Information Science,5,3,100,1,https://www.ratemyprofessors.com/professor/3024896
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI0ODk0,3024894,Kevin ,Hayes,Health Science,5,3,100,1,https://www.ratemyprofessors.com/professor/3024894
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTEzNjcy,2513672,Ryan,Cornell,Mathematics,5,3,100,2,https://www.ratemyprofessors.com/professor/2513672
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA4MTAx,2808101,Darrell,Evans,Science,5,1.3,100,3,https://www.ratemyprofessors.com/professor/2808101
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDEwNjkw,3010690,Andrew ,McMurray,Social Science,5,1,100,1,https://www.ratemyprofessors.com/professor/3010690
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODkwNTc3,2890577,William ,Blix,Accounting,3,3,33.3333,3,https://www.ratemyprofessors.com/professor/2890577
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDE5Nzkz,3019793,Brett ,Carnevale,Health Science,1,4,0,1,https://www.ratemyprofessors.com/professor/3019793
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTEzNjcx,2513671,William,Johnson,Writing,3.5,4.1,58.3333,12,https://www.ratemyprofessors.com/professor/2513671
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODU0ODU3,2854857,Carrie,DerKacy,Mathematics,5,2,100,2,https://www.ratemyprofessors.com/professor/2854857
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE1NTI3,2915527,Mike,Orsega,Information Science,1,4.7,0,3,https://www.ratemyprofessors.com/professor/2915527
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTc4OTIz,2578923,Joseph,Marchionda,Law,1,2.5,0,2,https://www.ratemyprofessors.com/professor/2578923
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzQyMjI4,2742228,Laura,Allison,Mathematics,4.7,1.3,100,3,https://www.ratemyprofessors.com/professor/2742228
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjA3MjMw,2607230,Nathan,Boyer,Business,5,1,100,1,https://www.ratemyprofessors.com/professor/2607230
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDA0MTA0,3004104,John,Hrabar,Education,5,3,100,1,https://www.ratemyprofessors.com/professor/3004104
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTYwMTc1,2560175,Katia,Heard,Health Science,4,2.5,100,2,https://www.ratemyprofessors.com/professor/2560175
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTg5Mzcy,2989372,Omar ,Fakhri,Ethnic Studies,5,2,100,1,https://www.ratemyprofessors.com/professor/2989372
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzE5ODk4,2719898,Rhonda,Figueroa,Education,5,1.5,100,2,https://www.ratemyprofessors.com/professor/2719898
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjIxNzM3,2621737,David,Healey,Writing,4.8,3,100,4,https://www.ratemyprofessors.com/professor/2621737
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE1ODY0,2915864,Timaree,Marston,Writing,5,3,100,1,https://www.ratemyprofessors.com/professor/2915864
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTk4NzE3,2998717,Robert,Kayl,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2998717
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODk1Njk3,2895697,Stephen,Grassett,Computer Science,3,1.5,50,2,https://www.ratemyprofessors.com/professor/2895697
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTk2Mzcy,2996372,April,Kendall,Education,1,1,0,1,https://www.ratemyprofessors.com/professor/2996372
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTk2MDAz,2996003,Vincient,Cleamons ,Hospitality,5,1,100,1,https://www.ratemyprofessors.com/professor/2996003
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI1Nzg0,2925784,Alisher,Akhmedjonov ,Economics,4.5,3,100,2,https://www.ratemyprofessors.com/professor/2925784
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTc0NDcz,2974473,Delores,Leonard,Marketing,5,2,100,1,https://www.ratemyprofessors.com/professor/2974473
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDY2NDY0,2466464,Kevin,Nash,Business,1,4,0,3,https://www.ratemyprofessors.com/professor/2466464
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTAyNjg4,2502688,Teresa,Kelly,English,2.1,4.5,30,10,https://www.ratemyprofessors.com/professor/2502688
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTQwNDkw,2540490,Laura,Baggett,Mathematics,4,1,100,3,https://www.ratemyprofessors.com/professor/2540490
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTg3MjY3,2987267,Rachel,Burger,Business,1,5,0,1,https://www.ratemyprofessors.com/professor/2987267
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTkxOTIw,2591920,Fred,Sakon,Mathematics,3.2,3.7,58.3333,12,https://www.ratemyprofessors.com/professor/2591920
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTMzMjg2,2533286,James,Ramos,Communication,1,4.5,0,2,https://www.ratemyprofessors.com/professor/2533286
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTc3NzEy,2577712,Jason,Jackson,Business,4,3,0,1,https://www.ratemyprofessors.com/professor/2577712
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODc3ODcw,2877870,Jeffery,Bailie,Education,4,3,100,1,https://www.ratemyprofessors.com/professor/2877870
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTczNjEy,2573612,Jeffrey-Peter,Hauck,Criminal Justice,5,2.7,100,3,https://www.ratemyprofessors.com/professor/2573612
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTgyMDYw,2982060,Cynthia ,Grow,Nursing,4,3,100,1,https://www.ratemyprofessors.com/professor/2982060
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM5MjMz,2939233,Jeff,Adair,Finance,3,4,100,1,https://www.ratemyprofessors.com/professor/2939233
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDkzMTcw,2493170,Kira,Shank,Health Science,3,3,50,2,https://www.ratemyprofessors.com/professor/2493170
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjg2MDMy,2686032,Ginger,Cameron,Health Science,3,3,50,6,https://www.ratemyprofessors.com/professor/2686032
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM4Nzk4,2938798,Lindsay,Giannone,Psychology,4,1,100,1,https://www.ratemyprofessors.com/professor/2938798
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTc3Mjgw,2977280,Vanessa,Myers,Chemistry,5,3,100,1,https://www.ratemyprofessors.com/professor/2977280
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTc2Njcz,2976673,Deb,Miller,Marketing,2,3,0,1,https://www.ratemyprofessors.com/professor/2976673
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE5MzQw,2919340,Greg,Czar,Psychology,5,3,100,4,https://www.ratemyprofessors.com/professor/2919340
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDYzMDgw,2463080,Michael,Heeren,Science,5,3.3,100,3,https://www.ratemyprofessors.com/professor/2463080
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTY5NTM5,2969539,Martin,Connor,Law,4,2,100,1,https://www.ratemyprofessors.com/professor/2969539
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTMzMjUz,2933253,Larry,Musolino,Mathematics,5,2,100,1,https://www.ratemyprofessors.com/professor/2933253
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjIxOTUz,2621953,Laura,Wood,Nursing,2.7,3.3,33.3333,3,https://www.ratemyprofessors.com/professor/2621953
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTU3NDI1,2957425,Nancy,Reck,Mathematics,5,3,100,1,https://www.ratemyprofessors.com/professor/2957425
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQ2ODE5,2946819,Mohamad, Sahloul,Finance,4,4,100,1,https://www.ratemyprofessors.com/professor/2946819
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjc0OTA5,2674909,Cathleen,Hochanadel,Business,1.6,4.3,14.2857,7,https://www.ratemyprofessors.com/professor/2674909
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQ0NTE5,2944519,Amy,Cavanaugh,Psychology,5,2,100,1,https://www.ratemyprofessors.com/professor/2944519
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjY0NzY1,2664765,Scott,Morrissette,Finance,1.8,4.3,25,4,https://www.ratemyprofessors.com/professor/2664765
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIyOTA0,2922904,Dr. Sandra,Clifton,English,5,3,100,1,https://www.ratemyprofessors.com/professor/2922904
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIyOTIx,2922921,Karen,Clem,Mathematics,5,2,100,1,https://www.ratemyprofessors.com/professor/2922921
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI0OTQ1,2924945,Natalie,Belbas,Psychology,5,3,100,1,https://www.ratemyprofessors.com/professor/2924945
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM2MDQz,2936043,Michael,Stutler,Health Science,2,4,0,1,https://www.ratemyprofessors.com/professor/2936043
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTA3MTY3,2507167,Ken,Caron,Humanities,5,2,100,1,https://www.ratemyprofessors.com/professor/2507167
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI5MzMx,2929331,Brooke,Noland,Information Science,5,4,100,1,https://www.ratemyprofessors.com/professor/2929331
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI1Nzgz,2925783,Martin,McDermott,Marketing,5,1,100,1,https://www.ratemyprofessors.com/professor/2925783
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzEyNTYz,2712563,Andre,Lee,Health Science,5,1,100,1,https://www.ratemyprofessors.com/professor/2712563
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTIwNzIz,2520723,Angela,Crawford,Medicine,2.7,3.7,33.3333,3,https://www.ratemyprofessors.com/professor/2520723
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIzMjMx,2923231,Yvonne,Pavlovych,Social Work,5,2,100,1,https://www.ratemyprofessors.com/professor/2923231
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTg2MTM4,2586138,Nathan,Botts,Information Science,5,2.3,100,4,https://www.ratemyprofessors.com/professor/2586138
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTYwNDQ5,2560449,Linda,Deaver,Business,5,3.5,100,2,https://www.ratemyprofessors.com/professor/2560449
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIxODE1,2921815,Isaac,James,Computer Science,1,3,0,1,https://www.ratemyprofessors.com/professor/2921815
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTE5MTQ5,2519149,Julie,Summers,Communication,1,3.4,0,5,https://www.ratemyprofessors.com/professor/2519149
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTkzODgw,2593880,Risa,Blair,Business,3.3,3,66.6667,3,https://www.ratemyprofessors.com/professor/2593880
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIwNzg1,2920785,Amy,McDavid,Nursing,1,3,0,1,https://www.ratemyprofessors.com/professor/2920785
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTA5MzQz,2909343,Keith,Wade,Management,4,3,100,1,https://www.ratemyprofessors.com/professor/2909343
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTEzNjAw,2913600,Ebony,Coleman,Psychology,5,1.5,100,2,https://www.ratemyprofessors.com/professor/2913600
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODgyMDgx,2882081,Nicole,Morrill,Psychology,4,3,100,1,https://www.ratemyprofessors.com/professor/2882081
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTk2NTg4,2596588,John,Moline,Criminal Justice,1.8,3.4,20,5,https://www.ratemyprofessors.com/professor/2596588
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTM4Mzkz,2538393,Kristy,Vukoder,Humanities,5,3.5,100,2,https://www.ratemyprofessors.com/professor/2538393
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODk1MDEy,2895012,Timothy ,Kozyra,Criminal Justice,4,2,0,1,https://www.ratemyprofessors.com/professor/2895012
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTEzMzE0,2913314,James,Eads,Accounting,5,2,100,1,https://www.ratemyprofessors.com/professor/2913314
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODQ3NTcz,2847573,Mark,Burlingam,English,1,5,0,1,https://www.ratemyprofessors.com/professor/2847573
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDI1NDY5,2425469,Stephen,Lemire,Health Science,4.2,3.2,66.6667,6,https://www.ratemyprofessors.com/professor/2425469
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODg4MDEz,2888013,Patty,Bellamy,Management,4,5,0,1,https://www.ratemyprofessors.com/professor/2888013
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTAzNjQx,2503641,Toby,Roberts,English,4.2,2.8,80,5,https://www.ratemyprofessors.com/professor/2503641
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzczMjI5,2773229,Raquel,Cotuno,Communication,4.5,2,100,2,https://www.ratemyprofessors.com/professor/2773229
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODgyOTY1,2882965,Jennie,Khun,Computer Science,5,3,100,1,https://www.ratemyprofessors.com/professor/2882965
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODgxNTAx,2881501,Mark,Piva,Finance,4,2,100,1,https://www.ratemyprofessors.com/professor/2881501
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODgwNDMz,2880433,Russell,Goodwin,Humanities,3,2,100,1,https://www.ratemyprofessors.com/professor/2880433
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODc5NjI5,2879629,Sharon,Marusiac,Biology,2,4,0,1,https://www.ratemyprofessors.com/professor/2879629
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzQ1ODA2,2745806,Russell,Fail,Philosophy,4.5,1.5,100,2,https://www.ratemyprofessors.com/professor/2745806
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODY3NTAw,2867500,Kelly,Wibbenmeyer,Business,1,5,0,1,https://www.ratemyprofessors.com/professor/2867500
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTAyNjg3,2502687,Brian,Danigole,Humanities,5,1,100,2,https://www.ratemyprofessors.com/professor/2502687
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODU0ODU0,2854854,Eric,Knight,Accounting,4,3,100,1,https://www.ratemyprofessors.com/professor/2854854
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTM1MjEw,2535210,Catherine,Rice,Science,5,2.5,100,2,https://www.ratemyprofessors.com/professor/2535210
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODQxNjky,2841692,Kristen,Banua,Psychology,4,2.5,100,2,https://www.ratemyprofessors.com/professor/2841692
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODI2MzQ1,2826345,Rhonda,Chicone,Computer Science,2,5,0,1,https://www.ratemyprofessors.com/professor/2826345
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODIxODcx,2821871,Mary,Albert,Marketing,3,4,50,2,https://www.ratemyprofessors.com/professor/2821871
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODEwNzcy,2810772,Paul,Tovbin,Business,3,3.5,50,2,https://www.ratemyprofessors.com/professor/2810772
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTE2ODc0,2516874,Dennis,Strouble,Humanities,1,4,0,2,https://www.ratemyprofessors.com/professor/2516874
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTQxNTIz,2541523,Julia,Blockberger,Accounting,5,3.5,100,2,https://www.ratemyprofessors.com/professor/2541523
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODI5NzU5,2829759,Tim,Nicholson,Humanities,5,2,100,1,https://www.ratemyprofessors.com/professor/2829759
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTIxODc0,2521874,Kristy,Crowley,Psychology,4.9,3,95,20,https://www.ratemyprofessors.com/professor/2521874
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzEyNTY1,2712565,Russell,Arenz,Health Science,5,1,100,1,https://www.ratemyprofessors.com/professor/2712565
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjY0NzY2,2664766,Laurie,Hopkins,Accounting,1.3,3.7,0,3,https://www.ratemyprofessors.com/professor/2664766
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTM0MTk5,2534199,Stacie,Kisver,Biology,5,1,100,1,https://www.ratemyprofessors.com/professor/2534199
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA0ODE0,2804814,Avery,Kellam,Information Science,5,4,100,2,https://www.ratemyprofessors.com/professor/2804814
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzY2MDk0,2766094,Lisa,Dunham,Philosophy,1.5,3,50,2,https://www.ratemyprofessors.com/professor/2766094
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODAzODY5,2803869,Victor,Cornell,Mathematics,5,1,100,1,https://www.ratemyprofessors.com/professor/2803869
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDcwMDA3,2470007,Jerry,Haenisch,Business,3,1,100,1,https://www.ratemyprofessors.com/professor/2470007
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDg4Mzg0,2488384,Carol,Taylor,English,2.4,3,40,5,https://www.ratemyprofessors.com/professor/2488384
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjA4OTk4,2608998,Jill,Kaplan,Psychology,2.5,2,50,2,https://www.ratemyprofessors.com/professor/2608998
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDUyODA1,2452805,Anthony,Russo,Health Science,1.5,3.5,0,2,https://www.ratemyprofessors.com/professor/2452805
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzg5Njg4,2789688,Salome,Gonzalez,Psychology,5,1,100,1,https://www.ratemyprofessors.com/professor/2789688
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTc5ODk1,2579895,Jesse,Munoz,Education,5,2,100,1,https://www.ratemyprofessors.com/professor/2579895
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDU5NzU5,2459759,William,Campbell,Management,2.5,3,50,2,https://www.ratemyprofessors.com/professor/2459759
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDgyOTg4,2482988,Danielle,Babb,Business,3.5,3,50,2,https://www.ratemyprofessors.com/professor/2482988
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzgxODAz,2781803,Amar,Mckee,Psychology,5,4,100,1,https://www.ratemyprofessors.com/professor/2781803
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzIzNjA0,2723604,Ashley,Cauley,Psychology,4.5,3.5,100,2,https://www.ratemyprofessors.com/professor/2723604
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTA3Njkz,2507693,Patrick,Morley,Criminal Justice,2.5,3,50,2,https://www.ratemyprofessors.com/professor/2507693
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzI0MTkx,2724191,Michelle,Bianco,English,2.5,3.5,50,2,https://www.ratemyprofessors.com/professor/2724191
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDkwODk2,2490896,Lois,Hinkley,Psychology,5,3.3,100,3,https://www.ratemyprofessors.com/professor/2490896
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzczMDk2,2773096,Nakisha,Floyd,Information Science,3,4,0,1,https://www.ratemyprofessors.com/professor/2773096
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzcwOTA5,2770909,Matthew,North,Computer Science,5,3,100,1,https://www.ratemyprofessors.com/professor/2770909
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzMwODc5,2730879,Susan,Ferebee,Information Science,5,4,100,1,https://www.ratemyprofessors.com/professor/2730879
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzY4ODI4,2768828,Elizabeth,McGrath,Mathematics,1,4,0,1,https://www.ratemyprofessors.com/professor/2768828
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzEyNTU4,2712558,Shelly,Johnsen,Health Science,5,2,100,1,https://www.ratemyprofessors.com/professor/2712558
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzY2MTAw,2766100,Danielle,Hadeed de Silva,Psychology,4,1,100,1,https://www.ratemyprofessors.com/professor/2766100
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzY2MTAz,2766103,Carter,Roberts,Psychology,4,2,100,1,https://www.ratemyprofessors.com/professor/2766103
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjkzMDc5,2693079,Jacob,Kaltenbach,English,4.7,3.7,100,3,https://www.ratemyprofessors.com/professor/2693079
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTcxNTY2,2571566,Gillian,Coote-Martin,Management,3,3,50,2,https://www.ratemyprofessors.com/professor/2571566
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzA1NDY3,2705467,Christopher,Guido,Ethnic Studies,4.5,2,100,2,https://www.ratemyprofessors.com/professor/2705467
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTc5MjU4,2579258,Richard,Franchetti,Accounting,1,4.5,0,2,https://www.ratemyprofessors.com/professor/2579258
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjgzMTc4,2683178,Lisa,Wright,Psychology,1.5,1.5,0,2,https://www.ratemyprofessors.com/professor/2683178
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzI5MTQ1,2729145,Kara,Johnson,Health Science,5,3,100,1,https://www.ratemyprofessors.com/professor/2729145
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzIwOTk4,2720998,DeAnn,Jones,Education,2,4,0,1,https://www.ratemyprofessors.com/professor/2720998
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDAyMTg2,2402186,Jason,Abate,Business,5,4,100,4,https://www.ratemyprofessors.com/professor/2402186
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzA5OTA1,2709905,Thomas,Anderson,Criminal Justice,5,3,100,1,https://www.ratemyprofessors.com/professor/2709905
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTE0MjYz,2514263,Robert,Russ,Writing,1,3,0,2,https://www.ratemyprofessors.com/professor/2514263
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjAwMjAz,2600203,Pamela,Cox,Mathematics,5,2.3,100,4,https://www.ratemyprofessors.com/professor/2600203
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzA0NDY1,2704465,Sarah,Brown,Nursing,5,1,100,1,https://www.ratemyprofessors.com/professor/2704465
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjIzMTQx,2623141,Jesus,Castro,Psychology,5,2.5,100,2,https://www.ratemyprofessors.com/professor/2623141
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjY4MDgy,2668082,Denise,Douglas,Education,1,3,0,1,https://www.ratemyprofessors.com/professor/2668082
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTExNDQ4,2511448,Eric,Lavalle,Psychology,5,3,100,1,https://www.ratemyprofessors.com/professor/2511448
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjY4MjUw,2668250,Joseph,Walsh,Social Work,4,2,100,1,https://www.ratemyprofessors.com/professor/2668250
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjY4MjQ5,2668249,Karen,Kolb-Shaw,Social Work,2,3,0,1,https://www.ratemyprofessors.com/professor/2668249
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjQ2NTI3,2646527,Yasar,Bora,Mathematics,5,4,100,1,https://www.ratemyprofessors.com/professor/2646527
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjEzNDUy,2613452,Megan,Bivens,Nursing,5,3,100,1,https://www.ratemyprofessors.com/professor/2613452
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDU5OTM4,2459938,Kevin,Eaton,Computer Science,5,2.7,100,3,https://www.ratemyprofessors.com/professor/2459938
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTI1MDgx,2525081,William,Hughes,Communication,3,3.5,50,2,https://www.ratemyprofessors.com/professor/2525081
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjE2MzU5,2616359,Jennifer,Harrison,Humanities,5,2,100,1,https://www.ratemyprofessors.com/professor/2616359
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTIyMzkw,2522390,Kimberly,Pate,Communication,1,3,0,1,https://www.ratemyprofessors.com/professor/2522390
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTY0MTY3,2564167,Juan,Roman,Business,1,5,0,2,https://www.ratemyprofessors.com/professor/2564167
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTEzODU5,2513859,Joni,Bertrand,Communication,4.4,3.9,85.7143,7,https://www.ratemyprofessors.com/professor/2513859
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDA0Mjk1,2404295,Angela,Edwards,Biology,3,4.5,50,2,https://www.ratemyprofessors.com/professor/2404295
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTkzODc1,2593875,Diana,Hinton,Accounting,5,3,100,1,https://www.ratemyprofessors.com/professor/2593875
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDExMDY3,2411067,Deborah,Busby,Communication,4,4,0,1,https://www.ratemyprofessors.com/professor/2411067
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDMyMzIz,2432323,Jennifer,Graham,Classics,3.7,3.3,66.6667,3,https://www.ratemyprofessors.com/professor/2432323
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTIxOTcy,2521972,Tomicka,Williams,Law,4,4,100,1,https://www.ratemyprofessors.com/professor/2521972
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDY0MjQ4,2464248,Karla,Drenner,Political Science,4.5,3.5,100,2,https://www.ratemyprofessors.com/professor/2464248
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTcxNTYz,2571563,Mohamad,Termos,Biology,5,4,100,1,https://www.ratemyprofessors.com/professor/2571563
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTEzNjcw,2513670,Diane,Berry,Humanities,2,3,0,1,https://www.ratemyprofessors.com/professor/2513670
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTExNDcx,2511471,Marilyn,Smith,Law,2.5,3.5,0,2,https://www.ratemyprofessors.com/professor/2511471
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTA0OTcz,2504973,Stanley,Self,Accounting,5,3,100,1,https://www.ratemyprofessors.com/professor/2504973
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDYzMDc2,2463076,William,Gurin,Political Science,3,3,100,1,https://www.ratemyprofessors.com/professor/2463076
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDkxMDE3,2491017,Lisa,Parenti,Health Science,5,3,100,1,https://www.ratemyprofessors.com/professor/2491017
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDg5Nzg2,2489786,Angela,Ask,Health Science,4,2,100,1,https://www.ratemyprofessors.com/professor/2489786
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDg5Nzkx,2489791,Kelly,Williams,Health Science,2,4,0,1,https://www.ratemyprofessors.com/professor/2489791
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDg3NzIy,2487722,Holly,Painter,Science,5,3,100,1,https://www.ratemyprofessors.com/professor/2487722
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDg1NTQy,2485542,Martin,Hill,Psychology,1,1,0,1,https://www.ratemyprofessors.com/professor/2485542
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDY4Mjky,2468292,Mason,Borchard,Education,5,3,100,1,https://www.ratemyprofessors.com/professor/2468292
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDY3MTEz,2467113,Pamela,Delotell,Business,5,3,100,1,https://www.ratemyprofessors.com/professor/2467113
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDY1MzQ5,2465349,Travis,Kibota,Science,5,4,100,1,https://www.ratemyprofessors.com/professor/2465349
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDE5OTI2,2419926,Denise,Orpustan - Love,Social Work,5,3,100,1,https://www.ratemyprofessors.com/professor/2419926
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDEwMTE1,2410115,Jean,Noutoua,Computer Science,5,2,100,1,https://www.ratemyprofessors.com/professor/2410115
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTQzNTEw,2543510,Deborah,Mack,Medicine,1,4,0,1,https://www.ratemyprofessors.com/professor/2543510
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU0MzUz,3154353,Robert,Rue,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3154353
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDkwOTE2,3090916,Jennifer,Snow,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3090916
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTEzNDc0,3113474,Nicholas ,Mullen,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3113474
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIzMjY3,3123267,Sandra  ,Wagner,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3123267
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIyNDIz,3122423,Jaqueline,Gilliard,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/3122423
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIyNDI0,3122424,Dawn,Cox,Mathematics,0,0,-1,0,https://www.ratemyprofessors.com/professor/3122424
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIwNDgy,3120482,Elyson ,de la cruz,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3120482
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDk5NDk5,3099499,Ariadna,Ramirez,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3099499
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDc2NTM4,3076538,Lori ,Pietrowski,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3076538
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDUwNjQz,3050643,Irina,Negrea,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/3050643
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI4MTc2,3028176,Michael ,Moleski,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3028176
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIwNzI0,3020724,Yvette,Navarro,Sociology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3020724
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDE5MzI0,3019324,James,Tyler,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3019324
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU4ODEy,3158812,Philippa,Duncan,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/3158812
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIyOTIw,3022920,Milad ,Jasemi,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3022920
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTQxMjkx,3141291,Laurie ,Vakili,Writing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3141291
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTk5MzE2,2999316,Melissa,Palka,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2999316
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTc0NDcy,2974472,Anthony, Miles,Marketing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2974472
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTQ0MzE0,3144314,Sylvia,DeAngelo,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3144314
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTM4Mzk1,3138395,Karen,Stiles,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3138395
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzg5MzE4,2789318,Patricia,Akinrogunde,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2789318
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQwODk3,2940897,Tammy,Matthews,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2940897
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIzMTY1,2923165,Dr. Fahlino,Sjuib,Accounting,0,0,-1,0,https://www.ratemyprofessors.com/professor/2923165
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIzNDEw,2923410,Jennifer,Fleming,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2923410
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjAyNjUw,2602650,Yolanda,King,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2602650
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTQyODQx,2542841,Janice,Kurth,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2542841
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTMyNTY3,2532567,Tammy,Williams,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2532567
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTAwNTc2,2500576,Cheryl,Olsen,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2500576
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODEyNzYy,2812762,Brandon,Wilson,Medicine,0,0,-1,0,https://www.ratemyprofessors.com/professor/2812762
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODU0NTA3,2854507,Lisa,Hone,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2854507
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODI2ODY3,2826867,Karen,Watson,Social Work,0,0,-1,0,https://www.ratemyprofessors.com/professor/2826867
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzcyNTY5,2772569,Stefanie,Reay,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2772569
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzQ1MDE2,2745016,Kilby,Allen,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/2745016
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODg1NTk3,2885597,Mark,Craymer,Accounting,0,0,-1,0,https://www.ratemyprofessors.com/professor/2885597
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODc5MzQ2,2879346,Thomas,Spotts,Ethnic Studies,0,0,-1,0,https://www.ratemyprofessors.com/professor/2879346
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODc3ODE1,2877815,Christopher,Bentley,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2877815
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODE3MjQ2,2817246,Lisa,Giarda,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2817246
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODczNjgz,2873683,Amanda,Williams,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2873683
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzI5Mjcx,2729271,Kent,Herbst,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2729271
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzE5ODk3,2719897,Jacob,Kaltenbach,Literature,0,0,-1,0,https://www.ratemyprofessors.com/professor/2719897
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzA2NjQ2,2706646,Jennifer,Deekens,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2706646
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTI1MDgw,2525080,Gabriel,Jewell,Communication,0,0,-1,0,https://www.ratemyprofessors.com/professor/2525080
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTc3Njcz,2577673,Patricia,Beckamn,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2577673
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE3Mzg0,3117384,Jose,Ruiz,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3117384
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTEyMzA2,3112306,Fabian,Bartos,Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3112306
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTA3MjY1,3107265,Rebekah,Haight,Social Work,0,0,-1,0,https://www.ratemyprofessors.com/professor/3107265
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTA2OTc5,3106979,Aaron,Bingaman,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/3106979
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTAxOTQ5,3101949,Abayomi,Afe,Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3101949
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTQ1NTkz,3145593,Rachel,Hahn,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/3145593
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU2ODI0,3156824,Carolina,Vinson,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3156824
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU3MjE2,3157216,Michelle ,Coleman,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3157216
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDEyMDY2,3012066,Dr Christopher, Roberts,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/3012066
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI5ODk4,3029898,Julie,Freydlin,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/3029898
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI0NjA0,3024604,James,Karan,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3024604
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDM2MDUz,3036053,Sonya ,Diaz,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3036053
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDM0Mjg0,3034284,Sean,Spear,Education,0,0,-1,0,https://www.ratemyprofessors.com/professor/3034284
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDkzOTYz,3093963,Leopold,Green,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/3093963
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDkwOTg0,3090984,Diane ,Denny ,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3090984
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDg0MDM4,3084038,Ebony,Berry,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3084038
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDcwNDkw,3070490,Tiffany,Vigil,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3070490
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDU0MTQw,3054140,Carlene,Graham,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3054140
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDUwNjI5,3050629,Samuel,Enajero,Finance,0,0,-1,0,https://www.ratemyprofessors.com/professor/3050629
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTYxMTAz,3161103,Isaac ,Johnson-Tyass,Education,0,0,-1,0,https://www.ratemyprofessors.com/professor/3161103
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzY2MTEz,2766113,Jimmy,Morgan,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2766113
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjA3MjI5,2607229,Daniel,Smith,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2607229
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTQyODQy,2542842,James,Young,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2542842
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTEzODAy,2513802,Roger,Mayer,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2513802
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjY4MjIw,2668220,Jere,Vincent,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2668220
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjc1NTgx,2675581,Shelly,Lehmann,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2675581
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQ0MjU5,2944259,Elaine,Lerner,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2944259
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQ0MjYx,2944261,Maryann,Denner,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/2944261
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQwODk4,2940898,Lisa,Reilly,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2940898
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI5MDgw,2929080,Ritu ,Sharma,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/2929080
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIzMTE4,2923118,Jenna,Potokar,Marketing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2923118
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI0NTQ3,2924547,Jeffrey,Messinger,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/2924547
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIyNzY5,2922769,Teresa,Lao,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2922769
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE2MzYx,2916361,Regina,Kraus,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2916361
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTE5OTEz,2919913,Geir,Bergvin,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2919913
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODczOTg4,2873988,Benjamin,Hartzog,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2873988
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzk4Nzgx,2798781,Monica,Farrar,Social Work,0,0,-1,0,https://www.ratemyprofessors.com/professor/2798781
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzg2ODkx,2786891,Carrie,O'Hare,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/2786891
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzgxOTIw,2781920,Joseph,Walton,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2781920
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzc5Mzc5,2779379,Sean,Craig,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2779379
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA2NDY4,2806468,Theresa,Eads,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2806468
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTc4MTgz,2978183,Traci,Scully,Social Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2978183
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU3OTA2,3157906,Vanessa,Paskaitis,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3157906
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDA3NjY0,3007664,Michael,Seymour,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3007664
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI2NjEy,3026612,Sean,Duffy,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/3026612
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTI0ODk5,3124899,Jay,Lee,Engineering,0,0,-1,0,https://www.ratemyprofessors.com/professor/3124899
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIzMjQ1,3123245,Andrea ,Robertson ,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3123245
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE4MDYw,3118060,Kenneth,Stratton,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3118060
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTEzMjE4,3113218,Theresa,Cooper,Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3113218
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDk2MDM3,3096037,Donna,Harwell,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/3096037
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTEyMTI5,3112129,Cynthia,Harrington,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3112129
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTA2MDY1,3106065,James,Dodge,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/3106065
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDk4ODA0,3098804,Janet,Ambrogne ,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3098804
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDk4MDkw,3098090,Candida,Constantine,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3098090
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDM1MTg3,3035187,Bonnie ,Bonnie ,Education,0,0,-1,0,https://www.ratemyprofessors.com/professor/3035187
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDMwMDg0,3030084,Anthony,Silva,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3030084
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI5MTAz,3029103,Maryanne ,Denner,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/3029103
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI4MjUy,3028252,Susan,Fan,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3028252
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDE3NzA0,3017704,Nancy,Silva,Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3017704
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTI5MjIy,3129222,Hamilton,Smith,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3129222
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDQxNzEz,3041713,Christopher ,Foster,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/3041713
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDc5NjEy,3079612,Julie,Dort,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/3079612
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTY0OTQ2,2964946,Anthony,Miles,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/2964946
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQ3NDQy,2947442,Susan,Wilson,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2947442
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM0MzY4,2934368,Emily,Rozwadowski,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2934368
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIzMTE3,2923117,Connie,Mitchell,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2923117
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTg2OTY5,2986969,Carol,Hannon,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2986969
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTc3MDI5,2577029,Dawn,Duran,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2577029
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjA4OTMx,2608931,Christopher,Rakovalis,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2608931
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDAxOTM0,2401934,Christopher,Zapalski,Accounting,0,0,-1,0,https://www.ratemyprofessors.com/professor/2401934
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODQ3ODg4,2847888,Kathleen,Bishop,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2847888
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODQ3MDI3,2847027,Richard,Niebusch,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/2847027
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODI4NzUz,2828753,Nicki,Bond,Social Work,0,0,-1,0,https://www.ratemyprofessors.com/professor/2828753
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODY4ODYw,2868860,Brandon,Presley,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/2868860
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODY0MjM3,2864237,Angela,Dryden,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2864237
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODUxNTMy,2851532,Jose ,Siqueira,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2851532
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA1MDI2,2805026,Jeffrey,Quesinberry,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/2805026
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzk4Nzc2,2798776,Monica,Farrar,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2798776
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzcwMTM5,2770139,Melissa,Carr,Communication,0,0,-1,0,https://www.ratemyprofessors.com/professor/2770139
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzQ3NDcx,2747471,Antoinette,Vicks,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/2747471
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjY0NzY0,2664764,Michael,Tustin,Marketing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2664764
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTIxOTcz,2521973,Arlen,Throne,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2521973
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTM4Mzk0,2538394,Peter,Nickless,Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2538394
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU2NTc4,3156578,Shohbhan ,Shah,Design,0,0,-1,0,https://www.ratemyprofessors.com/professor/3156578
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTQyNjUw,3142650,Laurie,Vakili,Accounting,0,0,-1,0,https://www.ratemyprofessors.com/professor/3142650
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTM5MTcz,3139173,Allison,Christine ,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3139173
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTM4MDI1,3138025,Stephen,Savage,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3138025
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTI5NjMw,3129630,Laurie ,Vikali,Education,0,0,-1,0,https://www.ratemyprofessors.com/professor/3129630
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDk1MDk3,3095097,Christine,Shikutwa,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3095097
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTQ4Njc4,3148678,Anne,Jarrard,Communication,0,0,-1,0,https://www.ratemyprofessors.com/professor/3148678
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDAxNjA3,3001607,Torrey,Davis,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3001607
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDgwMDY2,3080066,Jodee,Phillips,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3080066
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIyNjg0,3122684,Sian,Shipley,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3122684
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIyNDI1,3122425,Sheryl,Bone,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/3122425
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIxNDY3,3121467,Michael,Quails,Mathematics,0,0,-1,0,https://www.ratemyprofessors.com/professor/3121467
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIxMDI4,3121028,Amileah,Davis,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3121028
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE1NjYy,3115662,LaRiesha,Floyd,Social Work,0,0,-1,0,https://www.ratemyprofessors.com/professor/3115662
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDMxMzY2,3031366,Morgan,Skinner,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3031366
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIzMTE4,3023118,Rae,Dixon,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3023118
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTEwMjIy,3110222,Marcella,Anderson,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/3110222
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDI3Mjkz,3027293,Patricia,Wolf,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3027293
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDE2MTI2,3016126,Christopher,Grice,Sociology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3016126
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE4OTgy,3118982,Steve,Yurka,Communication,0,0,-1,0,https://www.ratemyprofessors.com/professor/3118982
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjAyNjQ5,2602649,Elizabeth,Reyes-Fournier,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2602649
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjYxMTg2,2661186,Christopher,Barclay,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2661186
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA4NTM0,2808534,Thomas,Veale,Writing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2808534
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA5NjI4,2809628,Kalie,Vandersnick,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2809628
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODg3MjQ2,2887246,Dana,Leland,Finance,0,0,-1,0,https://www.ratemyprofessors.com/professor/2887246
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTc3NzUz,2977753,Kylie,King,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2977753
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTYyMzQ2,2962346,Paula,Beiser,Accounting,0,0,-1,0,https://www.ratemyprofessors.com/professor/2962346
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM0MzY3,2934367,Michael,LaMagna,Communication,0,0,-1,0,https://www.ratemyprofessors.com/professor/2934367
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTEzNTI5,2913529,Howard,Weinraub,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2913529
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTIyNzcx,2922771,Shawn,Warren,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2922771
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTI0MTAx,2924101,Betsy,McCall,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2924101
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzcyNDAw,2772400,Kim,Nine,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2772400
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzA4MzU3,2708357,Marie,Brady-Whitcanack,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2708357
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDc5NTU0,2479554,Amanda,Carlson,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/2479554
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTg2ODQ5,2986849,John ,Schaefer,Marketing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2986849
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTgzNTkz,2983593,Louise,Murray,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2983593
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA1MDI3,2805027,Marney,Vandemark,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2805027
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjc1OTY4,2675968,Joshua,Dalrymple,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2675968
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjQwMjgz,2640283,Lisa,Teitler,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/2640283
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTM4NDM0,3138434,Marc,Willis,Communication,0,0,-1,0,https://www.ratemyprofessors.com/professor/3138434
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTM4Mzk0,3138394,Jean,Morrow,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3138394
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTM1NTE1,3135515,Quornelia,Hypolite,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3135515
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTQ0Mjk3,3144297,Laurie,Valiki,Theater,0,0,-1,0,https://www.ratemyprofessors.com/professor/3144297
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU5NTQ4,3159548,Winifert,Graves,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/3159548
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTYwNTk5,3160599,Sarah,Horell,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3160599
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTUyNjMz,3152633,Zachariah ,Pence,Mathematics,0,0,-1,0,https://www.ratemyprofessors.com/professor/3152633
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTUzMzIx,3153321,Bernadette ,Sherman,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3153321
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDUzMzY5,3053369,Gregory ,Madden,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3053369
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIyODM3,3022837,Carol,Hannahs ,Mathematics,0,0,-1,0,https://www.ratemyprofessors.com/professor/3022837
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIyNTgy,3022582,Christine,Vanni (Velanni),Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3022582
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIyNzIw,3022720,Jacob,Mack,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3022720
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIwMTc2,3020176,Jessica,Ellensohn,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3020176
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDE1Mzc5,3015379,Gary,Felder,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3015379
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDc1Nzk4,3075798,Kendra ,Michael,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3075798
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDkwMTc0,3090174,Brian,Gillispie,Mathematics,0,0,-1,0,https://www.ratemyprofessors.com/professor/3090174
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDAxMTUy,3001152,Dr. Ginger,Cameron,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3001152
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTk3MTE0,2997114,April,Kindall,Education,0,0,-1,0,https://www.ratemyprofessors.com/professor/2997114
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDIwMTQ4,3020148,Dr J.,Skiba,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/3020148
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTg0ODI2,2984826,Melissa,Diaz,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2984826
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTgyOTYw,2982960,Maria,Toy,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2982960
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTc1MDk0,2975094,Rachel,cook,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2975094
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTYzOTg2,2563986,Leslie,Campbell,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/2563986
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTIyMzYw,2522360,Krystina,Sapienza,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2522360
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTYyMDA2,2562006,Alan,Rynarzewski,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2562006
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzc3NjE4,2777618,Sean,Doyle,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2777618
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA4NTQ2,2808546,Kimberly,Allen,English,0,0,-1,0,https://www.ratemyprofessors.com/professor/2808546
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODA0ODE1,2804815,Damien,Porter,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2804815
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODUyNTkw,2852590,Laketha,Brandon,Management,0,0,-1,0,https://www.ratemyprofessors.com/professor/2852590
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU4ODE1,3158815,Robert,Reddick,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/3158815
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU4ODE0,3158814, Matthew,Call,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/3158814
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTU3NTQ1,3157545,Tonia,Walker,Accounting,0,0,-1,0,https://www.ratemyprofessors.com/professor/3157545
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTIzMzE5,3123319,Andrea, Robertson,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3123319
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE0ODcy,3114872,John ,Suarez,Education,0,0,-1,0,https://www.ratemyprofessors.com/professor/3114872
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTE0Mzk1,3114395,Charlotte,Spencer-Barrett,Writing,0,0,-1,0,https://www.ratemyprofessors.com/professor/3114395
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMTA5MTQ3,3109147,Shannon,Weiss,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/3109147
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0zMDk3OTI2,3097926,Aaron,Bingaman,Information Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/3097926
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTkxNzY5,2991769,Sean,Cai,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2991769
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODMwNTg3,2830587,Mary,Smith,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2830587
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODE0MjM0,2814234,Jennifer,Caseldine-Bracht,Philosophy,0,0,-1,0,https://www.ratemyprofessors.com/professor/2814234
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODEyOTQ0,2812944,Brandon,Wilson,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2812944
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODExMzQy,2811342,Robert,Freeborough,Business,0,0,-1,0,https://www.ratemyprofessors.com/professor/2811342
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzY0Mzg3,2764387,Sandra,Fontana,Writing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2764387
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNzEyNTY2,2712566,Yu-Wei,Yan,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2712566
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjc2ODI4,2676828,Katherine,Kellogg,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2676828
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNjcyMjI0,2672224,Jessica,Liske,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2672224
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTUzNDY0,2953464,Jessica,Gauvin,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2953464
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQyODIz,2942823,Diana,Walker,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2942823
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQyMTI0,2942124,Jeffery ,Gill,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/2942124
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQxMjEw,2941210,Bamidele ,Odede,Philosophy,0,0,-1,0,https://www.ratemyprofessors.com/professor/2941210
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTM0NDAz,2934403,Matt,Keogh,Computer Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2934403
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTA1NjAy,2905602,Saima,Shaik,Psychology,0,0,-1,0,https://www.ratemyprofessors.com/professor/2905602
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNTg5ODcw,2589870,Charmaine,London,Criminal Justice,0,0,-1,0,https://www.ratemyprofessors.com/professor/2589870
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yODcwNTg1,2870585,Bernadette,Varnes,Nursing,0,0,-1,0,https://www.ratemyprofessors.com/professor/2870585
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yOTQyMjM1,2942235,Karin,Oberlander,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2942235
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDA2MjE1,2406215,John,Aguilar,Health Science,0,0,-1,0,https://www.ratemyprofessors.com/professor/2406215
+44,Purdue University Global,U2Nob29sLTE3NTk5,IN,VGVhY2hlci0yNDE2ODY5,2416869,Susan,Kinsella,Law,0,0,-1,0,https://www.ratemyprofessors.com/professor/2416869

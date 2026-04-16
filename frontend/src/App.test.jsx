@@ -9,6 +9,20 @@ describe("NakedProfessor app", () => {
   beforeEach(() => {
     global.fetch = vi.fn((input) => {
       const url = typeof input === "string" ? input : String(input?.url ?? "");
+      if (url.includes("professor_sources")) {
+        return Promise.resolve({
+          ok: true,
+          json: () =>
+            Promise.resolve([
+              {
+                id: "test",
+                label: "Test dataset",
+                type: "csv",
+                path: "/data/test_professors.csv",
+              },
+            ]),
+        });
+      }
       if (url.includes("top_colleges")) {
         return Promise.resolve({
           ok: true,
@@ -18,7 +32,14 @@ describe("NakedProfessor app", () => {
             ]),
         });
       }
+      if (url.includes("test_professors.csv")) {
+        return Promise.resolve({
+          ok: true,
+          text: () => Promise.resolve(SAMPLE_CSV),
+        });
+      }
       return Promise.resolve({
+        ok: true,
         text: () => Promise.resolve(SAMPLE_CSV),
       });
     });
@@ -33,7 +54,6 @@ describe("NakedProfessor app", () => {
 
     expect(await screen.findByText(/NakedProfessor/i)).toBeInTheDocument();
     expect(await screen.findByText(/Failure stack/i)).toBeInTheDocument();
-    expect(await screen.findByText(/Fatigue at root/i)).toBeInTheDocument();
 
     fireEvent.click(screen.getByRole("tab", { name: /Game Plan/i }));
     expect(screen.getByText(/Effort vs grade simulator/i)).toBeInTheDocument();

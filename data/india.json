@@ -1,0 +1,1044 @@
+[
+  {
+    "rank": 1,
+    "name": "IGNOU",
+    "url": null,
+    "state": null,
+    "score": 100.0,
+    "previous_rank": null,
+    "metadata": {
+      "city": "New Delhi",
+      "estStudents": "~4,000,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "IGNOU",
+        "cityHint": "New Delhi",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 2,
+    "name": "University of Mumbai",
+    "url": null,
+    "state": null,
+    "score": 97.96,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Mumbai",
+      "estStudents": "~700,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Mumbai",
+        "cityHint": "Mumbai",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 3,
+    "name": "Chaudhary Charan Singh University",
+    "url": null,
+    "state": null,
+    "score": 95.92,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Meerut",
+      "estStudents": "~560,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Chaudhary Charan Singh University",
+        "cityHint": "Meerut",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 4,
+    "name": "Savitribai Phule Pune University",
+    "url": null,
+    "state": null,
+    "score": 93.88,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Pune",
+      "estStudents": "~600,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Savitribai Phule Pune University",
+        "cityHint": "Pune",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 5,
+    "name": "Rajasthan University",
+    "url": null,
+    "state": null,
+    "score": 91.84,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Jaipur",
+      "estStudents": "~500,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Rajasthan University",
+        "cityHint": "Jaipur",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 6,
+    "name": "University of Calcutta",
+    "url": null,
+    "state": null,
+    "score": 89.8,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Kolkata",
+      "estStudents": "~300,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Calcutta",
+        "cityHint": "Kolkata",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 7,
+    "name": "Dr. Bhimrao Ambedkar Open Univ.",
+    "url": null,
+    "state": null,
+    "score": 87.76,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Hyderabad",
+      "estStudents": "~300,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Dr. Bhimrao Ambedkar Open Univ.",
+        "cityHint": "Hyderabad",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 8,
+    "name": "Osmania University",
+    "url": null,
+    "state": null,
+    "score": 85.71,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Hyderabad",
+      "estStudents": "~300,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Osmania University",
+        "cityHint": "Hyderabad",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 9,
+    "name": "Mahatma Gandhi Kashi Vidyapith",
+    "url": null,
+    "state": null,
+    "score": 83.67,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Varanasi",
+      "estStudents": "~250,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Mahatma Gandhi Kashi Vidyapith",
+        "cityHint": "Varanasi",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 10,
+    "name": "Anna University",
+    "url": null,
+    "state": null,
+    "score": 81.63,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Chennai",
+      "estStudents": "~250,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Anna University",
+        "cityHint": "Chennai",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 11,
+    "name": "University of Delhi",
+    "url": null,
+    "state": null,
+    "score": 79.59,
+    "previous_rank": null,
+    "metadata": {
+      "city": "New Delhi",
+      "estStudents": "~300,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Delhi",
+        "cityHint": "New Delhi",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 12,
+    "name": "Bangalore University",
+    "url": null,
+    "state": null,
+    "score": 77.55,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Bangalore",
+      "estStudents": "~250,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Bangalore University",
+        "cityHint": "Bangalore",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 13,
+    "name": "Panjab University",
+    "url": null,
+    "state": null,
+    "score": 75.51,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Chandigarh",
+      "estStudents": "~200,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Panjab University",
+        "cityHint": "Chandigarh",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 14,
+    "name": "Andhra University",
+    "url": null,
+    "state": null,
+    "score": 73.47,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Visakhapatnam",
+      "estStudents": "~200,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Andhra University",
+        "cityHint": "Visakhapatnam",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 15,
+    "name": "Madras University",
+    "url": null,
+    "state": null,
+    "score": 71.43,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Chennai",
+      "estStudents": "~200,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Madras University",
+        "cityHint": "Chennai",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 16,
+    "name": "Gujarat University",
+    "url": null,
+    "state": null,
+    "score": 69.39,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Ahmedabad",
+      "estStudents": "~200,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Gujarat University",
+        "cityHint": "Ahmedabad",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 17,
+    "name": "Kurukshetra University",
+    "url": null,
+    "state": null,
+    "score": 67.35,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Kurukshetra",
+      "estStudents": "~200,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Kurukshetra University",
+        "cityHint": "Kurukshetra",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 18,
+    "name": "Magadh University",
+    "url": null,
+    "state": null,
+    "score": 65.31,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Bodh Gaya",
+      "estStudents": "~185,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Magadh University",
+        "cityHint": "Bodh Gaya",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 19,
+    "name": "Veer Narmad South Gujarat Univ.",
+    "url": null,
+    "state": null,
+    "score": 63.27,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Surat",
+      "estStudents": "~180,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Veer Narmad South Gujarat Univ.",
+        "cityHint": "Surat",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 20,
+    "name": "Vikram University",
+    "url": null,
+    "state": null,
+    "score": 61.22,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Ujjain",
+      "estStudents": "~175,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Vikram University",
+        "cityHint": "Ujjain",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 21,
+    "name": "Pt. Ravishankar Shukla University",
+    "url": null,
+    "state": null,
+    "score": 59.18,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Raipur",
+      "estStudents": "~170,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Pt. Ravishankar Shukla University",
+        "cityHint": "Raipur",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 22,
+    "name": "Devi Ahilya Vishwavidyalaya",
+    "url": null,
+    "state": null,
+    "score": 57.14,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Indore",
+      "estStudents": "~160,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Devi Ahilya Vishwavidyalaya",
+        "cityHint": "Indore",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 23,
+    "name": "Ranchi University",
+    "url": null,
+    "state": null,
+    "score": 55.1,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Ranchi",
+      "estStudents": "~155,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Ranchi University",
+        "cityHint": "Ranchi",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 24,
+    "name": "Tilka Manjhi Bhagalpur University",
+    "url": null,
+    "state": null,
+    "score": 53.06,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Bhagalpur",
+      "estStudents": "~150,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Tilka Manjhi Bhagalpur University",
+        "cityHint": "Bhagalpur",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 25,
+    "name": "Banaras Hindu University",
+    "url": null,
+    "state": null,
+    "score": 51.02,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Varanasi",
+      "estStudents": "~135,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Banaras Hindu University",
+        "cityHint": "Varanasi",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 26,
+    "name": "Jawaharlal Nehru University",
+    "url": null,
+    "state": null,
+    "score": 48.98,
+    "previous_rank": null,
+    "metadata": {
+      "city": "New Delhi",
+      "estStudents": "~8,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Jawaharlal Nehru University",
+        "cityHint": "New Delhi",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 27,
+    "name": "Aligarh Muslim University",
+    "url": null,
+    "state": null,
+    "score": 46.94,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Aligarh",
+      "estStudents": "~30,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Aligarh Muslim University",
+        "cityHint": "Aligarh",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 28,
+    "name": "Jamia Millia Islamia",
+    "url": null,
+    "state": null,
+    "score": 44.9,
+    "previous_rank": null,
+    "metadata": {
+      "city": "New Delhi",
+      "estStudents": "~20,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Jamia Millia Islamia",
+        "cityHint": "New Delhi",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 29,
+    "name": "University of Hyderabad",
+    "url": null,
+    "state": null,
+    "score": 42.86,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Hyderabad",
+      "estStudents": "~5,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "University of Hyderabad",
+        "cityHint": "Hyderabad",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 30,
+    "name": "Indian Institute of Technology Bombay",
+    "url": "https://www.ratemyprofessors.com/school/19276",
+    "state": "IN",
+    "score": 40.82,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Mumbai",
+      "estStudents": "~11,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE5Mjc2",
+        "legacyId": 19276,
+        "searchQuery": "Indian Institute of Technology Bombay",
+        "cityHint": "Mumbai"
+      },
+      "professorCount": 0,
+      "professorsSummary": {
+        "listedProfessors": 0,
+        "withNumericRating": 0,
+        "avgRatingAcrossProfessors": null
+      }
+    }
+  },
+  {
+    "rank": 31,
+    "name": "Indian Institute of Technology Bombay",
+    "url": "https://www.ratemyprofessors.com/school/19276",
+    "state": "IN",
+    "score": 38.78,
+    "previous_rank": null,
+    "metadata": {
+      "city": "New Delhi",
+      "estStudents": "~10,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE5Mjc2",
+        "legacyId": 19276,
+        "searchQuery": "Indian Institute of Technology Delhi",
+        "cityHint": "New Delhi"
+      },
+      "professorCount": 0,
+      "professorsSummary": {
+        "listedProfessors": 0,
+        "withNumericRating": 0,
+        "avgRatingAcrossProfessors": null
+      }
+    }
+  },
+  {
+    "rank": 32,
+    "name": "Indian Institute of Technology Bombay",
+    "url": "https://www.ratemyprofessors.com/school/19276",
+    "state": "IN",
+    "score": 36.73,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Chennai",
+      "estStudents": "~10,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE5Mjc2",
+        "legacyId": 19276,
+        "searchQuery": "Indian Institute of Technology Madras",
+        "cityHint": "Chennai"
+      },
+      "professorCount": 0,
+      "professorsSummary": {
+        "listedProfessors": 0,
+        "withNumericRating": 0,
+        "avgRatingAcrossProfessors": null
+      }
+    }
+  },
+  {
+    "rank": 33,
+    "name": "Indian Institute of Technology Bombay",
+    "url": "https://www.ratemyprofessors.com/school/19276",
+    "state": "IN",
+    "score": 34.69,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Kanpur",
+      "estStudents": "~9,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE5Mjc2",
+        "legacyId": 19276,
+        "searchQuery": "Indian Institute of Technology Kanpur",
+        "cityHint": "Kanpur"
+      },
+      "professorCount": 0,
+      "professorsSummary": {
+        "listedProfessors": 0,
+        "withNumericRating": 0,
+        "avgRatingAcrossProfessors": null
+      }
+    }
+  },
+  {
+    "rank": 34,
+    "name": "Indian Institute of Technology Bombay",
+    "url": "https://www.ratemyprofessors.com/school/19276",
+    "state": "IN",
+    "score": 32.65,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Kharagpur",
+      "estStudents": "~12,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE5Mjc2",
+        "legacyId": 19276,
+        "searchQuery": "Indian Institute of Technology Kharagpur",
+        "cityHint": "Kharagpur"
+      },
+      "professorCount": 0,
+      "professorsSummary": {
+        "listedProfessors": 0,
+        "withNumericRating": 0,
+        "avgRatingAcrossProfessors": null
+      }
+    }
+  },
+  {
+    "rank": 35,
+    "name": "Indian Institute of Technology Bombay",
+    "url": "https://www.ratemyprofessors.com/school/19276",
+    "state": "IN",
+    "score": 30.61,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Bangalore",
+      "estStudents": "~4,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE5Mjc2",
+        "legacyId": 19276,
+        "searchQuery": "Indian Institute of Science (IISc)",
+        "cityHint": "Bangalore"
+      },
+      "professorCount": 0,
+      "professorsSummary": {
+        "listedProfessors": 0,
+        "withNumericRating": 0,
+        "avgRatingAcrossProfessors": null
+      }
+    }
+  },
+  {
+    "rank": 36,
+    "name": "Tata Institute of Social Sciences",
+    "url": null,
+    "state": null,
+    "score": 28.57,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Mumbai",
+      "estStudents": "~3,500",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Tata Institute of Social Sciences",
+        "cityHint": "Mumbai",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 37,
+    "name": "Manipal Academy of Higher Education",
+    "url": null,
+    "state": null,
+    "score": 26.53,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Manipal",
+      "estStudents": "~28,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Manipal Academy of Higher Education",
+        "cityHint": "Manipal",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 38,
+    "name": "Amity University",
+    "url": null,
+    "state": null,
+    "score": 24.49,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Noida",
+      "estStudents": "~125,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Amity University",
+        "cityHint": "Noida",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 39,
+    "name": "Lovely Professional University",
+    "url": null,
+    "state": null,
+    "score": 22.45,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Phagwara",
+      "estStudents": "~35,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Lovely Professional University",
+        "cityHint": "Phagwara",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 40,
+    "name": "SRM Institute of Science & Tech.",
+    "url": null,
+    "state": null,
+    "score": 20.41,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Chennai",
+      "estStudents": "~52,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "SRM Institute of Science & Tech.",
+        "cityHint": "Chennai",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 41,
+    "name": "Vellore Institute of Technology",
+    "url": null,
+    "state": null,
+    "score": 18.37,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Vellore",
+      "estStudents": "~50,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Vellore Institute of Technology",
+        "cityHint": "Vellore",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 42,
+    "name": "Chandigarh University",
+    "url": null,
+    "state": null,
+    "score": 16.33,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Chandigarh",
+      "estStudents": "~70,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Chandigarh University",
+        "cityHint": "Chandigarh",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 43,
+    "name": "Sharda University",
+    "url": null,
+    "state": null,
+    "score": 14.29,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Greater Noida",
+      "estStudents": "~30,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Sharda University",
+        "cityHint": "Greater Noida",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 44,
+    "name": "Purdue University Global",
+    "url": "https://www.ratemyprofessors.com/school/17599",
+    "state": "IN",
+    "score": 12.24,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Sonipat",
+      "estStudents": "~8,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": true,
+        "schoolId": "U2Nob29sLTE3NTk5",
+        "legacyId": 17599,
+        "searchQuery": "O.P. Jindal Global University",
+        "cityHint": "Sonipat"
+      },
+      "professorCount": 558,
+      "professorsSummary": {
+        "listedProfessors": 558,
+        "withNumericRating": 558,
+        "avgRatingAcrossProfessors": 2.12
+      }
+    }
+  },
+  {
+    "rank": 45,
+    "name": "Symbiosis International University",
+    "url": null,
+    "state": null,
+    "score": 10.2,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Pune",
+      "estStudents": "~40,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Symbiosis International University",
+        "cityHint": "Pune",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 46,
+    "name": "BITS Pilani",
+    "url": null,
+    "state": null,
+    "score": 8.16,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Pilani",
+      "estStudents": "~14,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "BITS Pilani",
+        "cityHint": "Pilani",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 47,
+    "name": "National Institute of Technology Trichy",
+    "url": null,
+    "state": null,
+    "score": 6.12,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Tiruchirappalli",
+      "estStudents": "~8,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "National Institute of Technology Trichy",
+        "cityHint": "Tiruchirappalli",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 48,
+    "name": "NIT Warangal",
+    "url": null,
+    "state": null,
+    "score": 4.08,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Warangal",
+      "estStudents": "~7,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "NIT Warangal",
+        "cityHint": "Warangal",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 49,
+    "name": "Jadavpur University",
+    "url": null,
+    "state": null,
+    "score": 2.04,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Kolkata",
+      "estStudents": "~9,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Jadavpur University",
+        "cityHint": "Kolkata",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  },
+  {
+    "rank": 50,
+    "name": "Hyderabad Central University",
+    "url": null,
+    "state": null,
+    "score": 0.0,
+    "previous_rank": null,
+    "metadata": {
+      "city": "Hyderabad",
+      "estStudents": "~5,000",
+      "scrapedAt": "2026-04-16T01:51:15.728318+00:00",
+      "rmp": {
+        "matched": false,
+        "searchQuery": "Hyderabad Central University",
+        "cityHint": "Hyderabad",
+        "error": "no school search results"
+      },
+      "professorCount": 0
+    }
+  }
+]

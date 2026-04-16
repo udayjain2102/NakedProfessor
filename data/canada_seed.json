@@ -1,0 +1,98 @@
+[
+  {
+    "rank": 1,
+    "university": "University of Toronto",
+    "city": "Toronto",
+    "estStudents": "~102,000",
+    "rmp": { "search": "University of Toronto", "name_contains": "University of Toronto", "city": "Toronto" }
+  },
+  {
+    "rank": 2,
+    "university": "York University",
+    "city": "Toronto",
+    "estStudents": "~53,100",
+    "rmp": { "search": "York University - Keele", "name_contains": "Keele", "city": "Toronto" }
+  },
+  {
+    "rank": 3,
+    "university": "University of British Columbia",
+    "city": "Vancouver",
+    "estStudents": "~65,000",
+    "rmp": {
+      "search": "University of British Columbia",
+      "name_contains": "British Columbia",
+      "city": "Vancouver"
+    }
+  },
+  {
+    "rank": 4,
+    "university": "Université Laval",
+    "city": "Quebec City",
+    "estStudents": "~47,000",
+    "rmp": { "search": "Universite Laval", "name_contains": "Universite Laval", "city": "Québec" }
+  },
+  { "rank": 5, "university": "University of Ottawa", "city": "Ottawa", "estStudents": "~50,000" },
+  { "rank": 6, "university": "University of Waterloo", "city": "Waterloo", "estStudents": "~42,000" },
+  { "rank": 7, "university": "McGill University", "city": "Montreal", "estStudents": "~40,000" },
+  { "rank": 8, "university": "University of Alberta", "city": "Edmonton", "estStudents": "~40,000" },
+  {
+    "rank": 9,
+    "university": "Western University",
+    "city": "London ON",
+    "estStudents": "~40,000",
+    "rmp": { "search": "Western University", "name_contains": "Western University", "city": "London" }
+  },
+  { "rank": 10, "university": "McMaster University", "city": "Hamilton", "estStudents": "~32,000" },
+  { "rank": 11, "university": "University of Calgary", "city": "Calgary", "estStudents": "~33,000" },
+  { "rank": 12, "university": "Simon Fraser University", "city": "Burnaby", "estStudents": "~35,000" },
+  {
+    "rank": 13,
+    "university": "Ryerson / Toronto Metropolitan Univ.",
+    "city": "Toronto",
+    "estStudents": "~48,000",
+    "rmp": { "search": "Toronto Metropolitan University", "name_contains": "Toronto Metropolitan", "city": "Toronto" }
+  },
+  { "rank": 14, "university": "Carleton University", "city": "Ottawa", "estStudents": "~32,000" },
+  { "rank": 15, "university": "Dalhousie University", "city": "Halifax", "estStudents": "~20,000" },
+  { "rank": 16, "university": "University of Manitoba", "city": "Winnipeg", "estStudents": "~27,000" },
+  { "rank": 17, "university": "Queen's University", "city": "Kingston", "estStudents": "~25,000" },
+  { "rank": 18, "university": "University of Saskatchewan", "city": "Saskatoon", "estStudents": "~24,000" },
+  { "rank": 19, "university": "University of Victoria", "city": "Victoria", "estStudents": "~22,000" },
+  { "rank": 20, "university": "Concordia University", "city": "Montreal", "estStudents": "~47,000" },
+  { "rank": 21, "university": "University of Guelph", "city": "Guelph", "estStudents": "~30,000" },
+  { "rank": 22, "university": "Université de Montréal", "city": "Montreal", "estStudents": "~68,000" },
+  { "rank": 23, "university": "University of Regina", "city": "Regina", "estStudents": "~16,000" },
+  { "rank": 24, "university": "Brock University", "city": "St. Catharines", "estStudents": "~19,000" },
+  { "rank": 25, "university": "Wilfrid Laurier University", "city": "Waterloo", "estStudents": "~19,000" },
+  { "rank": 26, "university": "University of New Brunswick", "city": "Fredericton", "estStudents": "~10,000" },
+  { "rank": 27, "university": "Lakehead University", "city": "Thunder Bay", "estStudents": "~9,500" },
+  { "rank": 28, "university": "University of Windsor", "city": "Windsor", "estStudents": "~16,000" },
+  { "rank": 29, "university": "University of Northern BC", "city": "Prince George", "estStudents": "~5,000" },
+  { "rank": 30, "university": "Trent University", "city": "Peterborough", "estStudents": "~10,000" },
+  { "rank": 31, "university": "Memorial University of Newfoundland", "city": "St. John's", "estStudents": "~19,000" },
+  { "rank": 32, "university": "University of Lethbridge", "city": "Lethbridge", "estStudents": "~9,000" },
+  { "rank": 33, "university": "Nipissing University", "city": "North Bay", "estStudents": "~5,000" },
+  { "rank": 34, "university": "Laurentian University", "city": "Sudbury", "estStudents": "~8,000" },
+  { "rank": 35, "university": "UQAM (Univ. du Québec à Montréal)", "city": "Montreal", "estStudents": "~43,000" },
+  { "rank": 36, "university": "University of Moncton", "city": "Moncton", "estStudents": "~7,000" },
+  { "rank": 37, "university": "Algoma University", "city": "Sault Ste. Marie", "estStudents": "~9,000" },
+  { "rank": 38, "university": "University of Prince Edward Island", "city": "Charlottetown", "estStudents": "~5,000" },
+  { "rank": 39, "university": "Athabasca University", "city": "Athabasca", "estStudents": "~40,000" },
+  { "rank": 40, "university": "Cape Breton University", "city": "Sydney NS", "estStudents": "~5,500" },
+  { "rank": 41, "university": "Acadia University", "city": "Wolfville", "estStudents": "~4,000" },
+  { "rank": 42, "university": "Mount Allison University", "city": "Sackville", "estStudents": "~2,500" },
+  { "rank": 43, "university": "Saint Mary's University", "city": "Halifax", "estStudents": "~8,000" },
+  { "rank": 44, "university": "OCAD University", "city": "Toronto", "estStudents": "~5,000" },
+  { "rank": 45, "university": "Université du Québec en Outaouais", "city": "Gatineau", "estStudents": "~9,000" },
+  {
+    "rank": 46,
+    "university": "University of Fredericton",
+    "city": "Fredericton",
+    "estStudents": "~2,000",
+    "rmp": { "search": "University of Fredericton", "name_contains": "Fredericton", "city": "Fredericton" }
+  },
+  { "rank": 47, "university": "Thompson Rivers University", "city": "Kamloops", "estStudents": "~22,000" },
+  { "rank": 48, "university": "Kwantlen Polytechnic University", "city": "Surrey BC", "estStudents": "~20,000" },
+  { "rank": 49, "university": "MacEwan University", "city": "Edmonton", "estStudents": "~14,000" },
+  { "rank": 50, "university": "Mount Royal University", "city": "Calgary", "estStudents": "~15,000" }
+]
