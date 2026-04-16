@@ -94,10 +94,19 @@ export default function ExecutionHubScreen({
   return (
     <div className="np-screen">
       <header className="np-block-head">
+        <div className="np-eyebrow">03 / Run the semester</div>
         <h2 className="np-title">Execution Hub</h2>
         <p className="np-lead">
           Longitudinal alignment — not a second LMS. Track how closely your week matches the optimal playbook.
         </p>
+        <div className={`np-detect ${planReady ? "" : "np-detect-muted"}`}>
+          <strong>Status</strong>
+          <span>
+            {planReady
+              ? "Plan is generated. Use this screen as the live operating board for the class."
+              : "You can still track effort here, but the recommendations get sharper after Game Plan is generated."}
+          </span>
+        </div>
       </header>
 
       <section className="np-panel np-progress-panel">
@@ -129,32 +138,36 @@ export default function ExecutionHubScreen({
         </div>
       </section>
 
-      <section className="np-panel">
-        <h3 className="np-section-title">Alerts</h3>
-        <ul className="np-alert-list">
-          {alerts.map((x, i) => (
-            <li key={i} className={`np-alert np-alert-${x.type}`}>
-              {x.text}
-            </li>
-          ))}
-        </ul>
-      </section>
+      <div className="np-dual-grid">
+        <section className="np-panel">
+          <h3 className="np-section-title">Alerts</h3>
+          <ul className="np-alert-list">
+            {alerts.map((x, i) => (
+              <li key={i} className={`np-alert np-alert-${x.type}`}>
+                {x.text}
+              </li>
+            ))}
+          </ul>
+        </section>
 
-      <section className="np-panel">
-        <h3 className="np-section-title">Weekly timeline</h3>
-        <p className="np-section-sub">Assignments + exams inferred from syllabus text (demo heuristics).</p>
-        <div className="np-timeline">
-          {timeline.map((t) => (
-            <div key={t.id} className={`np-tl-item np-tl-${t.risk}`}>
-              <div className="np-tl-dot" />
-              <div>
-                <div className="np-tl-label">{t.label}</div>
-                <div className="np-tl-detail">{t.detail}</div>
+        <section className="np-panel">
+          <h3 className="np-section-title">Weekly timeline</h3>
+          <p className="np-section-sub">
+            Assignments + exams inferred from syllabus text (demo heuristics).
+          </p>
+          <div className="np-timeline">
+            {timeline.map((t) => (
+              <div key={t.id} className={`np-tl-item np-tl-${t.risk}`}>
+                <div className="np-tl-dot" />
+                <div>
+                  <div className="np-tl-label">{t.label}</div>
+                  <div className="np-tl-detail">{t.detail}</div>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      </div>
 
       <section className="np-panel np-notes">
         <h3 className="np-section-title">Smart notes (topic-linked)</h3>
