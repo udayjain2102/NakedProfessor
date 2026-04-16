@@ -45,6 +45,7 @@ export default function GamePlanScreen({
   materialsNote,
   onMaterialsNoteChange,
   onGenerate,
+  onOpenExecution,
   loading,
   planText,
   intel,
@@ -64,6 +65,7 @@ export default function GamePlanScreen({
     if (!professor || !profile) return "—";
     return effortToGradeBand(studyHours, profile, professor);
   }, [studyHours, professor, profile]);
+  const keywordSlice = parsed.keywords.slice(0, 8);
 
   if (!professor || !intel) {
     return (
@@ -77,66 +79,128 @@ export default function GamePlanScreen({
   return (
     <div className="np-screen">
       <header className="np-block-head">
+        <div className="np-eyebrow">02 / Build the playbook</div>
         <h2 className="np-title">Game Plan</h2>
         <p className="np-lead">
           Paste the syllabus. We’ll detect grading structure and generate an opinionated playbook — not generic advice.
         </p>
       </header>
 
-      <section className="np-panel">
-        <label className="np-label" htmlFor="course-title">
-          Course name (shows in Reality Check)
-        </label>
-        <input
-          id="course-title"
-          className="np-input"
-          value={courseTitle}
-          onChange={(e) => onCourseTitleChange(e.target.value)}
-          placeholder="e.g. CHEM 201 — Organic I"
-        />
+      <section className="np-setup-grid">
+        <article className="np-panel np-panel-ink">
+          <span className="np-eyebrow">Course frame</span>
+          <label className="np-label" htmlFor="course-title">
+            Course name
+          </label>
+          <input
+            id="course-title"
+            className="np-input"
+            value={courseTitle}
+            onChange={(e) => onCourseTitleChange(e.target.value)}
+            placeholder="e.g. CHEM 201 — Organic I"
+          />
+
+          <label className="np-label" htmlFor="materials">
+            Past exams / assignments
+          </label>
+          <textarea
+            id="materials"
+            className="np-textarea np-textarea-sm"
+            value={materialsNote}
+            onChange={(e) => onMaterialsNoteChange(e.target.value)}
+            placeholder="e.g. Upload: 2019 midterm + rubric (future file support)"
+            rows={4}
+          />
+
+          <div className="np-chip-row">
+            {keywordSlice.length > 0 ? (
+              keywordSlice.map((keyword) => (
+                <span key={keyword} className="np-chip">
+                  {keyword}
+                </span>
+              ))
+            ) : (
+              <span className="np-fineprint">
+                Syllabus keywords will appear here once text is pasted.
+              </span>
+            )}
+          </div>
+        </article>
+
+        <article className="np-panel">
+          <span className="np-eyebrow">Syllabus intake</span>
+          <p className="np-prompt-cycle">
+            {PROMPTS[syllabus.length % PROMPTS.length]}
+          </p>
+          <textarea
+            className="np-textarea"
+            value={syllabus}
+            onChange={(e) => onSyllabusChange(e.target.value)}
+            placeholder={`Grading:\n- Midterm 30%\n- Final 40%\n- Homework 30%\n\nSchedule:\n- Midterm Oct 14\n- Final Dec 10`}
+            rows={12}
+          />
+          <div
+            className={`np-detect ${parsed.grading.confidence === "none" ? "np-detect-muted" : ""}`}
+          >
+            <strong>Detected</strong>
+            <span>{parsed.grading.summary}</span>
+          </div>
+          <div className="np-action-row">
+            <button
+              type="button"
+              className="np-btn np-btn-primary"
+              disabled={loading || !syllabus.trim()}
+              onClick={onGenerate}
+            >
+              {loading ? "Analyzing professor patterns…" : "Optimize my grade strategy"}
+            </button>
+            {planText && (
+              <button
+                type="button"
+                className="np-btn np-btn-secondary"
+                onClick={onOpenExecution}
+              >
+                Open Execution Hub
+              </button>
+            )}
+          </div>
+        </article>
       </section>
 
-      <section className="np-panel">
-        <span className="np-eyebrow">Smart input</span>
-        <p className="np-prompt-cycle">
-          {PROMPTS[syllabus.length % PROMPTS.length]}
+      <section className="np-panel np-simulator">
+        <h3 className="np-section-title">Effort vs grade simulator</h3>
+        <p className="np-lead">
+          Modeled band if you hold <strong>{studyHours} hrs/week</strong> outside class.
         </p>
-        <textarea
-          className="np-textarea"
-          value={syllabus}
-          onChange={(e) => onSyllabusChange(e.target.value)}
-          placeholder={`Grading:\n- Midterm 30%\n- Final 40%\n- Homework 30%\n\nSchedule:\n- Midterm Oct 14\n- Final Dec 10`}
-          rows={10}
+        <input
+          type="range"
+          min={3}
+          max={15}
+          value={studyHours}
+          onChange={(e) => onStudyHoursChange(Number(e.target.value))}
+          className="np-range"
         />
-        <label className="np-label" htmlFor="materials">
-          Past exams / assignments (describe uploads — local demo)
-        </label>
-        <textarea
-          id="materials"
-          className="np-textarea np-textarea-sm"
-          value={materialsNote}
-          onChange={(e) => onMaterialsNoteChange(e.target.value)}
-          placeholder="e.g. Upload: 2019 midterm + rubric (files stored locally in a future build)"
-          rows={3}
-        />
-        <div className={`np-detect ${parsed.grading.confidence === "none" ? "np-detect-muted" : ""}`}>
-          <strong>Detected</strong>
-          <span>{parsed.grading.summary}</span>
+        <div className="np-sim-out">
+          <span>Predicted outcome band</span>
+          <strong>{predicted}</strong>
         </div>
-        <button
-          type="button"
-          className="np-btn np-btn-primary"
-          disabled={loading || !syllabus.trim()}
-          onClick={onGenerate}
-        >
-          {loading ? "Analyzing professor patterns…" : "Optimize my grade strategy"}
-        </button>
+        <p className="np-fineprint">
+          Estimates combine effort hours with this professor’s difficulty/clarity profile — not a promise.
+        </p>
       </section>
 
       {strategy && (
         <section className="np-panel np-strategy">
           <h3 className="np-section-title">Strategy generator</h3>
           <p className="np-verdict">{strategy.verdict}</p>
+          <div className={`np-detect ${strategy.examHeavy ? "" : "np-detect-muted"}`}>
+            <strong>Workload posture</strong>
+            <span>
+              {strategy.examHeavy
+                ? "Exam-heavy course: build timed reps early and treat lecture artifacts as the source of truth."
+                : "Assignment-heavy course: consistency beats last-minute compression."}
+            </span>
+          </div>
           <div className="np-two-col">
             <div>
               <span className="np-eyebrow">Priority topics</span>
@@ -167,28 +231,6 @@ export default function GamePlanScreen({
           </div>
         </section>
       )}
-
-      <section className="np-panel np-simulator">
-        <h3 className="np-section-title">Effort vs grade simulator</h3>
-        <p className="np-lead">
-          Modeled band if you hold <strong>{studyHours} hrs/week</strong> outside class.
-        </p>
-        <input
-          type="range"
-          min={3}
-          max={15}
-          value={studyHours}
-          onChange={(e) => onStudyHoursChange(Number(e.target.value))}
-          className="np-range"
-        />
-        <div className="np-sim-out">
-          <span>Predicted outcome band</span>
-          <strong>{predicted}</strong>
-        </div>
-        <p className="np-fineprint">
-          Estimates combine effort hours with this professor’s difficulty/clarity profile — not a promise.
-        </p>
-      </section>
 
       {planText && (
         <section className="np-panel">

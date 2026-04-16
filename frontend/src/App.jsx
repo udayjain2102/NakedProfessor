@@ -82,9 +82,27 @@ const LOADING_LINES = [
 ];
 
 const MODES = [
-  { id: "reality", label: "Reality Check", step: "01" },
-  { id: "gameplan", label: "Game Plan", step: "02" },
-  { id: "execution", label: "Execution Hub", step: "03" },
+  {
+    id: "reality",
+    label: "Reality Check",
+    step: "01",
+    description:
+      "Read the professor first: difficulty, clarity, grading risk, and the ways students usually lose points.",
+  },
+  {
+    id: "gameplan",
+    label: "Game Plan",
+    step: "02",
+    description:
+      "Turn the syllabus into a concrete weekly strategy instead of generic study advice.",
+  },
+  {
+    id: "execution",
+    label: "Execution Hub",
+    step: "03",
+    description:
+      "Track alignment once the semester starts so the plan stays usable under real workload pressure.",
+  },
 ];
 
 export default function App() {
@@ -187,6 +205,10 @@ export default function App() {
     () => filterProfessors(professorPool, search),
     [professorPool, search]
   );
+  const activeMode = useMemo(
+    () => MODES.find((item) => item.id === mode) || MODES[0],
+    [mode]
+  );
 
   function handleSelectSchool(option) {
     setSelectedSchool(option);
@@ -266,6 +288,43 @@ Generated locally (demo). Connect API for richer synthesis.`;
     });
   }
 
+  const bannerCards = [
+    {
+      label: "Professor",
+      value: selectedProfessor
+        ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
+        : "Pick a professor",
+      meta: selectedProfessor?.department || "Search the roster in the left rail.",
+    },
+    {
+      label: "Campus",
+      value:
+        selectedSchool?.name || selectedProfessor?.school_name || "Browse all schools",
+      meta:
+        selectedSchool?.inDataset === false
+          ? "This school is ranked, but its professor roster is not loaded."
+          : selectedProfessor?.school_name
+            ? "Roster and class context are locked."
+            : "Select a school to narrow the professor list.",
+    },
+    {
+      label: "Modeled risk",
+      value: intel?.risk?.level ? `${intel.risk.level} risk` : "Pending",
+      meta:
+        intel?.risk?.explanation ||
+        "Risk appears after a professor is selected.",
+    },
+    {
+      label: "A-range chance",
+      value:
+        intel?.survival?.mid != null ? `${intel.survival.mid}%` : "—",
+      meta:
+        intel?.survival != null
+          ? `${intel.survival.low}%–${intel.survival.high}% modeled band`
+          : "Shows once professor signals are available.",
+    },
+  ];
+
   return (
     <div className="np-app">
       <aside className="np-sidebar">
@@ -279,85 +338,98 @@ Generated locally (demo). Connect API for richer synthesis.`;
           </div>
         </div>
 
-        <label className="np-label" htmlFor="np-college-search">
-          College
-        </label>
-        <input
-          id="np-college-search"
-          className="np-input"
-          placeholder="Search college or state…"
-          value={collegeSearch}
-          onChange={(e) => setCollegeSearch(e.target.value)}
-          autoComplete="off"
-        />
-        {selectedSchool && (
-          <div className="np-school-picked">
-            <span className="np-school-picked-name">{selectedSchool.name}</span>
-            {!selectedSchool.inDataset && (
-              <span className="np-school-badge">No roster in dataset</span>
-            )}
-            <button
-              type="button"
-              className="np-school-clear"
-              onClick={handleClearSchool}
-              aria-label="Clear college"
-            >
-              ×
-            </button>
-          </div>
-        )}
-        <div className="np-college-list">
-          {!selectedSchool &&
-            filteredCollegeOptions.map((opt) => (
-              <button
-                key={opt.name}
-                type="button"
-                className="np-college-row"
-                onClick={() => handleSelectSchool(opt)}
-              >
-                <span className="np-college-name">{opt.name}</span>
-                <span className="np-college-meta">
-                  {opt.state ? `${opt.state}` : ""}
-                  {opt.rank != null ? ` · #${opt.rank}` : ""}
-                  {opt.inDataset && opt.professorCount > 0
-                    ? ` · ${opt.professorCount} profs`
-                    : ""}
-                </span>
-              </button>
-            ))}
+        <div className="np-sidebar-block np-sidebar-copy">
+          <span className="np-eyebrow">Control tower</span>
+          <p>
+            Lock the school, choose the professor, then move through the three
+            poster stages: read the risk, build the plan, run the semester.
+          </p>
         </div>
 
-        <label className="np-label" htmlFor="np-search">
-          Professor
-        </label>
-        <input
-          id="np-search"
-          className="np-input"
-          placeholder="Search name or department…"
-          value={search}
-          onChange={(e) => setSearch(e.target.value)}
-        />
-        {selectedSchool?.inDataset === false && (
-          <p className="np-school-hint">
-            This college isn’t in the loaded professor roster — pick a school with professors or clear to browse all.
-          </p>
-        )}
+        <div className="np-sidebar-block">
+          <label className="np-label" htmlFor="np-college-search">
+            01 / College
+          </label>
+          <input
+            id="np-college-search"
+            className="np-input"
+            placeholder="Search college or state…"
+            value={collegeSearch}
+            onChange={(e) => setCollegeSearch(e.target.value)}
+            autoComplete="off"
+          />
+          {selectedSchool && (
+            <div className="np-school-picked">
+              <span className="np-school-picked-name">{selectedSchool.name}</span>
+              {!selectedSchool.inDataset && (
+                <span className="np-school-badge">No roster in dataset</span>
+              )}
+              <button
+                type="button"
+                className="np-school-clear"
+                onClick={handleClearSchool}
+                aria-label="Clear college"
+              >
+                ×
+              </button>
+            </div>
+          )}
+          <div className="np-college-list">
+            {!selectedSchool &&
+              filteredCollegeOptions.map((opt) => (
+                <button
+                  key={opt.name}
+                  type="button"
+                  className="np-college-row"
+                  onClick={() => handleSelectSchool(opt)}
+                >
+                  <span className="np-college-name">{opt.name}</span>
+                  <span className="np-college-meta">
+                    {opt.state ? `${opt.state}` : ""}
+                    {opt.rank != null ? ` · #${opt.rank}` : ""}
+                    {opt.inDataset && opt.professorCount > 0
+                      ? ` · ${opt.professorCount} profs`
+                      : ""}
+                  </span>
+                </button>
+              ))}
+          </div>
+        </div>
 
-        <div className="np-prof-list">
-          {filteredProfessors.map((p) => (
-            <button
-              key={p.professor_id}
-              type="button"
-              className={`np-prof ${p.professor_id === selectedId ? "np-prof-active" : ""}`}
-              onClick={() => setSelectedId(p.professor_id)}
-            >
-              <span>
-                {p.professor_first} {p.professor_last}
-                <small>{p.department}</small>
-              </span>
-              {p.avg_rating && <span className="np-prof-rating">{p.avg_rating}</span>}
-            </button>
-          ))}
+        <div className="np-sidebar-block">
+          <label className="np-label" htmlFor="np-search">
+            02 / Professor
+          </label>
+          <input
+            id="np-search"
+            className="np-input"
+            placeholder="Search name or department…"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+          {selectedSchool?.inDataset === false && (
+            <p className="np-school-hint">
+              This school is ranked but not present in the loaded roster. Clear
+              it or switch to a campus with professor data.
+            </p>
+          )}
+
+          <div className="np-prof-list">
+            {filteredProfessors.map((p) => (
+              <button
+                key={p.professor_id}
+                type="button"
+                className={`np-prof ${p.professor_id === selectedId ? "np-prof-active" : ""}`}
+                onClick={() => setSelectedId(p.professor_id)}
+              >
+                <span>
+                  {p.professor_first} {p.professor_last}
+                  <small>{p.department}</small>
+                </span>
+                {p.avg_rating && <span className="np-prof-rating">{p.avg_rating}</span>}
+              </button>
+            ))}
+          </div>
         </div>
 
         {selectedProfessor && (
@@ -377,6 +449,11 @@ Generated locally (demo). Connect API for richer synthesis.`;
               {selectedProfessor.avg_rating &&
                 ` · ${selectedProfessor.avg_rating} avg · diff ${selectedProfessor.avg_difficulty}`}
             </p>
+            {intel?.risk && (
+              <p className="np-fineprint">
+                Current read: {intel.risk.level} risk · {intel.survival.mid}% A-band midpoint.
+              </p>
+            )}
           </div>
         )}
 
@@ -385,6 +462,11 @@ Generated locally (demo). Connect API for richer synthesis.`;
 
       <div className="np-main">
         <header className="np-topbar">
+          <div className="np-stage-intro">
+            <div className="np-stage-kicker">Stage {activeMode.step}</div>
+            <h1 className="np-stage-title">{activeMode.label}</h1>
+            <p className="np-stage-copy">{activeMode.description}</p>
+          </div>
           <div className="np-mode-rail" role="tablist" aria-label="Modes">
             {MODES.map((m) => (
               <button
@@ -396,27 +478,23 @@ Generated locally (demo). Connect API for richer synthesis.`;
                 onClick={() => goMode(m.id)}
               >
                 <span className="np-mode-step">{m.step}</span>
-                {m.label}
+                <span>{m.label}</span>
               </button>
             ))}
           </div>
-          <div className="np-topbar-actions">
-            <button
-              type="button"
-              className="np-btn np-btn-ghost"
-              onClick={() => goMode("reality")}
-            >
-              Analyze professor risk
-            </button>
-            <button
-              type="button"
-              className="np-btn np-btn-secondary"
-              onClick={() => goMode("gameplan")}
-            >
-              Build game plan
-            </button>
-          </div>
         </header>
+
+        <section className="np-stage-banner">
+          <div className="np-stage-banner-grid">
+            {bannerCards.map((card) => (
+              <article key={card.label} className="np-banner-card">
+                <span className="np-banner-label">{card.label}</span>
+                <strong className="np-banner-value">{card.value}</strong>
+                <p className="np-banner-meta">{card.meta}</p>
+              </article>
+            ))}
+          </div>
+        </section>
 
         {loading && (
           <div className="np-loading" role="status">
@@ -445,6 +523,7 @@ Generated locally (demo). Connect API for richer synthesis.`;
               materialsNote={materialsNote}
               onMaterialsNoteChange={setMaterialsNote}
               onGenerate={handleGenerateStrategy}
+              onOpenExecution={() => goMode("execution")}
               loading={loading}
               planText={planText}
               intel={intel}
