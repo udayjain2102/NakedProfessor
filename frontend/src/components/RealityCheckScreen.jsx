@@ -91,12 +91,13 @@ export default function RealityCheckScreen({
   courseTitle,
   intel,
   onGeneratePlan,
+  highlightPrimaryCta,
 }) {
   if (!intel || !professor) {
     return (
       <div className="np-empty">
         <h2 className="np-title">Reality Check</h2>
-        <p>Select a professor in the sidebar to see survival intelligence.</p>
+        <p>Select a professor in Setup to see the risk readout.</p>
       </div>
     );
   }
@@ -109,7 +110,7 @@ export default function RealityCheckScreen({
     <div className="np-screen np-screen-reality">
       <header className="np-poster-hero np-stagger-item" style={{ animationDelay: "0ms" }}>
         <div className="np-poster-main">
-          <div className="np-hero-kicker">01 / Poster readout</div>
+          <div className="np-hero-kicker">01 / Reality Check</div>
           <h1 className="np-hero-title">
             {professor.professor_first} {professor.professor_last}
           </h1>
@@ -156,9 +157,9 @@ export default function RealityCheckScreen({
       </section>
 
       <section className="np-section">
-        <h2 className="np-section-title">Signal intelligence</h2>
+        <h2 className="np-section-title">Professor signals</h2>
         <p className="np-section-sub">
-          Benchmarked signals — not vibes. Each row is a decision, not a label.
+          Benchmarked signals that explain workload, clarity, and grading pressure.
         </p>
         <div className="np-insight-list">
           {metrics.map((m, i) => (
@@ -168,9 +169,9 @@ export default function RealityCheckScreen({
       </section>
 
       <section className="np-section">
-        <h2 className="np-section-title">Failure stack</h2>
+        <h2 className="np-section-title">Common risks</h2>
         <p className="np-section-sub">
-          Top ways students lose points — frequency is modeled from signal mix.
+          Most common ways students lose points, modeled from the professor signal mix.
         </p>
         <div className="np-failure-table">
           <div className="np-failure-head">
@@ -195,7 +196,7 @@ export default function RealityCheckScreen({
 
       <div className="np-dual-grid">
         <section className="np-section np-panel np-predict">
-          <h2 className="np-section-title">Professor behavior predictions</h2>
+          <h2 className="np-section-title">Likely professor patterns</h2>
           <ul className="np-predict-list">
             {predictions.map((p, i) => (
               <li key={i} className="np-predict-item">
@@ -210,7 +211,7 @@ export default function RealityCheckScreen({
         </section>
 
         <section className="np-section np-panel np-decision">
-          <h2 className="np-section-title">If you take this class, what happens?</h2>
+          <h2 className="np-section-title">Likely outcomes</h2>
           <div className="np-scenario-grid">
             <div className="np-scenario">
               <div className="np-eyebrow">{scenarios.consistent.label}</div>
@@ -232,15 +233,13 @@ export default function RealityCheckScreen({
       </div>
 
       <div className="np-cta-bar">
-        <button type="button" className="np-btn np-btn-primary" onClick={onGeneratePlan}>
-          Move to Game Plan
-        </button>
         <button
           type="button"
-          className="np-btn np-btn-ghost"
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          className={`np-btn np-btn-primary ${highlightPrimaryCta ? "np-btn-highlight" : ""}`}
+          onClick={onGeneratePlan}
+          id="np-build-plan"
         >
-          Back to poster top
+          Build My Plan
         </button>
       </div>
     </div>
