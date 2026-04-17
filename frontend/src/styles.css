@@ -577,6 +577,36 @@ button {
   margin-bottom: var(--np-space-4);
 }
 
+.np-topbar-ad {
+  margin-top: 4px;
+}
+
+.np-ad-slot {
+  display: grid;
+  gap: 10px;
+  padding: 14px 16px;
+  border: 2px solid rgba(18, 18, 18, 0.12);
+  background:
+    linear-gradient(180deg, rgba(255, 246, 234, 0.88), rgba(239, 225, 209, 0.88)),
+    linear-gradient(90deg, rgba(18, 18, 18, 0.04) 1px, transparent 1px);
+  background-size: auto, 28px 28px;
+  box-shadow: var(--np-shadow-tight);
+}
+
+.np-ad-label {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--np-muted);
+}
+
+.np-ad-unit {
+  width: 100%;
+  overflow: hidden;
+}
+
 .np-header-context {
   display: flex;
   align-items: flex-start;

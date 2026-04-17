@@ -2,10 +2,11 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import RealityCheckScreen from "./components/RealityCheckScreen";
 import GamePlanScreen from "./components/GamePlanScreen";
 import ExecutionHubScreen from "./components/ExecutionHubScreen";
+import AdSlot from "./components/AdSlot";
 import { deriveProfile } from "./lib/profileDeriver";
 import { getFullIntel } from "./lib/survivalIntel";
 import { loadWorkspace, saveWorkspace } from "./lib/workspaceStore";
-import { supabase } from "./lib/supabaseClient";
+import { getAuthRedirectUrl, supabase } from "./lib/supabaseClient";
 import brandLogo from "./assets/nakedprofessor-logo.png";
 
 function parseCSV(text) {
@@ -145,6 +146,75 @@ function makeId(prefix) {
   return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`;
 }
 
+const AUTH_SEARCH_KEYS = ["code", "error", "error_code", "error_description", "type"];
+const AUTH_HASH_KEYS = [
+  "access_token",
+  "refresh_token",
+  "expires_at",
+  "expires_in",
+  "provider_token",
+  "provider_refresh_token",
+  "token_type",
+  "type",
+  "error",
+  "error_code",
+  "error_description",
+];
+
+function stripAuthCallbackFromUrl() {
+  if (typeof window === "undefined") return;
+
+  const url = new URL(window.location.href);
+  const nextHashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+  let changed = false;
+
+  AUTH_SEARCH_KEYS.forEach((key) => {
+    if (url.searchParams.has(key)) {
+      url.searchParams.delete(key);
+      changed = true;
+    }
+  });
+
+  AUTH_HASH_KEYS.forEach((key) => {
+    if (nextHashParams.has(key)) {
+      nextHashParams.delete(key);
+      changed = true;
+    }
+  });
+
+  if (!changed) return;
+
+  const nextSearch = url.searchParams.toString();
+  const nextHash = nextHashParams.toString();
+  const nextUrl = `${url.pathname}${nextSearch ? `?${nextSearch}` : ""}${nextHash ? `#${nextHash}` : ""}`;
+  window.history.replaceState({}, document.title, nextUrl || "/");
+}
+
+async function resolveAuthRedirect() {
+  if (typeof window === "undefined") return "";
+
+  const url = new URL(window.location.href);
+  const hashParams = new URLSearchParams(window.location.hash.replace(/^#/, ""));
+  const authError =
+    url.searchParams.get("error_description") || hashParams.get("error_description");
+
+  if (authError) {
+    stripAuthCallbackFromUrl();
+    return authError.replace(/\+/g, " ");
+  }
+
+  const authCode = url.searchParams.get("code");
+  if (!authCode || typeof supabase.auth.exchangeCodeForSession !== "function") {
+    return "";
+  }
+
+  const { error: exchangeError } = await supabase.auth.exchangeCodeForSession(authCode);
+  stripAuthCallbackFromUrl();
+  return exchangeError?.message || "";
+}
+
+const TOP_BANNER_AD_SLOT = import.meta.env.VITE_ADSENSE_SLOT_TOP_BANNER || "";
+
 export default function App() {
   const [professors, setProfessors] = useState([]);
   const [topColleges, setTopColleges] = useState([]);
@@ -221,10 +291,13 @@ export default function App() {
     let mounted = true;
 
     async function hydrateAuth() {
+      const redirectError = await resolveAuthRedirect();
       const {
         data: { session },
       } = await supabase.auth.getSession();
       if (!mounted) return;
+      if (session?.user) stripAuthCallbackFromUrl();
+      if (redirectError) setError(redirectError);
       setAuthUser(session?.user ?? null);
     }
 
@@ -233,6 +306,10 @@ export default function App() {
     const {
       data: { subscription },
     } = supabase.auth.onAuthStateChange((_event, session) => {
+      if (session?.user) {
+        stripAuthCallbackFromUrl();
+        setError("");
+      }
       setAuthUser(session?.user ?? null);
     });
 
@@ -468,18 +545,6 @@ export default function App() {
     });
   }
 
-  async function handleGoogleSignIn() {
-    setError("");
-    setAuthNotice("");
-    const { error: authError } = await supabase.auth.signInWithOAuth({
-      provider: "google",
-      options: {
-        redirectTo: window.location.origin,
-      },
-    });
-    if (authError) setError(authError.message);
-  }
-
   async function handleEduSignIn() {
     const email = authEmail.trim().toLowerCase();
     if (!/\.edu$/i.test(email)) {
@@ -491,7 +556,7 @@ export default function App() {
     const { error: authError } = await supabase.auth.signInWithOtp({
       email,
       options: {
-        emailRedirectTo: window.location.origin,
+        emailRedirectTo: getAuthRedirectUrl(),
       },
     });
 
@@ -926,13 +991,8 @@ Generated locally (demo). Connect API for richer synthesis.`;
             {!authUser ? (
               <>
                 <p className="np-fineprint">
-                  Use Google or a `.edu` email. Saved subjects and professors will be tied to your signed-in account on this device.
+                  Use your `.edu` email. Saved subjects and professors will be tied to your signed-in account on this device.
                 </p>
-                <div className="np-workspace-actions">
-                  <button type="button" className="np-btn np-btn-primary" onClick={handleGoogleSignIn}>
-                    Continue with Google
-                  </button>
-                </div>
                 <label className="np-label" htmlFor="np-auth-edu">
                   .edu email
                 </label>
@@ -944,7 +1004,7 @@ Generated locally (demo). Connect API for richer synthesis.`;
                   onChange={(e) => setAuthEmail(e.target.value)}
                 />
                 <div className="np-workspace-actions">
-                  <button type="button" className="np-btn np-btn-secondary" onClick={handleEduSignIn}>
+                  <button type="button" className="np-btn np-btn-primary" onClick={handleEduSignIn}>
                     Send magic link
                   </button>
                 </div>
@@ -1241,6 +1301,7 @@ Generated locally (demo). Connect API for richer synthesis.`;
             </ol>
           </nav>
           <p className="np-next-action">{nextAction}</p>
+          <AdSlot slot={TOP_BANNER_AD_SLOT} className="np-topbar-ad" minHeight={140} />
         </header>
 
         {hasProfessor && (
