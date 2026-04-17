@@ -17,18 +17,19 @@ const supabaseState = vi.hoisted(() => {
         },
       },
     })),
-    signInWithOAuth: vi.fn(async () => ({ data: {}, error: null })),
+    exchangeCodeForSession: vi.fn(async () => ({ data: {}, error: null })),
     signInWithOtp: vi.fn(async () => ({ data: {}, error: null })),
     signOut: vi.fn(async () => ({ error: null })),
   };
 });
 
 vi.mock("./lib/supabaseClient", () => ({
+  getAuthRedirectUrl: vi.fn(() => window.location.origin),
   supabase: {
     auth: {
       getSession: supabaseState.getSession,
       onAuthStateChange: supabaseState.onAuthStateChange,
-      signInWithOAuth: supabaseState.signInWithOAuth,
+      exchangeCodeForSession: supabaseState.exchangeCodeForSession,
       signInWithOtp: supabaseState.signInWithOtp,
       signOut: supabaseState.signOut,
     },
@@ -46,9 +47,10 @@ describe("NakedProfessor app", () => {
     supabaseState.state.currentUser = null;
     supabaseState.getSession.mockClear();
     supabaseState.onAuthStateChange.mockClear();
-    supabaseState.signInWithOAuth.mockClear();
+    supabaseState.exchangeCodeForSession.mockClear();
     supabaseState.signInWithOtp.mockClear();
     supabaseState.signOut.mockClear();
+    window.history.replaceState({}, "", "/");
     global.fetch = vi.fn((input) => {
       const url = typeof input === "string" ? input : String(input?.url ?? "");
       if (url.includes("top_colleges")) {
@@ -82,7 +84,6 @@ describe("NakedProfessor app", () => {
       screen.getByText(/Professor search unlocks after the university is selected/i)
     ).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /^Choose A University$/i })).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /Continue with Google/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Send magic link/i })).toBeInTheDocument();
     expect(screen.getAllByRole("button", { name: /Search school/i }).length).toBeGreaterThan(0);
     expect(screen.getByPlaceholderText(/Choose a university first/i)).toBeDisabled();
@@ -93,6 +94,39 @@ describe("NakedProfessor app", () => {
     expect(stepperButtons[0]).toBeDisabled();
     expect(stepperButtons[1]).toBeDisabled();
     expect(stepperButtons[2]).toBeDisabled();
+  });
+
+  it("exchanges callback codes from email sign-in links", async () => {
+    window.history.replaceState({}, "", "/?code=email-code&type=magiclink");
+    supabaseState.exchangeCodeForSession.mockImplementationOnce(async () => {
+      supabaseState.state.currentUser = {
+        id: "user-1",
+        email: "arjun@psu.edu",
+        user_metadata: { full_name: "Arjun" },
+      };
+      return { data: {}, error: null };
+    });
+
+    render(<App />);
+
+    expect(await screen.findByText(/Signed in as arjun@psu.edu/i)).toBeInTheDocument();
+    expect(supabaseState.exchangeCodeForSession).toHaveBeenCalledWith("email-code");
+    expect(window.location.search).toBe("");
+  });
+
+  it("shows redirect errors from invalid magic links", async () => {
+    window.history.replaceState(
+      {},
+      "",
+      "/?error_description=Magic+link+is+invalid+or+has+expired"
+    );
+
+    render(<App />);
+
+    expect(
+      await screen.findByText(/Magic link is invalid or has expired/i)
+    ).toBeInTheDocument();
+    expect(window.location.search).toBe("");
   });
 
   it("hides schools without roster data from setup", async () => {
