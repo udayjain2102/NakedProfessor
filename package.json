@@ -1,0 +1,11 @@
+{
+  "name": "nakedprofessor",
+  "private": true,
+  "workspaces": ["frontend"],
+  "scripts": {
+    "dev": "npm run dev -w frontend",
+    "build": "npm run build -w frontend",
+    "preview": "npm run preview -w frontend",
+    "test": "npm run test -w frontend"
+  }
+}
