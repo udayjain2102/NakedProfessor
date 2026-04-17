@@ -45,12 +45,13 @@ export default function GamePlanScreen({
   materialsNote,
   onMaterialsNoteChange,
   onGenerate,
-  onOpenExecution,
   loading,
   planText,
   intel,
   studyHours,
   onStudyHoursChange,
+  highlightPrimaryCta,
+  onFocusSyllabus,
 }) {
   const parsed = useMemo(() => parseSyllabus(syllabus || ""), [syllabus]);
   const strategy = useMemo(
@@ -79,12 +80,24 @@ export default function GamePlanScreen({
   return (
     <div className="np-screen">
       <header className="np-block-head">
-        <div className="np-eyebrow">02 / Build the playbook</div>
+        <div className="np-eyebrow">02 / Game Plan</div>
         <h2 className="np-title">Game Plan</h2>
         <p className="np-lead">
-          Paste the syllabus. We’ll detect grading structure and generate an opinionated playbook — not generic advice.
+          Paste the syllabus. We’ll detect grading structure and generate a concrete weekly strategy.
         </p>
       </header>
+
+      {!syllabus.trim() && (
+        <section className="np-state-card np-state-card-inline">
+          <div className="np-state-copy">
+            <h3 className="np-state-title">Add your syllabus</h3>
+            <p>Paste grading and dates so Game Plan can generate a usable weekly strategy.</p>
+          </div>
+          <button type="button" className="np-btn np-btn-primary" onClick={onFocusSyllabus}>
+            Add Syllabus
+          </button>
+        </section>
+      )}
 
       <section className="np-setup-grid">
         <article className="np-panel np-panel-ink">
@@ -133,6 +146,7 @@ export default function GamePlanScreen({
             {PROMPTS[syllabus.length % PROMPTS.length]}
           </p>
           <textarea
+            id="np-syllabus-input"
             className="np-textarea"
             value={syllabus}
             onChange={(e) => onSyllabusChange(e.target.value)}
@@ -148,21 +162,13 @@ export default function GamePlanScreen({
           <div className="np-action-row">
             <button
               type="button"
-              className="np-btn np-btn-primary"
+              id="np-generate-strategy"
+              className={`np-btn np-btn-primary ${highlightPrimaryCta ? "np-btn-highlight" : ""}`}
               disabled={loading || !syllabus.trim()}
               onClick={onGenerate}
             >
-              {loading ? "Analyzing professor patterns…" : "Optimize my grade strategy"}
+              {loading ? "Analyzing professor patterns…" : "Generate Strategy"}
             </button>
-            {planText && (
-              <button
-                type="button"
-                className="np-btn np-btn-secondary"
-                onClick={onOpenExecution}
-              >
-                Open Execution Hub
-              </button>
-            )}
           </div>
         </article>
       </section>
@@ -191,10 +197,10 @@ export default function GamePlanScreen({
 
       {strategy && (
         <section className="np-panel np-strategy">
-          <h3 className="np-section-title">Strategy generator</h3>
+          <h3 className="np-section-title">Generated strategy</h3>
           <p className="np-verdict">{strategy.verdict}</p>
           <div className={`np-detect ${strategy.examHeavy ? "" : "np-detect-muted"}`}>
-            <strong>Workload posture</strong>
+            <strong>Course shape</strong>
             <span>
               {strategy.examHeavy
                 ? "Exam-heavy course: build timed reps early and treat lecture artifacts as the source of truth."
