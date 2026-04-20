@@ -1,10 +1,11 @@
 import { createClient } from "@supabase/supabase-js";
 
-const supabaseUrl =
-  import.meta.env.VITE_SUPABASE_URL || "https://hzpjltcsbczluyhleyla.supabase.co";
-const supabaseAnonKey =
-  import.meta.env.VITE_SUPABASE_ANON_KEY ||
-  "sb_publishable_9QpoSFjKGyLtzCP1_KVpQg_Y1l2n3_o";
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || "";
+const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || "";
+
+export function hasSupabaseConfig() {
+  return Boolean(supabaseUrl && supabaseAnonKey);
+}
 
 function normalizeRedirectUrl(value) {
   if (!value) return "";
@@ -31,11 +32,66 @@ export function getAuthRedirectUrl() {
   return undefined;
 }
 
-export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
-  auth: {
-    persistSession: true,
-    autoRefreshToken: true,
-    detectSessionInUrl: true,
-    flowType: "implicit",
-  },
-});
+function createNoopSupabaseClient() {
+  return {
+    auth: {
+      async getSession() {
+        return { data: { session: null } };
+      },
+      onAuthStateChange() {
+        return {
+          data: {
+            subscription: {
+              unsubscribe() {},
+            },
+          },
+        };
+      },
+      async exchangeCodeForSession() {
+        return { data: {}, error: null };
+      },
+      async signInWithOtp() {
+        return { data: {}, error: new Error("Supabase auth is not configured.") };
+      },
+      async signOut() {
+        return { error: null };
+      },
+    },
+    from() {
+      return {
+        select() {
+          return {
+            eq() {
+              return {
+                async maybeSingle() {
+                  return { data: null, error: null, status: 406 };
+                },
+              };
+            },
+          };
+        },
+        async upsert() {
+          return { error: new Error("Supabase storage is not configured.") };
+        },
+        delete() {
+          return {
+            async eq() {
+              return { error: null };
+            },
+          };
+        },
+      };
+    },
+  };
+}
+
+export const supabase = hasSupabaseConfig()
+  ? createClient(supabaseUrl, supabaseAnonKey, {
+      auth: {
+        persistSession: true,
+        autoRefreshToken: true,
+        detectSessionInUrl: true,
+        flowType: "implicit",
+      },
+    })
+  : createNoopSupabaseClient();

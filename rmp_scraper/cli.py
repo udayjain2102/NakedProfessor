@@ -3,13 +3,12 @@ from __future__ import annotations
 import argparse
 import json
 import logging
-import sys
 from pathlib import Path
 
 import requests
 
 from .pipeline import (
-    export_professors_to_csv,
+    export_normalized_professors_artifact,
     load_or_create_college_cache,
     rankings_colleges_with_behrend,
 )
@@ -68,7 +67,7 @@ def _cmd_rankings(args: argparse.Namespace) -> int:
             professor.metadata = {"rank": college.rank, "state": college.state}
             all_records.append(professor)
 
-    export_professors_to_csv(all_records, args.output)
+    export_normalized_professors_artifact(all_records, args.output)
     return 0
 
 
@@ -109,7 +108,7 @@ def _cmd_professors(args: argparse.Namespace) -> int:
             "state": school.state,
             "school_legacy_id": school.legacy_id,
         }
-    export_professors_to_csv(records, args.output)
+    export_normalized_professors_artifact(records, args.output)
     LOG.info("Wrote %d professors to %s", len(records), args.output)
     return 0
 
@@ -167,7 +166,8 @@ def _build_parser() -> argparse.ArgumentParser:
     p_rank.add_argument(
         "--output",
         type=Path,
-        default=Path("data/top200_plus_behrend_professors.csv"),
+        default=Path("data/professors.normalized.v1.json"),
+        help="Versioned normalized output artifact path",
     )
     _add_delay(p_rank)
     p_rank.set_defaults(func=_cmd_rankings)
@@ -178,7 +178,10 @@ def _build_parser() -> argparse.ArgumentParser:
     _add_delay(p_schools)
     p_schools.set_defaults(func=_cmd_schools)
 
-    p_profs = sub.add_parser("professors", help="Export all professors for a school match to CSV")
+    p_profs = sub.add_parser(
+        "professors",
+        help="Export all professors for a school match to versioned normalized JSON",
+    )
     p_profs.add_argument("--school", required=True, help="School search string")
     p_profs.add_argument(
         "--pick",
@@ -187,7 +190,12 @@ def _build_parser() -> argparse.ArgumentParser:
         help="Index of school match to use (see `schools` subcommand)",
     )
     p_profs.add_argument("--search", default="", help="Optional professor name filter within the school")
-    p_profs.add_argument("--output", type=Path, default=Path("data/school_professors.csv"))
+    p_profs.add_argument(
+        "--output",
+        type=Path,
+        default=Path("data/school_professors.normalized.v1.json"),
+        help="Versioned normalized output artifact path",
+    )
     _add_delay(p_profs)
     p_profs.set_defaults(func=_cmd_professors)
 

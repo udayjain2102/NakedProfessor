@@ -1,0 +1,117 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-04-20T00:00:00Z",
+  "freshness": {
+    "generated_at": "2026-04-20T00:00:00Z",
+    "ttl_hours": 8760
+  },
+  "source_provenance": {
+    "rankings_source": {
+      "provider": "stateuniversity",
+      "url": "https://www.stateuniversity.com/rank/score_rank_by_4yrc.html"
+    },
+    "professor_source": {
+      "provider": "ratemyprofessors",
+      "url": "https://www.ratemyprofessors.com/graphql"
+    }
+  },
+  "schools": [
+    {
+      "school_id": "school:pa:pennsylvania-state-university-behrend",
+      "upstream_school_id": "behrend-sample",
+      "name": "Pennsylvania State University - Behrend",
+      "state": "PA",
+      "rank": 201,
+      "aliases": [
+        "Pennsylvania State University - Behrend",
+        "Penn State Behrend"
+      ],
+      "search_tokens": [
+        "behrend",
+        "penn",
+        "pennsylvania",
+        "state",
+        "university"
+      ],
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_school_id": "behrend-sample",
+        "rankings_rank": 201
+      }
+    }
+  ],
+  "professors": [
+    {
+      "professor_id": "prof:sample-1",
+      "school_id": "school:pa:pennsylvania-state-university-behrend",
+      "upstream_professor_id": "sample-1",
+      "legacy_id": 100001,
+      "first_name": "Alex",
+      "last_name": "Morgan",
+      "full_name": "Alex Morgan",
+      "department": "Mathematics",
+      "profile_url": "https://www.ratemyprofessors.com/professor/100001",
+      "aliases": [
+        "Alex Morgan",
+        "Morgan, Alex"
+      ],
+      "search_tokens": [
+        "alex",
+        "behrend",
+        "mathematics",
+        "morgan",
+        "pennsylvania"
+      ],
+      "metrics": {
+        "avg_rating": 4.2,
+        "avg_difficulty": 3.3,
+        "would_take_again_percent": 78,
+        "num_ratings": 12
+      },
+      "freshness": {
+        "observed_at": "2026-04-20T00:00:00Z"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "sample-1",
+        "provider_school_id": "behrend-sample"
+      }
+    },
+    {
+      "professor_id": "prof:sample-2",
+      "school_id": "school:pa:pennsylvania-state-university-behrend",
+      "upstream_professor_id": "sample-2",
+      "legacy_id": 100002,
+      "first_name": "Jamie",
+      "last_name": "Lee",
+      "full_name": "Jamie Lee",
+      "department": "Computer Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/100002",
+      "aliases": [
+        "Jamie Lee",
+        "Lee, Jamie"
+      ],
+      "search_tokens": [
+        "behrend",
+        "computer",
+        "jamie",
+        "lee",
+        "science"
+      ],
+      "metrics": {
+        "avg_rating": 3.9,
+        "avg_difficulty": 3.6,
+        "would_take_again_percent": 65,
+        "num_ratings": 9
+      },
+      "freshness": {
+        "observed_at": "2026-04-20T00:00:00Z"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "sample-2",
+        "provider_school_id": "behrend-sample"
+      }
+    }
+  ]
+}

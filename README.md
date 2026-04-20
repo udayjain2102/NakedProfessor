@@ -4,7 +4,7 @@ This project provides a web application that downloads the StateUniversity.com r
 list and enumerates professors from a third-party professor rating GraphQL API for each school.
 
 Default rankings view: top 200 schools plus Penn State Behrend (Erie, PA) if it is
-not already in that list, displayed in an interactive table and exportable to `top200_plus_behrend_professors.csv`.
+not already in that list, displayed in an interactive table and exportable to a versioned normalized artifact (`professors.normalized.v1.json`).
 
 ## Features
 
@@ -63,7 +63,7 @@ npm install
 npm run dev
 ```
 
-Use `data/top200_plus_behrend_professors.csv` from scraping, or the Behrend sample under `frontend/public/data/` for demos. Copy `frontend/.env.example` to `frontend/.env.local` and set `OPENAI_API_KEY` for local API routes.
+Use `data/professors.normalized.v1.json` from scraping, or the Behrend sample under `frontend/public/data/` for demos. Copy `frontend/.env.example` to `frontend/.env.local` and set `OPENAI_API_KEY` for local API routes.
 
 The browser does not hold the OpenAI key. Serverless generation uses `frontend/api/generate.js`; the host must provide `OPENAI_API_KEY`.
 

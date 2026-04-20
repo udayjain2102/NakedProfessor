@@ -34,6 +34,9 @@ professors.db copy
 
 # ignore Vite build output
 frontend/dist/
+frontend/playwright-report/
+frontend/test-results/
+frontend/.lighthouseci/
 
 # scratch / backup UI
 frontend/src/App_new.jsx
