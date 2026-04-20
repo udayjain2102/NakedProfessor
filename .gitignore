@@ -44,3 +44,5 @@ frontend/src/components/*_old.jsx
 frontend/src/components/PlanScreen_new.jsx
 
 frontend/public/data/professors.normalized.v1.json
+
+frontend/public/data/professors.normalized.v1.json
