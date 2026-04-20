@@ -84,16 +84,24 @@ sentiment) and tension statements the LLM prompt consumes.
   the table disappears.
 - The platform client replays the same GraphQL shape the website uses today. If the schema
   changes, update `rmp_scraper/rmp_client.py` accordingly.
-- The app currently picks the first school match from the platform. If you need deterministic
-  mappings, extend it to pre-map school IDs manually.
+- Rankings scraping now applies deterministic, state-aware school matching; if a school still
+  resolves ambiguously, add explicit RMP metadata overrides in the scraper config.
 - Long-running fetches display a progress indicator and stream results incrementally to avoid
   blocking the UI. Consider adding server-side checkpoints for large requests.
 
 ## Testing & Safety
 
-- `npm run lint` and `npm test` verify the app is syntactically valid and core logic is correct.
+- `cd frontend && npm test && npm run build` verifies frontend behavior and production bundling.
+- `python -m compileall rmp_scraper app.py` quickly catches Python syntax issues before shipping.
 - Always test with a small limit (5 schools) first to verify connectivity before a full
   200-school fetch.
+
+## Changelog (2026-04)
+
+- Added retry/backoff handling for RateMyProfessors GraphQL calls in the scraper client.
+- Switched rankings school resolution to deterministic, state-aware matching instead of first-result fallback.
+- Expanded GitHub Actions CI with a Python compile smoke check (`python -m compileall rmp_scraper app.py`).
+- Updated README verification commands to match the current runnable scripts.
 
 ## Next Steps
 

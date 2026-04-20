@@ -39,11 +39,16 @@ def _resolve_rankings_school(client: RateMyProfessorsClient, college: RankedColl
             rmp.get("search", college.name),
             name_contains=rmp.get("name_contains"),
             city_equals=rmp.get("city"),
+            state_equals=rmp.get("state") or college.state,
             max_results=int(rmp.get("max_results", 15)),
             default_index=int(rmp.get("default_index", 0)),
         )
-    matches = client.search_school(college.name)
-    return matches[0] if matches else None
+    return client.match_school(
+        college.name,
+        state_equals=college.state,
+        max_results=15,
+        default_index=0,
+    )
 
 
 def _cmd_rankings(args: argparse.Namespace) -> int:
