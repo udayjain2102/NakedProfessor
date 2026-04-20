@@ -100,3 +100,5 @@ sentiment) and tension statements the LLM prompt consumes.
 - Add parallelism with bounded concurrency while respecting per-host rate limits.
 - Enrich the professor view with department-level filters or summary statistics.
 - Persist raw JSON per professor to ease future analyses.
+- Add deterministic school matching and clearer retry/checkpoint behavior in the scraper pipeline.
+
