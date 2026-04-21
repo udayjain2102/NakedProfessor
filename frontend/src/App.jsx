@@ -1,36 +1,162 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { useLocation, useMatch, useNavigate } from "react-router-dom";
 import RealityCheckScreen from "./components/RealityCheckScreen";
 import GamePlanScreen from "./components/GamePlanScreen";
 import ExecutionHubScreen from "./components/ExecutionHubScreen";
 import AdSlot from "./components/AdSlot";
 import { deriveProfile } from "./lib/profileDeriver";
 import { getFullIntel } from "./lib/survivalIntel";
-import { loadWorkspace, saveWorkspace } from "./lib/workspaceStore";
 import { getAuthRedirectUrl, supabase } from "./lib/supabaseClient";
+import { loadProfessorArtifact } from "./lib/professorArtifactLoader";
+import { generateStudyPlan } from "./lib/studyPlanClient";
+import {
+  canUseCloudPlanStore,
+  derivePlanStoreAccountName,
+  loadPlanWorkspace,
+  savePlanWorkspace,
+} from "./lib/planStore";
 import brandLogo from "./assets/nakedprofessor-logo.png";
 
-function parseCSV(text) {
-  const lines = text.trim().split("\n");
-  const headers = lines[0].split(",").map((h) => h.trim());
-  return lines.slice(1).map((line) => {
-    const values = line.split(",");
-    return headers.reduce((obj, header, index) => {
-      obj[header] = values[index] ? values[index].trim() : "";
-      return obj;
-    }, {});
-  });
+const SEARCH_RESULT_LIMIT = 6;
+const MOBILE_SETUP_QUERY = "(max-width: 960px)";
+const SCHOOL_STOP_WORDS = new Set(["of", "the", "and", "at", "main", "campus"]);
+const SCHOOL_GENERIC_WORDS = new Set(["university", "college", "institute", "school", "campus"]);
+
+function normalizeSearchValue(value) {
+  return (value || "")
+    .toLowerCase()
+    .replace(/&/g, " and ")
+    .replace(/[^a-z0-9\s]+/g, " ")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
-function filterProfessors(professors, query) {
-  const q = query.toLowerCase().trim();
-  if (!q) return professors.slice(0, 14);
-  return professors
-    .filter((p) =>
-      `${p.professor_first} ${p.professor_last} ${p.department}`
-        .toLowerCase()
-        .includes(q)
-    )
-    .slice(0, 14);
+function buildInitialism(words) {
+  return words.map((word) => word[0]).join("");
+}
+
+function compactSearchValue(value) {
+  return normalizeSearchValue(value).replace(/\s+/g, "");
+}
+
+function uniqueSearchValues(values) {
+  return Array.from(
+    new Set(values.map((value) => normalizeSearchValue(value)).filter(Boolean))
+  );
+}
+
+function scoreSubsequence(query, candidate) {
+  if (!query || query.length < 3 || !candidate) return 0;
+
+  let queryIndex = 0;
+  let lastMatchIndex = -1;
+  let gapPenalty = 0;
+
+  for (let candidateIndex = 0; candidateIndex < candidate.length; candidateIndex += 1) {
+    if (candidate[candidateIndex] !== query[queryIndex]) continue;
+    if (lastMatchIndex !== -1) {
+      gapPenalty += candidateIndex - lastMatchIndex - 1;
+    }
+    lastMatchIndex = candidateIndex;
+    queryIndex += 1;
+    if (queryIndex === query.length) {
+      return Math.max(1, 120 - gapPenalty - (candidate.length - query.length));
+    }
+  }
+
+  return 0;
+}
+
+function scoreTokenPrefix(query, candidate) {
+  const queryTokens = query.split(" ").filter(Boolean);
+  const candidateTokens = candidate.split(" ").filter(Boolean);
+  if (!queryTokens.length || !candidateTokens.length) return 0;
+
+  let tokenCursor = 0;
+  let score = 0;
+
+  for (const queryToken of queryTokens) {
+    const tokenIndex = candidateTokens.findIndex(
+      (candidateToken, index) => index >= tokenCursor && candidateToken.startsWith(queryToken)
+    );
+    if (tokenIndex === -1) return 0;
+    const candidateToken = candidateTokens[tokenIndex];
+    score += 50 - Math.min(16, candidateToken.length - queryToken.length);
+    tokenCursor = tokenIndex + 1;
+  }
+
+  return score;
+}
+
+function scoreSearchAlias(query, candidate) {
+  if (!query || !candidate) return 0;
+
+  const compactQuery = query.replace(/\s+/g, "");
+  const compactCandidate = candidate.replace(/\s+/g, "");
+
+  if (candidate === query) return 1400;
+  if (compactCandidate === compactQuery) return 1320;
+  if (candidate.startsWith(query)) {
+    return 1180 - Math.min(160, candidate.length - query.length);
+  }
+
+  const tokenPrefixScore = scoreTokenPrefix(query, candidate);
+  if (tokenPrefixScore > 0) {
+    return 940 + tokenPrefixScore;
+  }
+
+  const tokenBoundaryIndex = candidate.indexOf(` ${query}`);
+  if (tokenBoundaryIndex !== -1) {
+    return 820 - Math.min(140, tokenBoundaryIndex * 6);
+  }
+
+  if (query.length >= 3) {
+    const substringIndex = candidate.indexOf(query);
+    if (substringIndex !== -1) {
+      return 760 - Math.min(180, substringIndex * 8);
+    }
+  }
+
+  const subsequenceScore = scoreSubsequence(compactQuery, compactCandidate);
+  if (subsequenceScore > 0) {
+    return 520 + subsequenceScore;
+  }
+
+  return 0;
+}
+
+function minimumSearchScore(queryVariants) {
+  const longestQueryLength = queryVariants.reduce(
+    (maxLength, query) => Math.max(maxLength, query.replace(/\s+/g, "").length),
+    0
+  );
+
+  if (longestQueryLength <= 1) return 1180;
+  if (longestQueryLength === 2) return 900;
+  return 520;
+}
+
+function rankSearchResults(items, queryVariants, getAliases, compareItems, limit = SEARCH_RESULT_LIMIT) {
+  if (!queryVariants.length) return items.slice(0, limit);
+
+  const acceptedScore = minimumSearchScore(queryVariants);
+
+  return items
+    .map((item) => {
+      const aliases = getAliases(item);
+      const score = queryVariants.reduce((bestScore, query) => {
+        const aliasScore = aliases.reduce((bestAliasScore, alias) => {
+          return Math.max(bestAliasScore, scoreSearchAlias(query, alias));
+        }, 0);
+        return Math.max(bestScore, aliasScore);
+      }, 0);
+
+      return { item, score };
+    })
+    .filter((entry) => entry.score >= acceptedScore)
+    .sort((left, right) => right.score - left.score || compareItems(left.item, right.item))
+    .slice(0, limit)
+    .map((entry) => entry.item);
 }
 
 function schoolKey(name) {
@@ -53,7 +179,61 @@ function schoolKey(name) {
     .trim();
 }
 
-/** Merge CSV schools with national rankings list for search. */
+function buildSchoolAliases(name, state) {
+  const normalizedName = normalizeSearchValue(name);
+  const normalizedKey = normalizeSearchValue(schoolKey(name));
+  const compactName = compactSearchValue(name);
+  const compactKey = compactSearchValue(schoolKey(name));
+  const words = normalizedKey.split(" ").filter(Boolean);
+  const searchWords = words.filter((word) => !SCHOOL_STOP_WORDS.has(word));
+  const coreWords = searchWords.filter((word) => !SCHOOL_GENERIC_WORDS.has(word));
+  const aliases = [name, normalizedName, normalizedKey, compactName, compactKey];
+
+  if (searchWords.length > 1) {
+    aliases.push(searchWords.join(" "));
+    aliases.push(compactSearchValue(searchWords.join(" ")));
+    aliases.push(buildInitialism(searchWords));
+  }
+  if (coreWords.length > 0) {
+    aliases.push(coreWords.join(" "));
+    aliases.push(compactSearchValue(coreWords.join(" ")));
+  }
+  if (coreWords.length > 1) {
+    aliases.push(buildInitialism(coreWords));
+  }
+  if (state) aliases.push(state);
+
+  return uniqueSearchValues(aliases);
+}
+
+function buildProfessorAliases(professor) {
+  const first = professor.professor_first || "";
+  const last = professor.professor_last || "";
+  const department = professor.department || "";
+  const firstInitial = first[0] || "";
+  const lastInitial = last[0] || "";
+  const fullName = `${first} ${last}`.trim();
+  const reversedName = `${last} ${first}`.trim();
+
+  return uniqueSearchValues([
+    fullName,
+    reversedName,
+    `${firstInitial} ${last}`,
+    `${last} ${firstInitial}`,
+    `${first} ${lastInitial}`,
+    `${firstInitial}${last}`,
+    `${first}${last}`,
+    `${last}${first}`,
+    `${firstInitial}${lastInitial}`,
+    `${lastInitial}${firstInitial}`,
+    department,
+    compactSearchValue(department),
+    `${fullName} ${department}`,
+    `${reversedName} ${department}`,
+  ]);
+}
+
+/** Merge artifact schools with national rankings list for search. */
 function buildSchoolOptions(professors, topColleges) {
   const map = new Map();
   for (const p of professors) {
@@ -61,7 +241,13 @@ function buildSchoolOptions(professors, topColleges) {
     if (!n) continue;
     const key = schoolKey(n);
     if (!map.has(key)) {
-      map.set(key, { key, name: n, inDataset: true, professorCount: 0 });
+      map.set(key, {
+        key,
+        name: n,
+        inDataset: true,
+        professorCount: 0,
+        aliases: buildSchoolAliases(n, p.school_state),
+      });
     }
     map.get(key).professorCount += 1;
   }
@@ -74,22 +260,57 @@ function buildSchoolOptions(professors, topColleges) {
         const e = map.get(key);
         e.state = c.state;
         e.rank = c.rank;
+        e.aliases = buildSchoolAliases(e.name, c.state);
       }
     }
   }
   return Array.from(map.values()).sort((a, b) => a.name.localeCompare(b.name));
 }
 
-function filterSchoolOptions(options, query, limit = 18) {
-  const s = query.toLowerCase().trim();
-  if (!s) return options.slice(0, limit);
-  return options
-    .filter(
-      (o) =>
-        o.name.toLowerCase().includes(s) ||
-        (o.state && String(o.state).toLowerCase().includes(s))
+function filterSchoolOptions(options, query, limit = SEARCH_RESULT_LIMIT) {
+  const queryVariants = uniqueSearchValues([query, schoolKey(query)]);
+  return rankSearchResults(
+    options,
+    queryVariants,
+    (option) => option.aliases || buildSchoolAliases(option.name, option.state),
+    (left, right) => left.name.localeCompare(right.name),
+    limit
+  );
+}
+
+function filterProfessors(professors, query, limit = SEARCH_RESULT_LIMIT) {
+  const queryVariants = uniqueSearchValues([query]);
+  return rankSearchResults(
+    professors,
+    queryVariants,
+    buildProfessorAliases,
+    (left, right) =>
+      left.professor_last.localeCompare(right.professor_last) ||
+      left.professor_first.localeCompare(right.professor_first),
+    limit
+  );
+}
+
+function clampHighlightIndex(index, length) {
+  if (!length) return -1;
+  if (index < 0) return 0;
+  if (index >= length) return length - 1;
+  return index;
+}
+
+function cycleHighlightIndex(index, length, direction) {
+  if (!length) return -1;
+  if (index < 0) return direction > 0 ? 0 : length - 1;
+  return (index + direction + length) % length;
+}
+
+function getFocusableElements(container) {
+  if (!container) return [];
+  return Array.from(
+    container.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
     )
-    .slice(0, limit);
+  ).filter((element) => !element.hasAttribute("disabled") && element.getAttribute("aria-hidden") !== "true");
 }
 
 const LOADING_LINES = [
@@ -99,6 +320,13 @@ const LOADING_LINES = [
 ];
 
 const MODES = [
+  {
+    id: "select",
+    label: "Choose Context",
+    step: "00",
+    description:
+      "Pick your school and professor context first so risk scoring and planning are grounded in the right class setup.",
+  },
   {
     id: "reality",
     label: "Reality Check",
@@ -214,8 +442,15 @@ async function resolveAuthRedirect() {
 }
 
 const TOP_BANNER_AD_SLOT = import.meta.env.VITE_ADSENSE_SLOT_TOP_BANNER || "";
+const TOP_COLLEGES_PATH = import.meta.env.VITE_TOP_COLLEGES_PATH || "/data/top_colleges.json";
 
 export default function App() {
+  const location = useLocation();
+  const navigate = useNavigate();
+  const selectMatch = useMatch("/app/select");
+  const professorMatch = useMatch("/app/professor/:id");
+  const planMatch = useMatch("/app/plan/:id");
+  const isSavedRoute = location.pathname === "/saved";
   const [professors, setProfessors] = useState([]);
   const [topColleges, setTopColleges] = useState([]);
   const [collegeSearch, setCollegeSearch] = useState("");
@@ -225,11 +460,11 @@ export default function App() {
   const [courseTitle, setCourseTitle] = useState("");
   const [syllabus, setSyllabus] = useState("");
   const [materialsNote, setMaterialsNote] = useState("");
-  const [planText, setPlanText] = useState("");
+  const [plan, setPlan] = useState(null);
   const [loading, setLoading] = useState(false);
   const [loadingIdx, setLoadingIdx] = useState(0);
   const [error, setError] = useState("");
-  const [mode, setMode] = useState("reality");
+  const [mode, setMode] = useState("select");
   const [studyHours, setStudyHours] = useState(9);
   const [authUser, setAuthUser] = useState(null);
   const [authEmail, setAuthEmail] = useState("");
@@ -242,6 +477,10 @@ export default function App() {
   const [workspaceLoaded, setWorkspaceLoaded] = useState(false);
   const [insightVisible, setInsightVisible] = useState(true);
   const [isSetupOpen, setIsSetupOpen] = useState(false);
+  const [isMobileSetup, setIsMobileSetup] = useState(false);
+  const [activePalette, setActivePalette] = useState(null);
+  const [schoolHighlightIndex, setSchoolHighlightIndex] = useState(-1);
+  const [professorHighlightIndex, setProfessorHighlightIndex] = useState(-1);
   const [stepTransition, setStepTransition] = useState("");
   const [highlightedAction, setHighlightedAction] = useState("");
   const rafIdRef = useRef(null);
@@ -254,24 +493,30 @@ export default function App() {
   });
   const setupPanelRef = useRef(null);
   const mainTopRef = useRef(null);
+  const schoolInputRef = useRef(null);
+  const professorInputRef = useRef(null);
+  const schoolSearchTriggerRef = useRef(null);
+  const professorSearchTriggerRef = useRef(null);
+  const paletteInputRef = useRef(null);
+  const paletteDialogRef = useRef(null);
+  const focusRestoreRef = useRef(null);
   const hasProfessor = Boolean(selectedId);
   const hasSyllabus = Boolean(syllabus.trim());
+  const supportsAccountSync = canUseCloudPlanStore();
+  const canSaveSubjects = !supportsAccountSync || Boolean(authUser);
 
   useEffect(() => {
     let cancelled = false;
     async function load() {
       try {
-        let csvRes = await fetch("/data/top200_plus_behrend_professors.csv");
-        if (!csvRes.ok) {
-          csvRes = await fetch("/data/behrend_professors.csv");
-        }
-        const text = await csvRes.text();
+        const loaded = await loadProfessorArtifact();
         if (cancelled) return;
-        const parsed = parseCSV(text);
-        setProfessors(parsed);
+        setProfessors(loaded.professors);
+        setTopColleges(loaded.schools);
 
         try {
-          const colRes = await fetch("/data/top_colleges.json");
+          const colRes = await fetch(TOP_COLLEGES_PATH);
+          if (!colRes.ok) return;
           const json = await colRes.json();
           if (!cancelled && Array.isArray(json)) setTopColleges(json);
         } catch {
@@ -288,6 +533,48 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (typeof window === "undefined" || typeof window.matchMedia !== "function") return;
+
+    const mediaQuery = window.matchMedia(MOBILE_SETUP_QUERY);
+    const handleChange = (event) => setIsMobileSetup(event.matches);
+
+    setIsMobileSetup(mediaQuery.matches);
+    if (typeof mediaQuery.addEventListener === "function") {
+      mediaQuery.addEventListener("change", handleChange);
+      return () => mediaQuery.removeEventListener("change", handleChange);
+    }
+
+    mediaQuery.addListener(handleChange);
+    return () => mediaQuery.removeListener(handleChange);
+  }, []);
+
+  useEffect(() => {
+    if (selectMatch) {
+      setMode("select");
+      return;
+    }
+    if (professorMatch?.params?.id) {
+      setSelectedId(professorMatch.params.id);
+      setMode("reality");
+      return;
+    }
+    if (planMatch?.params?.id) {
+      setSelectedId(planMatch.params.id);
+      setMode("gameplan");
+      return;
+    }
+    if (isSavedRoute) {
+      setMode("select");
+      setIsSetupOpen(true);
+    }
+  }, [isSavedRoute, planMatch, professorMatch, selectMatch]);
+
+  useEffect(() => {
+    if (!supportsAccountSync) {
+      setAuthUser(null);
+      return undefined;
+    }
+
     let mounted = true;
 
     async function hydrateAuth() {
@@ -317,50 +604,101 @@ export default function App() {
       mounted = false;
       subscription.unsubscribe();
     };
-  }, []);
+  }, [supportsAccountSync]);
 
   useEffect(() => {
-    if (!authUser) {
-      setWorkspaceLoaded(false);
-      setAccountName("");
-      setSavedSubjects([]);
-      setActiveSubjectId(null);
-      setSubjectName("");
-      setSelectedSchool(null);
-      setSelectedId(null);
-      setCourseTitle("");
-      setSyllabus("");
-      setMaterialsNote("");
-      setPlanText("");
-      setPlanReady(false);
-      setMode("reality");
-      return;
+    let cancelled = false;
+
+    async function hydrateWorkspace() {
+      if (!supportsAccountSync) {
+        try {
+          const workspace = await loadPlanWorkspace();
+          if (cancelled) return;
+          setAccountName(derivePlanStoreAccountName(null, workspace));
+          setSavedSubjects(Array.isArray(workspace.subjects) ? workspace.subjects : []);
+          setAuthNotice("Guest mode active. Subjects and plans are saved on this device.");
+          setWorkspaceLoaded(true);
+        } catch {
+          if (cancelled) return;
+          setAccountName("Guest mode");
+          setSavedSubjects([]);
+          setAuthNotice("Guest mode active. Subjects and plans are saved on this device.");
+          setError("Unable to load saved subjects.");
+          setWorkspaceLoaded(true);
+        }
+        return;
+      }
+
+      if (!authUser) {
+        if (cancelled) return;
+        setWorkspaceLoaded(false);
+        setAccountName("");
+        setSavedSubjects([]);
+        setActiveSubjectId(null);
+        setSubjectName("");
+        setSelectedSchool(null);
+        setSelectedId(null);
+        setCourseTitle("");
+        setSyllabus("");
+        setMaterialsNote("");
+        setPlan(null);
+        setPlanReady(false);
+        setMode("select");
+        return;
+      }
+
+      try {
+        const workspace = await loadPlanWorkspace({ user: authUser });
+        if (cancelled) return;
+        setAccountName(derivePlanStoreAccountName(authUser, workspace));
+        setSavedSubjects(Array.isArray(workspace.subjects) ? workspace.subjects : []);
+        setActiveSubjectId(null);
+        setSubjectName("");
+        setAuthNotice("");
+        setWorkspaceLoaded(true);
+      } catch {
+        if (cancelled) return;
+        setError("Unable to load saved subjects.");
+        setWorkspaceLoaded(true);
+      }
     }
 
-    const nextAccountName =
-      authUser.user_metadata?.full_name ||
-      authUser.user_metadata?.name ||
-      authUser.email?.split("@")[0] ||
-      "Student";
-    const workspace = loadWorkspace(authUser.id);
-    setAccountName(nextAccountName);
-    setSavedSubjects(Array.isArray(workspace.subjects) ? workspace.subjects : []);
-    setActiveSubjectId(null);
-    setSubjectName("");
-    setAuthNotice("");
-    setWorkspaceLoaded(true);
-  }, [authUser]);
+    hydrateWorkspace();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [authUser, supportsAccountSync]);
 
   useEffect(() => {
-    if (!authUser || !workspaceLoaded) return;
-    saveWorkspace(
-      {
-        accountName,
-        subjects: savedSubjects,
-      },
-      authUser.id
-    );
-  }, [accountName, authUser, savedSubjects, workspaceLoaded]);
+    if (!workspaceLoaded || !canSaveSubjects) return;
+
+    let cancelled = false;
+
+    async function persistWorkspace() {
+      try {
+        await savePlanWorkspace(
+          {
+            accountName,
+            subjects: savedSubjects,
+          },
+          {
+            user: authUser,
+          }
+        );
+      } catch {
+        if (!cancelled) {
+          setError("Unable to save subjects.");
+        }
+      }
+    }
+
+    persistWorkspace();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [accountName, authUser, canSaveSubjects, savedSubjects, workspaceLoaded]);
 
   useEffect(() => {
     return () => {
@@ -374,6 +712,12 @@ export default function App() {
   }, []);
 
   useEffect(() => {
+    if (!isMobileSetup && activePalette) {
+      setActivePalette(null);
+    }
+  }, [activePalette, isMobileSetup]);
+
+  useEffect(() => {
     if (!loading) return;
     const t = setInterval(() => {
       setLoadingIdx((i) => (i + 1) % LOADING_LINES.length);
@@ -385,6 +729,18 @@ export default function App() {
     () => professors.find((p) => p.professor_id === selectedId),
     [professors, selectedId]
   );
+
+  useEffect(() => {
+    if (!selectedProfessor) return;
+    const inferredSchool = {
+      key: schoolKey(selectedProfessor.school_name),
+      name: selectedProfessor.school_name,
+      professorCount: professors.filter(
+        (professor) => schoolKey(professor.school_name) === schoolKey(selectedProfessor.school_name)
+      ).length,
+    };
+    setSelectedSchool((current) => (current?.key === inferredSchool.key ? current : inferredSchool));
+  }, [professors, selectedProfessor]);
 
   const profile = useMemo(
     () => (selectedProfessor ? deriveProfile(selectedProfessor) : null),
@@ -415,6 +771,28 @@ export default function App() {
     () => filterProfessors(professorPool, search),
     [professorPool, search]
   );
+
+  useEffect(() => {
+    setSchoolHighlightIndex((current) =>
+      clampHighlightIndex(current < 0 ? 0 : current, filteredCollegeOptions.length)
+    );
+  }, [filteredCollegeOptions]);
+
+  useEffect(() => {
+    setProfessorHighlightIndex((current) =>
+      clampHighlightIndex(current < 0 ? 0 : current, filteredProfessors.length)
+    );
+  }, [filteredProfessors]);
+
+  useEffect(() => {
+    if (!activePalette) return;
+
+    const focusTimer = setTimeout(() => {
+      paletteInputRef.current?.focus();
+    }, 0);
+
+    return () => clearTimeout(focusTimer);
+  }, [activePalette]);
   const currentModeIndex = useMemo(() => {
     const idx = MODES.findIndex((item) => item.id === mode);
     return idx === -1 ? 0 : idx;
@@ -422,6 +800,7 @@ export default function App() {
   const activeMode = MODES[currentModeIndex] || MODES[0];
   const unlockedModes = useMemo(
     () => ({
+      select: true,
       reality: hasProfessor,
       gameplan: hasSyllabus,
       execution: planReady,
@@ -432,9 +811,15 @@ export default function App() {
     () =>
       MODES.map((item) => {
         let status = "";
-        if (item.id === "reality") {
+        if (item.id === "select") {
           status = hasProfessor
-            ? `Risk readout live for ${selectedProfessor.professor_first} ${selectedProfessor.professor_last}.`
+            ? "Context selected. Move to Reality Check to inspect risks."
+            : "Choose a school and professor to unlock the rest of the flow.";
+        } else if (item.id === "reality") {
+          status = hasProfessor
+            ? selectedProfessor
+              ? `Risk readout live for ${selectedProfessor.professor_first} ${selectedProfessor.professor_last}.`
+              : "Risk readout will load as soon as professor data resolves."
             : selectedSchool
               ? `Choose a professor from ${selectedSchool.name} to generate the risk readout.`
               : "Choose a university first, then select a professor.";
@@ -452,7 +837,9 @@ export default function App() {
 
         const isCurrent = mode === item.id;
         const isCompleted =
-          item.id === "reality"
+          item.id === "select"
+            ? hasProfessor
+            : item.id === "reality"
             ? hasProfessor && mode !== "reality"
             : item.id === "gameplan"
               ? planReady && mode === "execution"
@@ -466,17 +853,22 @@ export default function App() {
           unlocked: isUnlocked,
         };
       }),
-    [hasProfessor, hasSyllabus, mode, planReady, selectedProfessor, unlockedModes]
+    [hasProfessor, hasSyllabus, mode, planReady, selectedProfessor, selectedSchool, unlockedModes]
   );
   const nextAction = useMemo(() => {
     if (!selectedSchool) return "Next: choose a university to begin";
     if (!hasProfessor) return "Next: choose a professor from your university";
+    if (mode === "select") return "Next: review professor risk signals";
     if (mode === "reality") return "Next: add your syllabus to generate a plan";
     if (!hasSyllabus) return "Next: add your syllabus to generate a plan";
     if (!planReady) return "Next: generate your weekly strategy";
     return "Next: start tracking execution";
   }, [hasProfessor, hasSyllabus, mode, planReady, selectedSchool]);
-  const heroState = useMemo(() => {
+  const activeSchoolOption = filteredCollegeOptions[schoolHighlightIndex] || null;
+  const activeProfessorOption = filteredProfessors[professorHighlightIndex] || null;
+  const paletteResults = activePalette === "school" ? filteredCollegeOptions : filteredProfessors;
+  const paletteQuery = activePalette === "school" ? collegeSearch : search;
+  const heroState = (() => {
     if (hasProfessor) return null;
     if (selectedSchool && professorPool.length === 0) {
       return {
@@ -500,7 +892,7 @@ export default function App() {
       ctaLabel: "Choose A University",
       action: () => scrollToSetup(true),
     };
-  }, [hasProfessor, professorPool.length, selectedSchool]);
+  })();
   const headerContext = useMemo(() => {
     if (!selectedProfessor) return null;
     return {
@@ -513,11 +905,48 @@ export default function App() {
     };
   }, [courseTitle, selectedProfessor, selectedSchool, subjectName]);
 
+  function closeSearchPalette(options = {}) {
+    const { restoreFocus = true } = options;
+    const focusTarget = focusRestoreRef.current;
+    setActivePalette(null);
+    if (!restoreFocus) return;
+    focusTarget?.focus?.();
+    if (typeof requestAnimationFrame === "function") {
+      requestAnimationFrame(() => {
+        focusTarget?.focus?.();
+      });
+      return;
+    }
+    focusTarget?.focus?.();
+  }
+
+  function openSearchPalette(palette, triggerNode) {
+    focusRestoreRef.current = triggerNode || document.activeElement;
+    setActivePalette(palette);
+  }
+
   function handleSelectSchool(option) {
     setSelectedSchool(option);
     setCollegeSearch("");
     setSelectedId(null);
     setSearch("");
+    setPlan(null);
+    setPlanReady(false);
+    setSchoolHighlightIndex(-1);
+    setProfessorHighlightIndex(-1);
+    closeSearchPalette({ restoreFocus: false });
+    navigate("/app/select");
+  }
+
+  function handleSelectProfessor(professor) {
+    setSelectedId(professor.professor_id);
+    setPlan(null);
+    setPlanReady(false);
+    setProfessorHighlightIndex(-1);
+    closeSearchPalette({ restoreFocus: false });
+    setMode("reality");
+    navigate(`/app/professor/${professor.professor_id}`);
+    setIsSetupOpen(false);
   }
 
   function handleClearSchool() {
@@ -525,27 +954,148 @@ export default function App() {
     setCollegeSearch("");
     setSelectedId(null);
     setSearch("");
+    setPlan(null);
+    setPlanReady(false);
+    setSchoolHighlightIndex(-1);
+    setProfessorHighlightIndex(-1);
+    navigate("/app/select");
   }
 
-  function focusSchoolSearch() {
+  function focusSchoolSearch(triggerNode) {
     scrollToSetup(true);
     requestAnimationFrame(() => {
-      document.getElementById("np-college-search")?.focus();
+      if (isMobileSetup) {
+        openSearchPalette("school", triggerNode || schoolSearchTriggerRef.current);
+        return;
+      }
+      schoolInputRef.current?.focus();
     });
   }
 
-  function focusProfessorSearch() {
+  function focusProfessorSearch(triggerNode) {
     if (!selectedSchool) {
-      focusSchoolSearch();
+      focusSchoolSearch(triggerNode);
       return;
     }
     scrollToSetup(true);
     requestAnimationFrame(() => {
-      document.getElementById("np-search")?.focus();
+      if (isMobileSetup) {
+        openSearchPalette("professor", triggerNode || professorSearchTriggerRef.current);
+        return;
+      }
+      professorInputRef.current?.focus();
     });
   }
 
+  function handleSearchNavigation(event, items, activeIndex, setActiveIndex, onSelect, onClose) {
+    if (!items.length) {
+      if (event.key === "Escape" && onClose) {
+        event.preventDefault();
+        onClose();
+      }
+      return;
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      setActiveIndex((current) => cycleHighlightIndex(current, items.length, 1));
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setActiveIndex((current) => cycleHighlightIndex(current, items.length, -1));
+      return;
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+      const nextIndex = clampHighlightIndex(activeIndex < 0 ? 0 : activeIndex, items.length);
+      const nextItem = items[nextIndex] || items[0];
+      if (nextItem) onSelect(nextItem);
+      return;
+    }
+
+    if (event.key === "Escape" && onClose) {
+      event.preventDefault();
+      onClose();
+    }
+  }
+
+  function handleSchoolInputKeyDown(event) {
+    handleSearchNavigation(
+      event,
+      filteredCollegeOptions,
+      schoolHighlightIndex,
+      setSchoolHighlightIndex,
+      handleSelectSchool,
+      () => {
+        if (activePalette === "school") {
+          closeSearchPalette();
+          return;
+        }
+        if (collegeSearch) {
+          setCollegeSearch("");
+          setSchoolHighlightIndex(-1);
+        }
+      }
+    );
+  }
+
+  function handleProfessorInputKeyDown(event) {
+    handleSearchNavigation(
+      event,
+      filteredProfessors,
+      professorHighlightIndex,
+      setProfessorHighlightIndex,
+      handleSelectProfessor,
+      () => {
+        if (activePalette === "professor") {
+          closeSearchPalette();
+          return;
+        }
+        if (search) {
+          setSearch("");
+          setProfessorHighlightIndex(-1);
+        }
+      }
+    );
+  }
+
+  function handlePaletteDialogKeyDown(event) {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      closeSearchPalette();
+      return;
+    }
+
+    if (event.key !== "Tab") return;
+
+    const focusable = getFocusableElements(paletteDialogRef.current);
+    if (!focusable.length) return;
+
+    const firstElement = focusable[0];
+    const lastElement = focusable[focusable.length - 1];
+    const activeElement = document.activeElement;
+
+    if (event.shiftKey && activeElement === firstElement) {
+      event.preventDefault();
+      lastElement.focus();
+      return;
+    }
+
+    if (!event.shiftKey && activeElement === lastElement) {
+      event.preventDefault();
+      firstElement.focus();
+    }
+  }
+
   async function handleEduSignIn() {
+    if (!supportsAccountSync) {
+      setAuthNotice("Guest mode active. Subjects and plans are saved on this device.");
+      return;
+    }
+
     const email = authEmail.trim().toLowerCase();
     if (!/\.edu$/i.test(email)) {
       setError("Use a valid .edu email address.");
@@ -581,9 +1131,10 @@ export default function App() {
     setCourseTitle("");
     setSyllabus("");
     setMaterialsNote("");
-    setPlanText("");
+    setPlan(null);
     setPlanReady(false);
-    setMode("reality");
+    setMode("select");
+    navigate("/app/select");
   }
 
   function loadSavedSubject(subjectId, professorId) {
@@ -605,21 +1156,24 @@ export default function App() {
     setCourseTitle(subject.courseTitle || "");
     setSyllabus(subject.syllabus || "");
     setMaterialsNote(subject.materialsNote || "");
-    setPlanText(subject.planText || "");
-    setPlanReady(Boolean(subject.planReady));
+    setPlan(subject.plan || null);
+    setPlanReady(Boolean(subject.planReady || subject.plan));
     setStudyHours(subject.studyHours || 9);
     setCollegeSearch("");
     setSearch("");
     setSelectedSchool(nextSchool);
     setSelectedId(professorId || subject.activeProfessorId || null);
+    setSchoolHighlightIndex(-1);
+    setProfessorHighlightIndex(-1);
+    setActivePalette(null);
     setMode(subject.planReady ? "execution" : subject.syllabus?.trim() ? "gameplan" : "reality");
     setIsSetupOpen(false);
     setError("");
   }
 
   function handleSaveProfessorToSubject() {
-    if (!authUser) {
-      setError("Sign in before saving subjects.");
+    if (!canSaveSubjects) {
+      setError("Sign in before saving subjects to your account.");
       return;
     }
     if (!selectedSchool || !selectedProfessor) {
@@ -662,7 +1216,7 @@ export default function App() {
             courseTitle: courseTitle.trim() || nextSubjectName,
             syllabus,
             materialsNote,
-            planText,
+            plan,
             planReady,
             studyHours,
             schoolKey: selectedSchool.key,
@@ -689,7 +1243,7 @@ export default function App() {
           courseTitle: courseTitle.trim() || nextSubjectName,
           syllabus,
           materialsNote,
-          planText,
+          plan,
           planReady,
           studyHours,
           schoolKey: selectedSchool.key,
@@ -719,37 +1273,43 @@ export default function App() {
       return;
     }
     setError("");
+    setPlanReady(false);
     setLoading(true);
 
-    await new Promise((r) => setTimeout(r, 1100));
+    try {
+      const nextPlan = await generateStudyPlan({
+        syllabus,
+        professorSignals: {
+          professorName: `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`,
+          department: selectedProfessor.department || "",
+          schoolName: selectedProfessor.school_name || selectedSchool?.name || "",
+          avgRating: selectedProfessor.avg_rating || null,
+          avgDifficulty: selectedProfessor.avg_difficulty || null,
+          wouldTakeAgainPercent: selectedProfessor.would_take_again_percent || null,
+          numRatings: selectedProfessor.num_ratings || null,
+          workload: profile?.workload || null,
+          riskLevel: intel?.risk?.level || null,
+          riskExplanation: intel?.risk?.explanation || "",
+          confidenceNote: intel?.survival?.confidenceNote || "",
+          failurePatterns: (intel?.failureStack || []).map((item) => ({
+            label: item.label,
+            pct: item.pct,
+          })),
+          materialsNote: materialsNote.trim(),
+          courseTitle: courseTitle.trim(),
+        },
+      });
 
-    const profName = selectedProfessor.professor_first;
-    const dept = selectedProfessor.department;
-    const g = intel?.profile?.workload || "medium";
-
-    const body = `## Survival plan — ${profName} (${dept})
-
-### Verdict
-Treat this as a **${g} workload** class. Your strategy is tuned to clarity/workload signals — not generic study tips.
-
-### Weekly
-- **Mon–Tue**: Active recall on lecture artifacts (not passive re-reads).
-- **Wed**: Problem sets + error log (same mistake twice = stop and fix root cause).
-- **Thu–Sun**: Timed segment + review mistakes under test conditions.
-
-### Before each exam
-Two full-length mocks, sleep-protected. If past exams exist, match format exactly.
-
-### What to ignore
-Low-yield extras unless syllabus weights them. Protect deep-work blocks weekly — no negotiation.
-
----
-Generated locally (demo). Connect API for richer synthesis.`;
-
-    setPlanText(body);
-    setPlanReady(true);
-    setLoading(false);
-    setMode("execution");
+      setPlan(nextPlan);
+      setPlanReady(true);
+      setMode("execution");
+    } catch (generationError) {
+      setError(generationError.message || "Unable to generate the study plan.");
+      setPlan(null);
+      setPlanReady(false);
+    } finally {
+      setLoading(false);
+    }
   }
 
   function scrollToSetup(openDrawer = false) {
@@ -782,6 +1342,10 @@ Generated locally (demo). Connect API for richer synthesis.`;
     }
     if (!hasProfessor) {
       focusProfessorSearch();
+      return;
+    }
+    if (mode === "select") {
+      goMode("reality");
       return;
     }
     if (!hasSyllabus) {
@@ -839,7 +1403,7 @@ Generated locally (demo). Connect API for richer synthesis.`;
   }, [hasProfessor, hasSyllabus, planReady]);
 
   useEffect(() => {
-    if (!authUser || !activeSubjectId) return;
+    if (!activeSubjectId || !canSaveSubjects) return;
 
     setSavedSubjects((prev) =>
       prev.map((subject) => {
@@ -871,7 +1435,7 @@ Generated locally (demo). Connect API for richer synthesis.`;
           courseTitle: courseTitle.trim() || subject.courseTitle,
           syllabus,
           materialsNote,
-          planText,
+          plan,
           planReady,
           studyHours,
           schoolKey: selectedSchool?.key || subject.schoolKey,
@@ -884,10 +1448,11 @@ Generated locally (demo). Connect API for richer synthesis.`;
   }, [
     authUser,
     activeSubjectId,
+    canSaveSubjects,
     courseTitle,
     materialsNote,
     planReady,
-    planText,
+    plan,
     selectedProfessor,
     selectedSchool,
     studyHours,
@@ -900,6 +1465,13 @@ Generated locally (demo). Connect API for richer synthesis.`;
     if (!force && next !== mode && !unlockedModes[next]) return;
     setInsightVisible(false);
     setMode(next);
+    if (next === "select") {
+      navigate("/app/select");
+    } else if (next === "reality" && selectedId) {
+      navigate(`/app/professor/${selectedId}`);
+    } else if ((next === "gameplan" || next === "execution") && selectedId) {
+      navigate(`/app/plan/${selectedId}`);
+    }
     if (rafIdRef.current != null && typeof cancelAnimationFrame !== "undefined") {
       cancelAnimationFrame(rafIdRef.current);
       rafIdRef.current = null;
@@ -961,6 +1533,20 @@ Generated locally (demo). Connect API for richer synthesis.`;
             : "Add syllabus details to move into planning.",
     },
   ];
+  const workspaceTitle = supportsAccountSync ? "Account Sync" : "Saved Plans";
+  const workspaceOwnerName = accountName || (supportsAccountSync ? "No account yet" : "Guest mode");
+  const workspaceSummary = supportsAccountSync
+    ? accountName
+      ? `${savedSubjects.length} ${
+          savedSubjects.length === 1 ? "subject" : "subjects"
+        } saved to your account.`
+      : "Sign in to save subjects and resume on any device tied to your account."
+    : `${savedSubjects.length} ${
+        savedSubjects.length === 1 ? "subject" : "subjects"
+      } saved on this device.`;
+  const workspaceEmptyState = supportsAccountSync
+    ? "Saved subjects will appear here after you sign in and save a professor."
+    : "Saved subjects will appear here after you save a professor on this device.";
 
   return (
     <div className="np-app">
@@ -986,12 +1572,12 @@ Generated locally (demo). Connect API for richer synthesis.`;
 
           <div className="np-sidebar-block np-workspace-panel">
             <div className="np-setup-head">
-              <span className="np-eyebrow">Sign In</span>
+              <span className="np-eyebrow">{workspaceTitle}</span>
             </div>
-            {!authUser ? (
+            {supportsAccountSync && !authUser ? (
               <>
                 <p className="np-fineprint">
-                  Use your `.edu` email. Saved subjects and professors will be tied to your signed-in account on this device.
+                  Use your `.edu` email to save subjects to your account and resume them on signed-in devices.
                 </p>
                 <label className="np-label" htmlFor="np-auth-edu">
                   .edu email
@@ -1009,23 +1595,21 @@ Generated locally (demo). Connect API for richer synthesis.`;
                   </button>
                 </div>
               </>
-            ) : (
+            ) : supportsAccountSync ? (
               <div className="np-workspace-actions">
                 <button type="button" className="np-btn np-btn-ghost" onClick={handleSignOut}>
                   Sign out
                 </button>
               </div>
+            ) : (
+              <p className="np-fineprint">
+                Guest mode is active. Subjects, professors, and plans are saved on this device.
+              </p>
             )}
             <div className={`np-selection-card ${accountName ? "np-selection-card-active" : ""}`}>
               <div>
-                <strong>{accountName || "No account yet"}</strong>
-                <p className="np-fineprint">
-                  {accountName
-                    ? `${savedSubjects.length} ${
-                        savedSubjects.length === 1 ? "subject" : "subjects"
-                      } saved on this device.`
-                    : "Sign in to save subjects and compare professors."}
-                </p>
+                <strong>{workspaceOwnerName}</strong>
+                <p className="np-fineprint">{workspaceSummary}</p>
               </div>
             </div>
             {authUser && (
@@ -1044,14 +1628,14 @@ Generated locally (demo). Connect API for richer synthesis.`;
               placeholder="e.g. Calculus II"
               value={subjectName}
               onChange={(e) => setSubjectName(e.target.value)}
-              disabled={!authUser}
+              disabled={!canSaveSubjects}
             />
             <div className="np-workspace-actions">
               <button
                 type="button"
                 className={`np-btn np-btn-secondary ${highlightedAction === "workspace" ? "np-btn-highlight" : ""}`}
                 onClick={handleSaveProfessorToSubject}
-                disabled={!authUser || !selectedSchool || !selectedProfessor}
+                disabled={!canSaveSubjects || !selectedSchool || !selectedProfessor}
               >
                 Save professor to subject
               </button>
@@ -1059,7 +1643,7 @@ Generated locally (demo). Connect API for richer synthesis.`;
             <div className="np-subject-list">
               {savedSubjects.length === 0 ? (
                 <div className="np-inline-empty-state">
-                  <p>Saved subjects will appear here after you sign in and save a professor.</p>
+                  <p>{workspaceEmptyState}</p>
                 </div>
               ) : (
                 savedSubjects.map((subject) => {
@@ -1112,14 +1696,40 @@ Generated locally (demo). Connect API for richer synthesis.`;
             <label className="np-label" htmlFor="np-college-search">
               Search school
             </label>
-            <input
-              id="np-college-search"
-              className="np-input"
-              placeholder="Search school or state…"
-              value={collegeSearch}
-              onChange={(e) => setCollegeSearch(e.target.value)}
-              autoComplete="off"
-            />
+            {isMobileSetup ? (
+              <button
+                id="np-college-search"
+                ref={schoolSearchTriggerRef}
+                type="button"
+                className="np-search-launcher"
+                onClick={(event) => focusSchoolSearch(event.currentTarget)}
+                aria-haspopup="dialog"
+                aria-expanded={activePalette === "school"}
+              >
+                <span className="np-search-launcher-kicker">Command palette</span>
+                <strong>{selectedSchool?.name || collegeSearch.trim() || "Find a school"}</strong>
+                <small>Search by school name, state, or alias like PSU, NYU, or UCLA.</small>
+              </button>
+            ) : (
+              <input
+                id="np-college-search"
+                ref={schoolInputRef}
+                className="np-input"
+                placeholder="Search school, state, or alias…"
+                value={collegeSearch}
+                onChange={(event) => {
+                  setCollegeSearch(event.target.value);
+                  setSchoolHighlightIndex(0);
+                }}
+                onKeyDown={handleSchoolInputKeyDown}
+                autoComplete="off"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded={filteredCollegeOptions.length > 0}
+                aria-controls="np-school-results"
+                aria-activedescendant={activeSchoolOption ? `np-school-option-${activeSchoolOption.key}` : undefined}
+              />
+            )}
             <div className="np-select-state">
               <span className="np-label">Select school</span>
               <div className={`np-selection-card ${selectedSchool ? "np-selection-card-active" : ""}`}>
@@ -1134,49 +1744,116 @@ Generated locally (demo). Connect API for richer synthesis.`;
                 <button
                   type="button"
                   className={selectedSchool ? "np-school-clear" : "np-selection-action"}
-                  onClick={selectedSchool ? handleClearSchool : focusSchoolSearch}
+                  onClick={(event) =>
+                    selectedSchool
+                      ? handleClearSchool()
+                      : focusSchoolSearch(event.currentTarget)
+                  }
                   aria-label={selectedSchool ? "Clear college" : undefined}
                 >
                   {selectedSchool ? "×" : "Search school"}
                 </button>
               </div>
             </div>
-            <div className="np-college-list">
-              {filteredCollegeOptions.map((opt) => {
-                const isSelected = selectedSchool?.key === opt.key;
-                return (
-                  <button
-                    key={opt.key}
-                    type="button"
-                    className={`np-college-row ${isSelected ? "np-college-row-selected" : ""}`}
-                    onClick={() => handleSelectSchool(opt)}
-                  >
-                    <span className="np-college-row-top">
-                      <span className="np-college-name">{opt.name}</span>
-                      {isSelected && <span className="np-selected-marker">Selected</span>}
-                    </span>
-                    <span className="np-meta-chip-row">
-                      {opt.state && <span className="np-meta-chip">{opt.state}</span>}
-                      {opt.rank != null && <span className="np-meta-chip">QS US #{opt.rank}</span>}
-                      <span className="np-meta-chip">{`${opt.professorCount} profs`}</span>
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
+            {!isMobileSetup && filteredCollegeOptions.length === 0 && (
+              <section className="np-inline-empty-state">
+                <p>No schools match this search yet.</p>
+                <button
+                  type="button"
+                  className="np-btn np-btn-secondary"
+                  onClick={() => {
+                    setCollegeSearch("");
+                    setSchoolHighlightIndex(0);
+                  }}
+                >
+                  Clear school search
+                </button>
+              </section>
+            )}
+            {!isMobileSetup && filteredCollegeOptions.length > 0 && (
+              <div className="np-college-list" role="listbox" id="np-school-results">
+                {filteredCollegeOptions.map((opt, index) => {
+                  const isSelected = selectedSchool?.key === opt.key;
+                  const isHighlighted = schoolHighlightIndex === index;
+                  return (
+                    <button
+                      key={opt.key}
+                      id={`np-school-option-${opt.key}`}
+                      type="button"
+                      role="option"
+                      aria-selected={isHighlighted}
+                      className={`np-college-row ${
+                        isSelected ? "np-college-row-selected" : ""
+                      } ${isHighlighted ? "np-option-highlighted" : ""}`}
+                      onMouseEnter={() => setSchoolHighlightIndex(index)}
+                      onClick={() => handleSelectSchool(opt)}
+                    >
+                      <span className="np-college-row-top">
+                        <span className="np-college-name">{opt.name}</span>
+                        {isSelected && <span className="np-selected-marker">Selected</span>}
+                      </span>
+                      <span className="np-meta-chip-row">
+                        {opt.state && <span className="np-meta-chip">{opt.state}</span>}
+                        {opt.rank != null && <span className="np-meta-chip">QS US #{opt.rank}</span>}
+                        <span className="np-meta-chip">{`${opt.professorCount} profs`}</span>
+                      </span>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
             <label className="np-label" htmlFor="np-search">
               Search professor
             </label>
-            <input
-              id="np-search"
-              className="np-input"
-              placeholder={
-                selectedSchool ? "Search name or department…" : "Choose a university first…"
-              }
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              disabled={!selectedSchool}
-            />
+            {isMobileSetup ? (
+              <button
+                id="np-search"
+                ref={professorSearchTriggerRef}
+                type="button"
+                className="np-search-launcher"
+                onClick={(event) => focusProfessorSearch(event.currentTarget)}
+                disabled={!selectedSchool}
+                aria-haspopup="dialog"
+                aria-expanded={activePalette === "professor"}
+              >
+                <span className="np-search-launcher-kicker">Command palette</span>
+                <strong>
+                  {selectedProfessor
+                    ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
+                    : search.trim() || "Find a professor"}
+                </strong>
+                <small>
+                  {selectedSchool
+                    ? "Search by professor name, initials, or department."
+                    : "Pick a school first to search its roster."}
+                </small>
+              </button>
+            ) : (
+              <input
+                id="np-search"
+                ref={professorInputRef}
+                className="np-input"
+                placeholder={
+                  selectedSchool ? "Search name, initials, or department…" : "Choose a university first…"
+                }
+                value={search}
+                onChange={(event) => {
+                  setSearch(event.target.value);
+                  setProfessorHighlightIndex(0);
+                }}
+                onKeyDown={handleProfessorInputKeyDown}
+                disabled={!selectedSchool}
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded={filteredProfessors.length > 0}
+                aria-controls="np-professor-results"
+                aria-activedescendant={
+                  activeProfessorOption
+                    ? `np-professor-option-${activeProfessorOption.professor_id}`
+                    : undefined
+                }
+              />
+            )}
             <div className="np-select-state">
               <span className="np-label">Select professor</span>
               <div className={`np-selection-card ${selectedProfessor ? "np-selection-card-active" : ""}`}>
@@ -1198,7 +1875,11 @@ Generated locally (demo). Connect API for richer synthesis.`;
                   <button
                     type="button"
                     className="np-selection-action"
-                    onClick={selectedSchool ? focusProfessorSearch : focusSchoolSearch}
+                    onClick={(event) =>
+                      selectedSchool
+                        ? focusProfessorSearch(event.currentTarget)
+                        : focusSchoolSearch(event.currentTarget)
+                    }
                   >
                     {selectedSchool ? "Search professor" : "Choose school"}
                   </button>
@@ -1208,7 +1889,11 @@ Generated locally (demo). Connect API for richer synthesis.`;
             {!selectedSchool ? (
               <section className="np-inline-empty-state">
                 <p>Choose a school to load its professor roster.</p>
-                <button type="button" className="np-btn np-btn-secondary" onClick={focusSchoolSearch}>
+                <button
+                  type="button"
+                  className="np-btn np-btn-secondary"
+                  onClick={(event) => focusSchoolSearch(event.currentTarget)}
+                >
                   Search school
                 </button>
               </section>
@@ -1224,16 +1909,23 @@ Generated locally (demo). Connect API for richer synthesis.`;
                 </button>
               </section>
             ) : (
-              <div className="np-prof-list">
-                {filteredProfessors.map((p) => (
+              <div
+                className={`np-prof-list ${isMobileSetup ? "np-prof-list-hidden" : ""}`}
+                role="listbox"
+                id="np-professor-results"
+              >
+                {filteredProfessors.map((p, index) => (
                   <button
                     key={p.professor_id}
                     type="button"
-                    className={`np-prof ${p.professor_id === selectedId ? "np-prof-active" : ""}`}
-                    onClick={() => {
-                      setSelectedId(p.professor_id);
-                      setIsSetupOpen(false);
-                    }}
+                    id={`np-professor-option-${p.professor_id}`}
+                    role="option"
+                    aria-selected={professorHighlightIndex === index}
+                    className={`np-prof ${p.professor_id === selectedId ? "np-prof-active" : ""} ${
+                      professorHighlightIndex === index ? "np-option-highlighted" : ""
+                    }`}
+                    onMouseEnter={() => setProfessorHighlightIndex(index)}
+                    onClick={() => handleSelectProfessor(p)}
                   >
                     <span>
                       {p.professor_first} {p.professor_last}
@@ -1249,6 +1941,157 @@ Generated locally (demo). Connect API for richer synthesis.`;
           {error && <p className="np-error">{error}</p>}
         </div>
       </aside>
+
+      {activePalette && (
+        <div
+          className="np-search-palette-backdrop"
+          onMouseDown={(event) => {
+            if (event.target === event.currentTarget) closeSearchPalette();
+          }}
+        >
+          <div
+            ref={paletteDialogRef}
+            className="np-search-palette"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="np-search-palette-title"
+            onKeyDown={handlePaletteDialogKeyDown}
+          >
+            <div className="np-search-palette-head">
+              <div>
+                <span className="np-eyebrow">Search</span>
+                <h2 id="np-search-palette-title" className="np-search-palette-title">
+                  {activePalette === "school" ? "School discovery" : "Professor discovery"}
+                </h2>
+                <p className="np-fineprint">
+                  {activePalette === "school"
+                    ? "Use a school name, state, or alias. Arrow keys move, Enter selects, Escape closes."
+                    : "Use a professor name, initials, or department. Arrow keys move, Enter selects, Escape closes."}
+                </p>
+              </div>
+              <button
+                type="button"
+                className="np-search-palette-close"
+                onClick={() => closeSearchPalette()}
+                aria-label="Close search"
+              >
+                Close
+              </button>
+            </div>
+            <input
+              ref={paletteInputRef}
+              className="np-input"
+              placeholder={
+                activePalette === "school"
+                  ? "Search school, state, or alias…"
+                  : "Search professor, initials, or department…"
+              }
+              value={paletteQuery}
+              onChange={(event) => {
+                if (activePalette === "school") {
+                  setCollegeSearch(event.target.value);
+                  setSchoolHighlightIndex(0);
+                  return;
+                }
+                setSearch(event.target.value);
+                setProfessorHighlightIndex(0);
+              }}
+              onKeyDown={
+                activePalette === "school" ? handleSchoolInputKeyDown : handleProfessorInputKeyDown
+              }
+              autoComplete="off"
+              role="combobox"
+              aria-autocomplete="list"
+              aria-expanded={paletteResults.length > 0}
+              aria-controls={
+                activePalette === "school" ? "np-school-palette-results" : "np-professor-palette-results"
+              }
+              aria-activedescendant={
+                activePalette === "school"
+                  ? activeSchoolOption
+                    ? `np-school-palette-option-${activeSchoolOption.key}`
+                    : undefined
+                  : activeProfessorOption
+                    ? `np-professor-palette-option-${activeProfessorOption.professor_id}`
+                    : undefined
+              }
+            />
+            {activePalette === "school" ? (
+              paletteResults.length === 0 ? (
+                <section className="np-inline-empty-state">
+                  <p>No schools match this search yet.</p>
+                </section>
+              ) : (
+                <div className="np-search-palette-results" role="listbox" id="np-school-palette-results">
+                  {filteredCollegeOptions.map((opt, index) => {
+                    const isSelected = selectedSchool?.key === opt.key;
+                    const isHighlighted = schoolHighlightIndex === index;
+                    return (
+                      <button
+                        key={opt.key}
+                        id={`np-school-palette-option-${opt.key}`}
+                        type="button"
+                        role="option"
+                        aria-selected={isHighlighted}
+                        className={`np-college-row ${
+                          isSelected ? "np-college-row-selected" : ""
+                        } ${isHighlighted ? "np-option-highlighted" : ""}`}
+                        onMouseEnter={() => setSchoolHighlightIndex(index)}
+                        onClick={() => handleSelectSchool(opt)}
+                      >
+                        <span className="np-college-row-top">
+                          <span className="np-college-name">{opt.name}</span>
+                          {isSelected && <span className="np-selected-marker">Selected</span>}
+                        </span>
+                        <span className="np-meta-chip-row">
+                          {opt.state && <span className="np-meta-chip">{opt.state}</span>}
+                          {opt.rank != null && <span className="np-meta-chip">QS US #{opt.rank}</span>}
+                          <span className="np-meta-chip">{`${opt.professorCount} profs`}</span>
+                        </span>
+                      </button>
+                    );
+                  })}
+                </div>
+              )
+            ) : !selectedSchool ? (
+              <section className="np-inline-empty-state">
+                <p>Choose a school first to load professor results.</p>
+              </section>
+            ) : paletteResults.length === 0 ? (
+              <section className="np-inline-empty-state">
+                <p>No professors match this search yet.</p>
+              </section>
+            ) : (
+              <div className="np-search-palette-results" role="listbox" id="np-professor-palette-results">
+                {filteredProfessors.map((professor, index) => (
+                  <button
+                    key={professor.professor_id}
+                    id={`np-professor-palette-option-${professor.professor_id}`}
+                    type="button"
+                    role="option"
+                    aria-selected={professorHighlightIndex === index}
+                    className={`np-prof ${
+                      professor.professor_id === selectedId ? "np-prof-active" : ""
+                    } ${professorHighlightIndex === index ? "np-option-highlighted" : ""}`}
+                    onMouseEnter={() => setProfessorHighlightIndex(index)}
+                    onClick={() => handleSelectProfessor(professor)}
+                  >
+                    <span>
+                      {professor.professor_first} {professor.professor_last}
+                      <small>{professor.department}</small>
+                    </span>
+                    {professor.avg_rating && (
+                      <span className="np-prof-rating">{professor.avg_rating}</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            )}
+          </div>
+
+          {error && <p className="np-error">{error}</p>}
+        </div>
+      )}
 
       <div className="np-main" ref={mainTopRef}>
         <header className="np-topbar">
@@ -1326,7 +2169,7 @@ Generated locally (demo). Connect API for richer synthesis.`;
         )}
 
         <div className={`np-content ${insightVisible ? "np-content-in" : ""}`}>
-          {mode === "reality" && !hasProfessor && heroState && (
+          {mode === "select" && heroState && (
             <div className="np-screen">
               <StateCard
                 title={heroState.title}
@@ -1359,7 +2202,7 @@ Generated locally (demo). Connect API for richer synthesis.`;
               onGenerate={handleGenerateStrategy}
               onOpenExecution={() => goMode("execution")}
               loading={loading}
-              planText={planText}
+              plan={plan}
               intel={intel}
               studyHours={studyHours}
               onStudyHoursChange={setStudyHours}

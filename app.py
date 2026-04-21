@@ -14,7 +14,6 @@ import streamlit as st
 from diskcache import Cache
 
 from rmp_scraper.professor_profiles import (
-    DEFAULT_CSV_PATH,
     ParameterInsight,
     ProfessorProfile,
     ProfessorSnapshot,
@@ -22,6 +21,7 @@ from rmp_scraper.professor_profiles import (
     profile_as_dict,
 )
 from rmp_scraper.data_store import (
+    DEFAULT_ARTIFACT_PATH,
     DEFAULT_DB_PATH,
     ensure_database,
     get_professors_for_school,
@@ -632,7 +632,7 @@ def main() -> None:
         "chat with a coaching bot, spin up quizzes, and export everything to Obsidian/Notion."
     )
 
-    ensure_database(DEFAULT_CSV_PATH, DEFAULT_DB_PATH)
+    ensure_database(DEFAULT_ARTIFACT_PATH, DEFAULT_DB_PATH)
 
     selection_col, workspace_col = st.columns([1.05, 1.95], gap="large")
 

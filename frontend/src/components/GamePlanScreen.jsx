@@ -1,6 +1,11 @@
 import { useMemo } from "react";
 import { parseSyllabus } from "../lib/syllabusParser";
 import { effortToGradeBand } from "../lib/survivalIntel";
+import PlanRiskCards from "./game-plan/PlanRiskCards";
+import WeeklyChecklist from "./game-plan/WeeklyChecklist";
+import PlanMilestones from "./game-plan/PlanMilestones";
+import SourceTraceCards from "./game-plan/SourceTraceCards";
+import WhyPlanDrawer from "./game-plan/WhyPlanDrawer";
 
 const PROMPTS = [
   "Paste grading breakdown (e.g. Midterm 30%, Final 40%, HW 30%)…",
@@ -46,7 +51,7 @@ export default function GamePlanScreen({
   onMaterialsNoteChange,
   onGenerate,
   loading,
-  planText,
+  plan,
   intel,
   studyHours,
   onStudyHoursChange,
@@ -178,7 +183,11 @@ export default function GamePlanScreen({
         <p className="np-lead">
           Modeled band if you hold <strong>{studyHours} hrs/week</strong> outside class.
         </p>
+        <label className="np-label" htmlFor="gameplan-hours">
+          Your study hours / week
+        </label>
         <input
+          id="gameplan-hours"
           type="range"
           min={3}
           max={15}
@@ -238,10 +247,22 @@ export default function GamePlanScreen({
         </section>
       )}
 
-      {planText && (
-        <section className="np-panel">
-          <span className="np-eyebrow">Generated plan output</span>
-          <pre className="np-pre">{planText}</pre>
+      {plan && (
+        <section className="np-plan-stack">
+          <header className="np-block-head">
+            <div className="np-eyebrow">Structured plan</div>
+            <h3 className="np-section-title">Execution map built from syllabus plus professor signals</h3>
+          </header>
+          <PlanRiskCards riskSummary={plan.riskSummary} />
+          <div className="np-plan-main-grid">
+            <WeeklyChecklist weeklyPlan={plan.weeklyPlan} />
+            <PlanMilestones
+              assessmentPlan={plan.assessmentPlan}
+              officeHoursStrategy={plan.officeHoursStrategy}
+            />
+          </div>
+          <SourceTraceCards sourceTrace={plan.sourceTrace} />
+          <WhyPlanDrawer plan={plan} />
         </section>
       )}
     </div>

@@ -1,0 +1,36 @@
+0 verbose cli /opt/homebrew/Cellar/node/24.4.0/bin/node /opt/homebrew/bin/npm
+1 info using npm@11.4.2
+2 info using node@v24.4.0
+3 silly config load:file:/opt/homebrew/lib/node_modules/npm/npmrc
+4 silly config load:file:/Users/arjuntyagi/NakedProfessor/.npmrc
+5 silly config load:file:/Users/arjuntyagi/NakedProfessor/.sandbox-home/.npmrc
+6 silly config load:file:/opt/homebrew/etc/npmrc
+7 verbose title npm test --runInBand
+8 verbose argv "test" "--workspace" "frontend" "--" "--runInBand"
+9 verbose logfile logs-max:10 dir:/Users/arjuntyagi/NakedProfessor/.sandbox-home/.npm/_logs/2026-04-20T08_29_34_912Z-
+10 verbose logfile /Users/arjuntyagi/NakedProfessor/.sandbox-home/.npm/_logs/2026-04-20T08_29_34_912Z-debug-0.log
+11 silly logfile done cleaning log files
+12 verbose stack Error: command failed
+12 verbose stack     at promiseSpawn (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:22:22)
+12 verbose stack     at spawnWithShell (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:124:10)
+12 verbose stack     at promiseSpawn (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/promise-spawn/lib/index.js:12:12)
+12 verbose stack     at runScriptPkg (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/run-script-pkg.js:79:13)
+12 verbose stack     at runScript (/opt/homebrew/lib/node_modules/npm/node_modules/@npmcli/run-script/lib/run-script.js:9:12)
+12 verbose stack     at #run (/opt/homebrew/lib/node_modules/npm/lib/commands/run.js:135:13)
+12 verbose stack     at RunScript.execWorkspaces (/opt/homebrew/lib/node_modules/npm/lib/commands/run.js:67:24)
+12 verbose stack     at async Npm.exec (/opt/homebrew/lib/node_modules/npm/lib/npm.js:208:9)
+12 verbose stack     at async module.exports (/opt/homebrew/lib/node_modules/npm/lib/cli/entry.js:67:5)
+13 verbose pkgid forgekit-labs@1.0.0
+14 error Lifecycle script `test` failed with error:
+15 error code 127
+16 error path /Users/arjuntyagi/NakedProfessor/frontend
+17 error workspace forgekit-labs@1.0.0
+18 error location /Users/arjuntyagi/NakedProfessor/frontend
+19 error command failed
+20 error command sh -c vitest run --runInBand
+21 verbose cwd /Users/arjuntyagi/NakedProfessor
+22 verbose os Darwin 23.6.0
+23 verbose node v24.4.0
+24 verbose npm  v11.4.2
+25 verbose exit 127
+26 verbose code 127

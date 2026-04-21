@@ -2,9 +2,11 @@ from __future__ import annotations
 
 import base64
 import logging
+import random
+import re
 import time
 from dataclasses import dataclass, field
-from typing import Any, Dict, Iterator, List, Optional
+from typing import Any, Callable, Dict, Iterator, List, Optional
 
 import requests
 
@@ -18,6 +20,91 @@ DEFAULT_HEADERS = {
     "Content-Type": "application/json",
     "Accept": "application/json",
 }
+
+
+def _is_retryable_http_status(status_code: int) -> bool:
+    return status_code == 429 or status_code >= 500
+
+
+def _compute_backoff_with_jitter(
+    *,
+    attempt: int,
+    base_backoff_seconds: float,
+    random_fn: Callable[[], float],
+) -> float:
+    # Exponential backoff with additive jitter in [0, base_backoff_seconds).
+    return (base_backoff_seconds * (2 ** (attempt - 1))) + (
+        random_fn() * base_backoff_seconds
+    )
+
+
+def post_graphql_with_retry(
+    *,
+    session: requests.Session,
+    payload: dict,
+    max_retries: int,
+    base_backoff_seconds: float,
+    sleep_fn: Callable[[float], None] = time.sleep,
+    random_fn: Callable[[], float] = random.random,
+) -> dict:
+    max_attempts = max(1, max_retries + 1)
+    for attempt in range(1, max_attempts + 1):
+        try:
+            response = session.post(RMP_GRAPHQL_URL, json=payload, timeout=30)
+
+            if _is_retryable_http_status(response.status_code):
+                response.raise_for_status()
+
+            response.raise_for_status()
+            data = response.json()
+            if "errors" in data and data.get("errors"):
+                raise RuntimeError(f"GraphQL error: {data['errors']}")
+            return data
+        except requests.HTTPError as exc:
+            status_code = (
+                exc.response.status_code if exc.response is not None else None
+            )
+            retryable = bool(
+                status_code is not None and _is_retryable_http_status(status_code)
+            )
+            if not retryable:
+                raise
+            if attempt >= max_attempts:
+                raise RuntimeError(
+                    f"GraphQL request failed after {max_attempts} attempts"
+                ) from exc
+            wait_seconds = _compute_backoff_with_jitter(
+                attempt=attempt,
+                base_backoff_seconds=base_backoff_seconds,
+                random_fn=random_fn,
+            )
+            LOG.warning(
+                "RMP returned %s (attempt %d/%d). Retrying in %.2fs",
+                status_code,
+                attempt,
+                max_attempts,
+                wait_seconds,
+            )
+            sleep_fn(wait_seconds)
+        except (requests.Timeout, requests.ConnectionError, ValueError) as exc:
+            if attempt >= max_attempts:
+                raise RuntimeError(
+                    f"GraphQL request failed after {max_attempts} attempts"
+                ) from exc
+            wait_seconds = _compute_backoff_with_jitter(
+                attempt=attempt,
+                base_backoff_seconds=base_backoff_seconds,
+                random_fn=random_fn,
+            )
+            LOG.warning(
+                "GraphQL request failed on attempt %d/%d: %s. Retrying in %.2fs",
+                attempt,
+                max_attempts,
+                exc,
+                wait_seconds,
+            )
+            sleep_fn(wait_seconds)
+    raise RuntimeError("Unexpected GraphQL retry loop exit")
 
 SCHOOL_QUERY = """query NewSearchSchoolsQuery($query: SchoolSearchQuery!) {
   newSearch {
@@ -189,20 +276,35 @@ class RateMyProfessorsClient:
         delay: float = 0.5,
         page_size: int = 100,
         ratings_page_size: int = 50,
+        max_retries: int = 3,
+        retry_backoff_seconds: float = 1.0,
     ):
         self.session = session or requests.Session()
         self.session.headers.update(DEFAULT_HEADERS)
         self.delay = delay
         self.page_size = page_size
         self.ratings_page_size = ratings_page_size
+        self.max_retries = max_retries
+        self.retry_backoff_seconds = retry_backoff_seconds
 
     def _graphql(self, payload: dict) -> dict:
-        response = self.session.post(RMP_GRAPHQL_URL, json=payload, timeout=30)
-        response.raise_for_status()
-        data = response.json()
-        if "errors" in data and data.get("errors"):
-            raise RuntimeError(f"GraphQL error: {data['errors']}")
-        return data
+        return post_graphql_with_retry(
+            session=self.session,
+            payload=payload,
+            max_retries=self.max_retries,
+            base_backoff_seconds=self.retry_backoff_seconds,
+        )
+
+    @staticmethod
+    def _normalize_school_name(name: str) -> str:
+        lowered = (name or "").lower()
+        lowered = re.sub(r"[^\w\s]", " ", lowered)
+        lowered = re.sub(
+            r"\b(the|university|college|campus|at|of|main)\b",
+            " ",
+            lowered,
+        )
+        return " ".join(lowered.split())
 
     def search_school(self, name: str, max_rows: int = 5) -> List[SchoolMatch]:
         payload = {
@@ -231,10 +333,11 @@ class RateMyProfessorsClient:
         *,
         name_contains: Optional[str] = None,
         city_equals: Optional[str] = None,
+        state_equals: Optional[str] = None,
         max_results: int = 15,
         default_index: int = 0,
     ) -> Optional[SchoolMatch]:
-        """Search RMP schools and pick a row (filter by name/city) or fall back to ``default_index``."""
+        """Search RMP schools and pick a deterministic best match."""
         matches = self.search_school(search_text, max_rows=max_results)
         if not matches:
             return None
@@ -248,6 +351,31 @@ class RateMyProfessorsClient:
                     continue
                 return m
             return None
+        if state_equals:
+            target_state = state_equals.strip().lower()
+            state_filtered = [m for m in matches if (m.state or "").strip().lower() == target_state]
+            if len(state_filtered) == 1:
+                return state_filtered[0]
+            if state_filtered:
+                matches = state_filtered
+
+        normalized_search = self._normalize_school_name(search_text)
+
+        def score(match: SchoolMatch) -> int:
+            value = 0
+            normalized_name = self._normalize_school_name(match.name)
+            if normalized_search and normalized_name == normalized_search:
+                value += 100
+            if normalized_search and normalized_search in normalized_name:
+                value += 50
+            if state_equals and (match.state or "").strip().lower() == state_equals.strip().lower():
+                value += 25
+            return value
+
+        scored = [(score(m), idx, m) for idx, m in enumerate(matches)]
+        best_score, _, best_match = max(scored, key=lambda item: (item[0], -item[1]))
+        if best_score > 0:
+            return best_match
         if 0 <= default_index < len(matches):
             return matches[default_index]
         return matches[0]

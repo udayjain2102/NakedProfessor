@@ -1,11 +1,21 @@
 {
   "name": "nakedprofessor",
   "private": true,
-  "workspaces": ["frontend"],
+  "workspaces": [
+    "frontend"
+  ],
   "scripts": {
     "dev": "npm run dev -w frontend",
     "build": "npm run build -w frontend",
     "preview": "npm run preview -w frontend",
-    "test": "npm run test -w frontend"
+    "test": "npm run test -w frontend",
+    "lint": "npm run lint -w frontend",
+    "py:lint": "python -m ruff check --select F rmp_scraper tests app.py",
+    "py:test": "python -m pytest tests",
+    "py:compile": "python -m compileall rmp_scraper app.py",
+    "check": "npm run lint && npm run test && npm run build && npm run py:lint && npm run py:test && npm run py:compile"
+  },
+  "dependencies": {
+    "react-router-dom": "^7.14.1"
   }
 }
