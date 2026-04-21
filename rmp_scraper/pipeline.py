@@ -3,7 +3,7 @@ from __future__ import annotations
 import json
 import logging
 import re
-from datetime import UTC, datetime
+from datetime import datetime, timezone
 from dataclasses import asdict
 from pathlib import Path
 from typing import Iterable, List, Optional
@@ -15,6 +15,9 @@ from .rmp_client import ProfessorRecord
 
 LOG = logging.getLogger(__name__)
 ARTIFACT_SCHEMA_VERSION = "1.0.0"
+
+# Use timezone.utc for Python 3.9+ compatibility (UTC constant added in 3.11)
+UTC = timezone.utc
 
 # Appended after the ranked list when ``include_behrend`` is True (RMP match via metadata["rmp"]).
 PENN_STATE_BEHREND = RankedCollege(
