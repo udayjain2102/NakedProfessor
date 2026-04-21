@@ -1,20 +1,43 @@
+import {
+  buildStudyPlanPrompt,
+  parseStudyPlanResponse,
+} from "../src/lib/studyPlanSchema";
+
+function extractOutputText(data) {
+  return (
+    data.output_text ||
+    data.output?.map((item) => item.content?.map((block) => block.text).join("")).join("\n") ||
+    ""
+  );
+}
+
+function normalizeJsonText(text) {
+  return String(text || "")
+    .trim()
+    .replace(/^```json\s*/i, "")
+    .replace(/^```\s*/i, "")
+    .replace(/\s*```$/i, "")
+    .trim();
+}
+
 export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
 
-  const { model, prompt } = req.body;
+  const { syllabus, professorSignals } = req.body || {};
   const apiKey = process.env.OPENAI_API_KEY;
 
   if (!apiKey) {
-    return res.status(500).json({ error: "Missing required environment variable: OPENAI_API_KEY" });
+    return res.status(500).json({ error: "OpenAI API key not configured." });
   }
 
-  if (!model || !prompt) {
-    return res.status(400).json({ error: "Missing model or prompt." });
+  if (!syllabus || !professorSignals) {
+    return res.status(400).json({ error: "Missing syllabus or professorSignals." });
   }
 
   try {
+    const prompt = buildStudyPlanPrompt({ syllabus, professorSignals });
     const response = await fetch("https://api.openai.com/v1/responses", {
       method: "POST",
       headers: {
@@ -22,7 +45,7 @@ export default async function handler(req, res) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        model,
+        model: "gpt-5-mini",
         input: [{ role: "user", content: prompt }],
         max_output_tokens: 900,
       }),
@@ -34,12 +57,18 @@ export default async function handler(req, res) {
     }
 
     const data = await response.json();
-    const textResult =
-      data.output_text ||
-      data.output?.map((item) => item.content?.map((block) => block.text).join("")).join("\n") ||
-      "";
+    const textResult = extractOutputText(data);
+    let parsed;
 
-    return res.status(200).json({ text: textResult });
+    try {
+      parsed = parseStudyPlanResponse(JSON.parse(normalizeJsonText(textResult)));
+    } catch (error) {
+      return res.status(502).json({
+        error: error.message || "Model response did not match the study plan schema.",
+      });
+    }
+
+    return res.status(200).json({ plan: parsed });
   } catch (error) {
     return res.status(500).json({ error: error.message || "Generation failed." });
   }

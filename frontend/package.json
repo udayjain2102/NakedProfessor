@@ -6,20 +6,36 @@
   "description": "Mobile-first editorial mechanical analysis app.",
   "scripts": {
     "dev": "vite",
+    "dev:e2e": "vite --mode e2e",
     "build": "vite build",
+    "build:e2e": "vite build --mode e2e",
     "preview": "vite preview",
-    "test": "vitest run"
+    "preview:e2e": "vite preview --mode e2e",
+    "test": "vitest run",
+    "test:e2e": "playwright test",
+    "test:lighthouse": "node ./scripts/run-lighthouse-ci.mjs",
+    "lint": "eslint ."
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.103.2",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "web-vitals": "^5.2.0"
   },
   "devDependencies": {
+    "@axe-core/playwright": "^4.11.2",
+    "@eslint/js": "^9.39.1",
+    "@lhci/cli": "^0.15.1",
+    "@playwright/test": "^1.59.1",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.0",
     "@vitejs/plugin-react": "^5.1.0",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.4.0",
     "jsdom": "^27.0.1",
+    "start-server-and-test": "^3.0.2",
     "vite": "^7.1.10",
     "vitest": "^3.2.4"
   }

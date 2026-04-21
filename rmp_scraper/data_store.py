@@ -1,64 +1,30 @@
 from __future__ import annotations
 
-import csv
 import difflib
+import json
 import sqlite3
 from pathlib import Path
-from typing import Iterable, List, Optional
+from typing import List, Optional
 
 from .professor_profiles import ProfessorSnapshot
 
 DEFAULT_DB_PATH = Path(__file__).parent.parent / "data" / "professors.db"
-DEFAULT_CSV_PATH = Path(__file__).parent.parent / "data" / "top200_plus_behrend_professors.csv"
+DEFAULT_ARTIFACT_PATH = Path(__file__).parent.parent / "data" / "professors.normalized.v1.json"
 
-COLUMNS = [
-    "school_rank",
-    "school_name",
-    "school_id",
-    "school_state",
-    "professor_id",
-    "professor_legacy_id",
-    "professor_first",
-    "professor_last",
-    "department",
-    "avg_rating",
-    "avg_difficulty",
-    "would_take_again_percent",
-    "num_ratings",
-    "profile_url",
-]
-
-
-def _convert_value(column: str, value: Optional[str]):
-    if value is None:
-        return None
-    value = value.strip()
-    if value == "":
-        return None
-    if column in {"school_rank", "professor_legacy_id", "num_ratings"}:
-        try:
-            return int(value)
-        except ValueError:
-            return None
-    if column in {"avg_rating", "avg_difficulty", "would_take_again_percent"}:
-        try:
-            return float(value)
-        except ValueError:
-            return None
-    return value
-
-
-def ensure_database(csv_path: Path = DEFAULT_CSV_PATH, db_path: Path = DEFAULT_DB_PATH) -> None:
-    csv_path = Path(csv_path)
+def ensure_database(
+    artifact_path: Path = DEFAULT_ARTIFACT_PATH,
+    db_path: Path = DEFAULT_DB_PATH,
+) -> None:
+    artifact_path = Path(artifact_path)
     db_path = Path(db_path)
-    if not csv_path.exists():
-        raise FileNotFoundError(f"Professor CSV not found at {csv_path}")
+    if not artifact_path.exists():
+        raise FileNotFoundError(f"Professor artifact not found at {artifact_path}")
 
-    csv_stat = csv_path.stat()
-    csv_meta = {
-        "source_path": str(csv_path.resolve()),
-        "source_mtime": str(csv_stat.st_mtime),
-        "source_size": str(csv_stat.st_size),
+    artifact_stat = artifact_path.stat()
+    source_meta = {
+        "source_path": str(artifact_path.resolve()),
+        "source_mtime": str(artifact_stat.st_mtime),
+        "source_size": str(artifact_stat.st_size),
     }
 
     needs_refresh = not db_path.exists()
@@ -75,7 +41,7 @@ def ensure_database(csv_path: Path = DEFAULT_CSV_PATH, db_path: Path = DEFAULT_D
             else:
                 cur.execute("SELECT key, value FROM source_metadata")
                 stored_meta = {key: value for key, value in cur.fetchall()}
-                if stored_meta != csv_meta:
+                if stored_meta != source_meta:
                     needs_refresh = True
                 else:
                     cur.execute("SELECT COUNT(*) FROM professors")
@@ -121,12 +87,33 @@ def ensure_database(csv_path: Path = DEFAULT_CSV_PATH, db_path: Path = DEFAULT_D
             )
             """
         )
-        with csv_path.open() as fp:
-            reader = csv.DictReader(fp)
-            rows = [
-                [_convert_value(col, row.get(col)) for col in COLUMNS]
-                for row in reader
-            ]
+        artifact = json.loads(artifact_path.read_text())
+        schools_by_id = {
+            school.get("school_id"): school for school in artifact.get("schools", [])
+        }
+        rows = []
+        for row in artifact.get("professors", []):
+            school_id = row.get("school_id")
+            school = schools_by_id.get(school_id, {})
+            metrics = row.get("metrics", {})
+            rows.append(
+                [
+                    school.get("rank"),
+                    school.get("name"),
+                    school_id,
+                    school.get("state"),
+                    row.get("professor_id"),
+                    row.get("legacy_id"),
+                    row.get("first_name"),
+                    row.get("last_name"),
+                    row.get("department"),
+                    metrics.get("avg_rating"),
+                    metrics.get("avg_difficulty"),
+                    metrics.get("would_take_again_percent"),
+                    metrics.get("num_ratings"),
+                    row.get("profile_url"),
+                ]
+            )
         cur.executemany(
             """
             INSERT OR REPLACE INTO professors
@@ -137,7 +124,7 @@ def ensure_database(csv_path: Path = DEFAULT_CSV_PATH, db_path: Path = DEFAULT_D
         cur.execute("CREATE INDEX IF NOT EXISTS idx_professors_school ON professors(school_name)")
         cur.executemany(
             "INSERT INTO source_metadata(key, value) VALUES (?, ?)",
-            list(csv_meta.items()),
+            list(source_meta.items()),
         )
         conn.commit()
     finally:

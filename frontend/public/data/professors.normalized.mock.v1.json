@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-04-20T00:00:00Z",
+  "freshness": {
+    "generated_at": "2026-04-20T00:00:00Z",
+    "ttl_hours": 720
+  },
+  "schools": [
+    {
+      "school_id": "school:st:test-university",
+      "name": "Test University",
+      "state": "ST",
+      "rank": 1
+    }
+  ],
+  "professors": [
+    {
+      "professor_id": "prof:1",
+      "school_id": "school:st:test-university",
+      "legacy_id": 1,
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "department": "Mathematics",
+      "profile_url": "https://example.com",
+      "metrics": {
+        "avg_rating": 4.2,
+        "avg_difficulty": 3.4,
+        "would_take_again_percent": 72,
+        "num_ratings": 15
+      }
+    },
+    {
+      "professor_id": "prof:2",
+      "school_id": "school:st:test-university",
+      "legacy_id": 2,
+      "first_name": "John",
+      "last_name": "Smith",
+      "department": "Mathematics",
+      "profile_url": "https://example.com/john",
+      "metrics": {
+        "avg_rating": 3.8,
+        "avg_difficulty": 3.6,
+        "would_take_again_percent": 61,
+        "num_ratings": 11
+      }
+    }
+  ]
+}

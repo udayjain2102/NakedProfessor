@@ -3,7 +3,7 @@ from __future__ import annotations
 import logging
 import re
 from dataclasses import dataclass, field
-from typing import Iterable, List, Optional
+from typing import List, Optional
 from urllib.parse import urljoin, urlparse
 
 from bs4 import BeautifulSoup

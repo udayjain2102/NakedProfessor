@@ -1,0 +1,12 @@
+[
+  {
+    "rank": 1,
+    "name": "Test University",
+    "state": "ST"
+  },
+  {
+    "rank": 2,
+    "name": "Missing University",
+    "state": "ZZ"
+  }
+]
