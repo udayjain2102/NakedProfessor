@@ -74,6 +74,40 @@ The browser does not hold the OpenAI key. Serverless generation uses `frontend/a
 3. Add the **Environment Variable** `OPENAI_API_KEY` (Production / Preview as needed).
 4. Deploy. Functions are served from `frontend/api/` relative to that root.
 
+#### Hosting professor data on Supabase Storage
+
+The production portal can load professor data from Supabase Storage instead of bundling a large
+artifact with the Vite app.
+
+1. In `frontend/.env.local`, set upload credentials. Use the service-role key only locally or in CI:
+
+```bash
+SUPABASE_URL=https://YOUR_PROJECT.supabase.co
+SUPABASE_SERVICE_ROLE_KEY=YOUR_SERVICE_ROLE_KEY
+SUPABASE_PROFESSOR_BUCKET=professor-artifacts
+SUPABASE_PROFESSOR_OBJECT=top200_plus_behrend_professors.csv
+PROFESSOR_ARTIFACT_SOURCE=public/data/top200_plus_behrend_professors.csv
+```
+
+2. Upload the tracked all-school CSV:
+
+```bash
+cd frontend
+npm run upload:professor-data
+```
+
+3. Copy the printed public URL into Vercel/Netlify as:
+
+```bash
+VITE_PROFESSOR_ARTIFACT_PATHS=https://YOUR_PROJECT.supabase.co/storage/v1/object/public/professor-artifacts/top200_plus_behrend_professors.csv
+```
+
+4. Redeploy the frontend. The app fetches that hosted CSV at startup, so future data refreshes only
+   require re-running the upload command unless the artifact path changes.
+
+Do not put `SUPABASE_SERVICE_ROLE_KEY` in any `VITE_` variable. `VITE_` variables are exposed to
+browser code.
+
 Behind the scenes, `rmp_scraper/professor_profiles.py` converts professor rating platform
 metrics into normalized parameters (clarity, workload, support, assessment strictness,
 sentiment) and tension statements the LLM prompt consumes.

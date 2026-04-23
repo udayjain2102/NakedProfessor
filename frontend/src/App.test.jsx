@@ -181,6 +181,14 @@ const SAMPLE_ARTIFACT = {
   ],
 };
 
+const SAMPLE_CSV = [
+  "school_rank,school_name,school_id,school_state,professor_id,professor_legacy_id,professor_first,professor_last,department,avg_rating,avg_difficulty,would_take_again_percent,num_ratings,profile_url",
+  "1,Test University,school:st:test-university,ST,prof:1,1,Jane,Doe,Mathematics,4.2,3.4,72,15,https://example.com",
+  "1,Test University,school:st:test-university,ST,prof:2,2,John,Smith,Mathematics,3.8,3.6,61,11,https://example.com/john",
+  "2,Pennsylvania State University - Behrend,school:pa:penn-state-behrend,PA,prof:3,3,Alex,Morgan,Computer Science,4.1,3.1,76,19,https://example.com/alex",
+  "2,Pennsylvania State University - Behrend,school:pa:penn-state-behrend,PA,prof:4,4,Jamie,Lee,Mathematics,3.9,3.2,64,12,https://example.com/jamie",
+].join("\n");
+
 const SAMPLE_STUDY_PLAN = {
   schemaVersion: STUDY_PLAN_SCHEMA_VERSION,
   riskSummary: {
@@ -252,6 +260,12 @@ describe("NakedProfessor app", () => {
     window.history.replaceState({}, "", "/");
     global.fetch = vi.fn((input) => {
       const url = typeof input === "string" ? input : String(input?.url ?? "");
+      if (url.includes("top200_plus_behrend_professors.csv") || url.includes("professor-artifacts")) {
+        return Promise.resolve({
+          ok: true,
+          text: () => Promise.resolve(SAMPLE_CSV),
+        });
+      }
       if (url.includes("normalized")) {
         return Promise.resolve({
           ok: true,
