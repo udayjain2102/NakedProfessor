@@ -1,4 +1,5 @@
 import { useId } from "react";
+import AsciiPortrait from "./AsciiPortrait";
 
 function InsightModule({ metric, index }) {
   return (
@@ -111,9 +112,16 @@ export default function RealityCheckScreen({
       <header className="np-poster-hero np-stagger-item" style={{ animationDelay: "0ms" }}>
         <div className="np-poster-main">
           <div className="np-hero-kicker">01 / Reality Check</div>
-          <h1 className="np-hero-title">
-            {professor.professor_first} {professor.professor_last}
-          </h1>
+          <div className="np-hero-title-row">
+            <AsciiPortrait
+              seed={professor.professor_id}
+              label={`${professor.professor_first} ${professor.professor_last}`}
+              className="np-ascii-portrait-lg"
+            />
+            <h1 className="np-hero-title">
+              {professor.professor_first} {professor.professor_last}
+            </h1>
+          </div>
           <p className="np-hero-course">
             {courseTitle?.trim() || "Set course name in Game Plan"}
           </p>

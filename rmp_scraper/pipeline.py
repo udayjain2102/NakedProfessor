@@ -80,8 +80,9 @@ def _slugify(value: str) -> str:
 
 
 def canonical_school_id(record: ProfessorRecord) -> str:
-    state = _slugify(record.metadata.get("state") or "na")
-    return f"school:{state}:{_slugify(record.school_name)}"
+    region = record.metadata.get("state") or record.metadata.get("country") or "na"
+    region_slug = _slugify(region)
+    return f"school:{region_slug}:{_slugify(record.school_name)}"
 
 
 def canonical_professor_id(record: ProfessorRecord) -> str:
@@ -122,12 +123,14 @@ def build_normalized_professor_artifact(records: Iterable[ProfessorRecord]) -> d
     normalized_records = list(records)
     schools: dict[str, dict] = {}
     professors: list[dict] = []
+    seen_professor_rows: set[tuple[str, str, str, str]] = set()
 
     for record in normalized_records:
         school_id = canonical_school_id(record)
         professor_id = canonical_professor_id(record)
         school_rank = record.metadata.get("rank")
         school_state = record.metadata.get("state")
+        school_country = record.metadata.get("country")
         school = schools.setdefault(
             school_id,
             {
@@ -136,6 +139,7 @@ def build_normalized_professor_artifact(records: Iterable[ProfessorRecord]) -> d
                 "name": record.school_name,
                 "state": school_state,
                 "rank": school_rank,
+                "country": school_country,
                 "aliases": _school_aliases(record.school_name),
                 "search_tokens": _tokenize(record.school_name, school_state),
                 "source_provenance": {
@@ -150,6 +154,16 @@ def build_normalized_professor_artifact(records: Iterable[ProfessorRecord]) -> d
             school.get("rank") is None or school_rank < school["rank"]
         ):
             school["rank"] = school_rank
+
+        dedupe_key = (
+            professor_id,
+            school_id,
+            record.full_name,
+            record.department or "",
+        )
+        if dedupe_key in seen_professor_rows:
+            continue
+        seen_professor_rows.add(dedupe_key)
 
         professors.append(
             {
