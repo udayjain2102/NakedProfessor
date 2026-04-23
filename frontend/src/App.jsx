@@ -4,6 +4,7 @@ import RealityCheckScreen from "./components/RealityCheckScreen";
 import GamePlanScreen from "./components/GamePlanScreen";
 import ExecutionHubScreen from "./components/ExecutionHubScreen";
 import AdSlot from "./components/AdSlot";
+import AsciiPortrait from "./components/AsciiPortrait";
 import { deriveProfile } from "./lib/profileDeriver";
 import { getFullIntel } from "./lib/survivalIntel";
 import { getAuthRedirectUrl, supabase } from "./lib/supabaseClient";
@@ -2214,6 +2215,8 @@ export default function App() {
               </div>
             )}
           </div>
+
+          {error && <p className="np-error">{error}</p>}
         </div>
       )}
 

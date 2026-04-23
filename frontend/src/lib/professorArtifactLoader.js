@@ -29,6 +29,10 @@
 
 const DEFAULT_ARTIFACT_PATHS = [
   "/data/professors.normalized.v1.json",
+  "/data/professors_by_country/canada_professors.normalized.v1.json",
+  "/data/professors_by_country/united-kingdom_professors.normalized.v1.json",
+  "/data/professors_by_country/australia_professors.normalized.v1.json",
+  "/data/professors_by_country/india_professors.normalized.v1.json",
   "/data/top200_plus_behrend_professors.csv",
   "/data/behrend_professors.normalized.v1.json",
 ];
@@ -258,6 +262,39 @@ function isCsvPath(path) {
   return String(path || "").toLowerCase().split("?")[0].endsWith(".csv");
 }
 
+function mergeLoadedArtifacts(payloads) {
+  const schoolsById = new Map();
+  const professorsByKey = new Map();
+
+  for (const payload of payloads) {
+    for (const school of payload.schools || []) {
+      if (!schoolsById.has(school.school_id)) {
+        schoolsById.set(school.school_id, school);
+      }
+    }
+
+    for (const professor of payload.professors || []) {
+      const dedupeKey = `${professor.professor_id}::${professor.school_id}`;
+      if (!professorsByKey.has(dedupeKey)) {
+        professorsByKey.set(dedupeKey, professor);
+      }
+    }
+  }
+
+  const artifact = {
+    schema_version: payloads[0]?.schema_version || "1.0.0",
+    generated_at: payloads[0]?.generated_at || new Date().toISOString(),
+    schools: Array.from(schoolsById.values()),
+    professors: Array.from(professorsByKey.values()),
+  };
+
+  return {
+    artifact,
+    professors: toLegacyProfessorShape(artifact),
+    schools: toSchoolRankingShape(artifact),
+  };
+}
+
 /**
  * @param {{ artifactPaths?: string[], fetchImpl?: typeof fetch, nowMs?: number }} [options]
  */
@@ -266,6 +303,7 @@ export async function loadProfessorArtifact(options = {}) {
   const fetchImpl = options.fetchImpl || fetch;
   const nowMs = options.nowMs ?? Date.now();
   let lastError = null;
+  const loadedJsonArtifacts = [];
 
   for (const path of artifactPaths) {
     try {
@@ -273,20 +311,23 @@ export async function loadProfessorArtifact(options = {}) {
       if (!response.ok) continue;
 
       if (isCsvPath(path)) {
+        if (loadedJsonArtifacts.length) {
+          continue;
+        }
         return toCsvArtifactShape(await response.text());
       }
 
       const payload = await response.json();
       validateArtifactShape(payload);
       validateArtifactFreshness(payload, nowMs);
-      return {
-        artifact: payload,
-        professors: toLegacyProfessorShape(payload),
-        schools: toSchoolRankingShape(payload),
-      };
+      loadedJsonArtifacts.push(payload);
     } catch (error) {
       lastError = error;
     }
+  }
+
+  if (loadedJsonArtifacts.length) {
+    return mergeLoadedArtifacts(loadedJsonArtifacts);
   }
 
   if (lastError) throw lastError;
@@ -294,6 +335,7 @@ export async function loadProfessorArtifact(options = {}) {
 }
 
 export const __internal = {
+  mergeLoadedArtifacts,
   parseCsvRows,
   resolveArtifactPaths,
   validateArtifactShape,
