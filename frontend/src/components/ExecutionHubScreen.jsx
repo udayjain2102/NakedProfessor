@@ -107,6 +107,11 @@ export default function ExecutionHubScreen({
         <p className="np-lead">
           Track how closely your week matches the plan and where you need to adjust.
         </p>
+        <div className="np-intake-ruler" aria-label="Execution workflow">
+          <span>01 alignment</span>
+          <span>02 alert zones</span>
+          <span>03 linked notes</span>
+        </div>
         <div className={`np-detect ${planReady ? "" : "np-detect-muted"}`}>
           <strong>Status</strong>
           <span>

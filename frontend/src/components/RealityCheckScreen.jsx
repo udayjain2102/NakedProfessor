@@ -125,6 +125,24 @@ export default function RealityCheckScreen({
           <p className="np-hero-course">
             {courseTitle?.trim() || "Set course name in Game Plan"}
           </p>
+          <dl className="np-hero-data-rail" aria-label="Professor dossier metrics">
+            <div>
+              <dt>Dept</dt>
+              <dd>{professor.department || "Pending"}</dd>
+            </div>
+            <div>
+              <dt>Rating</dt>
+              <dd>{professor.avg_rating || "n/a"}</dd>
+            </div>
+            <div>
+              <dt>Difficulty</dt>
+              <dd>{professor.avg_difficulty || "n/a"}</dd>
+            </div>
+            <div>
+              <dt>Reports</dt>
+              <dd>{professor.num_ratings || "n/a"}</dd>
+            </div>
+          </dl>
           <p className="np-hero-tldr">{tldr}</p>
           <div className="np-risk-row">
             <span
