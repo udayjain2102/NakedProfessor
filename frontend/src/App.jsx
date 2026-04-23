@@ -4,6 +4,7 @@ import RealityCheckScreen from "./components/RealityCheckScreen";
 import GamePlanScreen from "./components/GamePlanScreen";
 import ExecutionHubScreen from "./components/ExecutionHubScreen";
 import AdSlot from "./components/AdSlot";
+import AsciiPortrait from "./components/AsciiPortrait";
 import { deriveProfile } from "./lib/profileDeriver";
 import { getFullIntel } from "./lib/survivalIntel";
 import { getAuthRedirectUrl, supabase } from "./lib/supabaseClient";
@@ -1857,19 +1858,28 @@ export default function App() {
             <div className="np-select-state">
               <span className="np-label">Select professor</span>
               <div className={`np-selection-card ${selectedProfessor ? "np-selection-card-active" : ""}`}>
-                <div>
-                  <strong>
-                    {selectedProfessor
-                      ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
-                      : "No professor selected"}
-                  </strong>
-                  <p className="np-fineprint">
-                    {selectedProfessor
-                      ? selectedProfessor.department
-                      : selectedSchool
-                        ? "Choose a professor to unlock Reality Check."
-                        : "Select a school first to load professor options."}
-                  </p>
+                <div className="np-selection-prof">
+                  {selectedProfessor && (
+                    <AsciiPortrait
+                      seed={selectedProfessor.professor_id}
+                      label={`${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`}
+                      className="np-ascii-portrait-sm"
+                    />
+                  )}
+                  <div className="np-selection-meta">
+                    <strong>
+                      {selectedProfessor
+                        ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
+                        : "No professor selected"}
+                    </strong>
+                    <p className="np-fineprint">
+                      {selectedProfessor
+                        ? selectedProfessor.department
+                        : selectedSchool
+                          ? "Choose a professor to unlock Reality Check."
+                          : "Select a school first to load professor options."}
+                    </p>
+                  </div>
                 </div>
                 {!selectedProfessor && (
                   <button
@@ -1927,9 +1937,16 @@ export default function App() {
                     onMouseEnter={() => setProfessorHighlightIndex(index)}
                     onClick={() => handleSelectProfessor(p)}
                   >
-                    <span>
-                      {p.professor_first} {p.professor_last}
-                      <small>{p.department}</small>
+                    <span className="np-prof-main">
+                      <AsciiPortrait
+                        seed={p.professor_id}
+                        label={`${p.professor_first} ${p.professor_last}`}
+                        className="np-ascii-portrait-sm"
+                      />
+                      <span className="np-prof-copy">
+                        {p.professor_first} {p.professor_last}
+                        <small>{p.department}</small>
+                      </span>
                     </span>
                     {p.avg_rating && <span className="np-prof-rating">{p.avg_rating}</span>}
                   </button>
@@ -2076,9 +2093,16 @@ export default function App() {
                     onMouseEnter={() => setProfessorHighlightIndex(index)}
                     onClick={() => handleSelectProfessor(professor)}
                   >
-                    <span>
-                      {professor.professor_first} {professor.professor_last}
-                      <small>{professor.department}</small>
+                    <span className="np-prof-main">
+                      <AsciiPortrait
+                        seed={professor.professor_id}
+                        label={`${professor.professor_first} ${professor.professor_last}`}
+                        className="np-ascii-portrait-sm"
+                      />
+                      <span className="np-prof-copy">
+                        {professor.professor_first} {professor.professor_last}
+                        <small>{professor.department}</small>
+                      </span>
                     </span>
                     {professor.avg_rating && (
                       <span className="np-prof-rating">{professor.avg_rating}</span>
@@ -2104,7 +2128,14 @@ export default function App() {
             <div className="np-header-context">
               <div className="np-header-context-main">
                 <span className="np-label">Selected context</span>
-                <h2 className="np-header-professor">{headerContext.name}</h2>
+                <div className="np-header-professor-row">
+                  <AsciiPortrait
+                    seed={selectedProfessor.professor_id}
+                    label={headerContext.name}
+                    className="np-ascii-portrait-md"
+                  />
+                  <h2 className="np-header-professor">{headerContext.name}</h2>
+                </div>
                 <p className="np-header-context-copy">
                   {headerContext.department} · {headerContext.school} · {headerContext.course}
                 </p>

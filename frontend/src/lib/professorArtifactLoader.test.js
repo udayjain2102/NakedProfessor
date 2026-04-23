@@ -121,4 +121,56 @@ describe("professorArtifactLoader", () => {
       "Pennsylvania State University - Behrend",
     ]);
   });
+
+  it("merges multiple normalized JSON artifacts", async () => {
+    const secondArtifact = {
+      ...VALID_ARTIFACT,
+      schools: [
+        {
+          school_id: "school:on:second-university",
+          name: "Second University",
+          state: "ON",
+          rank: 2,
+        },
+      ],
+      professors: [
+        {
+          professor_id: "prof:2",
+          school_id: "school:on:second-university",
+          legacy_id: 2,
+          first_name: "John",
+          last_name: "Smith",
+          department: "History",
+          profile_url: "https://example.com/2",
+          metrics: {
+            avg_rating: 4.6,
+            avg_difficulty: 2.1,
+            would_take_again_percent: 88,
+            num_ratings: 12,
+          },
+        },
+      ],
+    };
+
+    const fetchImpl = vi.fn(async (path) => {
+      if (path === "/data/one.json") {
+        return { ok: true, json: async () => VALID_ARTIFACT };
+      }
+      if (path === "/data/two.json") {
+        return { ok: true, json: async () => secondArtifact };
+      }
+      return { ok: false };
+    });
+
+    const loaded = await loadProfessorArtifact({
+      artifactPaths: ["/data/one.json", "/data/two.json"],
+      fetchImpl,
+    });
+
+    expect(loaded.professors).toHaveLength(2);
+    expect(loaded.schools.map((school) => school.name)).toEqual([
+      "Test University",
+      "Second University",
+    ]);
+  });
 });

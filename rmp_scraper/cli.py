@@ -3,10 +3,12 @@ from __future__ import annotations
 import argparse
 import json
 import logging
+import re
 from pathlib import Path
 
 import requests
 
+from .country_lists import load_country_lists
 from .pipeline import (
     export_normalized_professors_artifact,
     load_or_create_college_cache,
@@ -20,6 +22,41 @@ logging.basicConfig(
     format="%(asctime)s %(levelname)s %(name)s %(message)s",
 )
 LOG = logging.getLogger(__name__)
+
+
+def _strip_parenthetical_suffixes(value: str) -> str:
+    return re.sub(r"\s*\([^)]*\)", "", value or "").strip()
+
+
+def _resolve_country_list_school(
+    client: RateMyProfessorsClient,
+    college: RankedCollege,
+) -> object:
+    location = (college.metadata.get("list_location") or "").strip() or None
+    search_variants = []
+    for candidate in [college.name, _strip_parenthetical_suffixes(college.name)]:
+        normalized = (candidate or "").strip()
+        if normalized and normalized not in search_variants:
+            search_variants.append(normalized)
+
+    for search_text in search_variants:
+        school = client.match_school(
+            search_text,
+            city_equals=location,
+            max_results=15,
+            default_index=0,
+            allow_fallback=False,
+        )
+        if school is not None:
+            return school
+
+    # Final attempt: if the source list has no reliable location, still require a positive score.
+    return client.match_school(
+        college.name,
+        max_results=15,
+        default_index=0,
+        allow_fallback=False,
+    )
 
 
 def _add_delay(parser: argparse.ArgumentParser, default: float = 0.6) -> None:
@@ -134,6 +171,59 @@ def _cmd_reviews(args: argparse.Namespace) -> int:
     return 0
 
 
+def _slugify_filename(value: str) -> str:
+    normalized = value.lower().strip()
+    normalized = "".join(ch if ch.isalnum() else "-" for ch in normalized)
+    normalized = "-".join(filter(None, normalized.split("-")))
+    return normalized or "list"
+
+
+def _cmd_lists(args: argparse.Namespace) -> int:
+    session = requests.Session()
+    client = RateMyProfessorsClient(session=session, delay=args.delay)
+    country_lists = load_country_lists(args.lists)
+    merged_records = []
+
+    for country_list in country_lists:
+        records = []
+        universities = country_list.universities
+        if args.limit:
+            universities = universities[: args.limit]
+        LOG.info("Scraping %d schools for %s", len(universities), country_list.country)
+        for college in universities:
+            LOG.info("Scraping professors for %s (rank %s)", college.name, college.rank)
+            school = _resolve_country_list_school(client, college)
+            if school is None:
+                LOG.warning("No school match found on RMP for %s", college.name)
+                continue
+            for professor in client.iter_professors(school.id):
+                professor.metadata = {
+                    "rank": college.rank,
+                    "country": country_list.country,
+                    "state": school.state or college.state,
+                    "source": country_list.source,
+                    "list_name": college.metadata.get("list_name"),
+                    "list_rank": college.metadata.get("list_rank"),
+                    "list_location": college.metadata.get("list_location"),
+                    "list_notes": college.metadata.get("list_notes"),
+                    "rmp_school_name": school.name,
+                    "rmp_school_city": school.city,
+                    "rmp_school_state": school.state,
+                }
+                records.append(professor)
+        if args.output_dir:
+            output_path = args.output_dir / f"{_slugify_filename(country_list.country)}_professors.normalized.v1.json"
+            export_normalized_professors_artifact(records, output_path)
+            LOG.info("Wrote %d professors to %s", len(records), output_path)
+        else:
+            merged_records.extend(records)
+
+    if not args.output_dir:
+        export_normalized_professors_artifact(merged_records, args.output)
+        LOG.info("Wrote %d professors to %s", len(merged_records), args.output)
+    return 0
+
+
 def _build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(
         description="Scrape Rate My Professors via its public GraphQL endpoint (use responsibly).",
@@ -198,6 +288,36 @@ def _build_parser() -> argparse.ArgumentParser:
     )
     _add_delay(p_profs)
     p_profs.set_defaults(func=_cmd_professors)
+
+    p_lists = sub.add_parser(
+        "lists",
+        help="Scrape professors for schools listed in JSON files",
+    )
+    p_lists.add_argument(
+        "lists",
+        nargs="+",
+        type=Path,
+        help="One or more country list JSON files",
+    )
+    p_lists.add_argument(
+        "--output",
+        type=Path,
+        default=Path("data/professors.lists.normalized.v1.json"),
+        help="Merged normalized output artifact path (if --output-dir not set)",
+    )
+    p_lists.add_argument(
+        "--output-dir",
+        type=Path,
+        help="Write one normalized artifact per list into this directory",
+    )
+    p_lists.add_argument(
+        "--limit",
+        type=int,
+        default=0,
+        help="Optional cap on the number of schools per list (0 = no cap)",
+    )
+    _add_delay(p_lists)
+    p_lists.set_defaults(func=_cmd_lists)
 
     p_rev = sub.add_parser("reviews", help="Export all text ratings for one professor to JSONL")
     g = p_rev.add_mutually_exclusive_group(required=True)
