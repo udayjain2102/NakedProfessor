@@ -431,7 +431,12 @@ async function resolveAuthRedirect() {
   return exchangeError?.message || "";
 }
 
-const TOP_BANNER_AD_SLOT = import.meta.env.VITE_ADSENSE_SLOT_TOP_BANNER || "";
+const TOP_BANNER_AD_SLOT =
+  (typeof window !== "undefined" &&
+    window.__NP_RUNTIME_CONFIG__ &&
+    window.__NP_RUNTIME_CONFIG__.ADSENSE_SLOT_TOP_BANNER) ||
+  import.meta.env.VITE_ADSENSE_SLOT_TOP_BANNER ||
+  "";
 const TOP_COLLEGES_PATH = import.meta.env.VITE_TOP_COLLEGES_PATH || "/data/top_colleges.json";
 
 export default function App() {
