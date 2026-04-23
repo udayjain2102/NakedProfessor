@@ -68,7 +68,7 @@ async function expectNoSeriousAxeViolations(page) {
 test("select route has no serious accessibility violations", async ({ page }) => {
   await page.goto("/app/select");
   await expect(page.getByText(/NakedProfessor/i)).toBeVisible();
-  await expect(page.getByRole("button", { name: /^Choose A University$/i })).toBeVisible();
+  await expect(page.getByRole("button", { name: /Browse schools/i })).toBeVisible();
   await expectNoSeriousAxeViolations(page);
 });
 
