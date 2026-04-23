@@ -306,22 +306,21 @@ describe("NakedProfessor app", () => {
     renderApp();
 
     expect(await screen.findByText(/NakedProfessor/i)).toBeInTheDocument();
-    expect(screen.getByText(/Start by choosing a university/i)).toBeInTheDocument();
+    expect(screen.getByText(/Start by picking a professor/i)).toBeInTheDocument();
     expect(
-      screen.getByText(/Professor search unlocks after the university is selected/i)
+      screen.getByText(/Search for a school in Setup, then choose a professor to unlock the workflow/i)
     ).toBeInTheDocument();
-    expect(screen.getByRole("button", { name: /^Choose A University$/i })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: /^Jump to Setup$/i })).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /Send magic link/i })).toBeInTheDocument();
     expect(screen.getAllByRole("button", { name: /Search school/i }).length).toBeGreaterThan(0);
-    expect(screen.getByPlaceholderText(/Choose a university first/i)).toBeDisabled();
-    expect(screen.getByText(/Choose a school to load its professor roster/i)).toBeInTheDocument();
-    expect(screen.getByText(/Next: choose a university to begin/i)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText(/Select a school first/i)).toBeDisabled();
+    expect(screen.getByText(/No school selected yet/i)).toBeInTheDocument();
+    expect(screen.getByText(/Next: choose a school to begin/i)).toBeInTheDocument();
     const stepper = screen.getByRole("navigation", { name: /Stage progress/i });
     const stepperButtons = within(stepper).getAllByRole("button");
-    expect(stepperButtons[0]).toBeEnabled();
+    expect(stepperButtons[0]).toBeDisabled();
     expect(stepperButtons[1]).toBeDisabled();
     expect(stepperButtons[2]).toBeDisabled();
-    expect(stepperButtons[3]).toBeDisabled();
   });
 
   it("exchanges callback codes from email sign-in links", async () => {
@@ -357,11 +356,13 @@ describe("NakedProfessor app", () => {
     expect(window.location.search).toBe("");
   });
 
-  it("hides schools without roster data from setup", async () => {
+  it("shows ranked schools without rosters and exposes the empty state", async () => {
     renderApp();
 
     expect(await screen.findByRole("option", { name: /Test University/i })).toBeInTheDocument();
-    expect(screen.queryByText(/Missing University/i)).not.toBeInTheDocument();
+    fireEvent.click(screen.getByRole("option", { name: /Missing University/i }));
+    expect(screen.getByText(/This ranked school does not have a professor roster yet/i)).toBeInTheDocument();
+    expect(screen.getByText(/Next: choose a school with a roster/i)).toBeInTheDocument();
   });
 
   it("activates Reality Check after school and professor selection", async () => {
@@ -373,8 +374,8 @@ describe("NakedProfessor app", () => {
     fireEvent.click(screen.getByRole("option", { name: /Jane Doe/i }));
     expect(await screen.findByText(/Common risks/i)).toBeInTheDocument();
     expect(await screen.findByText(/Fatigue at root/i)).toBeInTheDocument();
-    expect(screen.getByText(/Selected context/i)).toBeInTheDocument();
-    expect(screen.getByText(/Mathematics · Test University/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Jane Doe/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Mathematics · Test University/i).length).toBeGreaterThan(0);
     expect(screen.getByText(/Next: add your syllabus to generate a plan/i)).toBeInTheDocument();
   });
 
@@ -393,7 +394,7 @@ describe("NakedProfessor app", () => {
     fireEvent.keyDown(professorInput, { key: "Enter" });
 
     expect(await screen.findByText(/Common risks/i)).toBeInTheDocument();
-    expect(screen.getByText(/Selected context/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Jane Doe/i).length).toBeGreaterThan(0);
   });
 
   it("matches school acronyms and professor compact last-first aliases", async () => {
@@ -413,7 +414,10 @@ describe("NakedProfessor app", () => {
 
     fireEvent.keyDown(professorInput, { key: "Enter" });
 
-    expect(await screen.findByText(/Computer Science · Pennsylvania State University - Behrend/i)).toBeInTheDocument();
+    expect(
+      (await screen.findAllByText(/Computer Science · Pennsylvania State University - Behrend/i))
+        .length
+    ).toBeGreaterThan(0);
   });
 
   it("uses a mobile command palette with Escape focus restoration", async () => {
@@ -422,7 +426,7 @@ describe("NakedProfessor app", () => {
     renderApp();
 
     fireEvent.click(screen.getByRole("button", { name: /Open Setup/i }));
-    const schoolLauncherLabel = await screen.findByText(/Find a school/i);
+    const schoolLauncherLabel = await screen.findByText(/^Find a school$/i);
     const schoolLauncher = schoolLauncherLabel.closest("button");
     expect(schoolLauncher).not.toBeNull();
     fireEvent.click(schoolLauncher);
@@ -474,7 +478,8 @@ describe("NakedProfessor app", () => {
     );
     expect(screen.getByText(/Next: start tracking execution/i)).toBeInTheDocument();
     expect(screen.getByRole("button", { name: /^Start Tracking$/i })).toBeInTheDocument();
-    expect(screen.getAllByText(/✓ completed/i)).toHaveLength(3);
+    expect(screen.getAllByText(/✓ completed/i)).toHaveLength(2);
+    expect(screen.getByText(/^Current$/i)).toBeInTheDocument();
   });
 
   it("falls back to guest device storage when Supabase env vars are absent", async () => {

@@ -242,13 +242,13 @@ function buildSchoolOptions(professors, topColleges) {
     if (!n) continue;
     const key = schoolKey(n);
     if (!map.has(key)) {
-      map.set(key, {
-        key,
-        name: n,
-        inDataset: true,
-        professorCount: 0,
-        aliases: buildSchoolAliases(n, p.school_state),
-      });
+        map.set(key, {
+          key,
+          name: n,
+          rosterAvailable: true,
+          professorCount: 0,
+          aliases: buildSchoolAliases(n, p.school_state),
+        });
     }
     map.get(key).professorCount += 1;
   }
@@ -262,6 +262,16 @@ function buildSchoolOptions(professors, topColleges) {
         e.state = c.state;
         e.rank = c.rank;
         e.aliases = buildSchoolAliases(e.name, c.state);
+      } else {
+        map.set(key, {
+          key,
+          name: n,
+          state: c.state,
+          rank: c.rank,
+          rosterAvailable: false,
+          professorCount: 0,
+          aliases: buildSchoolAliases(n, c.state),
+        });
       }
     }
   }
@@ -294,7 +304,7 @@ function filterProfessors(professors, query, limit = SEARCH_RESULT_LIMIT) {
 
 function clampHighlightIndex(index, length) {
   if (!length) return -1;
-  if (index < 0) return 0;
+  if (index < 0) return -1;
   if (index >= length) return length - 1;
   return index;
 }
@@ -320,50 +330,29 @@ const LOADING_LINES = [
   "Calibrating grade scenarios…",
 ];
 
-const MODES = [
-  {
-    id: "select",
-    label: "Choose Context",
-    step: "00",
-    description:
-      "Pick your school and professor context first so risk scoring and planning are grounded in the right class setup.",
-  },
+const STAGES = [
   {
     id: "reality",
-    label: "Reality Check",
+    title: "Reality Check",
     step: "01",
     description:
-      "Read the professor first: difficulty, clarity, grading risk, and the ways students usually lose points.",
+      "Review professor difficulty, clarity, grading pressure, and the common ways students lose points.",
   },
   {
     id: "gameplan",
-    label: "Game Plan",
+    title: "Game Plan",
     step: "02",
     description:
-      "Turn the syllabus into a concrete weekly strategy instead of generic study advice.",
+      "Add the syllabus and turn it into a concrete weekly strategy for this specific class.",
   },
   {
     id: "execution",
-    label: "Execution Hub",
+    title: "Execution Hub",
     step: "03",
     description:
-      "Track alignment once the semester starts so the plan stays usable under real workload pressure.",
+      "Track effort, deadlines, and adjustments once the plan is ready and the semester is moving.",
   },
 ];
-
-function StateCard({ title, copy, ctaLabel, onCta, tone = "default" }) {
-  return (
-    <section className={`np-state-card np-state-card-${tone}`}>
-      <div className="np-state-copy">
-        <h2 className="np-state-title">{title}</h2>
-        <p>{copy}</p>
-      </div>
-      <button type="button" className="np-btn np-btn-primary" onClick={onCta}>
-        {ctaLabel}
-      </button>
-    </section>
-  );
-}
 
 function safeScrollIntoView(node, options) {
   if (node && typeof node.scrollIntoView === "function") {
@@ -479,6 +468,7 @@ export default function App() {
   const [insightVisible, setInsightVisible] = useState(true);
   const [isSetupOpen, setIsSetupOpen] = useState(false);
   const [isMobileSetup, setIsMobileSetup] = useState(false);
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [activePalette, setActivePalette] = useState(null);
   const [schoolHighlightIndex, setSchoolHighlightIndex] = useState(-1);
   const [professorHighlightIndex, setProfessorHighlightIndex] = useState(-1);
@@ -504,7 +494,7 @@ export default function App() {
   const hasProfessor = Boolean(selectedId);
   const hasSyllabus = Boolean(syllabus.trim());
   const supportsAccountSync = canUseCloudPlanStore();
-  const canSaveSubjects = !supportsAccountSync || Boolean(authUser);
+  const canSaveSubjects = true;
 
   useEffect(() => {
     let cancelled = false;
@@ -537,9 +527,13 @@ export default function App() {
     if (typeof window === "undefined" || typeof window.matchMedia !== "function") return;
 
     const mediaQuery = window.matchMedia(MOBILE_SETUP_QUERY);
-    const handleChange = (event) => setIsMobileSetup(event.matches);
+    const handleChange = (event) => {
+      setIsMobileSetup(event.matches);
+      if (event.matches) setIsSidebarCollapsed(false);
+    };
 
     setIsMobileSetup(mediaQuery.matches);
+    if (mediaQuery.matches) setIsSidebarCollapsed(false);
     if (typeof mediaQuery.addEventListener === "function") {
       mediaQuery.addEventListener("change", handleChange);
       return () => mediaQuery.removeEventListener("change", handleChange);
@@ -611,40 +605,30 @@ export default function App() {
     let cancelled = false;
 
     async function hydrateWorkspace() {
-      if (!supportsAccountSync) {
+      if (!supportsAccountSync || !authUser) {
         try {
           const workspace = await loadPlanWorkspace();
           if (cancelled) return;
           setAccountName(derivePlanStoreAccountName(null, workspace));
           setSavedSubjects(Array.isArray(workspace.subjects) ? workspace.subjects : []);
-          setAuthNotice("Guest mode active. Subjects and plans are saved on this device.");
+          setAuthNotice(
+            supportsAccountSync
+              ? "Guest mode active. Sign in to sync subjects across devices."
+              : "Guest mode active. Subjects and plans are saved on this device."
+          );
           setWorkspaceLoaded(true);
         } catch {
           if (cancelled) return;
           setAccountName("Guest mode");
           setSavedSubjects([]);
-          setAuthNotice("Guest mode active. Subjects and plans are saved on this device.");
+          setAuthNotice(
+            supportsAccountSync
+              ? "Guest mode active. Sign in to sync subjects across devices."
+              : "Guest mode active. Subjects and plans are saved on this device."
+          );
           setError("Unable to load saved subjects.");
           setWorkspaceLoaded(true);
         }
-        return;
-      }
-
-      if (!authUser) {
-        if (cancelled) return;
-        setWorkspaceLoaded(false);
-        setAccountName("");
-        setSavedSubjects([]);
-        setActiveSubjectId(null);
-        setSubjectName("");
-        setSelectedSchool(null);
-        setSelectedId(null);
-        setCourseTitle("");
-        setSyllabus("");
-        setMaterialsNote("");
-        setPlan(null);
-        setPlanReady(false);
-        setMode("select");
         return;
       }
 
@@ -733,15 +717,20 @@ export default function App() {
 
   useEffect(() => {
     if (!selectedProfessor) return;
+    const inferredKey = schoolKey(selectedProfessor.school_name);
+    const rankedSchool = topColleges.find((school) => schoolKey(school.name) === inferredKey);
     const inferredSchool = {
-      key: schoolKey(selectedProfessor.school_name),
+      key: inferredKey,
       name: selectedProfessor.school_name,
       professorCount: professors.filter(
-        (professor) => schoolKey(professor.school_name) === schoolKey(selectedProfessor.school_name)
+        (professor) => schoolKey(professor.school_name) === inferredKey
       ).length,
+      rosterAvailable: true,
+      state: rankedSchool?.state,
+      rank: rankedSchool?.rank,
     };
     setSelectedSchool((current) => (current?.key === inferredSchool.key ? current : inferredSchool));
-  }, [professors, selectedProfessor]);
+  }, [professors, selectedProfessor, topColleges]);
 
   const profile = useMemo(
     () => (selectedProfessor ? deriveProfile(selectedProfessor) : null),
@@ -794,103 +783,204 @@ export default function App() {
 
     return () => clearTimeout(focusTimer);
   }, [activePalette]);
-  const currentModeIndex = useMemo(() => {
-    const idx = MODES.findIndex((item) => item.id === mode);
-    return idx === -1 ? 0 : idx;
-  }, [mode]);
-  const activeMode = MODES[currentModeIndex] || MODES[0];
+  const selectedSchoolHasRoster = Boolean(selectedSchool?.professorCount);
+  const activeStage = useMemo(
+    () => STAGES.find((item) => item.id === mode) || STAGES[0],
+    [mode]
+  );
   const unlockedModes = useMemo(
     () => ({
-      select: true,
       reality: hasProfessor,
-      gameplan: hasSyllabus,
+      gameplan: hasProfessor && hasSyllabus,
       execution: planReady,
     }),
     [hasProfessor, hasSyllabus, planReady]
   );
   const stepperSteps = useMemo(
     () =>
-      MODES.map((item) => {
+      STAGES.map((item) => {
         let status = "";
-        if (item.id === "select") {
+        if (item.id === "reality") {
           status = hasProfessor
-            ? "Context selected. Move to Reality Check to inspect risks."
-            : "Choose a school and professor to unlock the rest of the flow.";
-        } else if (item.id === "reality") {
-          status = hasProfessor
-            ? selectedProfessor
-              ? `Risk readout live for ${selectedProfessor.professor_first} ${selectedProfessor.professor_last}.`
-              : "Risk readout will load as soon as professor data resolves."
-            : selectedSchool
-              ? `Choose a professor from ${selectedSchool.name} to generate the risk readout.`
-              : "Choose a university first, then select a professor.";
+            ? "Professor selected. Risk review is ready."
+            : selectedSchool && !selectedSchoolHasRoster
+              ? "Choose another school to unlock this stage."
+              : selectedSchool
+                ? "Select a professor in Setup."
+                : "Select a school and professor in Setup.";
         } else if (item.id === "gameplan") {
-          status = planReady
-            ? "Strategy generated and ready to revise."
-            : hasSyllabus
-              ? "Syllabus is loaded. Generate the strategy to continue."
-              : "Paste grading and dates to build the strategy.";
+          status = hasSyllabus
+            ? planReady
+              ? "Syllabus loaded. Strategy generated."
+              : "Syllabus loaded. Generate your strategy."
+            : hasProfessor
+              ? "Add your syllabus to unlock this stage."
+              : "Complete Reality Check first.";
         } else {
           status = planReady
-            ? "Weekly alignment board is active."
-            : "Unlocks after the Game Plan is generated.";
+            ? "Plan ready. Tracking is live."
+            : "Generate a plan to unlock it.";
         }
 
-        const isCurrent = mode === item.id;
+        const isCurrent = mode !== "select" && mode === item.id;
         const isCompleted =
-          item.id === "select"
-            ? hasProfessor
-            : item.id === "reality"
-            ? hasProfessor && mode !== "reality"
+          item.id === "reality"
+            ? hasProfessor && (mode === "gameplan" || mode === "execution")
             : item.id === "gameplan"
               ? planReady && mode === "execution"
               : false;
-        const isUnlocked = unlockedModes[item.id];
+        const isUnlocked = isCurrent || isCompleted || unlockedModes[item.id];
 
         return {
           ...item,
           status,
-          state: isCompleted ? "completed" : isCurrent && isUnlocked ? "current" : "locked",
+          state: isCompleted ? "completed" : isCurrent ? "current" : "locked",
           unlocked: isUnlocked,
         };
       }),
-    [hasProfessor, hasSyllabus, mode, planReady, selectedProfessor, selectedSchool, unlockedModes]
+    [
+      hasProfessor,
+      hasSyllabus,
+      mode,
+      planReady,
+      selectedSchool,
+      selectedSchoolHasRoster,
+      unlockedModes,
+    ]
   );
   const nextAction = useMemo(() => {
-    if (!selectedSchool) return "Next: choose a university to begin";
-    if (!hasProfessor) return "Next: choose a professor from your university";
-    if (mode === "select") return "Next: review professor risk signals";
+    if (!selectedSchool) return "Next: choose a school to begin";
+    if (!selectedSchoolHasRoster) return "Next: choose a school with a roster";
+    if (!hasProfessor) return "Next: choose a professor to begin";
     if (mode === "reality") return "Next: add your syllabus to generate a plan";
     if (!hasSyllabus) return "Next: add your syllabus to generate a plan";
     if (!planReady) return "Next: generate your weekly strategy";
     return "Next: start tracking execution";
-  }, [hasProfessor, hasSyllabus, mode, planReady, selectedSchool]);
+  }, [hasProfessor, hasSyllabus, mode, planReady, selectedSchool, selectedSchoolHasRoster]);
+  const shellHeader = useMemo(() => {
+    if (mode === "select") {
+      if (!selectedSchool) {
+        return {
+          kicker: "Setup",
+          title: "Choose your class context",
+          copy:
+            "Use the Setup panel to pick a school and then a professor. The planning flow unlocks after that context is set.",
+        };
+      }
+      if (!selectedSchoolHasRoster) {
+        return {
+          kicker: "Setup",
+          title: "Choose a school with a roster",
+          copy:
+            "This school is ranked, but professor data is not available here yet. Pick another school to continue.",
+        };
+      }
+      return {
+        kicker: "Setup",
+        title: "Select a professor",
+        copy: `Pick a professor from ${selectedSchool.name} to unlock Reality Check.`,
+      };
+    }
+
+    return {
+      kicker: `Stage ${activeStage.step}`,
+      title: activeStage.title,
+      copy: activeStage.description,
+    };
+  }, [activeStage.description, activeStage.step, activeStage.title, mode, selectedSchool, selectedSchoolHasRoster]);
   const activeSchoolOption = filteredCollegeOptions[schoolHighlightIndex] || null;
   const activeProfessorOption = filteredProfessors[professorHighlightIndex] || null;
   const paletteResults = activePalette === "school" ? filteredCollegeOptions : filteredProfessors;
   const paletteQuery = activePalette === "school" ? collegeSearch : search;
+  const renderSchoolOption = (opt, index, idPrefix = "np-school-option") => {
+    const isSelected = selectedSchool?.key === opt.key;
+    const isHighlighted = schoolHighlightIndex === index;
+
+    return (
+      <button
+        key={`${idPrefix}-${opt.key}`}
+        id={`${idPrefix}-${opt.key}`}
+        type="button"
+        role="option"
+        aria-selected={isSelected}
+        className={`np-college-row ${
+          isSelected ? "np-college-row-selected" : ""
+        } ${isHighlighted ? "np-option-highlighted" : ""}`}
+        onMouseEnter={() => setSchoolHighlightIndex(index)}
+        onClick={() => handleSelectSchool(opt)}
+      >
+        <span className="np-college-row-main">
+          <span className="np-college-name">{opt.name}</span>
+          <span className="np-meta-chip-row">
+            {opt.state && <span className="np-meta-chip">{opt.state}</span>}
+            {opt.rank != null && <span className="np-meta-chip">Rank #{opt.rank}</span>}
+            <span className="np-meta-chip">
+              {opt.professorCount > 0 ? `${opt.professorCount} profs` : "No roster"}
+            </span>
+          </span>
+        </span>
+        {isSelected && <span className="np-selected-marker">Selected</span>}
+      </button>
+    );
+  };
+  const renderProfessorOption = (professor, index, idPrefix = "np-professor-option") => {
+    const isSelected = professor.professor_id === selectedId;
+    const isHighlighted = professorHighlightIndex === index;
+
+    return (
+      <button
+        key={`${idPrefix}-${professor.professor_id}`}
+        type="button"
+        id={`${idPrefix}-${professor.professor_id}`}
+        role="option"
+        aria-selected={isSelected}
+        className={`np-prof ${isSelected ? "np-prof-active" : ""} ${
+          isHighlighted ? "np-option-highlighted" : ""
+        }`}
+        onMouseEnter={() => setProfessorHighlightIndex(index)}
+        onClick={() => handleSelectProfessor(professor)}
+      >
+        <span className="np-prof-main">
+          <span className="np-prof-name">
+            {professor.professor_first} {professor.professor_last}
+          </span>
+          <span className="np-meta-chip-row">
+            {professor.department && <span className="np-meta-chip">{professor.department}</span>}
+            {professor.avg_rating && <span className="np-meta-chip">Rating {professor.avg_rating}</span>}
+            {professor.avg_difficulty && (
+              <span className="np-meta-chip">Difficulty {professor.avg_difficulty}</span>
+            )}
+            {professor.num_ratings && (
+              <span className="np-meta-chip">{professor.num_ratings} reviews</span>
+            )}
+          </span>
+        </span>
+        {isSelected && <span className="np-selected-marker">Selected</span>}
+      </button>
+    );
+  };
   const heroState = (() => {
     if (hasProfessor) return null;
-    if (selectedSchool && professorPool.length === 0) {
+    if (selectedSchool && !selectedSchoolHasRoster) {
       return {
-        title: "No professor roster is available for this school",
-        copy: "Choose a different school to keep moving through Reality Check, Game Plan, and Execution Hub.",
+        title: "This school does not have a professor roster yet",
+        copy: "Choose another school in Setup to continue into Reality Check, Game Plan, and Execution Hub.",
         ctaLabel: "Choose Another School",
         action: handleClearSchool,
       };
     }
     if (selectedSchool) {
       return {
-        title: "Now choose a professor",
-        copy: `Choose a professor from ${selectedSchool.name} to activate Reality Check.`,
-        ctaLabel: "Choose A Professor",
+        title: "Start by picking a professor",
+        copy: `Choose a professor from ${selectedSchool.name} in Setup to unlock Reality Check.`,
+        ctaLabel: "Jump to Setup",
         action: () => scrollToSetup(true),
       };
     }
     return {
-      title: "Start by choosing a university",
-      copy: "Pick a school first. Professor search unlocks after the university is selected.",
-      ctaLabel: "Choose A University",
+      title: "Start by picking a professor",
+      copy: "Search for a school in Setup, then choose a professor to unlock the workflow.",
+      ctaLabel: "Jump to Setup",
       action: () => scrollToSetup(true),
     };
   })();
@@ -903,6 +993,7 @@ export default function App() {
       course: courseTitle.trim() || subjectName.trim() || "Course title not set",
       rating: selectedProfessor.avg_rating || null,
       difficulty: selectedProfessor.avg_difficulty || null,
+      reviews: selectedProfessor.num_ratings || null,
     };
   }, [courseTitle, selectedProfessor, selectedSchool, subjectName]);
 
@@ -974,7 +1065,7 @@ export default function App() {
   }
 
   function focusProfessorSearch(triggerNode) {
-    if (!selectedSchool) {
+    if (!selectedSchool || !selectedSchoolHasRoster) {
       focusSchoolSearch(triggerNode);
       return;
     }
@@ -1178,7 +1269,7 @@ export default function App() {
       return;
     }
     if (!selectedSchool || !selectedProfessor) {
-      setError("Choose a university and professor before saving.");
+      setError("Choose a school and professor before saving.");
       return;
     }
     const nextSubjectName = subjectName.trim() || courseTitle.trim();
@@ -1314,6 +1405,7 @@ export default function App() {
   }
 
   function scrollToSetup(openDrawer = false) {
+    if (!isMobileSetup) setIsSidebarCollapsed(false);
     if (openDrawer) setIsSetupOpen(true);
     safeScrollIntoView(setupPanelRef.current, { behavior: "smooth", block: "start" });
   }
@@ -1338,6 +1430,10 @@ export default function App() {
 
   function handleNextAction() {
     if (!selectedSchool) {
+      focusSchoolSearch();
+      return;
+    }
+    if (!selectedSchoolHasRoster) {
       focusSchoolSearch();
       return;
     }
@@ -1496,10 +1592,14 @@ export default function App() {
         ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
         : "Professor pending",
       meta: selectedProfessor
-        ? [courseTitle.trim() || subjectName.trim() || "Course title not set", selectedProfessor.school_name]
+        ? [
+            courseTitle.trim() || subjectName.trim() || "Course not set",
+            selectedProfessor.department || "Department pending",
+            selectedProfessor.school_name,
+          ]
             .filter(Boolean)
             .join(" · ")
-        : "Choose school and professor context.",
+        : "Choose a school and professor to ground the class context.",
     },
     {
       label: "Risk",
@@ -1507,8 +1607,8 @@ export default function App() {
       value: intel?.risk?.level ? `${intel.risk.level} risk` : "Risk pending",
       meta:
         selectedProfessor && profile
-          ? `${profile.workload} workload · ${intel?.risk?.explanation || "Professor signal read is live."}`
-          : "Professor selection unlocks workload and grading risk.",
+          ? `${profile.workload} workload · ${intel?.risk?.explanation || "Professor signals are ready."}`
+          : "Workload and grading danger appear after professor selection.",
     },
     {
       label: "Outcome",
@@ -1519,8 +1619,8 @@ export default function App() {
           : "Range pending",
       meta:
         intel?.survival != null
-          ? `A-band estimate · ${intel.survival.confidenceNote}`
-          : "Estimated grade range appears after professor selection.",
+          ? `Estimated grade band · ${intel.survival.confidenceNote}`
+          : "Confidence range appears after professor selection.",
     },
     {
       label: "State",
@@ -1528,30 +1628,54 @@ export default function App() {
       value: planReady ? "Plan ready" : "Plan not ready",
       meta:
         planReady
-          ? "Execution Hub is unlocked."
+          ? "Execution Hub is unlocked and ready for tracking."
           : hasSyllabus
-            ? "Generate your weekly strategy to unlock execution."
-            : "Add syllabus details to move into planning.",
+            ? "Generate your weekly strategy to continue."
+            : "Add your syllabus to move into Game Plan.",
     },
   ];
   const workspaceTitle = supportsAccountSync ? "Account Sync" : "Saved Plans";
   const workspaceOwnerName = accountName || (supportsAccountSync ? "No account yet" : "Guest mode");
-  const workspaceSummary = supportsAccountSync
-    ? accountName
+  const workspaceSummary =
+    supportsAccountSync && authUser
       ? `${savedSubjects.length} ${
           savedSubjects.length === 1 ? "subject" : "subjects"
         } saved to your account.`
-      : "Sign in to save subjects and resume on any device tied to your account."
-    : `${savedSubjects.length} ${
-        savedSubjects.length === 1 ? "subject" : "subjects"
-      } saved on this device.`;
-  const workspaceEmptyState = supportsAccountSync
-    ? "Saved subjects will appear here after you sign in and save a professor."
-    : "Saved subjects will appear here after you save a professor on this device.";
+      : `${savedSubjects.length} ${
+          savedSubjects.length === 1 ? "subject" : "subjects"
+        } saved on this device.`;
+  const workspaceEmptyState =
+    supportsAccountSync && authUser
+      ? "Saved subjects will appear here after you save a professor to your account."
+      : "Saved subjects will appear here after you save a professor on this device.";
+  const showSchoolResults =
+    !isMobileSetup &&
+    filteredCollegeOptions.length > 0 &&
+    (!selectedSchool || Boolean(collegeSearch.trim()));
+  const showProfessorResults = !isMobileSetup && filteredProfessors.length > 0;
+  const collapsedSidebarSummary = [
+    selectedSchool?.name || "School pending",
+    selectedProfessor
+      ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
+      : "Professor pending",
+    planReady ? "Plan ready" : "Plan pending",
+  ];
 
   return (
-    <div className="np-app">
-      <aside className={`np-sidebar ${isSetupOpen ? "np-sidebar-open" : ""}`}>
+    <div className={`np-app ${isSidebarCollapsed ? "np-app-sidebar-collapsed" : ""}`}>
+      <aside
+        className={`np-sidebar ${isSetupOpen ? "np-sidebar-open" : ""} ${
+          isSidebarCollapsed ? "np-sidebar-collapsed" : ""
+        }`}
+      >
+        <button
+          type="button"
+          className="np-sidebar-toggle"
+          onClick={() => setIsSidebarCollapsed((collapsed) => !collapsed)}
+          aria-expanded={!isSidebarCollapsed}
+        >
+          {isSidebarCollapsed ? "Expand" : "Collapse"}
+        </button>
         <button
           type="button"
           className="np-mobile-setup-toggle"
@@ -1560,6 +1684,31 @@ export default function App() {
         >
           {isSetupOpen ? "Hide Setup" : "Open Setup"}
         </button>
+        {isSidebarCollapsed && !isMobileSetup && (
+          <div className="np-sidebar-collapsed-rail">
+            <div className="np-brand np-brand-compact">
+              <div className="np-brand-mark">
+                <img src={brandLogo} alt="NakedProfessor logo" className="np-brand-logo" />
+              </div>
+            </div>
+            <div className="np-sidebar-rail-stack">
+              {collapsedSidebarSummary.map((item) => (
+                <span key={item} className="np-sidebar-rail-pill">
+                  {item}
+                </span>
+              ))}
+            </div>
+            <button
+              type="button"
+              className="np-btn np-btn-ghost np-sidebar-rail-action"
+              onClick={() => setIsSidebarCollapsed(false)}
+            >
+              Open setup
+            </button>
+          </div>
+        )}
+        {(!isSidebarCollapsed || isMobileSetup) && (
+          <>
         <div className={`np-sidebar-drawer ${isSetupOpen ? "np-sidebar-drawer-open" : ""}`}>
           <div className="np-brand">
             <div className="np-brand-mark">
@@ -1571,7 +1720,262 @@ export default function App() {
             </div>
           </div>
 
-          <div className="np-sidebar-block np-workspace-panel">
+          <div className="np-sidebar-main">
+          <div className="np-sidebar-block np-setup-panel" ref={setupPanelRef} id="np-setup-panel">
+            <div className="np-setup-head">
+              <span className="np-eyebrow">Setup</span>
+              <p className="np-fineprint">Search school, select school, search professor, select professor.</p>
+            </div>
+            <label className="np-label" htmlFor="np-college-search">
+              Search school
+            </label>
+            {isMobileSetup ? (
+              <button
+                id="np-college-search"
+                ref={schoolSearchTriggerRef}
+                type="button"
+                className="np-search-launcher"
+                onClick={(event) => focusSchoolSearch(event.currentTarget)}
+                aria-haspopup="dialog"
+                aria-expanded={activePalette === "school"}
+              >
+                <span className="np-search-launcher-kicker">Search school</span>
+                <strong>{selectedSchool?.name || collegeSearch.trim() || "Find a school"}</strong>
+                <small>Type a school name, state, or alias.</small>
+              </button>
+            ) : (
+              <input
+                id="np-college-search"
+                ref={schoolInputRef}
+                className="np-input"
+                placeholder="Search school, state, or alias"
+                value={collegeSearch}
+                onChange={(event) => {
+                  setCollegeSearch(event.target.value);
+                  setSchoolHighlightIndex(event.target.value.trim() ? 0 : -1);
+                }}
+                onKeyDown={handleSchoolInputKeyDown}
+                autoComplete="off"
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded={filteredCollegeOptions.length > 0}
+                aria-controls="np-school-results"
+                aria-activedescendant={activeSchoolOption ? `np-school-option-${activeSchoolOption.key}` : undefined}
+              />
+            )}
+            <div className="np-select-state">
+              <span className="np-label">Select school</span>
+              <div className={`np-selection-card ${selectedSchool ? "np-selection-card-active" : ""}`}>
+                <div>
+                  <strong>{selectedSchool?.name || "No school selected"}</strong>
+                  <p className="np-fineprint">
+                    {selectedSchool
+                      ? selectedSchoolHasRoster
+                        ? "Roster available."
+                        : "No roster available."
+                      : "Search first, then select a school."}
+                  </p>
+                </div>
+                <button
+                  type="button"
+                  className={selectedSchool ? "np-selection-action" : "np-selection-action"}
+                  onClick={(event) => {
+                    if (selectedSchool) {
+                      setCollegeSearch(selectedSchool.name);
+                      setSchoolHighlightIndex(0);
+                    }
+                    focusSchoolSearch(event.currentTarget);
+                  }}
+                >
+                  {selectedSchool ? "Change school" : "Browse schools"}
+                </button>
+              </div>
+            </div>
+            {!isMobileSetup && filteredCollegeOptions.length === 0 && !selectedSchool && (
+              <section className="np-inline-empty-state">
+                <p>No schools match this search yet.</p>
+                <button
+                  type="button"
+                  className="np-btn np-btn-secondary"
+                  onClick={() => {
+                    setCollegeSearch("");
+                    setSchoolHighlightIndex(-1);
+                  }}
+                >
+                  Clear school search
+                </button>
+              </section>
+            )}
+            {selectedSchool && !collegeSearch.trim() && (
+              <section className="np-inline-empty-state np-inline-compact-state">
+                <p>School locked to {selectedSchool.name}. Search again if you want to switch universities.</p>
+                <button
+                  type="button"
+                  className="np-btn np-btn-secondary"
+                  onClick={(event) => {
+                    setCollegeSearch(selectedSchool.name);
+                    setSchoolHighlightIndex(0);
+                    focusSchoolSearch(event.currentTarget);
+                  }}
+                >
+                  Change school
+                </button>
+              </section>
+            )}
+            {showSchoolResults && (
+              <div className="np-college-list" role="listbox" id="np-school-results">
+                {filteredCollegeOptions.map((opt, index) => renderSchoolOption(opt, index))}
+              </div>
+            )}
+            <label className="np-label" htmlFor="np-search">
+              Search professor
+            </label>
+            {isMobileSetup ? (
+              <button
+                id="np-search"
+                ref={professorSearchTriggerRef}
+                type="button"
+                className="np-search-launcher"
+                onClick={(event) => focusProfessorSearch(event.currentTarget)}
+                disabled={!selectedSchool}
+                aria-haspopup="dialog"
+                aria-expanded={activePalette === "professor"}
+              >
+                <span className="np-search-launcher-kicker">Search professor</span>
+                <strong>
+                  {selectedProfessor
+                    ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
+                    : search.trim() || "Find a professor"}
+                </strong>
+                <small>
+                  {selectedSchool
+                    ? "Type a name, initials, or department."
+                    : "Select a school first."}
+                </small>
+              </button>
+            ) : (
+              <input
+                id="np-search"
+                ref={professorInputRef}
+                className="np-input"
+                placeholder={
+                  selectedSchool ? "Search name, initials, or department" : "Select a school first"
+                }
+                value={search}
+                onChange={(event) => {
+                  setSearch(event.target.value);
+                  setProfessorHighlightIndex(event.target.value.trim() ? 0 : -1);
+                }}
+                onKeyDown={handleProfessorInputKeyDown}
+                disabled={!selectedSchool || !selectedSchoolHasRoster}
+                role="combobox"
+                aria-autocomplete="list"
+                aria-expanded={filteredProfessors.length > 0}
+                aria-controls="np-professor-results"
+                aria-activedescendant={
+                  activeProfessorOption
+                    ? `np-professor-option-${activeProfessorOption.professor_id}`
+                    : undefined
+                }
+              />
+            )}
+            <div className="np-select-state">
+              <span className="np-label">Select professor</span>
+              <div className={`np-selection-card ${selectedProfessor ? "np-selection-card-active" : ""}`}>
+                <div>
+                  <strong>
+                    {selectedProfessor
+                      ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
+                      : "No professor selected"}
+                  </strong>
+                  <p className="np-fineprint">
+                    {selectedProfessor
+                      ? selectedProfessor.department
+                      : selectedSchool && !selectedSchoolHasRoster
+                        ? "Choose another school to load a roster."
+                        : selectedSchool
+                        ? "Choose a professor to unlock Reality Check."
+                        : "Select a school first to load professor options."}
+                  </p>
+                </div>
+                {!selectedProfessor ? (
+                  <button
+                    type="button"
+                    className="np-selection-action"
+                    onClick={(event) =>
+                      selectedSchool
+                        ? focusProfessorSearch(event.currentTarget)
+                        : focusSchoolSearch(event.currentTarget)
+                    }
+                  >
+                    {selectedSchool && selectedSchoolHasRoster ? "Browse professors" : "Choose school"}
+                  </button>
+                ) : (
+                  <button
+                    type="button"
+                    className="np-selection-action"
+                    onClick={(event) => {
+                      setSearch(
+                        `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`.trim()
+                      );
+                      setProfessorHighlightIndex(0);
+                      focusProfessorSearch(event.currentTarget);
+                    }}
+                  >
+                    Change professor
+                  </button>
+                )}
+              </div>
+            </div>
+            {!selectedSchool ? (
+              <section className="np-inline-empty-state">
+                <p>No school selected yet.</p>
+                <button
+                  type="button"
+                  className="np-btn np-btn-secondary"
+                  onClick={(event) => focusSchoolSearch(event.currentTarget)}
+                >
+                  Search school
+                </button>
+              </section>
+            ) : !selectedSchoolHasRoster ? (
+              <section className="np-inline-empty-state">
+                <p>This ranked school does not have a professor roster yet.</p>
+                <button
+                  type="button"
+                  className="np-btn np-btn-secondary"
+                  onClick={handleClearSchool}
+                >
+                  Choose another school
+                </button>
+              </section>
+            ) : filteredProfessors.length === 0 && !selectedProfessor ? (
+              <section className="np-inline-empty-state">
+                <p>No professors match this search yet.</p>
+                <button
+                  type="button"
+                  className="np-btn np-btn-secondary"
+                  onClick={() => setSearch("")}
+                >
+                  Clear professor search
+                </button>
+              </section>
+            ) : (
+              showProfessorResults && (
+                <div
+                  className={`np-prof-list ${isMobileSetup ? "np-prof-list-hidden" : ""}`}
+                  role="listbox"
+                  id="np-professor-results"
+                >
+                  {filteredProfessors.map((professor, index) =>
+                    renderProfessorOption(professor, index)
+                  )}
+                </div>
+              )
+            )}
+          </div>
+
+          <div className="np-sidebar-block np-account-panel">
             <div className="np-setup-head">
               <span className="np-eyebrow">{workspaceTitle}</span>
             </div>
@@ -1619,7 +2023,17 @@ export default function App() {
               </div>
             )}
             {authNotice && <div className="np-fineprint np-auth-meta">{authNotice}</div>}
+          </div>
 
+          {error && <p className="np-error">{error}</p>}
+          </div>
+
+          <div className="np-sidebar-bottom">
+          <div className="np-sidebar-block np-course-panel">
+            <div className="np-setup-head">
+              <span className="np-eyebrow">Course Save</span>
+              <p className="np-fineprint">Save the selected professor into a course slot at the bottom of the workspace.</p>
+            </div>
             <label className="np-label" htmlFor="np-subject-name">
               Subject
             </label>
@@ -1688,275 +2102,11 @@ export default function App() {
                 })
               )}
             </div>
+            </div>
           </div>
-
-          <div className="np-sidebar-block np-setup-panel" ref={setupPanelRef} id="np-setup-panel">
-            <div className="np-setup-head">
-              <span className="np-eyebrow">Setup</span>
-            </div>
-            <label className="np-label" htmlFor="np-college-search">
-              Search school
-            </label>
-            {isMobileSetup ? (
-              <button
-                id="np-college-search"
-                ref={schoolSearchTriggerRef}
-                type="button"
-                className="np-search-launcher"
-                onClick={(event) => focusSchoolSearch(event.currentTarget)}
-                aria-haspopup="dialog"
-                aria-expanded={activePalette === "school"}
-              >
-                <span className="np-search-launcher-kicker">Command palette</span>
-                <strong>{selectedSchool?.name || collegeSearch.trim() || "Find a school"}</strong>
-                <small>Search by school name, state, or alias like PSU, NYU, or UCLA.</small>
-              </button>
-            ) : (
-              <input
-                id="np-college-search"
-                ref={schoolInputRef}
-                className="np-input"
-                placeholder="Search school, state, or alias…"
-                value={collegeSearch}
-                onChange={(event) => {
-                  setCollegeSearch(event.target.value);
-                  setSchoolHighlightIndex(0);
-                }}
-                onKeyDown={handleSchoolInputKeyDown}
-                autoComplete="off"
-                role="combobox"
-                aria-autocomplete="list"
-                aria-expanded={filteredCollegeOptions.length > 0}
-                aria-controls="np-school-results"
-                aria-activedescendant={activeSchoolOption ? `np-school-option-${activeSchoolOption.key}` : undefined}
-              />
-            )}
-            <div className="np-select-state">
-              <span className="np-label">Select school</span>
-              <div className={`np-selection-card ${selectedSchool ? "np-selection-card-active" : ""}`}>
-                <div>
-                  <strong>{selectedSchool?.name || "No school selected"}</strong>
-                  <p className="np-fineprint">
-                    {selectedSchool
-                      ? "Roster available."
-                      : "Choose a school to narrow the professor list."}
-                  </p>
-                </div>
-                <button
-                  type="button"
-                  className={selectedSchool ? "np-school-clear" : "np-selection-action"}
-                  onClick={(event) =>
-                    selectedSchool
-                      ? handleClearSchool()
-                      : focusSchoolSearch(event.currentTarget)
-                  }
-                  aria-label={selectedSchool ? "Clear college" : undefined}
-                >
-                  {selectedSchool ? "×" : "Search school"}
-                </button>
-              </div>
-            </div>
-            {!isMobileSetup && filteredCollegeOptions.length === 0 && (
-              <section className="np-inline-empty-state">
-                <p>No schools match this search yet.</p>
-                <button
-                  type="button"
-                  className="np-btn np-btn-secondary"
-                  onClick={() => {
-                    setCollegeSearch("");
-                    setSchoolHighlightIndex(0);
-                  }}
-                >
-                  Clear school search
-                </button>
-              </section>
-            )}
-            {!isMobileSetup && filteredCollegeOptions.length > 0 && (
-              <div className="np-college-list" role="listbox" id="np-school-results">
-                {filteredCollegeOptions.map((opt, index) => {
-                  const isSelected = selectedSchool?.key === opt.key;
-                  const isHighlighted = schoolHighlightIndex === index;
-                  return (
-                    <button
-                      key={opt.key}
-                      id={`np-school-option-${opt.key}`}
-                      type="button"
-                      role="option"
-                      aria-selected={isHighlighted}
-                      className={`np-college-row ${
-                        isSelected ? "np-college-row-selected" : ""
-                      } ${isHighlighted ? "np-option-highlighted" : ""}`}
-                      onMouseEnter={() => setSchoolHighlightIndex(index)}
-                      onClick={() => handleSelectSchool(opt)}
-                    >
-                      <span className="np-college-row-top">
-                        <span className="np-college-name">{opt.name}</span>
-                        {isSelected && <span className="np-selected-marker">Selected</span>}
-                      </span>
-                      <span className="np-meta-chip-row">
-                        {opt.state && <span className="np-meta-chip">{opt.state}</span>}
-                        {opt.rank != null && <span className="np-meta-chip">QS US #{opt.rank}</span>}
-                        <span className="np-meta-chip">{`${opt.professorCount} profs`}</span>
-                      </span>
-                    </button>
-                  );
-                })}
-              </div>
-            )}
-            <label className="np-label" htmlFor="np-search">
-              Search professor
-            </label>
-            {isMobileSetup ? (
-              <button
-                id="np-search"
-                ref={professorSearchTriggerRef}
-                type="button"
-                className="np-search-launcher"
-                onClick={(event) => focusProfessorSearch(event.currentTarget)}
-                disabled={!selectedSchool}
-                aria-haspopup="dialog"
-                aria-expanded={activePalette === "professor"}
-              >
-                <span className="np-search-launcher-kicker">Command palette</span>
-                <strong>
-                  {selectedProfessor
-                    ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
-                    : search.trim() || "Find a professor"}
-                </strong>
-                <small>
-                  {selectedSchool
-                    ? "Search by professor name, initials, or department."
-                    : "Pick a school first to search its roster."}
-                </small>
-              </button>
-            ) : (
-              <input
-                id="np-search"
-                ref={professorInputRef}
-                className="np-input"
-                placeholder={
-                  selectedSchool ? "Search name, initials, or department…" : "Choose a university first…"
-                }
-                value={search}
-                onChange={(event) => {
-                  setSearch(event.target.value);
-                  setProfessorHighlightIndex(0);
-                }}
-                onKeyDown={handleProfessorInputKeyDown}
-                disabled={!selectedSchool}
-                role="combobox"
-                aria-autocomplete="list"
-                aria-expanded={filteredProfessors.length > 0}
-                aria-controls="np-professor-results"
-                aria-activedescendant={
-                  activeProfessorOption
-                    ? `np-professor-option-${activeProfessorOption.professor_id}`
-                    : undefined
-                }
-              />
-            )}
-            <div className="np-select-state">
-              <span className="np-label">Select professor</span>
-              <div className={`np-selection-card ${selectedProfessor ? "np-selection-card-active" : ""}`}>
-                <div className="np-selection-prof">
-                  {selectedProfessor && (
-                    <AsciiPortrait
-                      seed={selectedProfessor.professor_id}
-                      label={`${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`}
-                      className="np-ascii-portrait-sm"
-                    />
-                  )}
-                  <div className="np-selection-meta">
-                    <strong>
-                      {selectedProfessor
-                        ? `${selectedProfessor.professor_first} ${selectedProfessor.professor_last}`
-                        : "No professor selected"}
-                    </strong>
-                    <p className="np-fineprint">
-                      {selectedProfessor
-                        ? selectedProfessor.department
-                        : selectedSchool
-                          ? "Choose a professor to unlock Reality Check."
-                          : "Select a school first to load professor options."}
-                    </p>
-                  </div>
-                </div>
-                {!selectedProfessor && (
-                  <button
-                    type="button"
-                    className="np-selection-action"
-                    onClick={(event) =>
-                      selectedSchool
-                        ? focusProfessorSearch(event.currentTarget)
-                        : focusSchoolSearch(event.currentTarget)
-                    }
-                  >
-                    {selectedSchool ? "Search professor" : "Choose school"}
-                  </button>
-                )}
-              </div>
-            </div>
-            {!selectedSchool ? (
-              <section className="np-inline-empty-state">
-                <p>Choose a school to load its professor roster.</p>
-                <button
-                  type="button"
-                  className="np-btn np-btn-secondary"
-                  onClick={(event) => focusSchoolSearch(event.currentTarget)}
-                >
-                  Search school
-                </button>
-              </section>
-            ) : filteredProfessors.length === 0 ? (
-              <section className="np-inline-empty-state">
-                <p>No professors match this search yet.</p>
-                <button
-                  type="button"
-                  className="np-btn np-btn-secondary"
-                  onClick={() => setSearch("")}
-                >
-                  Clear professor search
-                </button>
-              </section>
-            ) : (
-              <div
-                className={`np-prof-list ${isMobileSetup ? "np-prof-list-hidden" : ""}`}
-                role="listbox"
-                id="np-professor-results"
-              >
-                {filteredProfessors.map((p, index) => (
-                  <button
-                    key={p.professor_id}
-                    type="button"
-                    id={`np-professor-option-${p.professor_id}`}
-                    role="option"
-                    aria-selected={professorHighlightIndex === index}
-                    className={`np-prof ${p.professor_id === selectedId ? "np-prof-active" : ""} ${
-                      professorHighlightIndex === index ? "np-option-highlighted" : ""
-                    }`}
-                    onMouseEnter={() => setProfessorHighlightIndex(index)}
-                    onClick={() => handleSelectProfessor(p)}
-                  >
-                    <span className="np-prof-main">
-                      <AsciiPortrait
-                        seed={p.professor_id}
-                        label={`${p.professor_first} ${p.professor_last}`}
-                        className="np-ascii-portrait-sm"
-                      />
-                      <span className="np-prof-copy">
-                        {p.professor_first} {p.professor_last}
-                        <small>{p.department}</small>
-                      </span>
-                    </span>
-                    {p.avg_rating && <span className="np-prof-rating">{p.avg_rating}</span>}
-                  </button>
-                ))}
-              </div>
-            )}
           </div>
-
-          {error && <p className="np-error">{error}</p>}
-        </div>
+          </>
+        )}
       </aside>
 
       {activePalette && (
@@ -2000,8 +2150,8 @@ export default function App() {
               className="np-input"
               placeholder={
                 activePalette === "school"
-                  ? "Search school, state, or alias…"
-                  : "Search professor, initials, or department…"
+                  ? "Search school, state, or alias"
+                  : "Search professor, initials, or department"
               }
               value={paletteQuery}
               onChange={(event) => {
@@ -2040,39 +2190,18 @@ export default function App() {
                 </section>
               ) : (
                 <div className="np-search-palette-results" role="listbox" id="np-school-palette-results">
-                  {filteredCollegeOptions.map((opt, index) => {
-                    const isSelected = selectedSchool?.key === opt.key;
-                    const isHighlighted = schoolHighlightIndex === index;
-                    return (
-                      <button
-                        key={opt.key}
-                        id={`np-school-palette-option-${opt.key}`}
-                        type="button"
-                        role="option"
-                        aria-selected={isHighlighted}
-                        className={`np-college-row ${
-                          isSelected ? "np-college-row-selected" : ""
-                        } ${isHighlighted ? "np-option-highlighted" : ""}`}
-                        onMouseEnter={() => setSchoolHighlightIndex(index)}
-                        onClick={() => handleSelectSchool(opt)}
-                      >
-                        <span className="np-college-row-top">
-                          <span className="np-college-name">{opt.name}</span>
-                          {isSelected && <span className="np-selected-marker">Selected</span>}
-                        </span>
-                        <span className="np-meta-chip-row">
-                          {opt.state && <span className="np-meta-chip">{opt.state}</span>}
-                          {opt.rank != null && <span className="np-meta-chip">QS US #{opt.rank}</span>}
-                          <span className="np-meta-chip">{`${opt.professorCount} profs`}</span>
-                        </span>
-                      </button>
-                    );
-                  })}
+                  {filteredCollegeOptions.map((opt, index) =>
+                    renderSchoolOption(opt, index, "np-school-palette-option")
+                  )}
                 </div>
               )
             ) : !selectedSchool ? (
               <section className="np-inline-empty-state">
                 <p>Choose a school first to load professor results.</p>
+              </section>
+            ) : !selectedSchoolHasRoster ? (
+              <section className="np-inline-empty-state">
+                <p>This school does not have a professor roster yet.</p>
               </section>
             ) : paletteResults.length === 0 ? (
               <section className="np-inline-empty-state">
@@ -2080,35 +2209,9 @@ export default function App() {
               </section>
             ) : (
               <div className="np-search-palette-results" role="listbox" id="np-professor-palette-results">
-                {filteredProfessors.map((professor, index) => (
-                  <button
-                    key={professor.professor_id}
-                    id={`np-professor-palette-option-${professor.professor_id}`}
-                    type="button"
-                    role="option"
-                    aria-selected={professorHighlightIndex === index}
-                    className={`np-prof ${
-                      professor.professor_id === selectedId ? "np-prof-active" : ""
-                    } ${professorHighlightIndex === index ? "np-option-highlighted" : ""}`}
-                    onMouseEnter={() => setProfessorHighlightIndex(index)}
-                    onClick={() => handleSelectProfessor(professor)}
-                  >
-                    <span className="np-prof-main">
-                      <AsciiPortrait
-                        seed={professor.professor_id}
-                        label={`${professor.professor_first} ${professor.professor_last}`}
-                        className="np-ascii-portrait-sm"
-                      />
-                      <span className="np-prof-copy">
-                        {professor.professor_first} {professor.professor_last}
-                        <small>{professor.department}</small>
-                      </span>
-                    </span>
-                    {professor.avg_rating && (
-                      <span className="np-prof-rating">{professor.avg_rating}</span>
-                    )}
-                  </button>
-                ))}
+                {filteredProfessors.map((professor, index) =>
+                  renderProfessorOption(professor, index, "np-professor-palette-option")
+                )}
               </div>
             )}
           </div>
@@ -2119,37 +2222,24 @@ export default function App() {
 
       <div className="np-main" ref={mainTopRef}>
         <header className="np-topbar">
-          <div className="np-stage-intro">
-            <div className="np-stage-kicker">Stage {activeMode.step}</div>
-            <h1 className="np-stage-title">{activeMode.label}</h1>
-            <p className="np-stage-copy">{activeMode.description}</p>
-          </div>
-          {headerContext && (
-            <div className="np-header-context">
-              <div className="np-header-context-main">
-                <span className="np-label">Selected context</span>
-                <div className="np-header-professor-row">
-                  <AsciiPortrait
-                    seed={selectedProfessor.professor_id}
-                    label={headerContext.name}
-                    className="np-ascii-portrait-md"
-                  />
-                  <h2 className="np-header-professor">{headerContext.name}</h2>
-                </div>
-                <p className="np-header-context-copy">
-                  {headerContext.department} · {headerContext.school} · {headerContext.course}
-                </p>
-              </div>
-              <div className="np-header-context-stats">
-                {headerContext.rating && (
-                  <span className="np-header-stat">Rating {headerContext.rating}</span>
-                )}
-                {headerContext.difficulty && (
-                  <span className="np-header-stat">Difficulty {headerContext.difficulty}</span>
-                )}
-              </div>
+          <div className="np-system-strip" aria-label="Workflow status">
+            <div className="np-system-cell np-system-cell-label">
+              <span className="np-system-label">Workflow</span>
+              <strong className="np-system-value">Class planning system</strong>
             </div>
-          )}
+            <div className="np-system-cell">
+              <span className="np-system-label">School</span>
+              <strong className="np-system-value">{selectedSchool?.name || "Not selected"}</strong>
+            </div>
+            <div className="np-system-cell">
+              <span className="np-system-label">Professor</span>
+              <strong className="np-system-value">{selectedProfessor ? "Selected" : "Pending"}</strong>
+            </div>
+            <div className="np-system-cell">
+              <span className="np-system-label">Plan</span>
+              <strong className="np-system-value">{planReady ? "Ready" : "Not generated"}</strong>
+            </div>
+          </div>
           <nav className="np-progress-stepper" aria-label="Stage progress">
             <ol className="np-progress-list">
               {stepperSteps.map((step) => (
@@ -2164,10 +2254,14 @@ export default function App() {
                     <div className="np-step-topline">
                       <span className="np-mode-step">{step.step}</span>
                       <span className={`np-step-state np-step-state-${step.state}`}>
-                        {step.state === "completed" ? "✓ completed" : step.state}
+                        {step.state === "completed"
+                          ? "✓ completed"
+                          : step.state === "current"
+                            ? "Current"
+                            : "Locked"}
                       </span>
                     </div>
-                    <strong className="np-step-title">{step.label}</strong>
+                    <strong className="np-step-title">{step.title}</strong>
                     <span className="np-step-status">{step.status}</span>
                   </button>
                 </li>
@@ -2175,6 +2269,33 @@ export default function App() {
             </ol>
           </nav>
           <p className="np-next-action">{nextAction}</p>
+          <div className="np-stage-intro">
+            <div className="np-stage-kicker">{shellHeader.kicker}</div>
+            <h1 className="np-stage-title">{shellHeader.title}</h1>
+            <p className="np-stage-copy">{shellHeader.copy}</p>
+          </div>
+          {headerContext && (
+            <div className="np-header-context">
+              <div className="np-header-context-main">
+                <h2 className="np-header-professor">{headerContext.name}</h2>
+                <p className="np-header-context-copy">
+                  {headerContext.department} · {headerContext.school}
+                </p>
+              </div>
+              <div className="np-header-context-stats">
+                <span className="np-header-stat">{headerContext.course}</span>
+                {headerContext.rating && (
+                  <span className="np-header-stat">Rating {headerContext.rating}</span>
+                )}
+                {headerContext.difficulty && (
+                  <span className="np-header-stat">Difficulty {headerContext.difficulty}</span>
+                )}
+                {headerContext.reviews && (
+                  <span className="np-header-stat">{headerContext.reviews} reviews</span>
+                )}
+              </div>
+            </div>
+          )}
           <AdSlot slot={TOP_BANNER_AD_SLOT} className="np-topbar-ad" minHeight={140} />
         </header>
 
@@ -2202,13 +2323,18 @@ export default function App() {
         <div className={`np-content ${insightVisible ? "np-content-in" : ""}`}>
           {mode === "select" && heroState && (
             <div className="np-screen">
-              <StateCard
-                title={heroState.title}
-                copy={heroState.copy}
-                ctaLabel={heroState.ctaLabel}
-                onCta={heroState.action}
-                tone="hero"
-              />
+              <section className="np-state-card np-main-hero-state" aria-labelledby="np-select-workflow-title">
+                <div className="np-select-hero-copy">
+                  <span className="np-state-index">Setup required</span>
+                  <h2 id="np-select-workflow-title" className="np-select-title">
+                    {heroState.title}
+                  </h2>
+                  <p>{heroState.copy}</p>
+                  <button type="button" className="np-btn np-btn-primary" onClick={heroState.action}>
+                    {heroState.ctaLabel}
+                  </button>
+                </div>
+              </section>
             </div>
           )}
           {mode === "reality" && hasProfessor && (

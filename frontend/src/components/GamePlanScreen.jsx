@@ -90,6 +90,11 @@ export default function GamePlanScreen({
         <p className="np-lead">
           Paste the syllabus. We’ll detect grading structure and generate a concrete weekly strategy.
         </p>
+        <div className="np-intake-ruler" aria-label="Game Plan workflow">
+          <span>01 course frame</span>
+          <span>02 syllabus signal</span>
+          <span>03 strategy output</span>
+        </div>
       </header>
 
       {!syllabus.trim() && (
