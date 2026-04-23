@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-04-23T04:04:03.387218+00:00",
+  "freshness": {
+    "generated_at": "2026-04-23T04:04:03.387218+00:00",
+    "ttl_hours": 168
+  },
+  "source_provenance": {
+    "rankings_source": {
+      "provider": "stateuniversity",
+      "url": "https://www.stateuniversity.com/rank/score_rank_by_4yrc.html"
+    },
+    "professor_source": {
+      "provider": "ratemyprofessors",
+      "url": "https://www.ratemyprofessors.com/graphql"
+    }
+  },
+  "schools": [
+    {
+      "school_id": "school:bc:anna-cleveland",
+      "upstream_school_id": "U2Nob29sLTE5MTc1",
+      "name": "Anna Cleveland",
+      "state": "BC",
+      "rank": 4,
+      "country": "India",
+      "aliases": [
+        "Anna Cleveland"
+      ],
+      "search_tokens": [
+        "anna",
+        "bc",
+        "cleveland"
+      ],
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_school_id": "U2Nob29sLTE5MTc1",
+        "rankings_rank": 4
+      }
+    }
+  ],
+  "professors": [
+    {
+      "professor_id": "prof:2979074",
+      "school_id": "school:bc:anna-cleveland",
+      "upstream_professor_id": "VGVhY2hlci0yOTc5MDc0",
+      "legacy_id": 2979074,
+      "first_name": "Dana ",
+      "last_name": "Sheehan ",
+      "full_name": "Dana  Sheehan",
+      "department": "English",
+      "profile_url": "https://www.ratemyprofessors.com/professor/2979074",
+      "aliases": [
+        "Dana  Sheehan",
+        "Sheehan , Dana",
+        "https://www.ratemyprofessors.com/professor/2979074"
+      ],
+      "search_tokens": [
+        "anna",
+        "cleveland",
+        "dana",
+        "english",
+        "sheehan"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:04:03.387218+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0yOTc5MDc0",
+        "provider_school_id": "U2Nob29sLTE5MTc1"
+      }
+    }
+  ]
+}
