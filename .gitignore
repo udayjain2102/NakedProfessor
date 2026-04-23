@@ -48,3 +48,6 @@ frontend/public/data/professors.normalized.v1.json
 
 frontend/public/data/professors.normalized.v1.json
 !frontend/public/data/
+
+# ignore large local datasets
+data/
