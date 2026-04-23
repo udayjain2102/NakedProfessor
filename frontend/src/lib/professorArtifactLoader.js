@@ -29,6 +29,7 @@
 
 const DEFAULT_ARTIFACT_PATHS = [
   "/data/professors.normalized.v1.json",
+  "/data/top200_plus_behrend_professors.csv",
   "/data/behrend_professors.normalized.v1.json",
 ];
 
@@ -124,6 +125,139 @@ function toSchoolRankingShape(artifact) {
   }));
 }
 
+function parseCsvRows(text, onRow) {
+  let row = [];
+  let field = "";
+  let inQuotes = false;
+
+  function emitRow() {
+    if (!row.length && !field) return;
+    row.push(field);
+    onRow(row);
+    row = [];
+    field = "";
+  }
+
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+
+    if (inQuotes) {
+      if (char === '"' && text[index + 1] === '"') {
+        field += '"';
+        index += 1;
+      } else if (char === '"') {
+        inQuotes = false;
+      } else {
+        field += char;
+      }
+      continue;
+    }
+
+    if (char === '"') {
+      inQuotes = true;
+    } else if (char === ",") {
+      row.push(field);
+      field = "";
+    } else if (char === "\n") {
+      emitRow();
+    } else if (char !== "\r") {
+      field += char;
+    }
+  }
+
+  emitRow();
+}
+
+function normalizeHeader(value) {
+  return value.replace(/^\uFEFF/, "").trim();
+}
+
+function parseCsvRecords(text, onRecord) {
+  let headers = null;
+
+  parseCsvRows(text, (row) => {
+    if (!headers) {
+      headers = row.map(normalizeHeader);
+      return;
+    }
+
+    if (row.every((value) => !String(value || "").trim())) return;
+
+    const record = {};
+    headers.forEach((header, index) => {
+      record[header] = row[index] ?? "";
+    });
+    onRecord(record);
+  });
+
+  return headers || [];
+}
+
+function parseRank(value) {
+  const rank = Number.parseInt(String(value || "").trim(), 10);
+  return Number.isFinite(rank) ? rank : null;
+}
+
+function toCsvArtifactShape(csvText) {
+  const professors = [];
+  const schoolsByKey = new Map();
+  const headers = parseCsvRecords(csvText, (row) => {
+    const schoolName = String(row.school_name || "").trim();
+    const professorId = String(row.professor_id || "").trim();
+    if (!schoolName || !professorId) return;
+
+    const schoolState = String(row.school_state || "").trim();
+    const schoolRank = parseRank(row.school_rank);
+    const schoolId = String(row.school_id || "").trim();
+
+    professors.push({
+      school_rank: schoolRank ?? "",
+      school_name: schoolName,
+      school_id: schoolId,
+      school_state: schoolState,
+      professor_id: professorId,
+      professor_legacy_id: String(row.professor_legacy_id || "").trim(),
+      professor_first: String(row.professor_first || "").trim(),
+      professor_last: String(row.professor_last || "").trim(),
+      department: String(row.department || "").trim(),
+      avg_rating: String(row.avg_rating || "").trim(),
+      avg_difficulty: String(row.avg_difficulty || "").trim(),
+      would_take_again_percent: String(row.would_take_again_percent || "").trim(),
+      num_ratings: String(row.num_ratings || "").trim(),
+      profile_url: String(row.profile_url || "").trim(),
+    });
+
+    const schoolKey = schoolId || `${schoolName}:${schoolState}`;
+    if (!schoolsByKey.has(schoolKey)) {
+      schoolsByKey.set(schoolKey, {
+        rank: schoolRank,
+        name: schoolName,
+        state: schoolState,
+      });
+    }
+  });
+
+  const requiredHeaders = ["school_name", "professor_id", "professor_first", "professor_last"];
+  for (const header of requiredHeaders) {
+    assert(headers.includes(header), `CSV artifact is missing ${header}.`);
+  }
+  assert(professors.length > 0, "CSV artifact professors array is empty.");
+
+  return {
+    artifact: null,
+    professors,
+    schools: Array.from(schoolsByKey.values()).sort(
+      (left, right) =>
+        (left.rank ?? Number.MAX_SAFE_INTEGER) - (right.rank ?? Number.MAX_SAFE_INTEGER) ||
+        left.name.localeCompare(right.name)
+    ),
+  };
+}
+
+function isCsvPath(path) {
+  return String(path || "").toLowerCase().split("?")[0].endsWith(".csv");
+}
+
 /**
  * @param {{ artifactPaths?: string[], fetchImpl?: typeof fetch, nowMs?: number }} [options]
  */
@@ -137,6 +271,11 @@ export async function loadProfessorArtifact(options = {}) {
     try {
       const response = await fetchImpl(path);
       if (!response.ok) continue;
+
+      if (isCsvPath(path)) {
+        return toCsvArtifactShape(await response.text());
+      }
+
       const payload = await response.json();
       validateArtifactShape(payload);
       validateArtifactFreshness(payload, nowMs);
@@ -155,6 +294,7 @@ export async function loadProfessorArtifact(options = {}) {
 }
 
 export const __internal = {
+  parseCsvRows,
   resolveArtifactPaths,
   validateArtifactShape,
   validateArtifactFreshness,
