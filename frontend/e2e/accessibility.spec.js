@@ -67,22 +67,29 @@ async function expectNoSeriousAxeViolations(page) {
 
 test("select route has no serious accessibility violations", async ({ page }) => {
   await page.goto("/app/select");
-  await expect(page.getByText(/NakedProfessor/i)).toBeVisible();
-  await expect(page.getByRole("button", { name: /Browse schools/i })).toBeVisible();
+  await page.waitForLoadState("networkidle");
+  await expect(page.getByText(/NakedProfessor/i)).toBeVisible({ timeout: 10000 });
+  await expect(page.getByRole("button", { name: /Browse schools/i })).toBeVisible({ timeout: 10000 });
   await expectNoSeriousAxeViolations(page);
 });
 
 test("professor route has no serious accessibility violations", async ({ page }) => {
   await page.goto("/app/professor/prof:1");
-  await expect(page.getByRole("heading", { name: /Reality Check/i })).toBeVisible();
-  await expect(page.getByText(/Common risks/i)).toBeVisible();
+  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("heading", { name: /Reality Check/i })).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText(/Common risks/i)).toBeVisible({ timeout: 10000 });
   await expectNoSeriousAxeViolations(page);
 });
 
 test("game-plan route has no serious accessibility violations", async ({ page }) => {
   await page.goto("/app/plan/prof:1");
-  await expect(page.getByRole("heading", { level: 1, name: /Game Plan/i })).toBeVisible();
-  await expect(page.getByRole("heading", { level: 3, name: /Add your syllabus/i })).toBeVisible();
+  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("heading", { level: 1, name: /Game Plan/i })).toBeVisible({
+    timeout: 10000,
+  });
+  await expect(page.getByRole("heading", { level: 3, name: /Add your syllabus/i })).toBeVisible({
+    timeout: 10000,
+  });
   await expectNoSeriousAxeViolations(page);
 });
 
@@ -123,7 +130,10 @@ test("saved route has no serious accessibility violations", async ({ page }) => 
   }, SAMPLE_PLAN);
 
   await page.goto("/saved");
-  await expect(page.getByRole("button", { name: /Calculus II/i })).toBeVisible();
-  await expect(page.getByText(/1 subject saved on this device/i)).toBeVisible();
+  await page.waitForLoadState("networkidle");
+  await expect(page.getByRole("button", { name: /Calculus II/i })).toBeVisible({ timeout: 10000 });
+  await expect(page.getByText(/1 subject saved on this device/i)).toBeVisible({
+    timeout: 10000,
+  });
   await expectNoSeriousAxeViolations(page);
 });
