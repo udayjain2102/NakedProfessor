@@ -48,3 +48,6 @@ frontend/public/data/professors.normalized.v1.json
 
 # ignore large local datasets
 data/
+
+# ignore everything in public data folder except the normalized JSONrontend/public/data/*
+!frontend/public/data/professors.normalized.v1.json

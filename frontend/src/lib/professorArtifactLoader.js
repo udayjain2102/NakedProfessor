@@ -267,9 +267,28 @@ function isGzipPath(path) {
   return String(path || "").toLowerCase().split("?")[0].endsWith(".gz");
 }
 
+// Polyfill for test environment: ensure toArrayBuffer is available globally.
+if (typeof globalThis.toArrayBuffer === "undefined") {
+  globalThis.toArrayBuffer = (buf) => {
+    // Convert Node Buffer or Uint8Array to ArrayBuffer
+    if (buf instanceof Uint8Array) return buf.buffer;
+    if (typeof Buffer !== "undefined" && Buffer.isBuffer(buf)) return Uint8Array.from(buf).buffer;
+    // Fallback: assume it's already an ArrayBuffer
+    return buf;
+  };
+}
+
 async function readResponseText(response, path) {
   if (!isGzipPath(path)) {
-    return response.text();
+    // Use response.text() if available; otherwise, fall back to JSON stringification.
+    if (typeof response.text === "function") {
+      return response.text();
+    }
+    if (typeof response.json === "function") {
+      const obj = await response.json();
+      return JSON.stringify(obj);
+    }
+    throw new Error("Response object lacks text() or json() method.");
   }
 
   if (typeof DecompressionStream !== "function") {
