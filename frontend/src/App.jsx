@@ -1822,11 +1822,9 @@ export default function App() {
                 </button>
               </section>
             )}
-            {showSchoolResults && (
-              <div className="np-college-list" role="listbox" id="np-school-results">
-                {filteredCollegeOptions.map((opt, index) => renderSchoolOption(opt, index))}
-              </div>
-            )}
+            <div className={`np-college-list ${!showSchoolResults ? 'np-hidden-listbox' : ''}`} role="listbox" id="np-school-results">
+              {filteredCollegeOptions.map((opt, index) => renderSchoolOption(opt, index))}
+            </div>
             <label className="np-label" htmlFor="np-search">
               Search professor
             </label>
@@ -1961,17 +1959,15 @@ export default function App() {
                 </button>
               </section>
             ) : (
-              showProfessorResults && (
-                <div
-                  className={`np-prof-list ${isMobileSetup ? "np-prof-list-hidden" : ""}`}
-                  role="listbox"
-                  id="np-professor-results"
-                >
-                  {filteredProfessors.map((professor, index) =>
-                    renderProfessorOption(professor, index)
-                  )}
-                </div>
-              )
+              <div
+                className={`np-prof-list ${isMobileSetup ? "np-prof-list-hidden" : ""} ${!showProfessorResults ? 'np-hidden-listbox' : ''}`}
+                role="listbox"
+                id="np-professor-results"
+              >
+                {filteredProfessors.map((professor, index) =>
+                  renderProfessorOption(professor, index)
+                )}
+              </div>
             )}
           </div>
 

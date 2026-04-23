@@ -677,6 +677,10 @@ textarea:focus-visible {
   background: rgba(239, 35, 51, 0.22);
 }
 
+.np-hidden-listbox {
+  display: none;
+}
+
 .np-search-palette-backdrop {
   position: fixed;
   inset: 0;

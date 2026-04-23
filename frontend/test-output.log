@@ -1,0 +1,12 @@
+
+> forgekit-labs@1.0.0 test:e2e
+> playwright test
+
+sh: playwright: command not found
+npm error Lifecycle script `test:e2e` failed with error:
+npm error code 127
+npm error path /Users/adijain/ENGINEERING/NakedProfessor.worktrees/copilot-fix-aria-controls-refs/frontend
+npm error workspace forgekit-labs@1.0.0
+npm error location /Users/adijain/ENGINEERING/NakedProfessor.worktrees/copilot-fix-aria-controls-refs/frontend
+npm error command failed
+npm error command sh -c playwright test
