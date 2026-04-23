@@ -1,0 +1,2720 @@
+[
+  {
+    "rank": 4,
+    "name": "California Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/CA/California_Institute_of_Technology.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 4,
+      "qs_world_rank": "10"
+    }
+  },
+  {
+    "rank": 1,
+    "name": "Massachusetts Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/MA/Massachusetts_Institute_of_Technology.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 1,
+      "qs_world_rank": "1"
+    }
+  },
+  {
+    "rank": 11,
+    "name": "Princeton University",
+    "url": "https://www.stateuniversity.com/universities/NJ/Princeton_University.html",
+    "state": "NJ",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 11,
+      "qs_world_rank": "=25"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Williams College",
+    "url": "https://www.stateuniversity.com/universities/MA/Williams_College.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 54,
+    "name": "University of Notre Dame",
+    "url": "https://www.stateuniversity.com/universities/IN/University_of_Notre_Dame.html",
+    "state": "IN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 54,
+      "qs_world_rank": "=294"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Swarthmore College",
+    "url": "https://www.stateuniversity.com/universities/PA/Swarthmore_College.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Middlebury College",
+    "url": "https://www.stateuniversity.com/universities/VT/Middlebury_College.html",
+    "state": "VT",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Wesleyan University",
+    "url": "https://www.stateuniversity.com/universities/CT/Wesleyan_University.html",
+    "state": "CT",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Bowdoin College",
+    "url": "https://www.stateuniversity.com/universities/ME/Bowdoin_College.html",
+    "state": "ME",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 29,
+    "name": "Rice University",
+    "url": "https://www.stateuniversity.com/universities/TX/Rice_University.html",
+    "state": "TX",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 29,
+      "qs_world_rank": "=119"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Amherst College",
+    "url": "https://www.stateuniversity.com/universities/MA/Amherst_College.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Pomona College",
+    "url": "https://www.stateuniversity.com/universities/CA/Pomona_College.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Carleton College",
+    "url": "https://www.stateuniversity.com/universities/MN/Carleton_College.html",
+    "state": "MN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 46,
+    "name": "Vanderbilt University",
+    "url": "https://www.stateuniversity.com/universities/TN/Vanderbilt_University.html",
+    "state": "TN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 46,
+      "qs_world_rank": "250"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Wellesley College",
+    "url": "https://www.stateuniversity.com/universities/MA/Wellesley_College.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "United States Coast Guard Academy",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Vassar College",
+    "url": "https://www.stateuniversity.com/universities/NY/Vassar_College.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Claremont McKenna College",
+    "url": "https://www.stateuniversity.com/universities/CA/Claremont_McKenna_College.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Franklin W Olin College of Engineering",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 21,
+    "name": "Brown University",
+    "url": "https://www.stateuniversity.com/universities/RI/Brown_University.html",
+    "state": "RI",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 21,
+      "qs_world_rank": "69"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Harvey Mudd College",
+    "url": "https://www.stateuniversity.com/universities/CA/Harvey_Mudd_College.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Haverford College",
+    "url": "https://www.stateuniversity.com/universities/PA/Haverford_College.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Colgate University",
+    "url": "https://www.stateuniversity.com/universities/NY/Colgate_University.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 16,
+    "name": "Carnegie Mellon University",
+    "url": "https://www.stateuniversity.com/universities/PA/Carnegie_Mellon_University.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 16,
+      "qs_world_rank": "52"
+    }
+  },
+  {
+    "rank": 7,
+    "name": "Cornell University",
+    "url": "https://www.stateuniversity.com/universities/NY/Cornell_University.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 7,
+      "qs_world_rank": "16"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Bucknell University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Davidson College",
+    "url": "https://www.stateuniversity.com/universities/NC/Davidson_College.html",
+    "state": "NC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Washington and Lee University",
+    "url": "https://www.stateuniversity.com/universities/VA/Washington_and_Lee_University.html",
+    "state": "VA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Colorado College",
+    "url": "https://www.stateuniversity.com/universities/CO/Colorado_College.html",
+    "state": "CO",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 3,
+    "name": "Harvard University",
+    "url": "https://www.stateuniversity.com/universities/MA/Harvard_University.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 3,
+      "qs_world_rank": "5"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Colby College",
+    "url": "https://www.stateuniversity.com/universities/ME/Colby_College.html",
+    "state": "ME",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Hamilton College",
+    "url": "https://www.stateuniversity.com/universities/NY/Hamilton_College.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Union College",
+    "url": "https://www.stateuniversity.com/universities/NY/Union_College.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Grinnell College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 95,
+    "name": "Lehigh University",
+    "url": "https://www.stateuniversity.com/universities/PA/Lehigh_University.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 95,
+      "qs_world_rank": "=668"
+    }
+  },
+  {
+    "rank": null,
+    "name": "College of William and Mary",
+    "url": "https://www.stateuniversity.com/universities/VA/College_of_William_and_Mary.html",
+    "state": "VA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 44,
+    "name": "Dartmouth College",
+    "url": "https://www.stateuniversity.com/universities/NH/Dartmouth_College.html",
+    "state": "NH",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 44,
+      "qs_world_rank": "=247"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Kenyon College",
+    "url": "https://www.stateuniversity.com/universities/OH/Kenyon_College.html",
+    "state": "OH",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Mount Holyoke College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Macalester College",
+    "url": "https://www.stateuniversity.com/universities/MN/Macalester_College.html",
+    "state": "MN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Lafayette College",
+    "url": "https://www.stateuniversity.com/universities/PA/Lafayette_College.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "United States Naval Academy",
+    "url": "https://www.stateuniversity.com/universities/MD/United_States_Naval_Academy.html",
+    "state": "MD",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Bryn Mawr College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Rose-Hulman Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/IN/Rose_Hulman_Institute_of_Technology.html",
+    "state": "IN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Skidmore College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "United States Merchant Marine Academy",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Oberlin College",
+    "url": "https://www.stateuniversity.com/universities/OH/Oberlin_College.html",
+    "state": "OH",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Villanova University",
+    "url": "https://www.stateuniversity.com/universities/PA/Villanova_University.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Dickinson College",
+    "url": "https://www.stateuniversity.com/universities/PA/Dickinson_College.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Richmond",
+    "url": "https://www.stateuniversity.com/universities/VA/University_of_Richmond.html",
+    "state": "VA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Barnard College",
+    "url": "https://www.stateuniversity.com/universities/NY/Barnard_College.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "St. John's College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 5,
+    "name": "University of Chicago",
+    "url": "https://www.stateuniversity.com/universities/IL/University_of_Chicago.html",
+    "state": "IL",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 5,
+      "qs_world_rank": "13"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Whitman College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Reed College",
+    "url": "https://www.stateuniversity.com/universities/OR/Reed_College.html",
+    "state": "OR",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "United States Military Academy",
+    "url": "https://www.stateuniversity.com/universities/NY/United_States_Military_Academy.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 13,
+    "name": "Northwestern University",
+    "url": "https://www.stateuniversity.com/universities/IL/Northwestern_University.html",
+    "state": "IL",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 13,
+      "qs_world_rank": "=42"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Trinity College",
+    "url": "https://www.stateuniversity.com/universities/CT/Trinity_College.html",
+    "state": "CT",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Denison University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Connecticut College",
+    "url": "https://www.stateuniversity.com/universities/CT/Connecticut_College.html",
+    "state": "CT",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "DePauw University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 63,
+    "name": "Northeastern University",
+    "url": "https://www.stateuniversity.com/universities/MA/Northeastern_University.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 63,
+      "qs_world_rank": "384"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Trinity University",
+    "url": "https://www.stateuniversity.com/universities/TX/Trinity_University.html",
+    "state": "TX",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Gettysburg College",
+    "url": "https://www.stateuniversity.com/universities/PA/Gettysburg_College.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Occidental College",
+    "url": "https://www.stateuniversity.com/universities/CA/Occidental_College.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Furman University",
+    "url": "https://www.stateuniversity.com/universities/SC/Furman_University.html",
+    "state": "SC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Southern Methodist University",
+    "url": "https://www.stateuniversity.com/universities/TX/Southern_Methodist_University.html",
+    "state": "TX",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Scripps College",
+    "url": "https://www.stateuniversity.com/universities/CA/Scripps_College.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 72,
+    "name": "University of Georgia",
+    "url": "https://www.stateuniversity.com/universities/GA/University_of_Georgia.html",
+    "state": "GA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 72,
+      "qs_world_rank": "525"
+    }
+  },
+  {
+    "rank": 24,
+    "name": "Pennsylvania State University-Main Campus",
+    "url": "https://penn.stateuniversity.com/",
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 24,
+      "qs_world_rank": "=82"
+    }
+  },
+  {
+    "rank": 31,
+    "name": "University of North Carolina at Chapel Hill",
+    "url": "https://www.stateuniversity.com/universities/NC/University_of_North_Carolina_at_Chapel_Hill.html",
+    "state": "NC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 31,
+      "qs_world_rank": "=140"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Cox College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "North Carolina State University at Raleigh",
+    "url": "https://northcarolina.stateuniversity.com/",
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "The University of the South",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Rhodes College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 59,
+    "name": "Tufts University",
+    "url": "https://www.stateuniversity.com/universities/MA/Tufts_University.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 59,
+      "qs_world_rank": "=334"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Santa Clara University",
+    "url": "https://www.stateuniversity.com/universities/CA/Santa_Clara_University.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 62,
+    "name": "Virginia Polytechnic Institute and State University",
+    "url": "https://www.stateuniversity.com/universities/VA/Virginia_Polytechnic_Institute_and_State_University.html",
+    "state": "VA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 62,
+      "qs_world_rank": "=358"
+    }
+  },
+  {
+    "rank": 6,
+    "name": "University of Pennsylvania",
+    "url": "https://www.stateuniversity.com/universities/PA/University_of_Pennsylvania.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 6,
+      "qs_world_rank": "15"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Wheaton College",
+    "url": "https://www.stateuniversity.com/universities/IL/Wheaton_College.html",
+    "state": "IL",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Clemson University",
+    "url": "https://www.stateuniversity.com/universities/SC/Clemson_University.html",
+    "state": "SC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Centre College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Webb Institute",
+    "url": "https://www.stateuniversity.com/universities/NY/Webb_Institute.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Virginia-Main Campus",
+    "url": "https://www.stateuniversity.com/universities/VA/University_of_Virginia.html",
+    "state": "VA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 14,
+    "name": "University of Michigan-Ann Arbor",
+    "url": "https://www.stateuniversity.com/universities/MI/University_of_Michigan.html",
+    "state": "MI",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 14,
+      "qs_world_rank": "45"
+    }
+  },
+  {
+    "rank": 20,
+    "name": "The University of Texas at Austin",
+    "url": "https://www.stateuniversity.com/universities/TX/The_University_of_Texas_Austin.html",
+    "state": "TX",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 20,
+      "qs_world_rank": "68"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Babson College",
+    "url": "https://www.stateuniversity.com/universities/MA/Babson_College.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 73,
+    "name": "Boston College",
+    "url": "https://www.stateuniversity.com/universities/MA/Boston_College.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 73,
+      "qs_world_rank": "=526"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Tulsa",
+    "url": "https://www.stateuniversity.com/universities/OK/University_of_Tulsa.html",
+    "state": "OK",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Rollins College",
+    "url": "https://www.stateuniversity.com/universities/FL/Rollins_College.html",
+    "state": "FL",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 97,
+    "name": "Rensselaer Polytechnic Institute",
+    "url": "https://www.stateuniversity.com/universities/NY/Rensselaer_Polytechnic_Institute.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 97,
+      "qs_world_rank": "695"
+    }
+  },
+  {
+    "rank": 10,
+    "name": "Johns Hopkins University",
+    "url": "https://www.stateuniversity.com/universities/MD/Johns_Hopkins_University.html",
+    "state": "MD",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 10,
+      "qs_world_rank": "24"
+    }
+  },
+  {
+    "rank": 57,
+    "name": "University of Miami",
+    "url": "https://www.stateuniversity.com/universities/FL/University_of_Miami.html",
+    "state": "FL",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 57,
+      "qs_world_rank": "=314"
+    }
+  },
+  {
+    "rank": null,
+    "name": "College of the Holy Cross",
+    "url": "https://www.stateuniversity.com/universities/MA/College_of_the_Holy_Cross.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Brandeis University",
+    "url": "https://www.stateuniversity.com/universities/MA/Brandeis_University.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Franklin and Marshall College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Texas Christian University",
+    "url": "https://www.stateuniversity.com/universities/TX/Texas_Christian_University.html",
+    "state": "TX",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 30,
+    "name": "Georgia Institute of Technology-Main Campus",
+    "url": "https://www.stateuniversity.com/universities/GA/Georgia_Institute_of_Technology.html",
+    "state": "GA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 30,
+      "qs_world_rank": "=123"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Kalamazoo College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Hellenic College-Holy Cross Greek Orthodox School of Theology",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 2,
+    "name": "Stanford University",
+    "url": "https://www.stateuniversity.com/universities/CA/Stanford_University.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 2,
+      "qs_world_rank": "3"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Thomas Aquinas College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "St Olaf College",
+    "url": "https://www.stateuniversity.com/universities/MN/St_Olaf_College.html",
+    "state": "MN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 22,
+    "name": "University of Illinois at Urbana-Champaign",
+    "url": "https://www.stateuniversity.com/universities/IL/University_of_Illinois_at_Urbana_Champaign.html",
+    "state": "IL",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 22,
+      "qs_world_rank": "81"
+    }
+  },
+  {
+    "rank": 42,
+    "name": "University of Florida",
+    "url": "https://www.stateuniversity.com/universities/FL/University_of_Florida.html",
+    "state": "FL",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 42,
+      "qs_world_rank": "=212"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Rochester Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/NY/Rochester_Institute_of_Technology.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Principia College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Gonzaga University",
+    "url": "https://www.stateuniversity.com/universities/WA/Gonzaga_University.html",
+    "state": "WA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Divine Word College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 35,
+    "name": "Washington University in St Louis",
+    "url": "https://www.stateuniversity.com/universities/MO/Washington_University_in_St_Louis.html",
+    "state": "MO",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 35,
+      "qs_world_rank": "167"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Baylor University",
+    "url": "https://www.stateuniversity.com/universities/TX/Baylor_University.html",
+    "state": "TX",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 84,
+    "name": "Illinois Institute of Technology",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 84,
+      "qs_world_rank": "=591"
+    }
+  },
+  {
+    "rank": 53,
+    "name": "Case Western Reserve University",
+    "url": "https://www.stateuniversity.com/universities/OH/Case_Western_Reserve_University.html",
+    "state": "OH",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 53,
+      "qs_world_rank": "=294"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Gustavus Adolphus College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 45,
+    "name": "University of Massachusetts-Amherst",
+    "url": "https://www.stateuniversity.com/universities/MA/University_of_Massachusetts_Amherst.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 45,
+      "qs_world_rank": "=247"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Providence College",
+    "url": "https://www.stateuniversity.com/universities/RI/Providence_College.html",
+    "state": "RI",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "St Lawrence University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Soka University of America",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of North Carolina School of the Arts",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Hobart William Smith Colleges",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 79,
+    "name": "University of Delaware",
+    "url": "https://www.stateuniversity.com/universities/DE/University_of_Delaware.html",
+    "state": "DE",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 79,
+      "qs_world_rank": "=553"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Loyola University Maryland",
+    "url": "https://www.stateuniversity.com/universities/MD/Loyola_University_Maryland.html",
+    "state": "MD",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Drake University",
+    "url": "https://www.stateuniversity.com/universities/IA/Drake_University.html",
+    "state": "IA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 26,
+    "name": "Purdue University-Main Campus",
+    "url": "https://www.stateuniversity.com/universities/IN/Purdue_University.html",
+    "state": "IN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 26,
+      "qs_world_rank": "=110"
+    }
+  },
+  {
+    "rank": null,
+    "name": "The College of Wooster",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Miami University-Oxford",
+    "url": "https://www.stateuniversity.com/universities/OH/Miami_University_Oxford_Campus.html",
+    "state": "OH",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 56,
+    "name": "Indiana University-Bloomington",
+    "url": "https://www.stateuniversity.com/universities/IN/Indiana_University_Bloomington.html",
+    "state": "IN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 56,
+      "qs_world_rank": "=306"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Butler University",
+    "url": "https://www.stateuniversity.com/universities/IN/Butler_University.html",
+    "state": "IN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Ursinus College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Wofford College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 9,
+    "name": "Yale University",
+    "url": "https://www.stateuniversity.com/universities/CT/Yale_University.html",
+    "state": "CT",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 9,
+      "qs_world_rank": "21"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Lawrence University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 40,
+    "name": "University of Maryland-College Park",
+    "url": "https://www.stateuniversity.com/universities/MD/University_of_Maryland_College_Park.html",
+    "state": "MD",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 40,
+      "qs_world_rank": "=207"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Elon University",
+    "url": "https://www.stateuniversity.com/universities/NC/Elon_University.html",
+    "state": "NC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Kettering University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 25,
+    "name": "Boston University",
+    "url": "https://www.stateuniversity.com/universities/MA/Boston_University.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 25,
+      "qs_world_rank": "=88"
+    }
+  },
+  {
+    "rank": 50,
+    "name": "Georgetown University",
+    "url": "https://www.stateuniversity.com/universities/DC/Georgetown_University.html",
+    "state": "DC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 50,
+      "qs_world_rank": "=285"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Hope College",
+    "url": "https://www.stateuniversity.com/universities/MI/Hope_College.html",
+    "state": "MI",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Smith College",
+    "url": "https://www.stateuniversity.com/universities/MA/Smith_College.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Bates College",
+    "url": "https://www.stateuniversity.com/universities/ME/Bates_College.html",
+    "state": "ME",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Virginia Military Institute",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Pennsylvania College of Health Sciences",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Summit Christian College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Wabash College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 84,
+    "name": "Tulane University of Louisiana",
+    "url": "https://www.stateuniversity.com/universities/LA/Tulane_University_of_Louisiana.html",
+    "state": "LA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 84,
+      "qs_world_rank": "=597"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Denver",
+    "url": "https://www.stateuniversity.com/universities/CO/University_of_Denver.html",
+    "state": "CO",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 87,
+    "name": "The University of Tennessee-Knoxville",
+    "url": "https://www.stateuniversity.com/universities/TN/The_University_of_Tennessee.html",
+    "state": "TN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 87,
+      "qs_world_rank": "=607"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Bentley University",
+    "url": "https://www.stateuniversity.com/universities/MA/Bentley_University.html",
+    "state": "MA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Oklahoma-Norman Campus",
+    "url": "https://www.stateuniversity.com/universities/OK/University_of_Oklahoma.html",
+    "state": "OK",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 34,
+    "name": "Michigan State University",
+    "url": "https://michigan.stateuniversity.com/",
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 34,
+      "qs_world_rank": "161"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Dayton",
+    "url": "https://www.stateuniversity.com/universities/OH/University_of_Dayton.html",
+    "state": "OH",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Pepperdine University",
+    "url": "https://www.stateuniversity.com/universities/CA/Pepperdine_University.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 18,
+    "name": "Duke University",
+    "url": "https://www.stateuniversity.com/universities/NC/Duke_University.html",
+    "state": "NC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 18,
+      "qs_world_rank": "62"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Seattle University",
+    "url": "https://www.stateuniversity.com/universities/WA/Seattle_University.html",
+    "state": "WA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Union University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Saint Anselm College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 75,
+    "name": "University of Connecticut",
+    "url": "https://www.stateuniversity.com/universities/CT/University_of_Connecticut.html",
+    "state": "CT",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 75,
+      "qs_world_rank": "534"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Illinois Wesleyan University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Creighton University",
+    "url": "https://www.stateuniversity.com/universities/NE/Creighton_University.html",
+    "state": "NE",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 81,
+    "name": "Colorado School of Mines",
+    "url": "https://www.stateuniversity.com/universities/CO/Colorado_School_of_Mines.html",
+    "state": "CO",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 81,
+      "qs_world_rank": "=571"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Elizabethtown College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 38,
+    "name": "Emory University",
+    "url": "https://www.stateuniversity.com/universities/GA/Emory_University.html",
+    "state": "GA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 38,
+      "qs_world_rank": "182"
+    }
+  },
+  {
+    "rank": 33,
+    "name": "University of Southern California",
+    "url": "https://www.stateuniversity.com/universities/CA/University_of_Southern_California.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 33,
+      "qs_world_rank": "146"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Spelman College",
+    "url": "https://www.stateuniversity.com/universities/GA/Spelman_College.html",
+    "state": "GA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Puerto Rico-Rio Piedras",
+    "url": "https://www.stateuniversity.com/universities/PR/University_of_Puerto_Rico_Rio_Piedras.html",
+    "state": "PR",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Auburn University",
+    "url": "https://www.stateuniversity.com/universities/AL/Auburn_University_Main.html",
+    "state": "AL",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Samford University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 41,
+    "name": "University of Minnesota-Twin Cities",
+    "url": "https://www.stateuniversity.com/universities/MN/University_of_Minnesota_Twin_Cities.html",
+    "state": "MN",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 41,
+      "qs_world_rank": "=212"
+    }
+  },
+  {
+    "rank": 8,
+    "name": "University of California-Berkeley",
+    "url": "https://www.stateuniversity.com/universities/CA/University_of_California_Berkeley.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 8,
+      "qs_world_rank": "=17"
+    }
+  },
+  {
+    "rank": null,
+    "name": "College of Saint Benedict",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Saint Johns University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Syracuse University",
+    "url": "https://www.stateuniversity.com/universities/NY/Syracuse_University.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Hendrix College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Loyola Marymount University",
+    "url": "https://www.stateuniversity.com/universities/CA/Loyola_Marymount_University.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Binghamton University",
+    "url": "https://binghamton.stateuniversity.com/",
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Earlham College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Muhlenberg College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Texas A & M University-College Station",
+    "url": "https://www.stateuniversity.com/universities/TX/Texas_A_M_University.html",
+    "state": "TX",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Jewish Theological Seminary of America",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 37,
+    "name": "University of California-Santa Barbara",
+    "url": "https://www.stateuniversity.com/universities/CA/University_of_California_Santa_Barbara.html",
+    "state": "CA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 37,
+      "qs_world_rank": "179"
+    }
+  },
+  {
+    "rank": 78,
+    "name": "Florida State University",
+    "url": "https://florida.stateuniversity.com/",
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 78,
+      "qs_world_rank": "549"
+    }
+  },
+  {
+    "rank": 76,
+    "name": "University of Utah",
+    "url": "https://www.stateuniversity.com/universities/UT/University_of_Utah.html",
+    "state": "UT",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 76,
+      "qs_world_rank": "=540"
+    }
+  },
+  {
+    "rank": 83,
+    "name": "American University",
+    "url": "https://www.stateuniversity.com/universities/DC/American_University.html",
+    "state": "DC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 83,
+      "qs_world_rank": "=587"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Harding University",
+    "url": "https://www.stateuniversity.com/universities/AR/Harding_University.html",
+    "state": "AR",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Calvin College",
+    "url": "https://www.stateuniversity.com/universities/MI/Calvin_College.html",
+    "state": "MI",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 27,
+    "name": "University of Wisconsin-Madison",
+    "url": "https://www.stateuniversity.com/universities/WI/University_of_Wisconsin_Madison.html",
+    "state": "WI",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 27,
+      "qs_world_rank": "=110"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Puget Sound",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Clarkson University",
+    "url": "https://www.stateuniversity.com/universities/NY/Clarkson_University.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Wheaton College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Berry College",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "University of Pittsburgh-Pittsburgh Campus",
+    "url": "https://www.stateuniversity.com/universities/PA/University_of_Pittsburgh.html",
+    "state": "PA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Michigan Technological University",
+    "url": "https://www.stateuniversity.com/universities/MI/Michigan_Technological_University.html",
+    "state": "MI",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Rhode Island School of Design",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Howard University",
+    "url": "https://www.stateuniversity.com/universities/DC/Howard_University.html",
+    "state": "DC",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Willamette University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Siena College",
+    "url": "https://www.stateuniversity.com/universities/NY/Siena_College.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 96,
+    "name": "Stevens Institute of Technology",
+    "url": "https://www.stateuniversity.com/universities/NJ/Stevens_Institute_of_Technology.html",
+    "state": "NJ",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 96,
+      "qs_world_rank": "=673"
+    }
+  },
+  {
+    "rank": null,
+    "name": "Ohio Northern University",
+    "url": null,
+    "state": null,
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": null,
+    "name": "James Madison University",
+    "url": "https://www.stateuniversity.com/universities/VA/James_Madison_University.html",
+    "state": "VA",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27"
+    }
+  },
+  {
+    "rank": 43,
+    "name": "University of Rochester",
+    "url": "https://www.stateuniversity.com/universities/NY/University_of_Rochester.html",
+    "state": "NY",
+    "score": null,
+    "previous_rank": null,
+    "metadata": {
+      "ranking_source": "QS TopUniversities US article",
+      "ranking_source_url": "https://www.topuniversities.com/where-to-study/north-america/united-states/ranked-top-100-us-universities",
+      "ranking_source_updated": "2024-08-27",
+      "qs_us_rank": 43,
+      "qs_world_rank": "236"
+    }
+  }
+]
