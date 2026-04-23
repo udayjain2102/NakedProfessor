@@ -35,6 +35,12 @@ const VALID_ARTIFACT = {
   ],
 };
 
+const VALID_CSV = [
+  "school_rank,school_name,school_id,school_state,professor_id,professor_legacy_id,professor_first,professor_last,department,avg_rating,avg_difficulty,would_take_again_percent,num_ratings,profile_url",
+  "1,Test University,S_1,ST,P_1,1,Jane,Doe,Mathematics,4.2,3.4,72,15,https://example.com",
+  "2,Pennsylvania State University - Behrend,S_2,PA,P_2,2,Alex,Morgan,Computer Science,4.1,3.1,76,19,https://example.com/alex",
+].join("\n");
+
 describe("professorArtifactLoader", () => {
   it("rejects empty artifacts", () => {
     expect(() => __internal.validateArtifactShape({})).toThrow(/schema_version/i);
@@ -66,10 +72,53 @@ describe("professorArtifactLoader", () => {
       ok: true,
       json: async () => VALID_ARTIFACT,
     }));
-    const loaded = await loadProfessorArtifact({ fetchImpl });
+    const loaded = await loadProfessorArtifact({
+      artifactPaths: ["/data/professors.normalized.v1.json"],
+      fetchImpl,
+    });
     expect(loaded.professors).toHaveLength(1);
     expect(loaded.professors[0].professor_first).toBe("Jane");
     expect(loaded.professors[0].school_name).toBe("Test University");
     expect(loaded.schools[0].name).toBe("Test University");
+  });
+
+  it("loads CSV fallback artifacts and maps to legacy UI fields", async () => {
+    const fetchImpl = vi.fn(async () => ({
+      ok: true,
+      text: async () => VALID_CSV,
+    }));
+    const loaded = await loadProfessorArtifact({
+      artifactPaths: ["/data/top200_plus_behrend_professors.csv"],
+      fetchImpl,
+    });
+
+    expect(loaded.professors).toHaveLength(2);
+    expect(loaded.schools).toHaveLength(2);
+    expect(loaded.professors[0].professor_first).toBe("Jane");
+    expect(loaded.professors[0].school_name).toBe("Test University");
+    expect(loaded.professors[1].department).toBe("Computer Science");
+    expect(loaded.schools[1].name).toBe("Pennsylvania State University - Behrend");
+  });
+
+  it("falls back to CSV when the full normalized JSON is unavailable", async () => {
+    const fetchImpl = vi.fn(async (path) => {
+      if (String(path).endsWith(".json")) {
+        return { ok: false };
+      }
+      return {
+        ok: true,
+        text: async () => VALID_CSV,
+      };
+    });
+    const loaded = await loadProfessorArtifact({
+      artifactPaths: ["/data/professors.normalized.v1.json", "/data/top200_plus_behrend_professors.csv"],
+      fetchImpl,
+    });
+
+    expect(fetchImpl).toHaveBeenCalledTimes(2);
+    expect(loaded.schools.map((school) => school.name)).toEqual([
+      "Test University",
+      "Pennsylvania State University - Behrend",
+    ]);
   });
 });
