@@ -336,6 +336,7 @@ class RateMyProfessorsClient:
         state_equals: Optional[str] = None,
         max_results: int = 15,
         default_index: int = 0,
+        allow_fallback: bool = True,
     ) -> Optional[SchoolMatch]:
         """Search RMP schools and pick a deterministic best match."""
         matches = self.search_school(search_text, max_rows=max_results)
@@ -376,6 +377,8 @@ class RateMyProfessorsClient:
         best_score, _, best_match = max(scored, key=lambda item: (item[0], -item[1]))
         if best_score > 0:
             return best_match
+        if not allow_fallback:
+            return None
         if 0 <= default_index < len(matches):
             return matches[default_index]
         return matches[0]

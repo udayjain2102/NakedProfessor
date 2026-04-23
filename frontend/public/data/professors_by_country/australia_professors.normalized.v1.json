@@ -1,0 +1,813 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-04-23T04:03:53.997800+00:00",
+  "freshness": {
+    "generated_at": "2026-04-23T04:03:53.997800+00:00",
+    "ttl_hours": 168
+  },
+  "source_provenance": {
+    "rankings_source": {
+      "provider": "stateuniversity",
+      "url": "https://www.stateuniversity.com/rank/score_rank_by_4yrc.html"
+    },
+    "professor_source": {
+      "provider": "ratemyprofessors",
+      "url": "https://www.ratemyprofessors.com/graphql"
+    }
+  },
+  "schools": [
+    {
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_school_id": "U2Nob29sLTU5ODU=",
+      "name": "Emily Griffith Technical College",
+      "state": "CO",
+      "rank": 18,
+      "country": "Australia",
+      "aliases": [
+        "Emily Griffith Technical College"
+      ],
+      "search_tokens": [
+        "co",
+        "college",
+        "emily",
+        "griffith",
+        "technical"
+      ],
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_school_id": "U2Nob29sLTU5ODU=",
+        "rankings_rank": 18
+      }
+    },
+    {
+      "school_id": "school:on:charles-sturt-university",
+      "upstream_school_id": "U2Nob29sLTEyOTY3",
+      "name": "Charles Sturt University",
+      "state": "ON",
+      "rank": 30,
+      "country": "Australia",
+      "aliases": [
+        "Charles Sturt Univ.",
+        "Charles Sturt University"
+      ],
+      "search_tokens": [
+        "charles",
+        "on",
+        "sturt",
+        "university"
+      ],
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_school_id": "U2Nob29sLTEyOTY3",
+        "rankings_rank": 30
+      }
+    }
+  ],
+  "professors": [
+    {
+      "professor_id": "prof:2230060",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0yMjMwMDYw",
+      "legacy_id": 2230060,
+      "first_name": "Hannah",
+      "last_name": "Bass",
+      "full_name": "Hannah Bass",
+      "department": "Nursing",
+      "profile_url": "https://www.ratemyprofessors.com/professor/2230060",
+      "aliases": [
+        "Bass, Hannah",
+        "Hannah Bass",
+        "https://www.ratemyprofessors.com/professor/2230060"
+      ],
+      "search_tokens": [
+        "bass",
+        "college",
+        "emily",
+        "griffith",
+        "hannah",
+        "nursing",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0yMjMwMDYw",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:2713140",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0yNzEzMTQw",
+      "legacy_id": 2713140,
+      "first_name": "Gabrielle",
+      "last_name": "Clem",
+      "full_name": "Gabrielle Clem",
+      "department": "Health Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/2713140",
+      "aliases": [
+        "Clem, Gabrielle",
+        "Gabrielle Clem",
+        "https://www.ratemyprofessors.com/professor/2713140"
+      ],
+      "search_tokens": [
+        "clem",
+        "college",
+        "emily",
+        "gabrielle",
+        "griffith",
+        "health",
+        "science",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0yNzEzMTQw",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:2465227",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0yNDY1MjI3",
+      "legacy_id": 2465227,
+      "first_name": "Ricardo",
+      "last_name": "Dena",
+      "full_name": "Ricardo Dena",
+      "department": "Computer Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/2465227",
+      "aliases": [
+        "Dena, Ricardo",
+        "Ricardo Dena",
+        "https://www.ratemyprofessors.com/professor/2465227"
+      ],
+      "search_tokens": [
+        "college",
+        "computer",
+        "dena",
+        "emily",
+        "griffith",
+        "ricardo",
+        "science",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0yNDY1MjI3",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:1799569",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0xNzk5NTY5",
+      "legacy_id": 1799569,
+      "first_name": "Maria chris",
+      "last_name": "Foster",
+      "full_name": "Maria chris Foster",
+      "department": "Health Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/1799569",
+      "aliases": [
+        "Foster, Maria chris",
+        "Maria chris Foster",
+        "https://www.ratemyprofessors.com/professor/1799569"
+      ],
+      "search_tokens": [
+        "chris",
+        "college",
+        "emily",
+        "foster",
+        "griffith",
+        "health",
+        "maria",
+        "science",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 2,
+        "avg_difficulty": 3,
+        "would_take_again_percent": -1,
+        "num_ratings": 1
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0xNzk5NTY5",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:644107",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci02NDQxMDc=",
+      "legacy_id": 644107,
+      "first_name": "Ginny",
+      "last_name": "Froelich",
+      "full_name": "Ginny Froelich",
+      "department": "Health Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/644107",
+      "aliases": [
+        "Froelich, Ginny",
+        "Ginny Froelich",
+        "https://www.ratemyprofessors.com/professor/644107"
+      ],
+      "search_tokens": [
+        "college",
+        "emily",
+        "froelich",
+        "ginny",
+        "griffith",
+        "health",
+        "science",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci02NDQxMDc=",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:644114",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci02NDQxMTQ=",
+      "legacy_id": 644114,
+      "first_name": "Donna",
+      "last_name": "Herbison",
+      "full_name": "Donna Herbison",
+      "department": "Health Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/644114",
+      "aliases": [
+        "Donna Herbison",
+        "Herbison, Donna",
+        "https://www.ratemyprofessors.com/professor/644114"
+      ],
+      "search_tokens": [
+        "college",
+        "donna",
+        "emily",
+        "griffith",
+        "health",
+        "herbison",
+        "science",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci02NDQxMTQ=",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:2349839",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0yMzQ5ODM5",
+      "legacy_id": 2349839,
+      "first_name": "Alicia",
+      "last_name": "Marsicovetere",
+      "full_name": "Alicia Marsicovetere",
+      "department": "Health Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/2349839",
+      "aliases": [
+        "Alicia Marsicovetere",
+        "Marsicovetere, Alicia",
+        "https://www.ratemyprofessors.com/professor/2349839"
+      ],
+      "search_tokens": [
+        "alicia",
+        "college",
+        "emily",
+        "griffith",
+        "health",
+        "marsicovetere",
+        "science",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 2,
+        "avg_difficulty": 3,
+        "would_take_again_percent": 0,
+        "num_ratings": 2
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0yMzQ5ODM5",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:2016766",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0yMDE2NzY2",
+      "legacy_id": 2016766,
+      "first_name": "Kristi",
+      "last_name": "Martin",
+      "full_name": "Kristi Martin",
+      "department": "Culinary Arts",
+      "profile_url": "https://www.ratemyprofessors.com/professor/2016766",
+      "aliases": [
+        "Kristi Martin",
+        "Martin, Kristi",
+        "https://www.ratemyprofessors.com/professor/2016766"
+      ],
+      "search_tokens": [
+        "arts",
+        "college",
+        "culinary",
+        "emily",
+        "griffith",
+        "kristi",
+        "martin",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 5,
+        "avg_difficulty": 4,
+        "would_take_again_percent": -1,
+        "num_ratings": 1
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0yMDE2NzY2",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:2847611",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0yODQ3NjEx",
+      "legacy_id": 2847611,
+      "first_name": "Niamh",
+      "last_name": "McCay",
+      "full_name": "Niamh McCay",
+      "department": "Music",
+      "profile_url": "https://www.ratemyprofessors.com/professor/2847611",
+      "aliases": [
+        "McCay, Niamh",
+        "Niamh McCay",
+        "https://www.ratemyprofessors.com/professor/2847611"
+      ],
+      "search_tokens": [
+        "college",
+        "emily",
+        "griffith",
+        "mccay",
+        "music",
+        "niamh",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 5,
+        "avg_difficulty": 2,
+        "would_take_again_percent": 100,
+        "num_ratings": 1
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0yODQ3NjEx",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:644109",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci02NDQxMDk=",
+      "legacy_id": 644109,
+      "first_name": "Ellen",
+      "last_name": "Miller",
+      "full_name": "Ellen Miller",
+      "department": "Health Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/644109",
+      "aliases": [
+        "Ellen Miller",
+        "Miller, Ellen",
+        "https://www.ratemyprofessors.com/professor/644109"
+      ],
+      "search_tokens": [
+        "college",
+        "ellen",
+        "emily",
+        "griffith",
+        "health",
+        "miller",
+        "science",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci02NDQxMDk=",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:644111",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci02NDQxMTE=",
+      "legacy_id": 644111,
+      "first_name": "Mary",
+      "last_name": "Payne",
+      "full_name": "Mary Payne",
+      "department": "Health Science",
+      "profile_url": "https://www.ratemyprofessors.com/professor/644111",
+      "aliases": [
+        "Mary Payne",
+        "Payne, Mary",
+        "https://www.ratemyprofessors.com/professor/644111"
+      ],
+      "search_tokens": [
+        "college",
+        "emily",
+        "griffith",
+        "health",
+        "mary",
+        "payne",
+        "science",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci02NDQxMTE=",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:1189111",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0xMTg5MTEx",
+      "legacy_id": 1189111,
+      "first_name": "Jeremy",
+      "last_name": "Pickard",
+      "full_name": "Jeremy Pickard",
+      "department": "Business",
+      "profile_url": "https://www.ratemyprofessors.com/professor/1189111",
+      "aliases": [
+        "Jeremy Pickard",
+        "Pickard, Jeremy",
+        "https://www.ratemyprofessors.com/professor/1189111"
+      ],
+      "search_tokens": [
+        "business",
+        "college",
+        "emily",
+        "griffith",
+        "jeremy",
+        "pickard",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0xMTg5MTEx",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:2111968",
+      "school_id": "school:co:emily-griffith-technical-college",
+      "upstream_professor_id": "VGVhY2hlci0yMTExOTY4",
+      "legacy_id": 2111968,
+      "first_name": "Shawn",
+      "last_name": "Scott",
+      "full_name": "Shawn Scott",
+      "department": "Nursing",
+      "profile_url": "https://www.ratemyprofessors.com/professor/2111968",
+      "aliases": [
+        "Scott, Shawn",
+        "Shawn Scott",
+        "https://www.ratemyprofessors.com/professor/2111968"
+      ],
+      "search_tokens": [
+        "college",
+        "emily",
+        "griffith",
+        "nursing",
+        "scott",
+        "shawn",
+        "technical"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0yMTExOTY4",
+        "provider_school_id": "U2Nob29sLTU5ODU="
+      }
+    },
+    {
+      "professor_id": "prof:1112601",
+      "school_id": "school:on:charles-sturt-university",
+      "upstream_professor_id": "VGVhY2hlci0xMTEyNjAx",
+      "legacy_id": 1112601,
+      "first_name": "Sue",
+      "last_name": "Clancy",
+      "full_name": "Sue Clancy",
+      "department": "Education",
+      "profile_url": "https://www.ratemyprofessors.com/professor/1112601",
+      "aliases": [
+        "Clancy, Sue",
+        "Sue Clancy",
+        "https://www.ratemyprofessors.com/professor/1112601"
+      ],
+      "search_tokens": [
+        "charles",
+        "clancy",
+        "education",
+        "sturt",
+        "sue",
+        "university"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0xMTEyNjAx",
+        "provider_school_id": "U2Nob29sLTEyOTY3"
+      }
+    },
+    {
+      "professor_id": "prof:858842",
+      "school_id": "school:on:charles-sturt-university",
+      "upstream_professor_id": "VGVhY2hlci04NTg4NDI=",
+      "legacy_id": 858842,
+      "first_name": "Cam",
+      "last_name": "Fraser",
+      "full_name": "Cam Fraser",
+      "department": "Education",
+      "profile_url": "https://www.ratemyprofessors.com/professor/858842",
+      "aliases": [
+        "Cam Fraser",
+        "Fraser, Cam",
+        "https://www.ratemyprofessors.com/professor/858842"
+      ],
+      "search_tokens": [
+        "cam",
+        "charles",
+        "education",
+        "fraser",
+        "sturt",
+        "university"
+      ],
+      "metrics": {
+        "avg_rating": 3.8,
+        "avg_difficulty": 3,
+        "would_take_again_percent": -1,
+        "num_ratings": 9
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci04NTg4NDI=",
+        "provider_school_id": "U2Nob29sLTEyOTY3"
+      }
+    },
+    {
+      "professor_id": "prof:1112605",
+      "school_id": "school:on:charles-sturt-university",
+      "upstream_professor_id": "VGVhY2hlci0xMTEyNjA1",
+      "legacy_id": 1112605,
+      "first_name": "Gail",
+      "last_name": "Grant",
+      "full_name": "Gail Grant",
+      "department": "Education",
+      "profile_url": "https://www.ratemyprofessors.com/professor/1112605",
+      "aliases": [
+        "Gail Grant",
+        "Grant, Gail",
+        "https://www.ratemyprofessors.com/professor/1112605"
+      ],
+      "search_tokens": [
+        "charles",
+        "education",
+        "gail",
+        "grant",
+        "sturt",
+        "university"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0xMTEyNjA1",
+        "provider_school_id": "U2Nob29sLTEyOTY3"
+      }
+    },
+    {
+      "professor_id": "prof:1112604",
+      "school_id": "school:on:charles-sturt-university",
+      "upstream_professor_id": "VGVhY2hlci0xMTEyNjA0",
+      "legacy_id": 1112604,
+      "first_name": "Don",
+      "last_name": "Jones",
+      "full_name": "Don Jones",
+      "department": "Education",
+      "profile_url": "https://www.ratemyprofessors.com/professor/1112604",
+      "aliases": [
+        "Don Jones",
+        "Jones, Don",
+        "https://www.ratemyprofessors.com/professor/1112604"
+      ],
+      "search_tokens": [
+        "charles",
+        "don",
+        "education",
+        "jones",
+        "sturt",
+        "university"
+      ],
+      "metrics": {
+        "avg_rating": 5,
+        "avg_difficulty": 2,
+        "would_take_again_percent": -1,
+        "num_ratings": 2
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0xMTEyNjA0",
+        "provider_school_id": "U2Nob29sLTEyOTY3"
+      }
+    },
+    {
+      "professor_id": "prof:1651556",
+      "school_id": "school:on:charles-sturt-university",
+      "upstream_professor_id": "VGVhY2hlci0xNjUxNTU2",
+      "legacy_id": 1651556,
+      "first_name": "Randa",
+      "last_name": "Khattar",
+      "full_name": "Randa Khattar",
+      "department": "Education",
+      "profile_url": "https://www.ratemyprofessors.com/professor/1651556",
+      "aliases": [
+        "Khattar, Randa",
+        "Randa Khattar",
+        "https://www.ratemyprofessors.com/professor/1651556"
+      ],
+      "search_tokens": [
+        "charles",
+        "education",
+        "khattar",
+        "randa",
+        "sturt",
+        "university"
+      ],
+      "metrics": {
+        "avg_rating": 4.8,
+        "avg_difficulty": 2.5,
+        "would_take_again_percent": -1,
+        "num_ratings": 2
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0xNjUxNTU2",
+        "provider_school_id": "U2Nob29sLTEyOTY3"
+      }
+    },
+    {
+      "professor_id": "prof:1112606",
+      "school_id": "school:on:charles-sturt-university",
+      "upstream_professor_id": "VGVhY2hlci0xMTEyNjA2",
+      "legacy_id": 1112606,
+      "first_name": "Doreen",
+      "last_name": "Rorrison",
+      "full_name": "Doreen Rorrison",
+      "department": "Education",
+      "profile_url": "https://www.ratemyprofessors.com/professor/1112606",
+      "aliases": [
+        "Doreen Rorrison",
+        "Rorrison, Doreen",
+        "https://www.ratemyprofessors.com/professor/1112606"
+      ],
+      "search_tokens": [
+        "charles",
+        "doreen",
+        "education",
+        "rorrison",
+        "sturt",
+        "university"
+      ],
+      "metrics": {
+        "avg_rating": 0,
+        "avg_difficulty": 0,
+        "would_take_again_percent": -1,
+        "num_ratings": 0
+      },
+      "freshness": {
+        "observed_at": "2026-04-23T04:03:53.997800+00:00"
+      },
+      "source_provenance": {
+        "provider": "ratemyprofessors",
+        "provider_professor_id": "VGVhY2hlci0xMTEyNjA2",
+        "provider_school_id": "U2Nob29sLTEyOTY3"
+      }
+    }
+  ]
+}
