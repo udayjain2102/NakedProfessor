@@ -1764,7 +1764,7 @@ export default function App() {
                 role="combobox"
                 aria-autocomplete="list"
                 aria-expanded={filteredCollegeOptions.length > 0}
-                aria-controls="np-school-results"
+                aria-controls={showSchoolResults ? "np-school-results" : undefined}
                 aria-activedescendant={activeSchoolOption ? `np-school-option-${activeSchoolOption.key}` : undefined}
               />
             )}
@@ -1876,7 +1876,7 @@ export default function App() {
                 role="combobox"
                 aria-autocomplete="list"
                 aria-expanded={filteredProfessors.length > 0}
-                aria-controls="np-professor-results"
+                aria-controls={showProfessorResults ? "np-professor-results" : undefined}
                 aria-activedescendant={
                   activeProfessorOption
                     ? `np-professor-option-${activeProfessorOption.professor_id}`
