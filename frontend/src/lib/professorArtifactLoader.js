@@ -259,7 +259,27 @@ function toCsvArtifactShape(csvText) {
 }
 
 function isCsvPath(path) {
-  return String(path || "").toLowerCase().split("?")[0].endsWith(".csv");
+  const normalizedPath = String(path || "").toLowerCase().split("?")[0];
+  return normalizedPath.endsWith(".csv") || normalizedPath.endsWith(".csv.gz");
+}
+
+function isGzipPath(path) {
+  return String(path || "").toLowerCase().split("?")[0].endsWith(".gz");
+}
+
+async function readResponseText(response, path) {
+  if (!isGzipPath(path)) {
+    return response.text();
+  }
+
+  if (typeof DecompressionStream !== "function") {
+    throw new Error("Gzip artifacts require DecompressionStream support.");
+  }
+
+  const stream = new Blob([await response.arrayBuffer()])
+    .stream()
+    .pipeThrough(new DecompressionStream("gzip"));
+  return new Response(stream).text();
 }
 
 function mergeLoadedArtifacts(payloads) {
@@ -311,13 +331,14 @@ export async function loadProfessorArtifact(options = {}) {
       if (!response.ok) continue;
 
       if (isCsvPath(path)) {
+        const csvText = await readResponseText(response, path);
         if (loadedJsonArtifacts.length) {
           continue;
         }
-        return toCsvArtifactShape(await response.text());
+        return toCsvArtifactShape(csvText);
       }
 
-      const payload = await response.json();
+      const payload = JSON.parse(await readResponseText(response, path));
       validateArtifactShape(payload);
       validateArtifactFreshness(payload, nowMs);
       loadedJsonArtifacts.push(payload);

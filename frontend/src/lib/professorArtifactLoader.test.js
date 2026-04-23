@@ -1,4 +1,5 @@
 import { describe, expect, it, vi } from "vitest";
+import { gzipSync } from "node:zlib";
 import { __internal, loadProfessorArtifact } from "./professorArtifactLoader";
 
 const VALID_ARTIFACT = {
@@ -82,6 +83,22 @@ describe("professorArtifactLoader", () => {
     expect(loaded.schools[0].name).toBe("Test University");
   });
 
+  it("loads gzipped normalized JSON artifacts", async () => {
+    const gzippedArtifact = gzipSync(Buffer.from(JSON.stringify(VALID_ARTIFACT)));
+    const fetchImpl = vi.fn(async () => ({
+      ok: true,
+      arrayBuffer: async () => toArrayBuffer(gzippedArtifact),
+    }));
+
+    const loaded = await loadProfessorArtifact({
+      artifactPaths: ["/data/professors.normalized.v1.json.gz"],
+      fetchImpl,
+    });
+
+    expect(loaded.professors).toHaveLength(1);
+    expect(loaded.schools[0].name).toBe("Test University");
+  });
+
   it("loads CSV fallback artifacts and maps to legacy UI fields", async () => {
     const fetchImpl = vi.fn(async () => ({
       ok: true,
@@ -100,6 +117,22 @@ describe("professorArtifactLoader", () => {
     expect(loaded.schools[1].name).toBe("Pennsylvania State University - Behrend");
   });
 
+  it("loads gzipped CSV fallback artifacts", async () => {
+    const gzippedCsv = gzipSync(Buffer.from(VALID_CSV));
+    const fetchImpl = vi.fn(async () => ({
+      ok: true,
+      arrayBuffer: async () => toArrayBuffer(gzippedCsv),
+    }));
+
+    const loaded = await loadProfessorArtifact({
+      artifactPaths: ["/data/top200_plus_behrend_professors.csv.gz"],
+      fetchImpl,
+    });
+
+    expect(loaded.professors).toHaveLength(2);
+    expect(loaded.professors[0].professor_first).toBe("Jane");
+    expect(loaded.professors[1].school_name).toBe("Pennsylvania State University - Behrend");
+  });
   it("falls back to CSV when the full normalized JSON is unavailable", async () => {
     const fetchImpl = vi.fn(async (path) => {
       if (String(path).endsWith(".json")) {
