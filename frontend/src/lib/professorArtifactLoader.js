@@ -291,14 +291,19 @@ async function readResponseText(response, path) {
     throw new Error("Response object lacks text() or json() method.");
   }
 
-  if (typeof DecompressionStream !== "function") {
-    throw new Error("Gzip artifacts require DecompressionStream support.");
+  // Gzip handling – use DecompressionStream when available, otherwise fallback to Node's zlib.
+  if (typeof DecompressionStream === "function" && typeof new Blob([]).stream === "function") {
+    const stream = new Blob([await response.arrayBuffer()])
+      .stream()
+      .pipeThrough(new DecompressionStream("gzip"));
+    return new Response(stream).text();
   }
 
-  const stream = new Blob([await response.arrayBuffer()])
-    .stream()
-    .pipeThrough(new DecompressionStream("gzip"));
-  return new Response(stream).text();
+  // Fallback for test environments (Node) – use synchronous gunzip.
+  const { gunzipSync } = require('node:zlib');
+  const buffer = Buffer.from(await response.arrayBuffer());
+  const decompressed = gunzipSync(buffer);
+  return decompressed.toString('utf-8');
 }
 
 function mergeLoadedArtifacts(payloads) {
