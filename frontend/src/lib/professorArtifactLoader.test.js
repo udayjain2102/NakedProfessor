@@ -1,4 +1,12 @@
 import { describe, expect, it, vi } from "vitest";
+
+// Helper for Node buffers used in tests – converts a Buffer or Uint8Array to an ArrayBuffer.
+function toArrayBuffer(buf) {
+  if (buf instanceof Uint8Array) return buf.buffer;
+  if (typeof Buffer !== "undefined" && Buffer.isBuffer(buf)) return Uint8Array.from(buf).buffer;
+  return buf;
+}
+
 import { gzipSync } from "node:zlib";
 import { __internal, loadProfessorArtifact } from "./professorArtifactLoader";
 
