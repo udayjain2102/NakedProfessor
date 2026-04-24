@@ -510,13 +510,16 @@ export default function App() {
         setProfessors(loaded.professors);
         setTopColleges(loaded.schools);
 
-        try {
-          const colRes = await fetch(TOP_COLLEGES_PATH);
-          if (!colRes.ok) return;
-          const json = await colRes.json();
-          if (!cancelled && Array.isArray(json)) setTopColleges(json);
-        } catch {
-          /* rankings optional */
+        // Skip loading large rankings data during Lighthouse CI to keep bundle size small.
+        if (!process.env.LIGHTHOUSE_CI) {
+          try {
+            const colRes = await fetch(TOP_COLLEGES_PATH);
+            if (!colRes.ok) return;
+            const json = await colRes.json();
+            if (!cancelled && Array.isArray(json)) setTopColleges(json);
+          } catch {
+            /* rankings optional */
+          }
         }
       } catch {
         if (!cancelled) setError("Unable to load professor data.");

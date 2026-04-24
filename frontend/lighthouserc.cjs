@@ -9,6 +9,7 @@ module.exports = {
       ],
       startServerCommand: "npm run preview:e2e -- --host 127.0.0.1 --port 4173",
       startServerReadyPattern: "127.0.0.1:4173",
+      startServerReadyTimeout: 120000,
       numberOfRuns: 1,
       settings: {
         chromeFlags: "--no-sandbox",

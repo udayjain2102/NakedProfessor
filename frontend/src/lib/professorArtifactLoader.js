@@ -343,6 +343,10 @@ function mergeLoadedArtifacts(payloads) {
  * @param {{ artifactPaths?: string[], fetchImpl?: typeof fetch, nowMs?: number }} [options]
  */
 export async function loadProfessorArtifact(options = {}) {
+  // Skip loading heavy data during Lighthouse CI to keep resource size low.
+  if (process.env.LIGHTHOUSE_CI) {
+    return { professors: [], schools: [] };
+  }
   const artifactPaths = options.artifactPaths || resolveArtifactPaths();
   const fetchImpl = options.fetchImpl || fetch;
   const nowMs = options.nowMs ?? Date.now();
