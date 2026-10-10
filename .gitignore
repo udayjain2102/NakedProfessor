@@ -51,3 +51,13 @@ data/
 
 # ignore everything in public data folder except the normalized JSONrontend/public/data/*
 !frontend/public/data/professors.normalized.v1.json
+
+# local tool / agent artifacts
+.venv-ci/
+.sandbox-tmp/
+.sandbox-home/
+.agents/
+.claw/
+.junie/
+.windsurf/
+skills-lock.json
