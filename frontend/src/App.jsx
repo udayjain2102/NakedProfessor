@@ -511,7 +511,7 @@ export default function App() {
         setTopColleges(loaded.schools);
 
         // Skip loading large rankings data during Lighthouse CI to keep bundle size small.
-        if (!process.env.LIGHTHOUSE_CI) {
+        if (!import.meta.env.VITE_LIGHTHOUSE_CI) {
           try {
             const colRes = await fetch(TOP_COLLEGES_PATH);
             if (!colRes.ok) return;
