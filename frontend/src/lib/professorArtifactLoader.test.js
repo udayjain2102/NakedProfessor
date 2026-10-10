@@ -10,6 +10,9 @@ function toArrayBuffer(buf) {
 import { gzipSync } from "node:zlib";
 import { __internal, loadProfessorArtifact } from "./professorArtifactLoader";
 
+// Pin "now" to the fixture date so freshness checks don't depend on the real clock.
+const FIXTURE_NOW = Date.parse("2026-04-20T00:00:00Z");
+
 const VALID_ARTIFACT = {
   schema_version: "1.0.0",
   generated_at: "2026-04-20T00:00:00Z",
@@ -82,6 +85,7 @@ describe("professorArtifactLoader", () => {
       json: async () => VALID_ARTIFACT,
     }));
     const loaded = await loadProfessorArtifact({
+      nowMs: FIXTURE_NOW,
       artifactPaths: ["/data/professors.normalized.v1.json"],
       fetchImpl,
     });
@@ -99,6 +103,7 @@ describe("professorArtifactLoader", () => {
     }));
 
     const loaded = await loadProfessorArtifact({
+      nowMs: FIXTURE_NOW,
       artifactPaths: ["/data/professors.normalized.v1.json.gz"],
       fetchImpl,
     });
@@ -113,6 +118,7 @@ describe("professorArtifactLoader", () => {
       text: async () => VALID_CSV,
     }));
     const loaded = await loadProfessorArtifact({
+      nowMs: FIXTURE_NOW,
       artifactPaths: ["/data/top200_plus_behrend_professors.csv"],
       fetchImpl,
     });
@@ -133,6 +139,7 @@ describe("professorArtifactLoader", () => {
     }));
 
     const loaded = await loadProfessorArtifact({
+      nowMs: FIXTURE_NOW,
       artifactPaths: ["/data/top200_plus_behrend_professors.csv.gz"],
       fetchImpl,
     });
@@ -152,6 +159,7 @@ describe("professorArtifactLoader", () => {
       };
     });
     const loaded = await loadProfessorArtifact({
+      nowMs: FIXTURE_NOW,
       artifactPaths: ["/data/professors.normalized.v1.json", "/data/top200_plus_behrend_professors.csv"],
       fetchImpl,
     });
@@ -204,6 +212,7 @@ describe("professorArtifactLoader", () => {
     });
 
     const loaded = await loadProfessorArtifact({
+      nowMs: FIXTURE_NOW,
       artifactPaths: ["/data/one.json", "/data/two.json"],
       fetchImpl,
     });
