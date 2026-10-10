@@ -10,7 +10,7 @@ const child = spawn(
     env: {
       ...process.env,
       CHROME_PATH: chromium.executablePath(),
-      LIGHTHOUSE_CI: "1",
+      VITE_LIGHTHOUSE_CI: "1",
     },
   }
 );

@@ -344,7 +344,7 @@ function mergeLoadedArtifacts(payloads) {
  */
 export async function loadProfessorArtifact(options = {}) {
   // Skip loading heavy data during Lighthouse CI to keep resource size low.
-  if (process.env.LIGHTHOUSE_CI) {
+  if (import.meta.env.VITE_LIGHTHOUSE_CI) {
     return { professors: [], schools: [] };
   }
   const artifactPaths = options.artifactPaths || resolveArtifactPaths();

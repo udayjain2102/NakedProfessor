@@ -76,7 +76,7 @@ test("select route has no serious accessibility violations", async ({ page }) =>
 test("professor route has no serious accessibility violations", async ({ page }) => {
   await page.goto("/app/professor/prof:1");
   await page.waitForLoadState("networkidle");
-  await expect(page.getByRole("heading", { name: /Reality Check/i })).toBeVisible({ timeout: 10000 });
+  await expect(page.getByRole("heading", { level: 1, name: /Reality Check/i })).toBeVisible({ timeout: 10000 });
   await expect(page.getByText(/Common risks/i)).toBeVisible({ timeout: 10000 });
   await expectNoSeriousAxeViolations(page);
 });
